@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>pdf-test</title>
+      <link href="/2019/07/06/pdf-test/"/>
+      <url>/2019/07/06/pdf-test/</url>
+      
+        <content type="html"><![CDATA[<p> 机器学习个人笔记完整版v5 by 黄博</p> <div class="pdf" target="pdf-test.pdf" height></div> ]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
+            <tag> 吴恩达 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo博客之主题优化</title>
       <link href="/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
       <url>/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
