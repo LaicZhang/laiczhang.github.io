@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laiczhang.github.io/"/>
-  <updated>2019-07-05T17:20:31.035Z</updated>
+  <updated>2019-07-05T17:26:05.014Z</updated>
   <id>https://laiczhang.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习个人笔记完整版v5</title>
+    <link href="https://laiczhang.github.io/2019/07/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v5/"/>
+    <id>https://laiczhang.github.io/2019/07/06/机器学习个人笔记完整版v5/</id>
+    <published>2019-07-05T17:24:20.000Z</published>
+    <updated>2019-07-05T17:26:05.014Z</updated>
+    
+    <content type="html"><![CDATA[<p> 机器学习个人笔记完整版v5 by 黄博</p> <div class="pdf" target="机器学习个人笔记完整版v5.pdf" height></div> ]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt; 机器学习个人笔记完整版v5 by 黄博&lt;/p&gt;
+ &lt;div class=&quot;pdf&quot; target=&quot;机器学习个人笔记完整版v5.pdf&quot; height&gt;&lt;/div&gt; 
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://laiczhang.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="机器学习" scheme="https://laiczhang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="吴恩达" scheme="https://laiczhang.github.io/tags/%E5%90%B4%E6%81%A9%E8%BE%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>pdf-test</title>
