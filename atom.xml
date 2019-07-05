@@ -5,9 +5,9 @@
   <subtitle>Do a good thing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://laiczhang.github.io/"/>
   <updated>2019-07-05T07:17:35.382Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://laiczhang.github.io/</id>
   
   <author>
     <name>Laic Zhang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo博客之主题优化</title>
-    <link href="http://yoursite.com/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
-    <id>http://yoursite.com/2019/07/05/hexo博客之主题优化/</id>
+    <link href="https://laiczhang.github.io/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://laiczhang.github.io/2019/07/05/hexo博客之主题优化/</id>
     <published>2019-07-05T07:08:56.000Z</published>
     <updated>2019-07-05T07:17:35.382Z</updated>
     
@@ -34,21 +34,21 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
     
-      <category term="next" scheme="http://yoursite.com/tags/next/"/>
+      <category term="next" scheme="https://laiczhang.github.io/tags/next/"/>
     
-      <category term="theme" scheme="http://yoursite.com/tags/theme/"/>
+      <category term="theme" scheme="https://laiczhang.github.io/tags/theme/"/>
     
   </entry>
   
   <entry>
     <title>hexo+github搭建个人博客</title>
-    <link href="http://yoursite.com/2019/07/05/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2019/07/05/hexo-github搭建个人博客/</id>
+    <link href="https://laiczhang.github.io/2019/07/05/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://laiczhang.github.io/2019/07/05/hexo-github搭建个人博客/</id>
     <published>2019-07-05T06:26:57.000Z</published>
     <updated>2019-07-05T07:04:43.678Z</updated>
     
@@ -63,25 +63,25 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
     
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+      <category term="github" scheme="https://laiczhang.github.io/tags/github/"/>
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+      <category term="blog" scheme="https://laiczhang.github.io/tags/blog/"/>
     
-      <category term="coding" scheme="http://yoursite.com/tags/coding/"/>
+      <category term="coding" scheme="https://laiczhang.github.io/tags/coding/"/>
     
-      <category term="域名" scheme="http://yoursite.com/tags/%E5%9F%9F%E5%90%8D/"/>
+      <category term="域名" scheme="https://laiczhang.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/07/04/hello-world/"/>
-    <id>http://yoursite.com/2019/07/04/hello-world/</id>
+    <link href="https://laiczhang.github.io/2019/07/04/hello-world/"/>
+    <id>https://laiczhang.github.io/2019/07/04/hello-world/</id>
     <published>2019-07-04T13:45:13.683Z</published>
     <updated>2019-07-05T05:44:00.671Z</updated>
     
@@ -96,12 +96,12 @@
     
     </summary>
     
-      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+      <category term="test" scheme="https://laiczhang.github.io/categories/test/"/>
     
     
-      <category term="hello" scheme="http://yoursite.com/tags/hello/"/>
+      <category term="hello" scheme="https://laiczhang.github.io/tags/hello/"/>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
     
   </entry>
   
