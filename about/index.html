@@ -69,6 +69,8 @@
   <link rel="manifest" href="/images/manifest.json">
 
 
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
 
 
 
@@ -81,7 +83,7 @@
     version: '7.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
-    back2top_sidebar: false,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -120,6 +122,8 @@
 <meta name="twitter:description" content="About   学习笔记、博文、CSDN、个人网站、日常踩坑记录以及一些独立作品的汇总目录。 集合我的github的一个索引记录自己开发过程中遇到的坑和问题。 记录一些学习知识的一个记录文档， 学的东西太多太杂，对很多东西很感兴趣，但是学习了之后只是当时在用，之后的使用场景不多， 导致遗忘比较快， 所以写文章的时候， 就尽量写的详细， 能整理为一个体系的就尽量整理为一个体系。 本项目作为目录，与其">
 <meta name="twitter:image" content="https://camo.githubusercontent.com/25f69c9d7b021aec8dc29ba00ed9b9ccf63df14f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c616e67756167652d6d61726b646f776e5f616e645f48544d4c2d7265642e737667">
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Laic Zhang の Blog" type="application/atom+xml">
@@ -275,7 +279,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">9</span></a>
 
   </li>
         
@@ -311,7 +315,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
 
   </li>
 
@@ -547,7 +551,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -601,7 +605,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -703,6 +709,13 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -742,9 +755,35 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.2k字</span>
+  <span class="post-count">博客全站共9.9k字</span>
 </div>
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -757,11 +796,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -809,6 +843,8 @@
 
 
 
+  
+
 
 
   
@@ -819,6 +855,9 @@
 
   
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
 
 
   
@@ -853,6 +892,9 @@
 
 
   
+  <script src="/js/js.cookie.js?v=7.1.2"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.2"></script>
+
 
   
 
@@ -1216,6 +1258,32 @@
 
 
   
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
 
   
 
@@ -1240,6 +1308,15 @@
   
 
   
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.loadBookmark();
+  
+  </script>
+
 
   
 <script>
