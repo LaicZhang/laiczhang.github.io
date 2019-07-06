@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laiczhang.github.io/"/>
-  <updated>2019-07-06T07:57:33.691Z</updated>
+  <updated>2019-07-06T06:28:14.845Z</updated>
   <id>https://laiczhang.github.io/</id>
   
   <author>
@@ -15,36 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>机器学习个人笔记完整版v5</title>
-    <link href="https://laiczhang.github.io/2019/07/06/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v5/"/>
-    <id>https://laiczhang.github.io/2019/07/06/机器学习个人笔记完整版v5/</id>
-    <published>2019-07-06T06:30:49.000Z</published>
-    <updated>2019-07-06T07:57:33.691Z</updated>
-    
-    <content type="html"><![CDATA[<p>机器学习个人笔记完整版v5 by 黄博</p><div class="pdf" target="机器学习个人笔记完整版v5/机器学习个人笔记完整版v5.pdf" height></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;机器学习个人笔记完整版v5 by 黄博&lt;/p&gt;
-&lt;div class=&quot;pdf&quot; target=&quot;机器学习个人笔记完整版v5/机器学习个人笔记完整版v5.pdf&quot; height&gt;&lt;/div&gt;
-
-
-      
-    
-    </summary>
-    
-      <category term="test" scheme="https://laiczhang.github.io/categories/test/"/>
-    
-    
-      <category term="test" scheme="https://laiczhang.github.io/tags/test/"/>
-    
-      <category term="机器学习" scheme="https://laiczhang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
   
   <entry>
     <title>我的hexo站点config.yml文件配置</title>
