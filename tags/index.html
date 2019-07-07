@@ -542,11 +542,30 @@
       
     </div>
 
+<% if (!index && post.comments theme.giteement.enable){ %>
+<div id="giteementDiv"></div>
+<link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+<script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+<script>
+var giteement = new Giteement({
+  id: '<%- post.date.format('YYYYMMDDHHmmss') %>',
+  owner: '<%- theme.giteement.giteeID %>',
+  repo: '<%- theme.giteement.repo %>',
+  backcall_uri: '<%- theme.giteement.redirect_uri %>',
+  oauth_uri: 'https://wudong.tech/token',
+  oauth: {
+    client_id: '<%- theme.giteement.ClientID %>',
+    client_secret: '<%- theme.giteement.ClientSecret %>'
+  },
+})
+giteement.render('giteementDiv')
+</script>
+<% } %>
   
 
 
 
-        </div>
+        </%></%></div>
         
           
   
