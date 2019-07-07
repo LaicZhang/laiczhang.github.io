@@ -1967,7 +1967,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #87ffc4;
+  background: #584e16;
 }
 .feed-link,
 .chat {
@@ -2534,26 +2534,6 @@ a.gitment-editor-footer-tip,
 .has-jax {
   overflow-x: auto;
   overflow-y: hidden;
-}
-#gitment-display-button {
-  display: inline-block;
-  padding: 0 15px;
-  color: #0a9caf;
-  cursor: pointer;
-  font-size: 14px;
-  border: 1px solid #0a9caf;
-  border-radius: 4px;
-}
-#gitment-display-button:hover {
-  color: #fff;
-  background: #0a9caf;
-}
-#gitment-container a {
-  border-bottom: none;
-}
-a.gitment-editor-footer-tip,
-.gitment-container.gitment-footer-container {
-  display: none;
 }
 .page-archive .archive-page-counter {
   position: relative;
