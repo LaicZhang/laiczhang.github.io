@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laiczhang.github.io/"/>
-  <updated>2019-07-06T16:57:04.859Z</updated>
+  <updated>2019-07-09T15:25:03.611Z</updated>
   <id>https://laiczhang.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub提速教程</title>
+    <link href="https://laiczhang.github.io/2019/07/09/GitHub%E6%8F%90%E9%80%9F%E6%95%99%E7%A8%8B/"/>
+    <id>https://laiczhang.github.io/2019/07/09/GitHub提速教程/</id>
+    <published>2019-07-09T15:21:39.000Z</published>
+    <updated>2019-07-09T15:25:03.611Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="获取github的IP地址"><a href="#获取github的IP地址" class="headerlink" title="获取github的IP地址"></a>获取github的IP地址</h2><p>访问<a href="https://www.ipaddress.com/" target="_blank" rel="noopener">https://www.ipaddress.com/</a> 网址 依次获取以下三个网址的IP</p><ol><li><a href="http://github.com/" target="_blank" rel="noopener">github.com</a></li><li><a href="http://github.global.ssl.fastly.net/" target="_blank" rel="noopener">github.global.ssl.fastly.net</a></li><li><a href="http://codeload.github.com/" target="_blank" rel="noopener">codeload.github.com</a></li></ol><p><img src="https://img-blog.csdnimg.cn/20190126112912387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzkxMDQ1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>这是我获取的IP</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192<span class="selector-class">.30</span><span class="selector-class">.253</span><span class="selector-class">.113</span>  <span class="selector-tag">github</span><span class="selector-class">.com</span></span><br><span class="line">151<span class="selector-class">.101</span><span class="selector-class">.25</span><span class="selector-class">.194</span> <span class="selector-tag">github</span><span class="selector-class">.global</span><span class="selector-class">.ssl</span><span class="selector-class">.fastly</span><span class="selector-class">.net</span></span><br><span class="line">192<span class="selector-class">.30</span><span class="selector-class">.253</span><span class="selector-class">.121</span> <span class="selector-tag">codeload</span><span class="selector-class">.github</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure><h2 id="修改系统hosts"><a href="#修改系统hosts" class="headerlink" title="修改系统hosts"></a>修改系统hosts</h2><p>添加内容</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">192<span class="selector-class">.30</span><span class="selector-class">.253</span><span class="selector-class">.113</span>  <span class="selector-tag">github</span><span class="selector-class">.com</span></span><br><span class="line">151<span class="selector-class">.101</span><span class="selector-class">.25</span><span class="selector-class">.194</span> <span class="selector-tag">github</span><span class="selector-class">.global</span><span class="selector-class">.ssl</span><span class="selector-class">.fastly</span><span class="selector-class">.net</span></span><br><span class="line">192<span class="selector-class">.30</span><span class="selector-class">.253</span><span class="selector-class">.121</span> <span class="selector-tag">codeload</span><span class="selector-class">.github</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure><h4 id="windows系统"><a href="#windows系统" class="headerlink" title="windows系统"></a>windows系统</h4><ol><li>hosts文件路径：C:\Windows\System32\drivers\etc\hosts ,</li><li>添加上面查询到的IP到hosts文件中（此时可能需要管理员权限,可以将hosts复制到桌面，修改好了再复制回去覆盖原先的）</li><li>结果：<br> <img src="https://img-blog.csdnimg.cn/20190126113626805.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzkxMDQ1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li><li>刷新DNS</li></ol><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure><h4 id="linux系统"><a href="#linux系统" class="headerlink" title="linux系统"></a>linux系统</h4><ol><li>打开hosts文件并修改</li></ol><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim <span class="regexp">/etc/</span>hosts</span><br></pre></td></tr></table></figure><p>插入ip映射保存退出<br>结果：<br><img src="https://img-blog.csdnimg.cn/20190126114004822.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zNzkxMDQ1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>2.重启网络服务</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="regexp">/etc/i</span>nit.d<span class="regexp">/networking restart</span></span><br></pre></td></tr></table></figure><p><strong>附上一张效果图</strong><br><img src="https://img-blog.csdnimg.cn/20190126114319387.png" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;获取github的IP地址&quot;&gt;&lt;a href=&quot;#获取github的IP地址&quot; class=&quot;headerlink&quot; title=&quot;获取github的IP地址&quot;&gt;&lt;/a&gt;获取github的IP地址&lt;/h2&gt;&lt;p&gt;访问&lt;a href=&quot;https://www.ipa
+      
+    
+    </summary>
+    
+      <category term="GitHub" scheme="https://laiczhang.github.io/categories/GitHub/"/>
+    
+    
+      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+    
+      <category term="hosts" scheme="https://laiczhang.github.io/tags/hosts/"/>
+    
+  </entry>
   
   <entry>
     <title>panda数计资料整理-更新中</title>
@@ -66,11 +93,11 @@
       <category term="GitHub项目" scheme="https://laiczhang.github.io/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
     
     
+      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+    
       <category term="人工智能" scheme="https://laiczhang.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
       <category term="编程语言" scheme="https://laiczhang.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
     
       <category term="机器学习" scheme="https://laiczhang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
