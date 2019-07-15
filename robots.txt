@@ -10,5 +10,7 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://albenw.github.io/sitemap.xml
-Sitemap: https://albenw.github.io/baidusitemap.xml
+Sitemap: https://laiczhang.github.io/sitemap.xml
+Sitemap: https://laiczhang.github.io/baidusitemap.xml
+Sitemap: https://laiczhang.coding.me/sitemap.xml
+Sitemap: https://laiczhang.coding.me/baidusitemap.xml
