@@ -14,3 +14,8 @@ Sitemap: https://laiczhang.github.io/sitemap.xml
 Sitemap: https://laiczhang.github.io/baidusitemap.xml
 Sitemap: https://laiczhang.coding.me/sitemap.xml
 Sitemap: https://laiczhang.coding.me/baidusitemap.xml
+
+Sitemap: https://coding.laiczhang.com/sitemap.xml
+Sitemap: https://coding.laiczhang.com/baidusitemap.xml
+Sitemap: https://github.laiczhang.com/sitemap.xml
+Sitemap: https://github.laiczhang.com/baidusitemap.xml
