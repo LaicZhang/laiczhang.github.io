@@ -1563,24 +1563,6 @@ pre .javascript .function {
   text-align: center;
   font-weight: 400;
 }
-.posts-expand .post-title .post-edit-link {
-  color: #bbb;
-  display: inline-block;
-  float: right;
-  border-bottom: none;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in;
-  transition-delay: 0s;
-  margin-left: -1.2em;
-}
-@media (max-width: 567px) {
-  .posts-expand .post-title .post-edit-link {
-    margin-left: initial;
-  }
-}
-.posts-expand .post-title .post-edit-link:hover {
-  color: #000;
-}
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
@@ -1976,7 +1958,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2aff;
+  background: #cc8b60;
 }
 .feed-link,
 .chat {
