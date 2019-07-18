@@ -5,9 +5,9 @@
   <subtitle>Do a good thing.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://laiczhang.github.io/"/>
+  <link href="https://github.laiczhang.com/"/>
   <updated>2019-07-18T15:24:48.908Z</updated>
-  <id>https://laiczhang.github.io/</id>
+  <id>https://github.laiczhang.com/</id>
   
   <author>
     <name>Laic Zhang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>谈谈关于信息不对称</title>
-    <link href="https://laiczhang.github.io/2019/07/18/%E8%B0%88%E8%B0%88%E5%85%B3%E4%BA%8E%E4%BF%A1%E6%81%AF%E4%B8%8D%E5%AF%B9%E7%A7%B0/"/>
-    <id>https://laiczhang.github.io/2019/07/18/谈谈关于信息不对称/</id>
+    <link href="https://github.laiczhang.com/2019/07/18/%E8%B0%88%E8%B0%88%E5%85%B3%E4%BA%8E%E4%BF%A1%E6%81%AF%E4%B8%8D%E5%AF%B9%E7%A7%B0/"/>
+    <id>https://github.laiczhang.com/2019/07/18/谈谈关于信息不对称/</id>
     <published>2019-07-18T15:18:36.000Z</published>
     <updated>2019-07-18T15:24:48.908Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="搬运" scheme="https://laiczhang.github.io/categories/%E6%90%AC%E8%BF%90/"/>
+      <category term="搬运" scheme="https://github.laiczhang.com/categories/%E6%90%AC%E8%BF%90/"/>
     
     
-      <category term="信息" scheme="https://laiczhang.github.io/tags/%E4%BF%A1%E6%81%AF/"/>
+      <category term="信息" scheme="https://github.laiczhang.com/tags/%E4%BF%A1%E6%81%AF/"/>
     
-      <category term="互联网" scheme="https://laiczhang.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+      <category term="互联网" scheme="https://github.laiczhang.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>【GitHub推荐】深度学习500问附完整下载</title>
-    <link href="https://laiczhang.github.io/2019/07/14/%E3%80%90GitHub%E6%8E%A8%E8%8D%90%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0500%E9%97%AE%E9%99%84%E5%AE%8C%E6%95%B4%E4%B8%8B%E8%BD%BD/"/>
-    <id>https://laiczhang.github.io/2019/07/14/【GitHub推荐】深度学习500问附完整下载/</id>
+    <link href="https://github.laiczhang.com/2019/07/14/%E3%80%90GitHub%E6%8E%A8%E8%8D%90%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0500%E9%97%AE%E9%99%84%E5%AE%8C%E6%95%B4%E4%B8%8B%E8%BD%BD/"/>
+    <id>https://github.laiczhang.com/2019/07/14/【GitHub推荐】深度学习500问附完整下载/</id>
     <published>2019-07-14T11:49:42.000Z</published>
     <updated>2019-07-14T13:15:23.990Z</updated>
     
@@ -58,19 +58,19 @@
     
     </summary>
     
-      <category term="GitHub项目" scheme="https://laiczhang.github.io/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
+      <category term="GitHub项目" scheme="https://github.laiczhang.com/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://github.laiczhang.com/tags/GitHub/"/>
     
-      <category term="深度学习" scheme="https://laiczhang.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="https://github.laiczhang.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>ApacheCN资源全整合-更新中</title>
-    <link href="https://laiczhang.github.io/2019/07/14/ApacheCN%E8%B5%84%E6%BA%90%E5%85%A8%E6%95%B4%E5%90%88-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    <id>https://laiczhang.github.io/2019/07/14/ApacheCN资源全整合-更新中/</id>
+    <link href="https://github.laiczhang.com/2019/07/14/ApacheCN%E8%B5%84%E6%BA%90%E5%85%A8%E6%95%B4%E5%90%88-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    <id>https://github.laiczhang.com/2019/07/14/ApacheCN资源全整合-更新中/</id>
     <published>2019-07-13T16:32:50.000Z</published>
     <updated>2019-07-14T11:41:03.520Z</updated>
     
@@ -89,19 +89,19 @@
     
     </summary>
     
-      <category term="GitHub项目" scheme="https://laiczhang.github.io/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
+      <category term="GitHub项目" scheme="https://github.laiczhang.com/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="ApacheCN" scheme="https://laiczhang.github.io/tags/ApacheCN/"/>
+      <category term="ApacheCN" scheme="https://github.laiczhang.com/tags/ApacheCN/"/>
     
-      <category term="资源分享" scheme="https://laiczhang.github.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
+      <category term="资源分享" scheme="https://github.laiczhang.com/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>2019最新百度网盘下载神器</title>
-    <link href="https://laiczhang.github.io/2019/07/13/2019%E6%9C%80%E6%96%B0%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/"/>
-    <id>https://laiczhang.github.io/2019/07/13/2019最新百度网盘下载神器/</id>
+    <link href="https://github.laiczhang.com/2019/07/13/2019%E6%9C%80%E6%96%B0%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8/"/>
+    <id>https://github.laiczhang.com/2019/07/13/2019最新百度网盘下载神器/</id>
     <published>2019-07-13T15:12:52.000Z</published>
     <updated>2019-07-13T16:22:28.597Z</updated>
     
@@ -116,23 +116,23 @@
     
     </summary>
     
-      <category term="GitHub项目" scheme="https://laiczhang.github.io/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
+      <category term="GitHub项目" scheme="https://github.laiczhang.com/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="百度网盘" scheme="https://laiczhang.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/"/>
+      <category term="百度网盘" scheme="https://github.laiczhang.com/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/"/>
     
-      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://github.laiczhang.com/tags/GitHub/"/>
     
-      <category term="golang" scheme="https://laiczhang.github.io/tags/golang/"/>
+      <category term="golang" scheme="https://github.laiczhang.com/tags/golang/"/>
     
-      <category term="Qt5" scheme="https://laiczhang.github.io/tags/Qt5/"/>
+      <category term="Qt5" scheme="https://github.laiczhang.com/tags/Qt5/"/>
     
   </entry>
   
   <entry>
     <title>油猴脚本安装教程</title>
-    <link href="https://laiczhang.github.io/2019/07/13/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>https://laiczhang.github.io/2019/07/13/油猴脚本安装教程/</id>
+    <link href="https://github.laiczhang.com/2019/07/13/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>https://github.laiczhang.com/2019/07/13/油猴脚本安装教程/</id>
     <published>2019-07-13T07:22:59.000Z</published>
     <updated>2019-07-13T07:30:55.427Z</updated>
     
@@ -144,19 +144,19 @@
     
     </summary>
     
-      <category term="Google" scheme="https://laiczhang.github.io/categories/Google/"/>
+      <category term="Google" scheme="https://github.laiczhang.com/categories/Google/"/>
     
     
-      <category term="Google" scheme="https://laiczhang.github.io/tags/Google/"/>
+      <category term="Google" scheme="https://github.laiczhang.com/tags/Google/"/>
     
-      <category term="Tampermonkey" scheme="https://laiczhang.github.io/tags/Tampermonkey/"/>
+      <category term="Tampermonkey" scheme="https://github.laiczhang.com/tags/Tampermonkey/"/>
     
   </entry>
   
   <entry>
     <title>bilibili学习视频资源整理-更新中</title>
-    <link href="https://laiczhang.github.io/2019/07/11/bilibili%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    <id>https://laiczhang.github.io/2019/07/11/bilibili学习视频资源整理-更新中/</id>
+    <link href="https://github.laiczhang.com/2019/07/11/bilibili%E5%AD%A6%E4%B9%A0%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    <id>https://github.laiczhang.com/2019/07/11/bilibili学习视频资源整理-更新中/</id>
     <published>2019-07-11T15:08:49.000Z</published>
     <updated>2019-07-11T15:11:20.718Z</updated>
     
@@ -171,21 +171,21 @@
     
     </summary>
     
-      <category term="bilibili" scheme="https://laiczhang.github.io/categories/bilibili/"/>
+      <category term="bilibili" scheme="https://github.laiczhang.com/categories/bilibili/"/>
     
     
-      <category term="bilibili" scheme="https://laiczhang.github.io/tags/bilibili/"/>
+      <category term="bilibili" scheme="https://github.laiczhang.com/tags/bilibili/"/>
     
   </entry>
   
   <entry>
     <title>Markdown常用语法笔记</title>
-    <link href="https://laiczhang.github.io/2019/07/11/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
-    <id>https://laiczhang.github.io/2019/07/11/Markdown常用语法笔记/</id>
+    <link href="https://github.laiczhang.com/2019/07/11/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <id>https://github.laiczhang.com/2019/07/11/Markdown常用语法笔记/</id>
     <published>2019-07-11T09:32:44.000Z</published>
     <updated>2019-07-11T09:36:37.620Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</strong></p><p><strong>Markdown编辑器有很多种，我使用的是 Typora</strong></p><p><strong>以下是Markdown的基本语法～（</strong>将下面的语法复制粘贴到Markdown编辑器里面即看见效果）</p><a id="more"></a><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*斜体*</span></span><br><span class="line"><span class="emphasis">_斜体第二种方法_</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="strong">*加粗*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">__加粗的第二种方法__</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___粗斜体___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">两个enter是换行，或者用&lt;/br&gt;标签表示换行</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">用一行的=或者-表示一级标题和二级标题。如：</span></span><br><span class="line"><span class="strong">一级标题</span></span><br><span class="line"><span class="strong">=======</span></span><br><span class="line"><span class="strong">二级标题</span></span><br><span class="line"><span class="strong">--------</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">也可以在前面加上一到六个#表示标题的1级到6级。如：</span></span><br><span class="line"><span class="strong">#一级标题</span></span><br><span class="line"><span class="strong">##二级标题</span></span><br><span class="line"><span class="strong">###三级标题</span></span><br><span class="line"><span class="strong">####四级标题</span></span><br><span class="line"><span class="strong">#####五级标题</span></span><br><span class="line"><span class="strong">######六级标题</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">无序列表：在前面加上 *</span> 或者 + 或者 - 然后加个空格：</span><br><span class="line"><span class="bullet">* </span>ABC</span><br><span class="line"><span class="bullet">* </span>DEF</span><br><span class="line"><span class="bullet">* </span>GHI</span><br><span class="line"></span><br><span class="line">+ JKL</span><br><span class="line">+ MNO</span><br><span class="line">+ PQR</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>STU</span><br><span class="line"><span class="bullet">- </span>VWX</span><br><span class="line"><span class="bullet">- </span>YZZ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表：数字<span class="code">+英文句点+</span>空格。如下：</span><br><span class="line">1. 呵呵</span><br><span class="line">2. 哈哈</span><br><span class="line">3. 嘿嘿</span><br><span class="line">4. 哼哼</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;lt;   // 会显示为”&lt;“</span><br><span class="line">&amp;amp;  // 会显示为”&amp;“：在 href 属性里面，必须将 &amp; 转变为 &amp;amp;</span><br><span class="line">\.     // 为了防止产生"1."变为有序列表，则可以写成"1\."</span><br><span class="line"><span class="code"> * _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：</span><br><span class="line">&gt;&gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。</span><br><span class="line">&gt;&gt;&gt;这是一个三级引言。格式会显示为字体更小了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​<span class="code">```</span>C++</span><br><span class="line">代码块语法高亮</span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>建立分割线的方法有：</p><hr><hr><hr><hr><p>超级链接：<a href="超级链接的网址，可以是绝对路径、相对路径">超级链接显示的文字</a><br>也支持HTML格式的超级链接<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></p><p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：Use the</code>printf()` function.</p><p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p><p>Email邮件：<br><a href="mailto:&#x31;&#50;&#x33;&#52;&#53;&#x36;&#55;&#56;&#57;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x31;&#50;&#x33;&#52;&#53;&#x36;&#55;&#56;&#57;&#x40;&#113;&#x71;&#46;&#99;&#x6f;&#x6d;</a></p><p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p><pre><code></code></pre>]]></content>
+    <content type="html"><![CDATA[<p><strong>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</strong></p><p><strong>Markdown编辑器有很多种，我使用的是 Typora</strong></p><p><strong>以下是Markdown的基本语法～（</strong>将下面的语法复制粘贴到Markdown编辑器里面即看见效果）</p><a id="more"></a><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*斜体*</span></span><br><span class="line"><span class="emphasis">_斜体第二种方法_</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="strong">*加粗*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">__加粗的第二种方法__</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___粗斜体___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">两个enter是换行，或者用&lt;/br&gt;标签表示换行</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">用一行的=或者-表示一级标题和二级标题。如：</span></span><br><span class="line"><span class="strong">一级标题</span></span><br><span class="line"><span class="strong">=======</span></span><br><span class="line"><span class="strong">二级标题</span></span><br><span class="line"><span class="strong">--------</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">也可以在前面加上一到六个#表示标题的1级到6级。如：</span></span><br><span class="line"><span class="strong">#一级标题</span></span><br><span class="line"><span class="strong">##二级标题</span></span><br><span class="line"><span class="strong">###三级标题</span></span><br><span class="line"><span class="strong">####四级标题</span></span><br><span class="line"><span class="strong">#####五级标题</span></span><br><span class="line"><span class="strong">######六级标题</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">无序列表：在前面加上 *</span> 或者 + 或者 - 然后加个空格：</span><br><span class="line"><span class="bullet">* </span>ABC</span><br><span class="line"><span class="bullet">* </span>DEF</span><br><span class="line"><span class="bullet">* </span>GHI</span><br><span class="line"></span><br><span class="line">+ JKL</span><br><span class="line">+ MNO</span><br><span class="line">+ PQR</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>STU</span><br><span class="line"><span class="bullet">- </span>VWX</span><br><span class="line"><span class="bullet">- </span>YZZ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表：数字<span class="code">+英文句点+</span>空格。如下：</span><br><span class="line">1. 呵呵</span><br><span class="line">2. 哈哈</span><br><span class="line">3. 嘿嘿</span><br><span class="line">4. 哼哼</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;lt;   // 会显示为”&lt;“</span><br><span class="line">&amp;amp;  // 会显示为”&amp;“：在 href 属性里面，必须将 &amp; 转变为 &amp;amp;</span><br><span class="line">\.     // 为了防止产生"1."变为有序列表，则可以写成"1\."</span><br><span class="line"><span class="code"> * _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：</span><br><span class="line">&gt;&gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。</span><br><span class="line">&gt;&gt;&gt;这是一个三级引言。格式会显示为字体更小了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​<span class="code">```</span>C++</span><br><span class="line">代码块语法高亮</span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>建立分割线的方法有：</p><hr><hr><hr><hr><p>超级链接：<a href="超级链接的网址，可以是绝对路径、相对路径">超级链接显示的文字</a><br>也支持HTML格式的超级链接<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></p><p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：Use the</code>printf()` function.</p><p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p><p>Email邮件：<br><a href="mailto:&#49;&#x32;&#51;&#52;&#x35;&#54;&#55;&#56;&#x39;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#49;&#x32;&#51;&#52;&#x35;&#54;&#55;&#56;&#x39;&#64;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a></p><p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p><pre><code></code></pre>]]></content>
     
     <summary type="html">
     
@@ -195,19 +195,19 @@
     
     </summary>
     
-      <category term="Markdown" scheme="https://laiczhang.github.io/categories/Markdown/"/>
+      <category term="Markdown" scheme="https://github.laiczhang.com/categories/Markdown/"/>
     
     
-      <category term="Markdown" scheme="https://laiczhang.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="https://github.laiczhang.com/tags/Markdown/"/>
     
-      <category term="笔记" scheme="https://laiczhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://github.laiczhang.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>GitHub提速教程</title>
-    <link href="https://laiczhang.github.io/2019/07/09/GitHub%E6%8F%90%E9%80%9F%E6%95%99%E7%A8%8B/"/>
-    <id>https://laiczhang.github.io/2019/07/09/GitHub提速教程/</id>
+    <link href="https://github.laiczhang.com/2019/07/09/GitHub%E6%8F%90%E9%80%9F%E6%95%99%E7%A8%8B/"/>
+    <id>https://github.laiczhang.com/2019/07/09/GitHub提速教程/</id>
     <published>2019-07-09T15:21:39.000Z</published>
     <updated>2019-07-10T15:56:40.668Z</updated>
     
@@ -225,19 +225,19 @@
     
     </summary>
     
-      <category term="GitHub" scheme="https://laiczhang.github.io/categories/GitHub/"/>
+      <category term="GitHub" scheme="https://github.laiczhang.com/categories/GitHub/"/>
     
     
-      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://github.laiczhang.com/tags/GitHub/"/>
     
-      <category term="hosts" scheme="https://laiczhang.github.io/tags/hosts/"/>
+      <category term="hosts" scheme="https://github.laiczhang.com/tags/hosts/"/>
     
   </entry>
   
   <entry>
     <title>panda数计资料整理-更新中</title>
-    <link href="https://laiczhang.github.io/2019/07/07/panda%E6%95%B0%E8%AE%A1%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    <id>https://laiczhang.github.io/2019/07/07/panda数计资料整理-更新中/</id>
+    <link href="https://github.laiczhang.com/2019/07/07/panda%E6%95%B0%E8%AE%A1%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    <id>https://github.laiczhang.com/2019/07/07/panda数计资料整理-更新中/</id>
     <published>2019-07-06T16:13:55.000Z</published>
     <updated>2019-07-06T16:57:04.859Z</updated>
     
@@ -252,21 +252,21 @@
     
     </summary>
     
-      <category term="panda" scheme="https://laiczhang.github.io/categories/panda/"/>
+      <category term="panda" scheme="https://github.laiczhang.com/categories/panda/"/>
     
     
-      <category term="攀枝花学院" scheme="https://laiczhang.github.io/tags/%E6%94%80%E6%9E%9D%E8%8A%B1%E5%AD%A6%E9%99%A2/"/>
+      <category term="攀枝花学院" scheme="https://github.laiczhang.com/tags/%E6%94%80%E6%9E%9D%E8%8A%B1%E5%AD%A6%E9%99%A2/"/>
     
-      <category term="期末考试" scheme="https://laiczhang.github.io/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/"/>
+      <category term="期末考试" scheme="https://github.laiczhang.com/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/"/>
     
-      <category term="课程攻略共享" scheme="https://laiczhang.github.io/tags/%E8%AF%BE%E7%A8%8B%E6%94%BB%E7%95%A5%E5%85%B1%E4%BA%AB/"/>
+      <category term="课程攻略共享" scheme="https://github.laiczhang.com/tags/%E8%AF%BE%E7%A8%8B%E6%94%BB%E7%95%A5%E5%85%B1%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>开源经典技术书籍整理-更新中</title>
-    <link href="https://laiczhang.github.io/2019/07/07/%E5%BC%80%E6%BA%90%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    <id>https://laiczhang.github.io/2019/07/07/开源经典技术书籍整理-更新中/</id>
+    <link href="https://github.laiczhang.com/2019/07/07/%E5%BC%80%E6%BA%90%E7%BB%8F%E5%85%B8%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D%E6%95%B4%E7%90%86-%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    <id>https://github.laiczhang.com/2019/07/07/开源经典技术书籍整理-更新中/</id>
     <published>2019-07-06T16:04:59.000Z</published>
     <updated>2019-07-06T16:12:51.872Z</updated>
     
@@ -281,27 +281,27 @@
     
     </summary>
     
-      <category term="GitHub项目" scheme="https://laiczhang.github.io/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
+      <category term="GitHub项目" scheme="https://github.laiczhang.com/categories/GitHub%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="GitHub" scheme="https://laiczhang.github.io/tags/GitHub/"/>
+      <category term="GitHub" scheme="https://github.laiczhang.com/tags/GitHub/"/>
     
-      <category term="人工智能" scheme="https://laiczhang.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+      <category term="人工智能" scheme="https://github.laiczhang.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
-      <category term="编程语言" scheme="https://laiczhang.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+      <category term="编程语言" scheme="https://github.laiczhang.com/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-      <category term="机器学习" scheme="https://laiczhang.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://github.laiczhang.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="python" scheme="https://laiczhang.github.io/tags/python/"/>
+      <category term="python" scheme="https://github.laiczhang.com/tags/python/"/>
     
-      <category term="editor" scheme="https://laiczhang.github.io/tags/editor/"/>
+      <category term="editor" scheme="https://github.laiczhang.com/tags/editor/"/>
     
   </entry>
   
   <entry>
     <title>我的hexo站点config.yml文件配置</title>
-    <link href="https://laiczhang.github.io/2019/07/06/%E6%88%91%E7%9A%84hexo%E7%AB%99%E7%82%B9config-yml%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/"/>
-    <id>https://laiczhang.github.io/2019/07/06/我的hexo站点config-yml文件配置/</id>
+    <link href="https://github.laiczhang.com/2019/07/06/%E6%88%91%E7%9A%84hexo%E7%AB%99%E7%82%B9config-yml%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/"/>
+    <id>https://github.laiczhang.com/2019/07/06/我的hexo站点config-yml文件配置/</id>
     <published>2019-07-06T06:08:27.000Z</published>
     <updated>2019-07-09T15:42:55.147Z</updated>
     
@@ -314,21 +314,21 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
     
-      <category term="next" scheme="https://laiczhang.github.io/tags/next/"/>
+      <category term="next" scheme="https://github.laiczhang.com/tags/next/"/>
     
-      <category term="config" scheme="https://laiczhang.github.io/tags/config/"/>
+      <category term="config" scheme="https://github.laiczhang.com/tags/config/"/>
     
   </entry>
   
   <entry>
     <title>hexo博客之主题优化</title>
-    <link href="https://laiczhang.github.io/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
-    <id>https://laiczhang.github.io/2019/07/05/hexo博客之主题优化/</id>
+    <link href="https://github.laiczhang.com/2019/07/05/hexo%E5%8D%9A%E5%AE%A2%E4%B9%8B%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/"/>
+    <id>https://github.laiczhang.com/2019/07/05/hexo博客之主题优化/</id>
     <published>2019-07-05T07:08:56.000Z</published>
     <updated>2019-07-05T11:44:30.884Z</updated>
     
@@ -343,21 +343,21 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
     
-      <category term="next" scheme="https://laiczhang.github.io/tags/next/"/>
+      <category term="next" scheme="https://github.laiczhang.com/tags/next/"/>
     
-      <category term="theme" scheme="https://laiczhang.github.io/tags/theme/"/>
+      <category term="theme" scheme="https://github.laiczhang.com/tags/theme/"/>
     
   </entry>
   
   <entry>
     <title>hexo+github搭建个人博客</title>
-    <link href="https://laiczhang.github.io/2019/07/05/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://laiczhang.github.io/2019/07/05/hexo-github搭建个人博客/</id>
+    <link href="https://github.laiczhang.com/2019/07/05/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://github.laiczhang.com/2019/07/05/hexo-github搭建个人博客/</id>
     <published>2019-07-05T06:26:57.000Z</published>
     <updated>2019-07-06T05:00:00.000Z</updated>
     
@@ -372,25 +372,25 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
     
-      <category term="github" scheme="https://laiczhang.github.io/tags/github/"/>
+      <category term="github" scheme="https://github.laiczhang.com/tags/github/"/>
     
-      <category term="blog" scheme="https://laiczhang.github.io/tags/blog/"/>
+      <category term="blog" scheme="https://github.laiczhang.com/tags/blog/"/>
     
-      <category term="coding" scheme="https://laiczhang.github.io/tags/coding/"/>
+      <category term="coding" scheme="https://github.laiczhang.com/tags/coding/"/>
     
-      <category term="域名" scheme="https://laiczhang.github.io/tags/%E5%9F%9F%E5%90%8D/"/>
+      <category term="域名" scheme="https://github.laiczhang.com/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://laiczhang.github.io/2019/07/04/hello-world/"/>
-    <id>https://laiczhang.github.io/2019/07/04/hello-world/</id>
+    <link href="https://github.laiczhang.com/2019/07/04/hello-world/"/>
+    <id>https://github.laiczhang.com/2019/07/04/hello-world/</id>
     <published>2019-07-04T13:45:13.683Z</published>
     <updated>2019-07-05T05:44:00.671Z</updated>
     
@@ -405,12 +405,12 @@
     
     </summary>
     
-      <category term="test" scheme="https://laiczhang.github.io/categories/test/"/>
+      <category term="test" scheme="https://github.laiczhang.com/categories/test/"/>
     
     
-      <category term="hello" scheme="https://laiczhang.github.io/tags/hello/"/>
+      <category term="hello" scheme="https://github.laiczhang.com/tags/hello/"/>
     
-      <category term="hexo" scheme="https://laiczhang.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
     
   </entry>
   
