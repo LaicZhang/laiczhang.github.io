@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-10-25T09:06:58.930Z</updated>
+  <updated>2019-10-25T09:11:18.480Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://github.laiczhang.com/2019-10-25/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/"/>
     <id>https://github.laiczhang.com/2019-10-25/为博客添加下载功能/</id>
     <published>2019-10-25T09:02:50.000Z</published>
-    <updated>2019-10-25T09:06:58.930Z</updated>
+    <updated>2019-10-25T09:11:18.480Z</updated>
     
-    <content type="html"><![CDATA[<div id="vip-container"><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者<code>wget</code>方式直接下载。 </p><a id="more"></a><h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>在<code>source</code>目录下，新建<code>download</code>目录，和<code>_posts``About``tags``categories</code>等目录并列。</p><p>然后，将你需要分享的文件或者需要展示的图片之类，统一放到该<code>download</code>下；</p><p>在写文章时，通过诸如<code>[点击下载](/download/xx.exe)</code>这样的链接，直接写入。</p><p>引用图片，采用<code>![pic](/download/test.jpg)</code>这样。</p><p>其他，照旧。</p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><img src="/download/test.jpg" alt="pic"></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    <content type="html"><![CDATA[<div id="vip-container"><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者<code>wget</code>方式直接下载。 </p><a id="more"></a><h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>在<code>source</code>目录下，新建<code>download</code>目录，和<code>_posts``About``tags``categories</code>等目录并列。</p><p>然后，将你需要分享的文件或者需要展示的图片之类，统一放到该<code>download</code>下；</p><p>在写文章时，通过诸如<code>[点击下载](/download/xx.exe)</code>这样的链接，直接写入。</p><p>引用图片，采用<code>![pic](/download/test.jpg)</code>这样。</p><p>其他，照旧。</p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><a href="/download/test.jpg">点击下载</a></p><p><img src="/download/test.jpg" alt="pic"></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
     
     <summary type="html">
     
@@ -196,9 +196,9 @@
       <category term="社团" scheme="https://github.laiczhang.com/categories/%E7%A4%BE%E5%9B%A2/"/>
     
     
-      <category term="资源" scheme="https://github.laiczhang.com/tags/%E8%B5%84%E6%BA%90/"/>
-    
       <category term="社团" scheme="https://github.laiczhang.com/tags/%E7%A4%BE%E5%9B%A2/"/>
+    
+      <category term="资源" scheme="https://github.laiczhang.com/tags/%E8%B5%84%E6%BA%90/"/>
     
       <category term="成长" scheme="https://github.laiczhang.com/tags/%E6%88%90%E9%95%BF/"/>
     
