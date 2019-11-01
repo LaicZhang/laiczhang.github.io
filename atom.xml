@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-10-29T16:41:37.368Z</updated>
+  <updated>2019-11-01T15:57:49.921Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>业务架构和业务逻辑</title>
+    <link href="https://github.laiczhang.com/2019-11-01/%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84%E5%92%8C%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91/"/>
+    <id>https://github.laiczhang.com/2019-11-01/业务架构和业务逻辑/</id>
+    <published>2019-11-01T15:56:03.000Z</published>
+    <updated>2019-11-01T15:57:49.921Z</updated>
+    
+    <content type="html"><![CDATA[<div id="vip-container"><p>“大飞哥，现在很多直播课堂蛊惑小白去学习互联网架构？真正工作后才发现 很多的公司为了成本考虑根本用不上那些技术 一线大厂往往对学历 公司和背景要求比较高 也进不去…所以对于社招来说 如何锻炼好自己的业务还有学习新技术的能力至关重要。 那么问题来了 我现在就是属于那种拿到需求脑子里经常没有思路 业务这块比较欠缺的情况，如何的弥补 在面试过程中面试官也提到了这一点 ，这种东西搜索引擎也没法给出合理的方案！“</p><a id="more"></a><p>我觉得业务可以从宏观和微观两个角度来看。</p><p>宏观的角度看，是业务架构。什么是业务架构呢？</p><p>如果你留心观察市面上的各种产品，各种APP。你会发现，大家在功能上都会有很多的相同点。</p><p>比如，每个APP，几乎都会有这些功能：注册，登录，用户头像，昵称；用户资料管理。</p><p>有些APP会有消息聊天；有的APP会有论坛功能；有的APP会有内容推送；有的APP会有商城，会有支付。</p><p>总的来说，你可以认为To C 产品的业务逻辑是有限的( To B的业务丰富性会更高，但也是有限的)，虽然具体的业务逻辑不同，但设计的关键点，其实是相同的。</p><p>比如说登录。一个产品的登录模块，一般会涉及：就近接入，IP重定向，加密设计，密码验证等。</p><p>比如说消息逻辑。消息逻辑的关键点一般是：消息的唯一性和顺序性。</p><p>类似论坛，内容推送，商城，支付，都一样，每个具体的业务都有其关键点，而且这些关键点几乎都有业内最佳实践，也有很高的经验可复用性。(代码不一定可以复用，但设计思路几乎都是相同的)。</p><p>以上的这些，就是我所说的业务架构。</p><p>这类的架构不像基础架构那么规整，也没有那么多规范，更多是经验实践的一种积累，但经过一段时间的演变后，大家的做法就大同小异了。</p><p>这类架构是可以学习的，你现在去网上搜索 “登陆系统设计”，“消息系统设计”，是可以找到不少的资料的。认真地看几篇，然后结合自己的思考，你会开始对这类业务架构有初步的认识。积累一段时间后，就可以解决掉你说的毫无头绪的问题，至少在遇到类似的业务的时候，你知道应该往那个方向去想了。</p><p>从微观的角度看，是业务逻辑。</p><p>在业务逻辑的设计上出现卡壳，我觉得大部分是因为对业务不熟悉导致的。是的，自家的业务，也是需要花费不少的时间去熟悉和深入理解的。</p><p>如果不理解它们，你做起设计的时候，就会出现心里没底或完全没有思路的情况。以下有些建议：</p><ol><li><p>体验产品！你公司的产品，或许是一个企业级的管理系统，或许是一个 C 端用户的产品。无论具体是什么，在有条件的情况下，自己最好能够先完整体验一遍。让自己有个全局的认识，而不是只见树木，不见森林。</p></li><li><p>平日里遇到问题要多思考，不要只是做完一个需求，就完了。这种思考，也是一种能力。就像我们做算法题，一开始做的时候，一脸懵逼，但做多了，思路自然就顺畅了。</p></li><li><p>除了自家的产品，平时也可以多体验其它公司的产品。你可以刷抖音，但不要只关注小姐姐。你可以思考它的产品设计，思考它的一些逻辑是怎么实现的。虽然不容易，但慢慢可以形成一种思维习惯。</p></li></ol><p>总的来说，业务逻辑并不像大家想象的那么容易，也不像大家想象的那么没有技术含量。大家缺乏的是对业务的正确认识和正确对待的方式。希望以上的分享，能给大家带来点启发！</p><p>本文来自【大飞码字的朋友们】，欢迎加入。</p><p><img src="/images/ZSXQ_%E5%A4%A7%E9%A3%9E%E7%A0%81%E5%AD%97.png" alt></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“大飞哥，现在很多直播课堂蛊惑小白去学习互联网架构？真正工作后才发现 很多的公司为了成本考虑根本用不上那些技术 一线大厂往往对学历 公司和背景要求比较高 也进不去…所以对于社招来说 如何锻炼好自己的业务还有学习新技术的能力至关重要。 那么问题来了 我现在就是属于那种拿到需求脑子里经常没有思路 业务这块比较欠缺的情况，如何的弥补 在面试过程中面试官也提到了这一点 ，这种东西搜索引擎也没法给出合理的方案！“&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="知识星球" scheme="https://github.laiczhang.com/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
+    
+    
+      <category term="业务" scheme="https://github.laiczhang.com/tags/%E4%B8%9A%E5%8A%A1/"/>
+    
+      <category term="架构" scheme="https://github.laiczhang.com/tags/%E6%9E%B6%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>我的11月待做清单</title>
@@ -81,9 +105,9 @@
       <category term="知识星球" scheme="https://github.laiczhang.com/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
     
     
-      <category term="技术" scheme="https://github.laiczhang.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="思考" scheme="https://github.laiczhang.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+      <category term="技术" scheme="https://github.laiczhang.com/tags/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="层次" scheme="https://github.laiczhang.com/tags/%E5%B1%82%E6%AC%A1/"/>
     
@@ -461,26 +485,6 @@
     <summary type="html">
     
       &lt;p&gt;续&lt;a href=&quot;https://coding.laiczhang.com/2019-10-06/CSDN%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%83%A8%E5%88%86%E8%B5%84%E6%BA%90-3/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CSDN下载的部分资源-3&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="福利" scheme="https://github.laiczhang.com/categories/%E7%A6%8F%E5%88%A9/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSDN下载的部分资源-3</title>
-    <link href="https://github.laiczhang.com/2019-10-06/CSDN%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%83%A8%E5%88%86%E8%B5%84%E6%BA%90-3/"/>
-    <id>https://github.laiczhang.com/2019-10-06/CSDN下载的部分资源-3/</id>
-    <published>2019-10-06T13:05:46.606Z</published>
-    <updated>2019-10-06T13:29:19.039Z</updated>
-    
-    <content type="html"><![CDATA[<div id="vip-container"><p>续上一篇<a href="https://coding.laiczhang.com/2019-09-27/CSDN%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%83%A8%E5%88%86%E8%B5%84%E6%BA%90-2/" target="_blank" rel="noopener">CSDN下载的部分资源-2</a></p><a id="more"></a><ul><li><h3 id="C-串口通讯DEMO"><a href="#C-串口通讯DEMO" class="headerlink" title="C#串口通讯DEMO"></a>C#串口通讯DEMO</h3></li></ul><p><a href="https://download.csdn.net/download/qq593178312/11367656" target="_blank" rel="noopener">https://download.csdn.net/download/qq593178312/11367656</a> </p><p>链接: <a href="https://pan.baidu.com/s/1ArWHg5tiAU5KARRWu6CxKg" target="_blank" rel="noopener">https://pan.baidu.com/s/1ArWHg5tiAU5KARRWu6CxKg</a> 提取码: 5r28 </p><ul><li><h3 id="Mysql、Python、Django、Flask面试笔记大全"><a href="#Mysql、Python、Django、Flask面试笔记大全" class="headerlink" title="Mysql、Python、Django、Flask面试笔记大全"></a>Mysql、Python、Django、Flask面试笔记大全</h3></li></ul><p><a href="https://download.csdn.net/download/weixin_43692357/11263549" target="_blank" rel="noopener">https://download.csdn.net/download/weixin_43692357/11263549</a> </p><p><a href="https://www.lanzous.com/i6lsp0f" target="_blank" rel="noopener">https://www.lanzous.com/i6lsp0f</a> </p><ul><li><h3 id="数据库-银行信贷管理系统"><a href="#数据库-银行信贷管理系统" class="headerlink" title="数据库-银行信贷管理系统"></a>数据库-银行信贷管理系统</h3></li></ul><p><a href="https://download.csdn.net/download/one_super_dreamer/9728342" target="_blank" rel="noopener">https://download.csdn.net/download/one_super_dreamer/9728342</a> </p><p>下载:<a href="https://www.lanzous.com/i6lrewf" target="_blank" rel="noopener">https://www.lanzous.com/i6lrewf</a> 密码:etyr </p><ul><li><h3 id="免费开源的小额贷款管理软件"><a href="#免费开源的小额贷款管理软件" class="headerlink" title="免费开源的小额贷款管理软件"></a>免费开源的小额贷款管理软件</h3></li></ul><p><a href="https://download.csdn.net/download/zhou2132099/9831963" target="_blank" rel="noopener">https://download.csdn.net/download/zhou2132099/9831963</a> </p><p>下载:<a href="https://www.lanzous.com/i6lrewf" target="_blank" rel="noopener">https://www.lanzous.com/i6lrewf</a> 密码:etyr </p><ul><li><h3 id="Microsoft-Visual-Basic-for-Applications7-1-x64"><a href="#Microsoft-Visual-Basic-for-Applications7-1-x64" class="headerlink" title="Microsoft Visual Basic for Applications7.1(x64)"></a>Microsoft Visual Basic for Applications7.1(x64)</h3></li></ul><p><a href="https://download.csdn.net/download/gechaoqingde/10422387" target="_blank" rel="noopener">https://download.csdn.net/download/gechaoqingde/10422387</a> </p><p>下载:<a href="https://www.lanzous.com/i6lradc" target="_blank" rel="noopener">https://www.lanzous.com/i6lradc</a> 密码:1q22 </p><ul><li><h3 id="C-Primer-中文版-第5版-azw3格式-kindle"><a href="#C-Primer-中文版-第5版-azw3格式-kindle" class="headerlink" title="C++ Primer 中文版 第5版 azw3格式 kindle"></a>C++ Primer 中文版 第5版 azw3格式 kindle</h3></li></ul><p><a href="https://download.csdn.net/download/weixin_43497347/10989765" target="_blank" rel="noopener">https://download.csdn.net/download/weixin_43497347/10989765</a> </p><p>链接: <a href="https://pan.baidu.com/s/1pt-laT081OwamFnpfBDYkw" target="_blank" rel="noopener">https://pan.baidu.com/s/1pt-laT081OwamFnpfBDYkw</a> 提取码: pzwc </p><ul><li><h3 id="CAD快速看图-VIP功能-破解版【稳定永久可用】（最新版）-7z"><a href="#CAD快速看图-VIP功能-破解版【稳定永久可用】（最新版）-7z" class="headerlink" title="CAD快速看图 VIP功能 破解版【稳定永久可用】（最新版）.7z"></a>CAD快速看图 VIP功能 破解版【稳定永久可用】（最新版）.7z</h3></li></ul><p><a href="https://download.csdn.net/download/cjy12356/11774540" target="_blank" rel="noopener">https://download.csdn.net/download/cjy12356/11774540</a> </p><p><a href="https://c-t.work/s/07752baafead49" target="_blank" rel="noopener">https://c-t.work/s/07752baafead49</a>  如需提取码：yyk8hd </p><ul><li><h3 id="日历控件12"><a href="#日历控件12" class="headerlink" title="日历控件12"></a>日历控件12</h3></li></ul><p><a href="https://download.csdn.net/download/u010859230/9617201" target="_blank" rel="noopener">https://download.csdn.net/download/u010859230/9617201</a> </p><p>链接：<a href="https://pan.baidu.com/s/1kOS81Sbq0dR_-llOkVR7iw" target="_blank" rel="noopener">https://pan.baidu.com/s/1kOS81Sbq0dR_-llOkVR7iw</a> 提取码：qxqu </p><ul><li><h3 id="用PPT来做2019苹果发布会演示文稿"><a href="#用PPT来做2019苹果发布会演示文稿" class="headerlink" title="用PPT来做2019苹果发布会演示文稿"></a>用PPT来做2019苹果发布会演示文稿</h3></li></ul><p><a href="https://download.csdn.net/download/zytjasper/11069995" target="_blank" rel="noopener">https://download.csdn.net/download/zytjasper/11069995</a> </p><p>链接：<a href="https://pan.baidu.com/s/1TJOsNA0rpkLHUq3pr9MjAg" target="_blank" rel="noopener">https://pan.baidu.com/s/1TJOsNA0rpkLHUq3pr9MjAg</a> 提取码：gms3 </p><ul><li><h3 id="蓝牙协议详解（很适合初学者）"><a href="#蓝牙协议详解（很适合初学者）" class="headerlink" title="蓝牙协议详解（很适合初学者）"></a>蓝牙协议详解（很适合初学者）</h3></li></ul><p><a href="https://download.csdn.net/download/woshifeizhu11/8500197" target="_blank" rel="noopener">https://download.csdn.net/download/woshifeizhu11/8500197</a> </p><p>链接: <a href="https://pan.baidu.com/s/1quTqcgdPD0_xsKR5BfHu9g" target="_blank" rel="noopener">https://pan.baidu.com/s/1quTqcgdPD0_xsKR5BfHu9g</a> 提取码: 6a81 </p><ul><li><h3 id="梯控分析客户端解压密码012345-rar"><a href="#梯控分析客户端解压密码012345-rar" class="headerlink" title="梯控分析客户端解压密码012345.rar"></a>梯控分析客户端解压密码012345.rar</h3></li></ul><p><a href="https://download.csdn.net/download/lb820123/11216579" target="_blank" rel="noopener">https://download.csdn.net/download/lb820123/11216579</a> </p><p>链接：<a href="https://pan.baidu.com/s/1AJto_F8cscnb4-BUGXf-BQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1AJto_F8cscnb4-BUGXf-BQ</a> 提取码：2ik8 </p><ul><li><h3 id="win10专业版-winsock和winsock2注册表"><a href="#win10专业版-winsock和winsock2注册表" class="headerlink" title="win10专业版 winsock和winsock2注册表"></a>win10专业版 winsock和winsock2注册表</h3></li></ul><p><a href="https://download.csdn.net/download/sevenyouxu/11088610" target="_blank" rel="noopener">https://download.csdn.net/download/sevenyouxu/11088610</a> </p><p>链接: <a href="https://pan.baidu.com/s/16sAVqwaiQiwVA1vl8y3A9A" target="_blank" rel="noopener">https://pan.baidu.com/s/16sAVqwaiQiwVA1vl8y3A9A</a> 提取码: vhft </p><ul><li><h3 id="2019漫画小说分销源码，亲测可用有教程"><a href="#2019漫画小说分销源码，亲测可用有教程" class="headerlink" title="2019漫画小说分销源码，亲测可用有教程"></a>2019漫画小说分销源码，亲测可用有教程</h3></li></ul><p><a href="https://download.csdn.net/download/bazinga0601/10972675" target="_blank" rel="noopener">https://download.csdn.net/download/bazinga0601/10972675</a> </p><p>链接：<a href="https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw</a> 提取码：hftg </p><ul><li><h3 id="小说漫画分销源码"><a href="#小说漫画分销源码" class="headerlink" title="小说漫画分销源码"></a>小说漫画分销源码</h3></li></ul><p><a href="https://download.csdn.net/download/forrestxue/11142448" target="_blank" rel="noopener">https://download.csdn.net/download/forrestxue/11142448</a> </p><p>链接：<a href="https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw</a> 提取码：hftg </p><ul><li><h3 id="仿www-toomics-xyz韩国漫画站源码"><a href="#仿www-toomics-xyz韩国漫画站源码" class="headerlink" title="仿www.toomics.xyz韩国漫画站源码"></a>仿<a href="http://www.toomics.xyz韩国漫画站源码" target="_blank" rel="noopener">www.toomics.xyz韩国漫画站源码</a></h3></li></ul><p><a href="https://download.csdn.net/download/duwenwu057/11151447" target="_blank" rel="noopener">https://download.csdn.net/download/duwenwu057/11151447</a> </p><p>链接：<a href="https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw</a> 提取码：hftg </p><ul><li><h3 id="小说漫画源码，免费开源，漫画分销源码"><a href="#小说漫画源码，免费开源，漫画分销源码" class="headerlink" title="小说漫画源码，免费开源，漫画分销源码"></a>小说漫画源码，免费开源，漫画分销源码</h3></li></ul><p><a href="https://download.csdn.net/download/weixin_44588923/11123242" target="_blank" rel="noopener">https://download.csdn.net/download/weixin_44588923/11123242</a> </p><p>链接：<a href="https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1sn9rOv9P6Ye2W5oNdgY-Rw</a> 提取码：hftg </p><ul><li><h3 id="华为HCIP最新题库-最新官方教材-笔记整理IENP-rar"><a href="#华为HCIP最新题库-最新官方教材-笔记整理IENP-rar" class="headerlink" title="华为HCIP最新题库+最新官方教材+笔记整理IENP.rar"></a>华为HCIP最新题库+最新官方教材+笔记整理IENP.rar</h3></li></ul><p><a href="https://download.csdn.net/download/weixin_43266469/11590126" target="_blank" rel="noopener">https://download.csdn.net/download/weixin_43266469/11590126</a> </p><p>链接：<a href="https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA" target="_blank" rel="noopener">https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA</a> 提取码：vwel </p><ul><li><p>HCIP-Routing_&amp;_Switching_V2.5_培训教材3本+V2.5_实验手册2本.rar（华为官方发布时间:2019-05-29）</p><p><a href="https://download.csdn.net/download/qq_31698997/11216726" target="_blank" rel="noopener">https://download.csdn.net/download/qq_31698997/11216726</a> </p><p>链接：<a href="https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA" target="_blank" rel="noopener">https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA</a> 提取码：vwel </p><ul><li>HCIP–H12-221+222+223-2019最新题库全打包.rar</li></ul><p><a href="https://download.csdn.net/download/qq_31698997/11317760" target="_blank" rel="noopener">https://download.csdn.net/download/qq_31698997/11317760</a> </p></li></ul><p>链接：<a href="https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA" target="_blank" rel="noopener">https://pan.baidu.com/s/1DCHxkFNSPA8i1L3VV1pxiA</a> 提取码：vwel </p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;续上一篇&lt;a href=&quot;https://coding.laiczhang.com/2019-09-27/CSDN%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%83%A8%E5%88%86%E8%B5%84%E6%BA%90-2/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CSDN下载的部分资源-2&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
