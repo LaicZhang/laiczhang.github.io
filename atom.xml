@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-03T05:51:11.242Z</updated>
+  <updated>2019-11-03T06:19:23.190Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo简易部署脚本</title>
+    <link href="https://github.laiczhang.com/2019-11-03/hexo%E7%AE%80%E6%98%93%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC/"/>
+    <id>https://github.laiczhang.com/2019-11-03/hexo简易部署脚本/</id>
+    <published>2019-11-03T06:15:58.000Z</published>
+    <updated>2019-11-03T06:19:23.190Z</updated>
+    
+    <content type="html"><![CDATA[<div id="vip-container"><p>我的hexo博客每次写了新的文章，要部署到博客上，还要hexo g和hexo d，过于麻烦，于是写个巨简陋的脚本，减少点</p><p>工作量，我可没有水博客（狗头</p><a id="more"></a><p>重新 gererate 下文件，然后重新部署。</p><p>在根目录下新建一个 deploy.sh 的脚本文件，内容如下： </p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo <span class="keyword">generate</span></span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>这样我们在部署发布的时候只需要执行： </p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sh</span> deploy.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure><p>就可以完成博客的更新了，非常简单。 </p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我的hexo博客每次写了新的文章，要部署到博客上，还要hexo g和hexo d，过于麻烦，于是写个巨简陋的脚本，减少点&lt;/p&gt;
+&lt;p&gt;工作量，我可没有水博客（狗头&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>解决删除文件时提示该项目不在请确认该项目的位置</title>
@@ -472,28 +491,6 @@
       <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
     
       <category term="下载" scheme="https://github.laiczhang.com/tags/%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过readmore插件实现公众号引流</title>
-    <link href="https://github.laiczhang.com/2019-10-23/%E9%80%9A%E8%BF%87readmore%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%95%E6%B5%81/"/>
-    <id>https://github.laiczhang.com/2019-10-23/通过readmore插件实现公众号引流/</id>
-    <published>2019-10-23T14:10:08.000Z</published>
-    <updated>2019-10-23T14:38:51.029Z</updated>
-    
-    <content type="html"><![CDATA[<div id="vip-container"><p>通过readmore的插件工具，实现了博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的。</p><a id="more"></a><p>如图，<img src="/images/%E9%80%9A%E8%BF%87readmore%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%95%E6%B5%81/QQ%E6%88%AA%E5%9B%BE20191023221432.png" alt></p><h1 id="tep-1-更新-config-yml-配置文件"><a href="#tep-1-更新-config-yml-配置文件" class="headerlink" title="tep #1 - 更新 _config.yml 配置文件"></a>tep #1 - 更新 <code>_config.yml</code> 配置文件</h1><p>在 <code>_config.yml</code> 配置文件中,配置 <code>readmore</code> 插件相关信息,详情见 <a href="https://openwrite.cn/openwrite/openwrite-readmore/" target="_blank" rel="noopener">OpenWrite 微信公众号增长神器 “ReadMore” 简介</a>.</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">plugins</span>:</span><br><span class="line">  <span class="attribute">readmore</span>:</span><br><span class="line">    <span class="attribute">blogId</span>: <span class="number">16671</span>-<span class="number">1571749158048</span>-<span class="number">830</span></span><br><span class="line">    <span class="attribute">name</span>: laiczhang</span><br><span class="line">    <span class="attribute">qrcode</span>: <span class="attribute">http</span>:<span class="comment">//39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg</span></span><br><span class="line">    <span class="attribute">keyword</span>: 博客</span><br></pre></td></tr></table></figure><blockquote><p>注意: 前往 <a href="https://openwrite.cn/" target="_blank" rel="noopener">OpenWrite</a> 后台申请开通 <code>readmore</code> 功能后,<strong>一定要替换成自己的相关配置</strong>!</p></blockquote><p>其中,配置参数含义如下:</p><ul><li><code>blogId</code> : [必选]OpenWrite 后台申请的博客唯一标识,例如:15702-1569305559839-744</li><li><code>name</code> : [必选]OpenWrite 后台申请的博客名称,例如:雪之梦技术驿站</li><li><code>qrcode</code> : [必选]OpenWrite 后台申请的微信公众号二维码,例如:<a href="https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg" target="_blank" rel="noopener">https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg</a></li><li><code>keyword</code> : [必选]OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip</li></ul><h1 id="Step-2-运行-hexo-相关命令"><a href="#Step-2-运行-hexo-相关命令" class="headerlink" title="Step #2 - 运行 hexo 相关命令"></a>Step #2 - 运行 hexo 相关命令</h1><ul><li>运行 <code>npm install</code> 命令安装到本地项目</li></ul><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-<span class="keyword">plugin</span>-readmore <span class="comment">--save</span></span><br></pre></td></tr></table></figure><ul><li>运行 <code>hexo generate</code> 命令构建本地项目或者 <code>hexo server</code> 启动本地服务.</li></ul><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>不仅 <a href="https://github.com/snowdreams1006/hexo-plugin-readmore" target="_blank" rel="noopener">hexo-plugin-readmore</a> <strong>官方文档</strong>已整合 <code>readmore</code> 版权保护插件,此外还提供了示例项目,详情参考 <code>example</code> 目录.</p><ul><li><a href="https://github.com/snowdreams1006/hexo-plugin-readmore/tree/master/docs" target="_blank" rel="noopener">官方文档</a></li><li><a href="https://github.com/snowdreams1006/hexo-plugin-readmore/tree/master/example" target="_blank" rel="noopener">官方示例</a></li></ul></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;通过readmore的插件工具，实现了博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="公众号" scheme="https://github.laiczhang.com/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
-    
-      <category term="插件" scheme="https://github.laiczhang.com/tags/%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
