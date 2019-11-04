@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.laiczhang.com/about/index.html</loc>
+    
+    <lastmod>2019-11-04T14:55:05.036Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.laiczhang.com/2019-11-03/hexo%E7%AE%80%E6%98%93%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC/</loc>
     
     <lastmod>2019-11-03T06:26:31.939Z</lastmod>
@@ -327,13 +334,6 @@
     <loc>https://github.laiczhang.com/2019-07-13/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2019-07-13T07:30:55.427Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.laiczhang.com/about/index.html</loc>
-    
-    <lastmod>2019-07-11T15:25:26.678Z</lastmod>
     
   </url>
   
