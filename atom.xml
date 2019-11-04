@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-03T06:26:31.939Z</updated>
+  <updated>2019-11-04T16:13:01.315Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何了解网络信息安全最新的一些动态</title>
+    <link href="https://github.laiczhang.com/2019-11-05/%E5%A6%82%E4%BD%95%E4%BA%86%E8%A7%A3%E7%BD%91%E7%BB%9C%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%9C%80%E6%96%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8A%A8%E6%80%81/"/>
+    <id>https://github.laiczhang.com/2019-11-05/如何了解网络信息安全最新的一些动态/</id>
+    <published>2019-11-04T16:12:15.000Z</published>
+    <updated>2019-11-04T16:13:01.315Z</updated>
+    
+    <content type="html"><![CDATA[<div id="vip-container"><p>如何了解网络信息安全最新的一些动态</p><a id="more"></a><iframe src="//player.bilibili.com/player.html?aid=74392703&cid=127253817&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何了解网络信息安全最新的一些动态&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="B站" scheme="https://github.laiczhang.com/categories/B%E7%AB%99/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>如何又好又快的学习计算机知识</title>
+    <link href="https://github.laiczhang.com/2019-11-05/%E5%A6%82%E4%BD%95%E5%8F%88%E5%A5%BD%E5%8F%88%E5%BF%AB%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/"/>
+    <id>https://github.laiczhang.com/2019-11-05/如何又好又快的学习计算机知识/</id>
+    <published>2019-11-04T16:09:47.000Z</published>
+    <updated>2019-11-04T16:12:07.111Z</updated>
+    
+    <content type="html"><![CDATA[<div id="vip-container"><p>如何又好又快的学习计算机知识</p><a id="more"></a><iframe src="//player.bilibili.com/player.html?aid=74392094&cid=127253041&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如何又好又快的学习计算机知识&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="B站" scheme="https://github.laiczhang.com/categories/B%E7%AB%99/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo简易部署脚本</title>
@@ -443,54 +483,6 @@
       <category term="会员" scheme="https://github.laiczhang.com/tags/%E4%BC%9A%E5%91%98/"/>
     
       <category term="免费" scheme="https://github.laiczhang.com/tags/%E5%85%8D%E8%B4%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人民日报-程序员真的是太太太太太太太太难了！</title>
-    <link href="https://github.laiczhang.com/2019-10-25/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5-%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9C%9F%E7%9A%84%E6%98%AF%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E9%9A%BE%E4%BA%86%EF%BC%81/"/>
-    <id>https://github.laiczhang.com/2019-10-25/人民日报-程序员真的是太太太太太太太太难了！/</id>
-    <published>2019-10-25T09:19:43.000Z</published>
-    <updated>2019-10-25T09:31:19.044Z</updated>
-    
-    <content type="html"><![CDATA[<div id="vip-container"><p>来自人民日报【【荐读】程序员真的是太太太太太太太太难了！】】</p><a id="more"></a><p><img src="/images/%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5-%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9C%9F%E7%9A%84%E6%98%AF%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E9%9A%BE%E4%BA%86%EF%BC%81/%E3%80%90%E8%8D%90%E8%AF%BB%E3%80%91%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9C%9F%E7%9A%84%E6%98%AF%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E5%A4%AA%E9%9A%BE%E4%BA%86%EF%BC%81.png" alt></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;来自人民日报【【荐读】程序员真的是太太太太太太太太难了！】】&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="转载" scheme="https://github.laiczhang.com/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-      <category term="程序员" scheme="https://github.laiczhang.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
-    
-      <category term="生活" scheme="https://github.laiczhang.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为博客添加下载功能</title>
-    <link href="https://github.laiczhang.com/2019-10-25/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%B8%8B%E8%BD%BD%E5%8A%9F%E8%83%BD/"/>
-    <id>https://github.laiczhang.com/2019-10-25/为博客添加下载功能/</id>
-    <published>2019-10-25T09:02:50.000Z</published>
-    <updated>2019-10-25T09:54:52.709Z</updated>
-    
-    <content type="html"><![CDATA[<div id="vip-container"><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者<code>wget</code>方式直接下载。 </p><a id="more"></a><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><a href="/download/test.jpg">点击下载</a></p><p><img src="/download/test.jpg" alt="pic"></p><h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>在<code>source</code>目录下，新建<code>download</code>目录，和<code>_posts``About``tags``categories</code>等目录并列。</p><p>然后，将你需要分享的文件或者需要展示的图片之类，统一放到该<code>download</code>下；</p><p>在写文章时，通过诸如<code>[点击下载](/download/xx.exe)</code>这样的链接，直接写入。</p><p>引用图片，采用<code>![pic](/download/test.jpg)</code>这样。</p><p>其他，照旧。</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h3&gt;&lt;p&gt;经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者&lt;code&gt;wget&lt;/code&gt;方式直接下载。 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://github.laiczhang.com/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://github.laiczhang.com/tags/hexo/"/>
-    
-      <category term="下载" scheme="https://github.laiczhang.com/tags/%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   
