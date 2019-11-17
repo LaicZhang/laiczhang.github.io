@@ -120,16 +120,10 @@
 <meta property="og:site_name" content="Laic Zhang の Blog">
 <meta property="og:description" content="在之前的文章中，我说过，当我们学习完python的基础知识后，需要选择一个方向继续探究下去，这个方向可以是web开发，爬虫，机器学习，数据分析等等。 当我们学习爬虫时，我们会发现，我们需要学习html等前端知识，我们还要懂得客户端与服务端的交互过程，所以要学习HTTP协议，最重要的是，我们该怎么有效率的爬取目标网站，如果目标网站有反爬机制，我们又该如何破解等等。 当学习web开发的时候，还是需要学">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/006yt1Omgy1foqhnh0940j30m80m7tcx.jpg">
-<meta property="og:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/1.png">
-<meta property="og:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/2.png">
-<meta property="og:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/3.png">
-<meta property="og:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/4.png">
 <meta property="og:updated_time" content="2019-07-23T15:34:27.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django搭建个人博客(1)">
 <meta name="twitter:description" content="在之前的文章中，我说过，当我们学习完python的基础知识后，需要选择一个方向继续探究下去，这个方向可以是web开发，爬虫，机器学习，数据分析等等。 当我们学习爬虫时，我们会发现，我们需要学习html等前端知识，我们还要懂得客户端与服务端的交互过程，所以要学习HTTP协议，最重要的是，我们该怎么有效率的爬取目标网站，如果目标网站有反爬机制，我们又该如何破解等等。 当学习web开发的时候，还是需要学">
-<meta name="twitter:image" content="https://github.laiczhang.com/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/006yt1Omgy1foqhnh0940j30m80m7tcx.jpg">
 
 
 
@@ -517,7 +511,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.4k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -556,13 +550,13 @@
 <p>当学习web开发的时候，还是需要学习前端知识，HTTP协议也要有所了解，考虑网站的安全问题，减少网站被攻击的可能性，以及该怎么应对爬虫爬取网站数据的问题等等。</p>
 <a id="more"></a>
 
-<p><img src="/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/006yt1Omgy1foqhnh0940j30m80m7tcx.jpg" alt></p>
+<p>![](/images/Django搭建个人博客-1/006yt1Omgy1foqhnh0940j30m80m7tcx.jpg)</p>
 <p>由上述可知web开发和爬虫是相辅相成的（发动魔法卡：右手に盾を左手に剣を  )，所以我才会选择学习这两个，以后工作的大致方向也就是这个两个方向了，如果之后非要选择其中一个方向的话，那选择起来也不会太头疼了。</p>
 <p>所以我将会在接下来的一个月里写一些关于web开发和python爬虫方面的教程，同时也记录一下我的学习过程。</p>
 <p>之前我学了一段时间的python建站框架——Django，也花了一些时间用这个框架写了一个简易的博客，也算是对Django有了基础的了解。下面也给大家介绍一下我的整个建站流程吧，顺便也可以将其作为我们web教程的开篇~</p>
 <p>前端代码有一部分借用了Bootstrap框架，Bootstrap不愧是最受欢迎的前端框架之一，用这个框架节省了我很多写代码的时间，它的的栅格系统在网页布局上给我带来了很大的便利。</p>
 <p>后端用的就是上面所说的Django框架，用这个框架之前我们需要创建一个Django工程，为了方便起见，我是直接在Pycharm里创建的。</p>
-<p><img src="/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/1.png" alt></p>
+<p>![](/images/Django搭建个人博客-1/1.png)</p>
 <p>程创建完之后，需要进行一些配置，接着就可以进入开发环节了。</p>
 <p>Django采用的是MTV设计模式，也就是Model(模型),Templates(模板)，View(视图).</p>
 <p><strong>Model用来与关系数据库进行映射</strong></p>
@@ -570,12 +564,12 @@
 <p><strong>View是用来对页面进行渲染，从而显示页面</strong></p>
 <p>用Django进行建站都离不开这个设计模式，下图是我博客中按照这个设计模式所作的.</p>
 <p>首先是我的模型</p>
-<p><img src="/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/2.png" alt></p>
+<p>![](/images/Django搭建个人博客-1/2.png)</p>
 <p>因为model是与关系数据库相互映射的，也就是说，模型中的一个类就代表着数据库中的一张表，每个属性代表着每个字段，这也就是ORM技术。所以我这里的三个类最终会在数据库中生成三张表，有了这三张表，我就可以用来与前台进行交互了。</p>
 <p>接下来是我的模板，我的模板中存放的是前端页面</p>
-<p><img src="/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/3.png" alt></p>
+<p>![](/images/Django搭建个人博客-1/3.png)</p>
 <p>最后就是我的视图，视图的作用就是渲染模板中的页面，显示视图函数从数据库中获取的值 .</p>
-<p><img src="/images/Django%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-1/4.png" alt></p>
+<p>![](/images/Django搭建个人博客-1/4.png)</p>
 <p>由于视图函数代码比较多，所以我只截取了一部分，同时这也说明了在MTV中，视图的重要性</p>
 <p>这个，个人博客的后端就是这样借助着Django的MVT做的，虽然还有许多细节没提，但是整个网站建站的根本就是这三个东西，关于细节的话,在之后的教程中会再跟大家讲解。</p>
 <p>所以总的来说，我的博客整个开发过程并不复杂</p>
@@ -1241,7 +1235,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">186k</span>
+    <span title="站点总字数">208k</span>
   
 
   
@@ -1252,7 +1246,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">2:49</span>
+    <span title="站点阅读时长">3:09</span>
   
 </div>
 <!--
@@ -1272,7 +1266,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共91.6k字</span>
+  <span class="post-count">博客全站共95.7k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1884,7 +1878,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1574006085056')
+  navigator.serviceWorker.register('/sw.js?t=1574007022593')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

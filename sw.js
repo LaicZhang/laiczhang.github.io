@@ -28,11 +28,11 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019-07-20/提问的智慧/');
 
-  precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
-
-  precacheUrls.push('/2019-10-16/CSDN下载的部分资源-4/');
+  precacheUrls.push('/2019-11-08/科学上网/');
 
   precacheUrls.push('/2019-10-06/CSDN下载的部分资源-3/');
+
+  precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
