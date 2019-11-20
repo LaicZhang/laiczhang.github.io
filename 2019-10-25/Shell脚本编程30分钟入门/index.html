@@ -120,10 +120,12 @@
 <meta property="og:site_name" content="Laic Zhang の Blog">
 <meta property="og:description" content="什么是Shell脚本shell和shell脚本的概念shell是指一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。Ken Thompson的sh是第一种Unix Shell，Windows Explorer是一个典型的图形界面Shell。 shell脚本（shell script），是一种为shell编写的脚本程序。业界所说的shell通常都是指shell脚本，但">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.laiczhang.com/images/%E7%BE%8E%E5%8C%96/2.jpg">
 <meta property="og:updated_time" content="2019-10-25T11:38:43.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell脚本编程30分钟入门">
 <meta name="twitter:description" content="什么是Shell脚本shell和shell脚本的概念shell是指一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。Ken Thompson的sh是第一种Unix Shell，Windows Explorer是一个典型的图形界面Shell。 shell脚本（shell script），是一种为shell编写的脚本程序。业界所说的shell通常都是指shell脚本，但">
+<meta name="twitter:image" content="https://github.laiczhang.com/images/%E7%BE%8E%E5%8C%96/2.jpg">
 
 
 
@@ -511,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">8.1k</span>
+                <span title="本文字数">7.8k</span>
               
 
               
@@ -549,7 +551,7 @@
 <p>shell脚本（shell script），是一种为shell编写的脚本程序。业界所说的shell通常都是指shell脚本，但读者朋友要知道，shell和shell script是两个不同的概念。由于习惯的原因，简洁起见，本文出现的“shell编程”都是指shell脚本编程，不是指开发shell自身（如Windows Explorer扩展开发）。</p>
 <a id="more"></a>
 
-<p>![](/images/美化/2.jpg)</p>
+<p><img src="/images/%E7%BE%8E%E5%8C%96/2.jpg" alt></p>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>看个例子吧：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir shell_tut</span><br><span class="line"><span class="built_in">cd</span> shell_tut</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ((i=0; i&lt;10; i++)); <span class="keyword">do</span></span><br><span class="line">	touch test_<span class="variable">$i</span>.txt</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
@@ -569,8 +571,8 @@
 <h4 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h4><p>Mac OS不仅带了sh、bash这两个最基础的解释器，还内置了ksh、csh、zsh等不常用的解释器。</p>
 <h4 id="Windows上的模拟器"><a href="#Windows上的模拟器" class="headerlink" title="Windows上的模拟器"></a>Windows上的模拟器</h4><p>windows出厂时没有内置shell解释器，需要自行安装，为了同时能用grep, awk, curl等工具，最好装一个cygwin或者mingw来模拟linux环境。</p>
 <ul>
-<li>[cygwin](<a href="http://www.cygwin.com/" target="_blank" rel="noopener">http://www.cygwin.com/</a>)</li>
-<li>[mingw](<a href="http://www.mingw.org/" target="_blank" rel="noopener">http://www.mingw.org/</a>)</li>
+<li><a href="http://www.cygwin.com/" target="_blank" rel="noopener">cygwin</a></li>
+<li><a href="http://www.mingw.org/" target="_blank" rel="noopener">mingw</a></li>
 </ul>
 <h3 id="脚本解释器"><a href="#脚本解释器" class="headerlink" title="脚本解释器"></a>脚本解释器</h3><h4 id="sh"><a href="#sh" class="headerlink" title="sh"></a>sh</h4><p>即Bourne shell，POSIX（Portable Operating System Interface）标准的shell解释器，它的二进制文件路径通常是/bin/sh，由Bell Labs开发。</p>
 <p>本文讲的是sh，如果你使用其它语言用作shell编程，请自行参考相应语言的文档。</p>
@@ -663,7 +665,7 @@
 
 <h4 id="查找子字符串"><a href="#查找子字符串" class="headerlink" title="查找子字符串"></a>查找子字符串</h4><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span>=<span class="string">"alibaba is a great company"</span></span><br><span class="line">echo `<span class="built_in">expr</span> index <span class="string">"$string"</span> <span class="keyword">is</span>`<span class="comment">#输出：3，这个语句的意思是：找出字母i在这名话中的位置，要在linux下运行，mac下会报错</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h4><p>参见本文档末尾的参考资料中[Advanced Bash-Scripting Guid Chapter 10.1](<a href="http://tldp.org/LDP/abs/html/string-manipulation.html" target="_blank" rel="noopener">http://tldp.org/LDP/abs/html/string-manipulation.html</a>)</p>
+<h4 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h4><p>参见本文档末尾的参考资料中<a href="http://tldp.org/LDP/abs/html/string-manipulation.html" target="_blank" rel="noopener">Advanced Bash-Scripting Guid Chapter 10.1</a></p>
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h2 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h2><h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><p>和Java、PHP等语言不一样，sh的流程控制不可为空，如：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">if</span> (<span class="keyword">isset</span>($_GET[<span class="string">"q"</span>])) &#123;</span></span><br><span class="line"><span class="php">	search(q);</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="php">	<span class="comment">//do nothing</span></span></span><br><span class="line"><span class="php">&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -721,9 +723,9 @@
 <h2 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h2><h3 id="执行脚本时传入"><a href="#执行脚本时传入" class="headerlink" title="执行脚本时传入"></a>执行脚本时传入</h3><h3 id="脚本运行中输入"><a href="#脚本运行中输入" class="headerlink" title="脚本运行中输入"></a>脚本运行中输入</h3><h3 id="select菜单"><a href="#select菜单" class="headerlink" title="select菜单"></a>select菜单</h3><h2 id="stdin和stdout"><a href="#stdin和stdout" class="headerlink" title="stdin和stdout"></a>stdin和stdout</h2><h2 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h2><p>sh脚本结合系统命令便有了强大的威力，在字符处理领域，有grep、awk、sed三剑客，grep负责找出特定的行，awk能将行拆分成多个字段，sed则可以实现更新插入删除等写操作。</p>
 <h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><p>查看进程列表</p>
 <h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><h4 id="排除grep自身"><a href="#排除grep自身" class="headerlink" title="排除grep自身"></a>排除grep自身</h4><h4 id="查找与target相邻的结果"><a href="#查找与target相邻的结果" class="headerlink" title="查找与target相邻的结果"></a>查找与target相邻的结果</h4><h3 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h3><h3 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h3><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><h4 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h4><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><h3 id="xargs"><a href="#xargs" class="headerlink" title="xargs"></a>xargs</h3><h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>[Advanced Bash-Scripting Guide](<a href="http://tldp.org/LDP/abs/html/)，非常详细，非常易读，大量example，既可以当入门教材，也可以当做工具书查阅" target="_blank" rel="noopener">http://tldp.org/LDP/abs/html/)，非常详细，非常易读，大量example，既可以当入门教材，也可以当做工具书查阅</a></li>
-<li>[Unix Shell Programming](<a href="http://www.tutorialspoint.com/unix/unix-shell.htm" target="_blank" rel="noopener">http://www.tutorialspoint.com/unix/unix-shell.htm</a>)</li>
-<li>[Linux Shell Scripting Tutorial - A Beginner’s handbook](<a href="http://bash.cyberciti.biz/guide/Main_Page" target="_blank" rel="noopener">http://bash.cyberciti.biz/guide/Main_Page</a>)</li>
+<li><a href="http://tldp.org/LDP/abs/html/" target="_blank" rel="noopener">Advanced Bash-Scripting Guide</a>，非常详细，非常易读，大量example，既可以当入门教材，也可以当做工具书查阅</li>
+<li><a href="http://www.tutorialspoint.com/unix/unix-shell.htm" target="_blank" rel="noopener">Unix Shell Programming</a></li>
+<li><a href="http://bash.cyberciti.biz/guide/Main_Page" target="_blank" rel="noopener">Linux Shell Scripting Tutorial - A Beginner’s handbook</a></li>
 <li><a href="https://github.com/qinjx/30min_guides/blob/master/shell.md" target="_blank" rel="noopener">https://github.com/qinjx/30min_guides/blob/master/shell.md</a> </li>
 </ul>
 </div>
@@ -773,39 +775,6 @@
     
       
     
-    
-      <div>
-        <div id="reward-container">
-  <div></div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/download/微信赞赏.png" alt="Laic Zhang 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/download/支付宝赞赏.png" alt="Laic Zhang 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -1408,7 +1377,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">208k</span>
+    <span title="站点总字数">186k</span>
   
 
   
@@ -1419,7 +1388,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">2:49</span>
   
 </div>
 <!--
@@ -1439,7 +1408,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共95.7k字</span>
+  <span class="post-count">博客全站共91.6k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1938,6 +1907,46 @@
   
 
   
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
 
 
   
@@ -1989,6 +1998,11 @@ if ($('body').find('div.pdf').length) {
   
 
   
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script>pangu.spacingPage();</script>
+
 
   
   
@@ -2051,7 +2065,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1574007022593')
+  navigator.serviceWorker.register('/sw.js?t=1574246968138')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

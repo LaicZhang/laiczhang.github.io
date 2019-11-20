@@ -120,10 +120,12 @@
 <meta property="og:site_name" content="Laic Zhang の Blog">
 <meta property="og:description" content="引言经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者wget方式直接下载。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://github.laiczhang.com/download/test.jpg">
 <meta property="og:updated_time" content="2019-10-25T09:54:52.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为博客添加下载功能">
 <meta name="twitter:description" content="引言经过n多次的test，终于实现了将需要下载的文件存储在本地并上传到github，如果某用户某时需要某文件，可以采用点击下载的方式直接下载到用户本地，或者wget方式直接下载。">
+<meta name="twitter:image" content="https://github.laiczhang.com/download/test.jpg">
 
 
 
@@ -511,7 +513,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">344</span>
+                <span title="本文字数">300</span>
               
 
               
@@ -550,9 +552,9 @@
 
 
 
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>[点击下载](/download/test.jpg)</p>
-<p>![pic](/download/test.jpg)</p>
-<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>在<code>source</code>目录下，新建<code>download</code>目录，和<code>_posts`</code>About<code>tags</code>categories`等目录并列。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><a href="/download/test.jpg">点击下载</a></p>
+<p><img src="/download/test.jpg" alt="pic"></p>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>在<code>source</code>目录下，新建<code>download</code>目录，和<code>_posts``About``tags``categories</code>等目录并列。</p>
 <p>然后，将你需要分享的文件或者需要展示的图片之类，统一放到该<code>download</code>下；</p>
 <p>在写文章时，通过诸如<code>[点击下载](/download/xx.exe)</code>这样的链接，直接写入。</p>
 <p>引用图片，采用<code>![pic](/download/test.jpg)</code>这样。</p>
@@ -604,39 +606,6 @@
     
       
     
-    
-      <div>
-        <div id="reward-container">
-  <div></div>
-  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/download/微信赞赏.png" alt="Laic Zhang 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/download/支付宝赞赏.png" alt="Laic Zhang 支付宝">
-        <p>支付宝</p>
-      </div>
-    
-
-  </div>
-</div>
-
-      </div>
     
 
     
@@ -1239,7 +1208,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">208k</span>
+    <span title="站点总字数">186k</span>
   
 
   
@@ -1250,7 +1219,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">2:49</span>
   
 </div>
 <!--
@@ -1270,7 +1239,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共95.7k字</span>
+  <span class="post-count">博客全站共91.6k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1769,6 +1738,46 @@
   
 
   
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
 
 
   
@@ -1820,6 +1829,11 @@ if ($('body').find('div.pdf').length) {
   
 
   
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script>pangu.spacingPage();</script>
+
 
   
   
@@ -1882,7 +1896,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1574007022593')
+  navigator.serviceWorker.register('/sw.js?t=1574246968138')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
