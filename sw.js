@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/[object Object]/关于信息差赚钱/');
+  precacheUrls.push('/2019-11-06/关于攻坚性项目的一些建议/');
 
-  precacheUrls.push('/[object Object]/提问的智慧/');
+  precacheUrls.push('/2019-07-20/提问的智慧/');
 
-  precacheUrls.push('/[object Object]/CSDN下载的部分资源-2/');
+  precacheUrls.push('/2019-07-23/Django搭建个人博客-1/');
 
-  precacheUrls.push('/[object Object]/CSDN下载的部分资源-3/');
+  precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
 
-  precacheUrls.push('/[object Object]/CSDN下载的部分资源-4/');
+  precacheUrls.push('/2019-11-08/科学上网/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
