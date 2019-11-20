@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-20T08:47:39.473Z</updated>
+  <updated>2019-11-20T12:39:48.377Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://github.laiczhang.com/2019-11-13/%E7%8C%B4%E5%8D%9A%E5%A3%AB-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/</id>
     <published>2019-11-13T06:21:01.000Z</published>
-    <updated>2019-11-20T08:47:39.473Z</updated>
+    <updated>2019-11-20T12:39:48.377Z</updated>
     
-    <content type="html"><![CDATA[<div id="vip-container"><h1 id="一、事件的概率"><a href="#一、事件的概率" class="headerlink" title="一、事件的概率"></a>一、事件的概率</h1><p>1.无放回类题目</p><p>盒子中有4红3白共7个球，不用眼瞅，7个球摸起来一样，现无放回的摸4次，那摸出两个红球两个白球的概率是多少？</p><p>$P=C^2$</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    <content type="html"><![CDATA[<div id="vip-container"><h1 id="一、事件的概率"><a href="#一、事件的概率" class="headerlink" title="一、事件的概率"></a>一、事件的概率</h1><p>1.无放回类题目</p><p>盒子中有4红3白共7个球，不用眼瞅，7个球摸起来一样，现无放回的摸4次，那摸出两个红球两个白球的概率是多少？</p><p><img src="1-1.png" alt></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
     
     <summary type="html">
     
