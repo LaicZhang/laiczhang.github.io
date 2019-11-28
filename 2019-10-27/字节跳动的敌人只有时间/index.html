@@ -113,7 +113,7 @@
 
 
   <meta name="description" content="https://mp.weixin.qq.com/s/N2vjJ3SUH8vs5PawTZ56pg 看了半佛仙人的这篇关于字节跳动的文章，我觉得写的挺好的。 说到字节跳动，我就想到拼多多。这一两年，这两家公司，经常是我们同事间讨论的对象。没什么特别的原因，就因为挖我们的人，挖得比较多。 有些同事拿到了两家公司的 offer， 自然少不了一番比较。 就待遇方面来说，拼多多比较愿意给，可能因为拼多多的">
-<meta name="keywords" content="字节跳动,思考">
+<meta name="keywords" content="思考,字节跳动">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字节跳动的敌人只有时间">
 <meta property="og:url" content="https://github.laiczhang.com/2019-10-27/字节跳动的敌人只有时间/index.html">
@@ -660,9 +660,9 @@
         
         <div class="post-tags">
           
-            <a href="/tags/字节跳动/" rel="tag"><i class="fa fa-tag"></i> 字节跳动</a>
-          
             <a href="/tags/思考/" rel="tag"><i class="fa fa-tag"></i> 思考</a>
+          
+            <a href="/tags/字节跳动/" rel="tag"><i class="fa fa-tag"></i> 字节跳动</a>
           
         </div>
       
@@ -718,6 +718,10 @@
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
   
 
@@ -1382,6 +1386,35 @@
 
 
   
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '077a3f2dfd6700ee64d0',
+    clientSecret: '5da18eeed430cd0bc31cc0bf44a7b9420a3b5567',
+    repo: 'laiczhang.github.io',
+    owner: 'LaicZhang',
+    admin: ['laiczhang'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   
@@ -1891,7 +1924,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1574909203943')
+  navigator.serviceWorker.register('/sw.js?t=1574911234889')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
