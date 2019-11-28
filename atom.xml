@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-28T03:18:53.517Z</updated>
+  <updated>2019-11-28T03:56:00.309Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>Windows良心软件推荐</title>
     <link href="https://github.laiczhang.com/2019-11-28/Windows%E8%89%AF%E5%BF%83%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     <id>https://github.laiczhang.com/2019-11-28/Windows良心软件推荐/</id>
-    <published>2019-11-28T02:25:29.000Z</published>
-    <updated>2019-11-28T03:18:53.517Z</updated>
+    <published>2019-11-28T03:54:43.000Z</published>
+    <updated>2019-11-28T03:56:00.309Z</updated>
     
-    <content type="html"><![CDATA[<div id="vip-container"><p>推荐Windows平台下的一些相当好用的的软件。</p><p>收录软件的共同点：</p><ul><li>免费</li><li>无广告</li><li>无捆绑</li><li>无毒</li></ul><a id="more"></a></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "https://coding.laiczhang.com/images/panda%E4%B8%80%E5%9D%97%E7%A0%96%E7%BE%8E%E5%8C%961.png",        "keyword": "博客"    });}</script>]]></content>
+    <content type="html"><![CDATA[<div id="vip-container"><p>推荐Windows平台下的一些相当好用的的软件。</p><p>收录软件的共同点：</p><ul><li>免费</li><li>无广告</li><li>无捆绑</li><li>无毒</li></ul><a id="more"></a><p>首先是强大的本地搜索软件——everything。</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "https://coding.laiczhang.com/images/panda%E4%B8%80%E5%9D%97%E7%A0%96%E7%BE%8E%E5%8C%961.png",        "keyword": "博客"    });}</script>]]></content>
     
     <summary type="html">
     
@@ -41,11 +41,9 @@
       <category term="高效率" scheme="https://github.laiczhang.com/categories/%E9%AB%98%E6%95%88%E7%8E%87/"/>
     
     
-      <category term="互联网" scheme="https://github.laiczhang.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
-    
-      <category term="免费" scheme="https://github.laiczhang.com/tags/%E5%85%8D%E8%B4%B9/"/>
-    
       <category term="资源" scheme="https://github.laiczhang.com/tags/%E8%B5%84%E6%BA%90/"/>
+    
+      <category term="互联网" scheme="https://github.laiczhang.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
   </entry>
   
