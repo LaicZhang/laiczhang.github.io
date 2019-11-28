@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-22T09:03:20.159Z</updated>
+  <updated>2019-11-28T02:32:08.107Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -17,17 +17,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows良心软件推荐</title>
+    <link href="https://github.laiczhang.com/2019-11-28/Windows%E8%89%AF%E5%BF%83%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
+    <id>https://github.laiczhang.com/2019-11-28/Windows良心软件推荐/</id>
+    <published>2019-11-28T02:25:29.000Z</published>
+    <updated>2019-11-28T02:32:08.107Z</updated>
+    
+    <content type="html"><![CDATA[<div id="vip-container"></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div id=&quot;vip-container&quot;&gt;&lt;/div&gt;
+
+			&lt;script src=&quot;https://my.openwrite.cn/js/readmore.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+			&lt;script&gt;
+			var 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>猴博士-概率论与数理统计复习笔记</title>
     <link href="https://github.laiczhang.com/2019-11-13/%E7%8C%B4%E5%8D%9A%E5%A3%AB-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/</id>
     <published>2019-11-13T06:21:01.000Z</published>
-    <updated>2019-11-22T09:03:20.159Z</updated>
+    <updated>2019-11-28T02:29:21.575Z</updated>
     
-    <content type="html"><![CDATA[<div id="vip-container"><p>因为hexo不能很好的渲染数学公式，所以在更新完后，如果需要md文件的可以在文末查看关键词。</p><a id="more"></a><h1 id="一、事件的概率"><a href="#一、事件的概率" class="headerlink" title="一、事件的概率"></a>一、事件的概率</h1><h2 id="1-无放回类题目"><a href="#1-无放回类题目" class="headerlink" title="1.无放回类题目"></a>1.无放回类题目</h2><p><img src="1-1.png" alt></p><p>$$C^m_n = \frac{n!}{m! \cdot (n-m)}$$</p><p>（1）盒子中有4红3白共7个球，不用眼瞅，7个球摸起来一样，现无放回的摸4次，那摸出两个红球两个白球的概率是多少？</p><p>$$P=\frac{C^2_4 \times C^2_3} {C^4_7}$$</p><p>（2）隔壁山头共有11只母猴儿，其中有5只美猴儿、6只丑猴儿，在大黑天看起来是一样的。今儿月黑风高，我小弟冒死为我捞来5只，问天亮后，发现有2只美猴儿、3只丑猴儿的概率是多少？</p><p>$$P=\frac{C^2_5 \times C^3_6} {C^5_{11}}=\frac{100}{231}$$</p><h2 id="2-有放回类题目"><a href="#2-有放回类题目" class="headerlink" title="2.有放回类题目"></a>2.有放回类题目</h2><p><img src="1-2.png" alt></p><p>（1）盒子中有5红6白共11个球，不用眼瞅，11个球摸起来是一样的，现有放回的摸5次，那摸出两个红球三个白球的概率是多少？</p><p><img src="1-3.png" alt></p><p>（2）在小弟为我抓回的5只母猴儿中，有2美3丑，每天我都随机挑一只母猴儿来，为她抓虱子。<br>就这样，过去了101天，抓了101次虱子，问这101次中，为美猴儿服务50次、丑猴儿服务51次的概率是多少？</p><p><img src="1-4.png" alt></p><h2 id="3-需要画图的题目"><a href="#3-需要画图的题目" class="headerlink" title="3.需要画图的题目"></a>3.需要画图的题目</h2><p>（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？</p><p><img src="1-5.png" alt></p><p>①表现已知条件</p><p>②表现待求概率的条件</p><p>③找出①②重合部分</p><p>④$P(x&gt;y)=\frac{③}{①}$</p><p>（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</p><p>设小明到教室时间为x，小刚为y</p><p>已知0&lt;x&lt;1，0&lt;y&lt;1，求x&gt;y的概率是多少？</p><p>（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求<br>$$x^2+y^2&lt;1$$<br>的概率是多少？</p><p><img src="1-6.png" alt><br>解析：</p><p>①表现已知条件</p><p>②表现待求概率的条件</p><p>③找出①②重合部分</p><p>④$P(x^2 + y^2 &lt; 1) = \frac { ③ }{ ① }$</p><p>解：<br>$$S_园 = π \times 1^2 = π$$</p><p>$$S_正 = 4$$</p><p>$$P(x^2+y^2&lt;1) = \frac{π}{4}$$</p><h2 id="4-条件概率"><a href="#4-条件概率" class="headerlink" title="4.条件概率"></a>4.条件概率</h2><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) }$$</p><p>事件A：掷一次骰子，朝上点数大于3</p><p>事件B：掷一次骰子，朝上点数是6</p><p>P（B|A）：掷一次骰子，已知朝上点数大于3，朝上点数是6的概率</p><p>P（AB）：掷一次骰子，朝上点数是6的概率</p><p>P（A）：掷一次骰子，朝上点数大于3的概率</p><p>（1）小明概率论考试得80分以上的概率是80%，得60分以上的概率是85%，已知这次考试小明概率论没挂，那么小明得80分以上的概率是多少？</p><p>事件A：小明得60分以上</p><p>事件B：小明得80分以上</p><p>P（B|A）：小明得60分以上时，小明得80分以上的概率，即小明得80分以上的概率</p><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) } = \frac{ 0.8 }{ 0.85 }$$</p><p>（2）某地区今年会发生洪水的概率是80%，今明两年至少有一年会发生洪水的概率是85%，假如今年没有发生洪水，那么明年发生洪水的概率是多少？</p><p>事件A：今年没有发生洪水</p><p>事件B：明年发生洪水</p><p>P（BIA）：今年没有发生洪水的情况下，明年发洪水的概率</p><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) } = \frac{ 0.05 }{ 0.2 }$$</p><h2 id="5-全概率公式"><a href="#5-全概率公式" class="headerlink" title="5.全概率公式"></a>5.全概率公式</h2><p>A、B…等个体均可能发生某事，则</p><p>$$P(发生某事)=P(A出现)·P(A发生某事)+P(B出现)·P(B发生某事)…$$</p><p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障的概率。</p><p>$$P(有客车发生故障)=P(高速客车出现)·P(高速客车故障)+P(普通客车出现)·P(普通客车故障)$$</p><p>$P(有客车发生故障)=0.2·0.002+0.8·0.01=0.0084$</p><p>(2)猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，那么抽中的员工通过考核的概率是多少？</p><p>$$P（抽中的员工通过考核）=P（猴博士出现）·P猴博士通过）+P（傻孢子出现）·P（傻犯子通过）$$</p><p>$P（抽中的员工通过考核）=50%·100%+50%·1%=50.5%$</p><p>（3）又到了交配的季节，主人过两天就拉你去隔壁村找母驴配种，隔壁村有三头母驴，分别是白驴、黑驴和棕驴。她仁得你宠幸的概率分别是50%、20%、30%。小白屁股大能生，她能怀上你孩子的概率是80%。小黑太瘦小，能怀孕的概率是20%。小棕中规中矩，能下息的概率是50%。那么你能喜当爹的概率是多少？</p><p>A、0%  B、59%  C、47%</p><h2 id="6-贝叶斯公式"><a href="#6-贝叶斯公式" class="headerlink" title="6.贝叶斯公式"></a>6.贝叶斯公式</h2><p>A、B…等个体均可能发生某事，则</p><p>$$P(已知有个体发生某事时，是A发生的)= \frac{ P(A出现) \cdot P(A发生某事) }{ P(发生某事) } $$</p><p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障时，故障的是高速客车的概率。</p><p>$$P（已知有客车发生故障，是高速客车发生的）=\frac{0.2·0.002}{0.0084}=\frac{1}{21}$$</p><p>（2）猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，求抽中的员工通过考核时，被抽中的员工是傻孢子的概率。</p><p>$$P(已知有员工通过考核，是傻孢子通过的)=\frac{0.5·0.1}{0.505}=\frac{1}{101}$$</p><h1 id="二、一维随机变量"><a href="#二、一维随机变量" class="headerlink" title="二、一维随机变量"></a>二、一维随机变量</h1><h2 id="已知-F-X-x-与-f-X-x-中的一项，求另一项"><a href="#已知-F-X-x-与-f-X-x-中的一项，求另一项" class="headerlink" title="已知$F_X(x)$与$f_X(x)$中的一项，求另一项"></a>已知$F_X(x)$与$f_X(x)$中的一项，求另一项</h2><p>$$f_X(x)=F_X{‘}(x)$$</p><p>$$F_X(x)=\int ^x _{-\infty}f_X(x)dx$$</p><p>例：设x的分布函数</p><p>$$F_X(x)=\begin{cases} 0,&amp;x&lt;1 \ lnx,&amp;1 \leqslant x &lt; e \ 1,&amp;x \geqslant e\end{cases}$$</p><p>求X的密度函数$f_X(x)$</p><p>解：</p><p>$$f_X(x)=F_X{‘}(x)=\begin{cases}0’,&amp;x&lt;1 \ (lnx)’,&amp;1 \leqslant x &lt; e \ 1’,&amp;x \geqslant e\end{cases}=\begin{cases}0,&amp;x&lt;1 \ \frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x \geqslant e\end{cases}=\begin{cases}\frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x 其他\end{cases}$$</p><p>例：设X的密度函数</p><p>$$f_X(x)=\begin{cases}-\frac{1}{2}x+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他\end{cases}$$<br>求X的分布函数$F_X(x)$</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    <content type="html"><![CDATA[<div id="vip-container"><p>观看猴博士爱讲课-概率论与数理统计视频时，因为视频不利于搜索，所以做个详细点的听课笔记</p><p>本地用Typora正常，但是hexo不能很好的渲染数学公式，部署到博客上不太美观。</p><p>在更新完后，如果需要md文件的可以在文末查看关键词。</p><a id="more"></a><h1 id="一、事件的概率"><a href="#一、事件的概率" class="headerlink" title="一、事件的概率"></a>一、事件的概率</h1><h2 id="1-无放回类题目"><a href="#1-无放回类题目" class="headerlink" title="1.无放回类题目"></a>1.无放回类题目</h2><p><img src="1-1.png" alt></p><p>$$C^m_n = \frac{n!}{m! \cdot (n-m)}$$</p><p>（1）盒子中有4红3白共7个球，不用眼瞅，7个球摸起来一样，现无放回的摸4次，那摸出两个红球两个白球的概率是多少？</p><p>$$P=\frac{C^2_4 \times C^2_3} {C^4_7}$$</p><p>（2）隔壁山头共有11只母猴儿，其中有5只美猴儿、6只丑猴儿，在大黑天看起来是一样的。今儿月黑风高，我小弟冒死为我捞来5只，问天亮后，发现有2只美猴儿、3只丑猴儿的概率是多少？</p><p>$$P=\frac{C^2_5 \times C^3_6} {C^5_{11}}=\frac{100}{231}$$</p><h2 id="2-有放回类题目"><a href="#2-有放回类题目" class="headerlink" title="2.有放回类题目"></a>2.有放回类题目</h2><p><img src="1-2.png" alt></p><p>（1）盒子中有5红6白共11个球，不用眼瞅，11个球摸起来是一样的，现有放回的摸5次，那摸出两个红球三个白球的概率是多少？</p><p><img src="1-3.png" alt></p><p>（2）在小弟为我抓回的5只母猴儿中，有2美3丑，每天我都随机挑一只母猴儿来，为她抓虱子。<br>就这样，过去了101天，抓了101次虱子，问这101次中，为美猴儿服务50次、丑猴儿服务51次的概率是多少？</p><p><img src="1-4.png" alt></p><h2 id="3-需要画图的题目"><a href="#3-需要画图的题目" class="headerlink" title="3.需要画图的题目"></a>3.需要画图的题目</h2><p>（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？</p><p><img src="1-5.png" alt></p><p>①表现已知条件</p><p>②表现待求概率的条件</p><p>③找出①②重合部分</p><p>④$P(x&gt;y)=\frac{③}{①}$</p><p>（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</p><p>设小明到教室时间为x，小刚为y</p><p>已知0&lt;x&lt;1，0&lt;y&lt;1，求x&gt;y的概率是多少？</p><p>（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求<br>$$x^2+y^2&lt;1$$<br>的概率是多少？</p><p><img src="1-6.png" alt><br>解析：</p><p>①表现已知条件</p><p>②表现待求概率的条件</p><p>③找出①②重合部分</p><p>④$P(x^2 + y^2 &lt; 1) = \frac { ③ }{ ① }$</p><p>解：<br>$$S_园 = π \times 1^2 = π$$</p><p>$$S_正 = 4$$</p><p>$$P(x^2+y^2&lt;1) = \frac{π}{4}$$</p><h2 id="4-条件概率"><a href="#4-条件概率" class="headerlink" title="4.条件概率"></a>4.条件概率</h2><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) }$$</p><p>事件A：掷一次骰子，朝上点数大于3</p><p>事件B：掷一次骰子，朝上点数是6</p><p>P（B|A）：掷一次骰子，已知朝上点数大于3，朝上点数是6的概率</p><p>P（AB）：掷一次骰子，朝上点数是6的概率</p><p>P（A）：掷一次骰子，朝上点数大于3的概率</p><p>（1）小明概率论考试得80分以上的概率是80%，得60分以上的概率是85%，已知这次考试小明概率论没挂，那么小明得80分以上的概率是多少？</p><p>事件A：小明得60分以上</p><p>事件B：小明得80分以上</p><p>P（B|A）：小明得60分以上时，小明得80分以上的概率，即小明得80分以上的概率</p><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) } = \frac{ 0.8 }{ 0.85 }$$</p><p>（2）某地区今年会发生洪水的概率是80%，今明两年至少有一年会发生洪水的概率是85%，假如今年没有发生洪水，那么明年发生洪水的概率是多少？</p><p>事件A：今年没有发生洪水</p><p>事件B：明年发生洪水</p><p>P（BIA）：今年没有发生洪水的情况下，明年发洪水的概率</p><p>$$P(B \mid A) = \frac{ P(AB) }{ P(A) } = \frac{ 0.05 }{ 0.2 }$$</p><h2 id="5-全概率公式"><a href="#5-全概率公式" class="headerlink" title="5.全概率公式"></a>5.全概率公式</h2><p>A、B…等个体均可能发生某事，则</p><p>$$P(发生某事)=P(A出现)·P(A发生某事)+P(B出现)·P(B发生某事)…$$</p><p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障的概率。</p><p>$$P(有客车发生故障)=P(高速客车出现)·P(高速客车故障)+P(普通客车出现)·P(普通客车故障)$$</p><p>$P(有客车发生故障)=0.2·0.002+0.8·0.01=0.0084$</p><p>(2)猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，那么抽中的员工通过考核的概率是多少？</p><p>$$P（抽中的员工通过考核）=P（猴博士出现）·P猴博士通过）+P（傻孢子出现）·P（傻犯子通过）$$</p><p>$P（抽中的员工通过考核）=50%·100%+50%·1%=50.5%$</p><p>（3）又到了交配的季节，主人过两天就拉你去隔壁村找母驴配种，隔壁村有三头母驴，分别是白驴、黑驴和棕驴。她仁得你宠幸的概率分别是50%、20%、30%。小白屁股大能生，她能怀上你孩子的概率是80%。小黑太瘦小，能怀孕的概率是20%。小棕中规中矩，能下息的概率是50%。那么你能喜当爹的概率是多少？</p><p>A、0%  B、59%  C、47%</p><h2 id="6-贝叶斯公式"><a href="#6-贝叶斯公式" class="headerlink" title="6.贝叶斯公式"></a>6.贝叶斯公式</h2><p>A、B…等个体均可能发生某事，则</p><p>$$P(已知有个体发生某事时，是A发生的)= \frac{ P(A出现) \cdot P(A发生某事) }{ P(发生某事) } $$</p><p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障时，故障的是高速客车的概率。</p><p>$$P（已知有客车发生故障，是高速客车发生的）=\frac{0.2·0.002}{0.0084}=\frac{1}{21}$$</p><p>（2）猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，求抽中的员工通过考核时，被抽中的员工是傻孢子的概率。</p><p>$$P(已知有员工通过考核，是傻孢子通过的)=\frac{0.5·0.1}{0.505}=\frac{1}{101}$$</p><h1 id="二、一维随机变量"><a href="#二、一维随机变量" class="headerlink" title="二、一维随机变量"></a>二、一维随机变量</h1><h2 id="已知-F-X-x-与-f-X-x-中的一项，求另一项"><a href="#已知-F-X-x-与-f-X-x-中的一项，求另一项" class="headerlink" title="已知$F_X(x)$与$f_X(x)$中的一项，求另一项"></a>已知$F_X(x)$与$f_X(x)$中的一项，求另一项</h2><p>$$f_X(x)=F_X{‘}(x)$$</p><p>$$F_X(x)=\int ^x _{-\infty}f_X(x)dx$$</p><p>例：设x的分布函数</p><p>$$F_X(x)=\begin{cases} 0,&amp;x&lt;1 \ lnx,&amp;1 \leqslant x &lt; e \ 1,&amp;x \geqslant e\end{cases}$$</p><p>求X的密度函数$f_X(x)$</p><p>解：</p><p>$$f_X(x)=F_X{‘}(x)=\begin{cases}0’,&amp;x&lt;1 \ (lnx)’,&amp;1 \leqslant x &lt; e \ 1’,&amp;x \geqslant e\end{cases}=\begin{cases}0,&amp;x&lt;1 \ \frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x \geqslant e\end{cases}=\begin{cases}\frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x 其他\end{cases}$$</p><p>例：设X的密度函数</p><p>$$f_X(x)=\begin{cases}-\frac{1}{2}x+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他\end{cases}$$<br>求X的分布函数$F_X(x)$</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;因为hexo不能很好的渲染数学公式，所以在更新完后，如果需要md文件的可以在文末查看关键词。&lt;/p&gt;
+      &lt;p&gt;观看猴博士爱讲课-概率论与数理统计视频时，因为视频不利于搜索，所以做个详细点的听课笔记&lt;/p&gt;
+&lt;p&gt;本地用Typora正常，但是hexo不能很好的渲染数学公式，部署到博客上不太美观。&lt;/p&gt;
+&lt;p&gt;在更新完后，如果需要md文件的可以在文末查看关键词。&lt;/p&gt;
     
     </summary>
     
@@ -477,35 +504,6 @@
       <category term="自学" scheme="https://github.laiczhang.com/tags/%E8%87%AA%E5%AD%A6/"/>
     
       <category term="技术" scheme="https://github.laiczhang.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>说说我了解的数据分析工作</title>
-    <link href="https://github.laiczhang.com/2019-10-25/%E8%AF%B4%E8%AF%B4%E6%88%91%E4%BA%86%E8%A7%A3%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B7%A5%E4%BD%9C/"/>
-    <id>https://github.laiczhang.com/2019-10-25/说说我了解的数据分析工作/</id>
-    <published>2019-10-25T12:06:27.000Z</published>
-    <updated>2019-10-26T15:52:40.541Z</updated>
-    
-    <content type="html"><![CDATA[<div id="vip-container"><p>前面有同学提到 怎么看数据分析工作的前景。</p><p>感觉这个问题蛮复杂的，于是就想开个新帖子来写写。</p><p>先说明下，我的分享只代表我个人意见，可能有错误或局限的地方，还请大家多多包涵。欢迎其他同学的指正和补充。</p><p>我觉得这类问题不会有统一的答案。不同的人，不同的工作岗位，不同的公司都不一样。</p><p>如果有同学有相关的从业经验，也希望可以分享下。</p><p>言归正传。我自己没有做过数据分析，不过带过数据团队和算法团队，我说说我的一些理解。</p><a id="more"></a><p>数据分析是个很宽泛得概念，笼统看，是给不出答案的，要细化来看。</p><p>我给数据分析做三大类的划分。当然会有不一样的分法，但关键不在于怎么分，而在于具体做的事情，做划分只是方便阐述。</p><p>三类： 大数据系统；数据处理；数据应用。</p><p>以上是我的划分。</p><h2 id="1-大数据系统"><a href="#1-大数据系统" class="headerlink" title="1 大数据系统"></a>1 大数据系统</h2><p>数据系统很好理解，就是类似 hadoop 这类的系统。严格来说，它不属于数据分析，而是数据工程，其实是后台开发岗位，所以这里就不展开了。</p><h2 id="2-数据处理"><a href="#2-数据处理" class="headerlink" title="2 数据处理"></a>2 数据处理</h2><p>数据处理，这个估计是大家最关心的，我估计大部分同学都是在做这部分的工作。</p><p>数据处理的工作可能包含这些：</p><p>数据埋点，数据清洗，建立数据报表，建立数据地图，跑 sql 提取数据，做数据展示报表等等。</p><p>说实话，这些工作是很枯燥的，做久了比较容易疲惫。</p><p>至于发展如何，要看公司。</p><p>举个例子。</p><p>就这个岗位来说，阿里可能会好过腾讯，原因是公司的业务不同。</p><p>阿里其实是商业服务公司。它的业务比较统一，数据量大，且同构，而本身跟商业相关，数据的价值更大。</p><p>听跳槽过来的同事说，阿里有专门的数据处理团队，数据仓库团队，负责建设维护阿里的主要数据。从阿里电商业务的规模来看，阿里的数据处理团队应该会很受重视。</p><p>再来说说腾讯。腾讯的数据也很多，但腾讯以产品主导，而且产品线很多，数据虽然也很多，但不同构，产品之间打通要花费巨大的人力物力。</p><p>另一方面，腾讯的产品对数据依赖其实不高。腾讯做产品很多是从人性出发，由牛逼的产品经理来把控，所以数据在腾讯，更多是辅助的作用，重要性自然没有那么高。</p><p>所以看 数据处理 岗位发展好不好的时候，要看公司业务对数据的依赖程度。</p><p>但就整个行业来说，大部分公司依赖都比较小，不是它们不想从数据挖出价值，而是没这个能力挖。</p><p>整体来说，我觉得数据处理岗位的天花板是比较低的。</p><h2 id="3-数据应用"><a href="#3-数据应用" class="headerlink" title="3 数据应用"></a>3 数据应用</h2><p>数据应用如果宽泛的看，可以分成两大类。</p><p>数据挖掘和机器学习。</p><p>数据挖掘。通过对数据的分析，结合行业，结合分析师自身经验理解，推导出未发现的客观规律，用于业务，用于商业决策。</p><p>这是对公司业务有重大影响的行为，所以凡是有这种部门的公司，该部门应该都是核心部门。</p><p>像埃森哲的商业报告，应该就是这类部门做的。</p><p>不过这种部门在互联网公司几乎没有，这类工作，其实最后都由对应的产品或运营做了，因为他们对业务更加熟悉。</p><p>大部分数据的同学在做着数据处理的工作，最后把数据结果给到产品或运营，由他们去分析挖掘，得出结论后给老板汇报。</p><p>机器学习。这个我觉得其实不应该归到数据分析，不过因为确实有涉及到数据，归进来也可以吧。</p><p>头条，抖音的推荐系统，就是最好的例子。机器学习是它们产品的核心竞争力，所以发展肯定不错，机器学习未来的发展也会不错。</p><p>但这里的问题是数据处理跟机器学习中间隔了几个 C++，不能说会数据，就会机器学习吧。</p><p>所以机器学习方向虽然不错，但几乎是完全不同的方向了。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>我觉得做 数据系统 或 数据应用 的同学都不用担心，只要好好努力，后面会不错。</p><p>数据处理 的同学要看具体公司和具体岗位了。</p><p>数据处理的同学其实有个不错的后续发展建议：平时可以多关注业务，多思考数据和业务的关系，后面可以往数据产品或数据运营的方向走，也是一个很顺滑的过度。</p><p>上面分享的是我接触到的情况，而且基本是互联网行业的情况，所以不能代表全局，只是我视野范围内的东西。</p><p>这个问题，我就分享到这里。欢迎其他同学的指正和补充。</p><p>本文来自【大飞码字的朋友们】</p><p><img src="/images/ZSXQ_%E5%A4%A7%E9%A3%9E%E7%A0%81%E5%AD%97.png" alt></p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前面有同学提到 怎么看数据分析工作的前景。&lt;/p&gt;
-&lt;p&gt;感觉这个问题蛮复杂的，于是就想开个新帖子来写写。&lt;/p&gt;
-&lt;p&gt;先说明下，我的分享只代表我个人意见，可能有错误或局限的地方，还请大家多多包涵。欢迎其他同学的指正和补充。&lt;/p&gt;
-&lt;p&gt;我觉得这类问题不会有统一的答案。不同的人，不同的工作岗位，不同的公司都不一样。&lt;/p&gt;
-&lt;p&gt;如果有同学有相关的从业经验，也希望可以分享下。&lt;/p&gt;
-&lt;p&gt;言归正传。我自己没有做过数据分析，不过带过数据团队和算法团队，我说说我的一些理解。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="知识星球" scheme="https://github.laiczhang.com/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
-    
-    
-      <category term="知识星球" scheme="https://github.laiczhang.com/tags/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
-    
-      <category term="大飞码字" scheme="https://github.laiczhang.com/tags/%E5%A4%A7%E9%A3%9E%E7%A0%81%E5%AD%97/"/>
     
   </entry>
   
