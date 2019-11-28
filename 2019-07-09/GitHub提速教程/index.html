@@ -740,10 +740,6 @@
           
 
   
-    <div class="comments" id="gitalk-container">
-    </div>
-
-  
 
 
 
@@ -1432,35 +1428,6 @@
 
 
   
-    
-
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-
-
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '077a3f2dfd6700ee64d0',
-    clientSecret: '5da18eeed430cd0bc31cc0bf44a7b9420a3b5567',
-    repo: 'laiczhang.github.io',
-    owner: 'LaicZhang',
-    admin: ['laiczhang'],
-    id: md5(location.pathname),
-    
-      language: window.navigator.language || window.navigator.userLanguage,
-    
-    distractionFreeMode: 'true'
-  });
-  gitalk.render('gitalk-container');
-</script>
-
-  
 
 
   
@@ -1970,7 +1937,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1574911234889')
+  navigator.serviceWorker.register('/sw.js?t=1574911940849')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
