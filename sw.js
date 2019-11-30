@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019-07-28/史上最全的开发和设计资源大全/');
+  precacheUrls.push('/2019-11-06/关于攻坚性项目的一些建议/');
 
   precacheUrls.push('/2019-07-20/提问的智慧/');
 
