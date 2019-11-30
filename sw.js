@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019-10-25/喜马拉雅-WPS-樊登会员-稻壳会员免费领取/');
+  precacheUrls.push('/2019-10-25/Shell脚本编程30分钟入门/');
 
   precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
 
