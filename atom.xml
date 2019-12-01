@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.laiczhang.com/"/>
-  <updated>2019-11-28T04:10:43.585Z</updated>
+  <updated>2019-12-01T14:09:27.915Z</updated>
   <id>https://github.laiczhang.com/</id>
   
   <author>
@@ -21,13 +21,16 @@
     <link href="https://github.laiczhang.com/2019-11-28/Windows%E8%89%AF%E5%BF%83%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     <id>https://github.laiczhang.com/2019-11-28/Windows良心软件推荐/</id>
     <published>2019-11-28T04:07:05.000Z</published>
-    <updated>2019-11-28T04:10:43.585Z</updated>
+    <updated>2019-12-01T14:09:27.915Z</updated>
     
-    <content type="html"><![CDATA[<div id="vip-container"><p>推荐软件共同点：免费、安全、无广告</p><a id="more"></a><ul><li>效率相关</li></ul><ul><li>娱乐相关</li></ul><ul><li>编程相关</li></ul></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
+    <content type="html"><![CDATA[<div id="vip-container"><p>推荐软件共同点：免费、安全、无广告[、小巧]</p><p>本文提到的软件的安装包均整理好了，</p><p>github地址：<a href="https://github.com/LaicZhang/some-software" target="_blank" rel="noopener">https://github.com/LaicZhang/some-software</a> </p><p>或者关注【laiczhang】公众号，发送关键词【win软件】，获取蓝奏云链接</p><a id="more"></a><ul><li>效率相关</li></ul><p>本地搜索神器-everything、Listary</p><p>解压缩软件-BANDIZIP</p><p>屏幕截图-(FastStone Capture)9.1汉化单文件便携企业版.zip </p><ul><li>娱乐相关</li></ul><p>Google浏览器-Chrome</p><p>B站视频下载器-JiJiDown</p><ul><li>编程相关</li></ul><p>强大的编辑器-notepad++</p><p>C及C++编译器-VC++6.0（迷你版才7M）</p><p>抓包神器-Fiddler</p><p>Windows连接Linux服务器软件-Xshell</p></div><script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script><script>var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);if (!isMobile) {    var btw = new BTWPlugin();    btw.init({        "id": "vip-container",        "blogId": "16671-1571749158048-830",        "name": "laiczhang",        "qrcode": "http://39.96.24.63/wp-content/uploads/2019/06/export1559829285250.jpg",        "keyword": "博客"    });}</script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;推荐软件共同点：免费、安全、无广告&lt;/p&gt;
+      &lt;p&gt;推荐软件共同点：免费、安全、无广告[、小巧]&lt;/p&gt;
+&lt;p&gt;本文提到的软件的安装包均整理好了，&lt;/p&gt;
+&lt;p&gt;github地址：&lt;a href=&quot;https://github.com/LaicZhang/some-software&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/LaicZhang/some-software&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;或者关注【laiczhang】公众号，发送关键词【win软件】，获取蓝奏云链接&lt;/p&gt;
     
     </summary>
     
