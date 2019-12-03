@@ -124,7 +124,11 @@
 <meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/1-6.png">
 <meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/4-1.png">
 <meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/4-2.png">
-<meta property="og:updated_time" content="2019-12-01T14:43:27.078Z">
+<meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/5-1.png">
+<meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/5-2.png">
+<meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/5-3.png">
+<meta property="og:image" content="https://github.laiczhang.com/2019-11-13/猴博士-概率论与数理统计复习笔记/5-4.png">
+<meta property="og:updated_time" content="2019-12-03T16:06:58.860Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="猴博士-概率论与数理统计复习笔记">
 <meta name="twitter:description" content="复习概率论，看的【猴博士爱讲课】4小时讲完《概率论与数理统计》/《概率论》/不挂科 ，因为视频不利于二次复习，所以做个详细点的听课笔记，如果文章有错误，请发邮件至i@laiczhang.com 本地用Typora与vscode均正常，但是hexo不能很好的渲染数学公式，部署到博客上不太美观。 在更新完后，如果需要md文件的可以在文末查看关键词。">
@@ -475,7 +479,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-12-01 22:43:27" itemprop="dateModified" datetime="2019-12-01T22:43:27+08:00">2019-12-01</time>
+                <time title="修改时间：2019-12-04 00:06:58" itemprop="dateModified" datetime="2019-12-04T00:06:58+08:00">2019-12-04</time>
               
             
           </span>
@@ -528,7 +532,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">18k</span>
               
 
               
@@ -542,7 +546,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">12 分钟</span>
+                <span title="阅读时长">16 分钟</span>
               
             </div>
           
@@ -594,11 +598,9 @@
 <p>②表现待求概率的条件</p>
 <p>③找出①②重合部分</p>
 <p>④$P(x&gt;y)=\frac{③}{①}$</p>
-<p>（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</p>
-<p>设小明到教室时间为x，小刚为y</p>
+<h3 id="（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？"><a href="#（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？" class="headerlink" title="（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？"></a>（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</h3><p>设小明到教室时间为x，小刚为y</p>
 <p>已知0&lt;x&lt;1，0&lt;y&lt;1，求x&gt;y的概率是多少？</p>
-<p>（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？</p>
-<p><img src="1-6.png" alt><br>解析：</p>
+<h3 id="（3）已知-1-lt-x-lt-1，-1-lt-y-lt-1，求-x-2-y-2-lt-1-的概率是多少？"><a href="#（3）已知-1-lt-x-lt-1，-1-lt-y-lt-1，求-x-2-y-2-lt-1-的概率是多少？" class="headerlink" title="（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？"></a>（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？</h3><p><img src="1-6.png" alt><br>解析：</p>
 <p>①表现已知条件</p>
 <p>②表现待求概率的条件</p>
 <p>③找出①②重合部分</p>
@@ -1011,12 +1013,92 @@
 <p>⑤当x、y属于其他情况时，</p>
 <p>$f(x,y)=\frac{\partial ^2 (0)}{\partial x \partial y}=\frac{\partial[\frac{\partial (0)}{\partial x}]}{\partial y}=\frac{\partial(0)}{\partial y}=0$</p>
 <p>综上所述，</p>
-<p>$f(x,y)=\begin{cases} x+y &amp;0&lt;x&lt;1,0&lt;y&lt;1 \0 &amp;其他 \end{cases}$</p>
-<h2 id="4-已知-f-x-y-，求-F-x-y"><a href="#4-已知-f-x-y-，求-F-x-y" class="headerlink" title="4.已知$f(x,y)$，求$F(x,y)$"></a>4.已知$f(x,y)$，求$F(x,y)$</h2><p>已知二维随机变量的联合密度函数</p>
-<p>$f(x,y)=\begin{cases} \frac{21}{4}x^2y,&amp;x^2 \leqslant y \leqslant 1 \0,&amp;其他 \end{cases}$，求$F(x,y)$</p>
+<p>$f(x,y)=\begin{cases} x+y &amp;0&lt;x&lt;1,0&lt;y&lt;1 \ 0 &amp;其他 \end{cases}$</p>
+<h2 id="4-已知-f-x-y-，求-F-x-y"><a href="#4-已知-f-x-y-，求-F-x-y" class="headerlink" title="4.已知$f(x,y)$，求$F(x,y)$"></a>4.已知$f(x,y)$，求$F(x,y)$</h2><p>(1)已知二维随机变量的联合密度函数</p>
+<p>$f(x,y)=\begin{cases} \frac{21}{4}x^2y,&amp;x^2 \leqslant y \leqslant 1 \ 0,&amp;其他 \end{cases}$，求$F(x,y)$</p>
 <p>解：</p>
 <p>第一步：找出f（x,y）不等于零时x的范围和y的范围</p>
-<h1 id="六、连续型二维变量（下）"><a href="#六、连续型二维变量（下）" class="headerlink" title="六、连续型二维变量（下）"></a>六、连续型二维变量（下）</h1><h1 id="七、随机变量的数字特征（上）"><a href="#七、随机变量的数字特征（上）" class="headerlink" title="七、随机变量的数字特征（上）"></a>七、随机变量的数字特征（上）</h1><h1 id="八、随机变量的数字特征（下）与中心极限定理"><a href="#八、随机变量的数字特征（下）与中心极限定理" class="headerlink" title="八、随机变量的数字特征（下）与中心极限定理"></a>八、随机变量的数字特征（下）与中心极限定理</h1><h1 id="九、矩估计"><a href="#九、矩估计" class="headerlink" title="九、矩估计"></a>九、矩估计</h1><h1 id="十、最大似然估计量"><a href="#十、最大似然估计量" class="headerlink" title="十、最大似然估计量"></a>十、最大似然估计量</h1><h1 id="十一、区间估计"><a href="#十一、区间估计" class="headerlink" title="十一、区间估计"></a>十一、区间估计</h1><h1 id="十二、假设检验1"><a href="#十二、假设检验1" class="headerlink" title="十二、假设检验1"></a>十二、假设检验1</h1><h1 id="十三、假设检验2"><a href="#十三、假设检验2" class="headerlink" title="十三、假设检验2"></a>十三、假设检验2</h1><h1 id="十四、假设检验3"><a href="#十四、假设检验3" class="headerlink" title="十四、假设检验3"></a>十四、假设检验3</h1><h1 id="十五、方差分析"><a href="#十五、方差分析" class="headerlink" title="十五、方差分析"></a>十五、方差分析</h1><h1 id="十六、一元线性回归"><a href="#十六、一元线性回归" class="headerlink" title="十六、一元线性回归"></a>十六、一元线性回归</h1></div>
+<p>x的范围：$x^2 \leqslant y \to -\sqrt{y} \leqslant x \leqslant \sqrt{y}$ </p>
+<p>y的范围：$x^2 \leqslant y \leqslant 1$</p>
+<p>第二步：计算$\int ^x <em>{g_1(y)}du \int ^y</em>{h_1(u) }f(u,v) dv$，结果记为①</p>
+<p>$g_1(y)$为x的左边界</p>
+<p>$h_1(u)$为将y的下边界中的x替换为u后的式子</p>
+<p>$f(u,v)$为将$f(x,y)$中的x替换为u、y替换为v后的式子</p>
+<p>$g_1(y) = - \sqrt{y}$，$h_1(u) = u^2$，$f(u,v) = \frac{21}{4} u^2 v$</p>
+<p>$① = \int ^x <em>{- \sqrt{y}}du \int ^y</em>{u^2} \frac{21}{4} u^2 v dv =\frac{7}{8}x^3y^2 -\frac{3}{8}x^7 +\frac{1}{2}y^{\frac{7}{2}}$</p>
+<p>第三步：将$x=g_2(y)$、$y=h_2(x)$分别代入①中，结果分别记为②、③</p>
+<p>$g_2(y)$为x的右边界</p>
+<p>$h_2(x)$为y的上边界</p>
+<p>$g_2(y) = \sqrt{y}$</p>
+<p>将$x = \sqrt{y}$代入①中，则</p>
+<p>$② = \frac{7}{8}(\sqrt{y})^3y^2 - \frac{3}{8}(\sqrt{y})^7 + \frac{1}{2}y^{\frac{7}{2}}$</p>
+<p>$②=y^{\frac{7}{2}}$</p>
+<p>$h_2(x)=1$</p>
+<p>将$y=1$代入①中，则</p>
+<p>$③ = \frac{7}{8}x^3 \cdot 1^2 - \frac{3}{8}x^7 + \frac{1}{2} \cdot 1^{\frac{7}{2}}$</p>
+<p>$③ = \frac{7}{8}x^3  - \frac{3}{8}x^7 + \frac{1}{2} $</p>
+<p>第四步：画出f（x,y）不等于零的区域，记为区域A </p>
+<p>A右侧的区域记为B</p>
+<p>A上侧的区域记为C </p>
+<p>A右上方的区域记为D</p>
+<p>则$F(x,y)=\begin{cases}①&amp;A区域 \ ② &amp;B区域 \③&amp;C区域 \ 1 &amp; D区域 \0 &amp; 其他 \end{cases}$</p>
+<p><img src="5-1.png" alt></p>
+<p>$F(x,y)=\begin{cases} \frac{7}{8}x^3y^2 -\frac{3}{8}x^7 +\frac{1}{2}y^{\frac{7}{2}}&amp;x^2 \leqslant y \leqslant 1  \ y^{\frac{7}{2}} &amp;x&gt; \sqrt{y} ,0 \leqslant y \leqslant 1 \ \frac{7}{8}x^3 -\frac{3}{8}x^7 +\frac{1}{2}&amp;-1 \leqslant x \leqslant 1,y&gt;1 \ 1 &amp; x&gt;1,y&gt;1 \0 &amp; 其他 \end{cases}$</p>
+<p>(2)已知二维随机变量的联合密度函数</p>
+<p>$\f(x,y) = \begin{cases} x+y &amp;0&lt;x&lt;1,0&lt;y&lt;1 \0&amp;其他 \end{cases}$，求$F(x,y)$</p>
+<p>x的范围：0&lt;x&lt;1，y的范围：0&lt;y&lt;1</p>
+<p>$ g_1(y)=0，h_1(u)=0，f(u,v)=u+v$</p>
+<p>$①=\int ^x <em>{0}du \int ^y</em>{0 }(u+v) dv=\frac{1}{2}x^2y+\frac{1}{2}xy^2$</p>
+<p>$g_2(y)=1$</p>
+<p>将$x=1$代入①中，则</p>
+<p>$②=\frac{1}{2}  \cdot 1^2 \cdot y + \frac{1}{2} \cdot 1 \cdot y^2$</p>
+<p>$②=\frac{1}{2} y + \frac{1}{2} y^2$</p>
+<p>$h_2(x)=1$</p>
+<p>将$y=1$代入①中，则</p>
+<p>$③=\frac{1}{2} x^2 \cdot 1 + \frac{1}{2} x \cdot 1^2$</p>
+<p>$③=\frac{1}{2} x^2+ \frac{1}{2} x $</p>
+<p><img src="5-2.png" alt></p>
+<p>$F(x,y)=\begin{cases} \frac{1}{2}x^2y+\frac{1}{2}xy^2&amp;0&lt;x&lt;1,0&lt;y&lt;1  \ \frac{1}{2} y + \frac{1}{2} y^2 &amp;1 \leqslant x,0&lt;y&lt;1 \ \frac{1}{2} x^2+ \frac{1}{2} x&amp;0&lt;x&lt;1,1 \leqslant y \ 1 &amp; 1 \leqslant x,1 \leqslant y \0 &amp; 其他 \end{cases}$</p>
+<h2 id="5-已知-F-x-y-求P"><a href="#5-已知-F-x-y-求P" class="headerlink" title="5.已知$F(x,y)求P$"></a>5.已知$F(x,y)求P$</h2><p>$P(X \leqslant x_0,Y \leqslant y_0)=F(x_0,y_0)$</p>
+<p>已知二维随机变量的联合分布函数$F(x,y) =\begin{cases} \frac{1}{2}x^2y+\frac{1}{2}xy^2 &amp;0&lt;x&lt;1,0&lt;y&lt;1 \\frac{1}{2}y+\frac{1}{2}y^2 &amp;1 \leqslant x,0&lt;y&lt;1 \\frac{1}{2}x^2+\frac{1}{2}x &amp;0&lt;x&lt;1,1 \leqslant y \1 &amp;  1 \leqslant x,1 \leqslant y \0&amp;其他\end{cases}$</p>
+<p>(1)求$P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})$</p>
+<p>解：</p>
+<p>$F(\frac{1}{2},\frac{1}{2})=\frac{1}{2} \times (\frac{1}{2})^2 \times \frac{1}{2} + \frac{1}{2} \times \frac{1}{2} \times (\frac{1}{2})^2=\frac{1}{8}$</p>
+<p>$\therefore P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})=\frac{1}{8}$</p>
+<p>(2)求$P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})$</p>
+<p>$\because P(X \leqslant \frac{1}{2})=P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})+P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})$</p>
+<p>$\therefore P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})=P(X \leqslant \frac{1}{2}) - P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})=P(X \leqslant \frac{1}{2},Y \leqslant +\infty) - P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})=F(\frac{1}{2},\infty)-F(\frac{1}{2},\frac{1}{2})=\frac{3}{8}-\frac{1}{8}=\frac{1}{4}$</p>
+<h2 id="6-已知-f-x-y-求P"><a href="#6-已知-f-x-y-求P" class="headerlink" title="6.已知$f(x,y)$求P"></a>6.已知$f(x,y)$求P</h2><p>已知二维随机变量的联合密度函数$f(x,y)=\begin{cases}6xy&amp;0 \leqslant x \leqslant 1,x^2 \leqslant y \leqslant 1 \   0,其他 \end{cases}$，求$P(X \ge Y)$</p>
+<p>第一步：找出f（xy）不等于零时x的范围和y的范围</p>
+<p>x的范围：0≤x≤1</p>
+<p>y的范围：$x^2 \leqslant y \leqslant 1$</p>
+<p>第二步：找出要求概率的范围，添到上一步的范围里（要保证至少有一个未知数的上下限都是纯数字）</p>
+<p>$P（X \ge Y）→P（Y \leqslant X）$</p>
+<p>x的范围：0≤x≤1,$(0 \to a,1 \to b$</p>
+<p>y的范图：$\begin{cases} x^2 \le y \le 1\\ y \le x \end{cases} \to x^2 \le y \le x,(x^2 \to c,x \to d)$</p>
+<p>第三步：如果x的上下限都是纯数字则$P=\int ^b _a dx \int ^d _c f(x,y)dy$，如果y的上下限都是纯数字则$P=\int ^d _c dy \int ^b _a f(x,y)dx$</p>
+<p>$P(X \ge Y) = \int ^1_0 dx int ^x _{x^2} 6xy dy =\frac{1}{4}$</p>
+<h2 id="7-求F-x-y-或f-x-y-中含有的未知数"><a href="#7-求F-x-y-或f-x-y-中含有的未知数" class="headerlink" title="7.求F(x,y)或f(x,y)中含有的未知数"></a>7.求F(x,y)或f(x,y)中含有的未知数</h2><p>$F(+\infty,-\infty)=1$</p>
+<p>$F(-\infty,-\infty)=0$</p>
+<p>$F(x,-\infty)=0$</p>
+<p>$F(-\infty,y)=0$</p>
+<p>$\int ^{+\infty} _{-\infty} \int ^{+\infty} _{-\infty} f(x,y)dxdy=1$</p>
+<p>(1)设二维随机变量的联合分布函数为F(x,y)=a(b+arctanx)(c+arctan2y),求a、b、c</p>
+<p>解：</p>
+<p><img src="5-3.png" alt></p>
+<p>解得：$a=\frac{1}{\pi ^2},b=\frac{\pi}{2},c=\frac{\pi}{2}$</p>
+<p>(2)设二维随机变量的联合密度函数$f(x,y)=\begin{cases}kxy &amp;0 \le x \le 1,x^2 \le y \le 1 \ 0&amp;其他 \end{cases}$，求k</p>
+<p>解：由$\int ^{+\infty} _{-\infty} \int ^{+\infty} _{-\infty} f(x,y)dxdy=1$得：</p>
+<p>$\int ^1_0 \int ^1 _{x^2} kxydxdy=1$</p>
+<p>解得：k=6</p>
+<h2 id="8-求均匀分布的f-x-y-与P"><a href="#8-求均匀分布的f-x-y-与P" class="headerlink" title="8.求均匀分布的f(x,y)与P"></a>8.求均匀分布的f(x,y)与P</h2><p>$f(x,y)=\begin{cases}\frac{1}{A} &amp;当(x,y)\in D(A为区域D的面积) \ 0 &amp;其他 \end{cases}$</p>
+<p>设二维随机变量（x，y）在区域$D={（x，y）lx≥0，y≥0，x+y≤1}$上服从均匀分布求密度函数$f(x,y),P(X+Y \le  \frac{1}{2})$</p>
+<p><img src="5-4.png" alt></p>
+<p>$A=\frac{1}{2} \times 1 \times 1= \frac{1}{2}$</p>
+<p>$f(x,y)=\begin{cases}\frac{1}{\frac{1}{2}} &amp;当(x,y)\in D \ 0 &amp;其他 \end{cases} \to \begin{cases}2&amp;当(x,y)\in D \ 0 &amp;其他 \end{cases}$</p>
+<p>$A_1=\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} = \frac{1}{8}$</p>
+<p>$P(X+Y \le  \frac{1}{2})=\frac{A_1}{A}=\frac{\frac{1}{8}}{\frac{1}{2}}=\frac{1}{4}$</p>
+<h1 id="六、连续型二维变量（下）"><a href="#六、连续型二维变量（下）" class="headerlink" title="六、连续型二维变量（下）"></a>六、连续型二维变量（下）</h1><h1 id="七、随机变量的数字特征（上）"><a href="#七、随机变量的数字特征（上）" class="headerlink" title="七、随机变量的数字特征（上）"></a>七、随机变量的数字特征（上）</h1><h1 id="八、随机变量的数字特征（下）与中心极限定理"><a href="#八、随机变量的数字特征（下）与中心极限定理" class="headerlink" title="八、随机变量的数字特征（下）与中心极限定理"></a>八、随机变量的数字特征（下）与中心极限定理</h1><h1 id="九、矩估计"><a href="#九、矩估计" class="headerlink" title="九、矩估计"></a>九、矩估计</h1><h1 id="十、最大似然估计量"><a href="#十、最大似然估计量" class="headerlink" title="十、最大似然估计量"></a>十、最大似然估计量</h1><h1 id="十一、区间估计"><a href="#十一、区间估计" class="headerlink" title="十一、区间估计"></a>十一、区间估计</h1><h1 id="十二、假设检验1"><a href="#十二、假设检验1" class="headerlink" title="十二、假设检验1"></a>十二、假设检验1</h1><h1 id="十三、假设检验2"><a href="#十三、假设检验2" class="headerlink" title="十三、假设检验2"></a>十三、假设检验2</h1><h1 id="十四、假设检验3"><a href="#十四、假设检验3" class="headerlink" title="十四、假设检验3"></a>十四、假设检验3</h1><h1 id="十五、方差分析"><a href="#十五、方差分析" class="headerlink" title="十五、方差分析"></a>十五、方差分析</h1><h1 id="十六、一元线性回�"><a href="#十六、一元线性回�" class="headerlink" title="十六、一元线性回�"></a>十六、一元线性回�</h1></div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -1619,7 +1701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、事件的概率"><span class="nav-number">1.</span> <span class="nav-text">一、事件的概率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-无放回类题目"><span class="nav-number">1.1.</span> <span class="nav-text">1.无放回类题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-有放回类题目"><span class="nav-number">1.2.</span> <span class="nav-text">2.有放回类题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-需要画图的题目"><span class="nav-number">1.3.</span> <span class="nav-text">3.需要画图的题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）已知0-lt-x-lt-1，0-lt-y-1，求x-gt-y的概率是多少？"><span class="nav-number">1.3.1.</span> <span class="nav-text">（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-条件概率"><span class="nav-number">1.4.</span> <span class="nav-text">4.条件概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-全概率公式"><span class="nav-number">1.5.</span> <span class="nav-text">5.全概率公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-贝叶斯公式"><span class="nav-number">1.6.</span> <span class="nav-text">6.贝叶斯公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、一维随机变量"><span class="nav-number">2.</span> <span class="nav-text">二、一维随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知-F-X-x-与-f-X-x-中的一项，求另一项"><span class="nav-number">2.1.</span> <span class="nav-text">1.已知$F_X(x)$与$f_X(x)$中的一项，求另一项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知-F-X-x-与-f-X-x-中的一种，求-P"><span class="nav-number">2.2.</span> <span class="nav-text">2.已知$F_X(x)$与$f_X(x)$中的一种，求$P$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-F-X-x-或-f-X-x-含有未知数，求未知数"><span class="nav-number">2.3.</span> <span class="nav-text">3.$F_X(x)$或$f_X(x)$含有未知数，求未知数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例1：设X的分布函数-F-X-x-begin-cases-0-amp-x-leqslant-0-a-be-lambda-x-amp-x-gt-0-end-cases-lambda-gt-0-，求a和b。"><span class="nav-number">2.3.1.</span> <span class="nav-text">例1：设X的分布函数$F_X(x) = \begin{cases} 0,&amp;x \leqslant 0 \ a+be^{\lambda -x},&amp;x&gt;0  \end{cases} (\lambda &gt;0)$，求a和b。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例2：设X的密度函数-f-X-x-begin-cases-ax-1-amp-0-leqslant-x-leqslant-2-0-amp-其他-end-cases-，求常数a。"><span class="nav-number">2.3.2.</span> <span class="nav-text">例2：设X的密度函数$f_X(x) = \begin{cases} ax+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他 \end{cases}$，求常数a。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-求分布律"><span class="nav-number">2.4.</span> <span class="nav-text">4.求分布律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-已知含有未知数分布列，求未知数"><span class="nav-number">2.5.</span> <span class="nav-text">5.已知含有未知数分布列，求未知数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、一维随机变量的函数"><span class="nav-number">3.</span> <span class="nav-text">三、一维随机变量的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知X分布列，求Y分布列"><span class="nav-number">3.1.</span> <span class="nav-text">1.已知X分布列，求Y分布列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知-F-X-x-，求-F-Y-y"><span class="nav-number">3.2.</span> <span class="nav-text">2.已知$F_X(x)$，求$F_Y(y)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-已知-f-X-x-，求-f-Y-y"><span class="nav-number">3.3.</span> <span class="nav-text">3.已知$f_X(x)$，求$f_Y(y)$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、常见的五种分布"><span class="nav-number">4.</span> <span class="nav-text">四、常见的五种分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-符合均匀长度，求概率"><span class="nav-number">4.1.</span> <span class="nav-text">1.符合均匀长度，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-符合泊松分布，求概率"><span class="nav-number">4.2.</span> <span class="nav-text">2.符合泊松分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-符合二项分布，求概率"><span class="nav-number">4.3.</span> <span class="nav-text">3.符合二项分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-符合指数分布，求概率"><span class="nav-number">4.4.</span> <span class="nav-text">4.符合指数分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-符合正态分布，求概率"><span class="nav-number">4.5.</span> <span class="nav-text">5.符合正态分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-正态分布图像"><span class="nav-number">4.6.</span> <span class="nav-text">6.正态分布图像</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、离散型二维变量与连续性二维变量（上）"><span class="nav-number">5.</span> <span class="nav-text">五、离散型二维变量与连续性二维变量（上）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知二维离散型分布律，求？？？"><span class="nav-number">5.1.</span> <span class="nav-text">1.已知二维离散型分布律，求？？？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知二维离散型分布律，判断独立性"><span class="nav-number">5.2.</span> <span class="nav-text">2.已知二维离散型分布律，判断独立性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-已知二维随机变量X、Y的分布律如下-请判断X、Y的独立性"><span class="nav-number">5.2.1.</span> <span class="nav-text">1.已知二维随机变量X、Y的分布律如下,请判断X、Y的独立性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-已知二维随机变量X、Y的分布律如下-X、Y是相互独立的，求a、β的值"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.已知二维随机变量X、Y的分布律如下,X、Y是相互独立的，求a、β的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-已知-F-x-y-，求-f-x-y"><span class="nav-number">5.3.</span> <span class="nav-text">3.已知$F(x,y)$，求$f(x,y)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-已知-f-x-y-，求-F-x-y"><span class="nav-number">5.4.</span> <span class="nav-text">4.已知$f(x,y)$，求$F(x,y)$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、连续型二维变量（下）"><span class="nav-number">6.</span> <span class="nav-text">六、连续型二维变量（下）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、随机变量的数字特征（上）"><span class="nav-number">7.</span> <span class="nav-text">七、随机变量的数字特征（上）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、随机变量的数字特征（下）与中心极限定理"><span class="nav-number">8.</span> <span class="nav-text">八、随机变量的数字特征（下）与中心极限定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、矩估计"><span class="nav-number">9.</span> <span class="nav-text">九、矩估计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、最大似然估计量"><span class="nav-number">10.</span> <span class="nav-text">十、最大似然估计量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一、区间估计"><span class="nav-number">11.</span> <span class="nav-text">十一、区间估计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二、假设检验1"><span class="nav-number">12.</span> <span class="nav-text">十二、假设检验1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十三、假设检验2"><span class="nav-number">13.</span> <span class="nav-text">十三、假设检验2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十四、假设检验3"><span class="nav-number">14.</span> <span class="nav-text">十四、假设检验3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十五、方差分析"><span class="nav-number">15.</span> <span class="nav-text">十五、方差分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十六、一元线性回归"><span class="nav-number">16.</span> <span class="nav-text">十六、一元线性回归</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、事件的概率"><span class="nav-number">1.</span> <span class="nav-text">一、事件的概率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-无放回类题目"><span class="nav-number">1.1.</span> <span class="nav-text">1.无放回类题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-有放回类题目"><span class="nav-number">1.2.</span> <span class="nav-text">2.有放回类题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-需要画图的题目"><span class="nav-number">1.3.</span> <span class="nav-text">3.需要画图的题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）已知0-lt-x-lt-1，0-lt-y-1，求x-gt-y的概率是多少？"><span class="nav-number">1.3.1.</span> <span class="nav-text">（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？"><span class="nav-number">1.3.2.</span> <span class="nav-text">（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）已知-1-lt-x-lt-1，-1-lt-y-lt-1，求-x-2-y-2-lt-1-的概率是多少？"><span class="nav-number">1.3.3.</span> <span class="nav-text">（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-条件概率"><span class="nav-number">1.4.</span> <span class="nav-text">4.条件概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-全概率公式"><span class="nav-number">1.5.</span> <span class="nav-text">5.全概率公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-贝叶斯公式"><span class="nav-number">1.6.</span> <span class="nav-text">6.贝叶斯公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、一维随机变量"><span class="nav-number">2.</span> <span class="nav-text">二、一维随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知-F-X-x-与-f-X-x-中的一项，求另一项"><span class="nav-number">2.1.</span> <span class="nav-text">1.已知$F_X(x)$与$f_X(x)$中的一项，求另一项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知-F-X-x-与-f-X-x-中的一种，求-P"><span class="nav-number">2.2.</span> <span class="nav-text">2.已知$F_X(x)$与$f_X(x)$中的一种，求$P$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-F-X-x-或-f-X-x-含有未知数，求未知数"><span class="nav-number">2.3.</span> <span class="nav-text">3.$F_X(x)$或$f_X(x)$含有未知数，求未知数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#例1：设X的分布函数-F-X-x-begin-cases-0-amp-x-leqslant-0-a-be-lambda-x-amp-x-gt-0-end-cases-lambda-gt-0-，求a和b。"><span class="nav-number">2.3.1.</span> <span class="nav-text">例1：设X的分布函数$F_X(x) = \begin{cases} 0,&amp;x \leqslant 0 \ a+be^{\lambda -x},&amp;x&gt;0  \end{cases} (\lambda &gt;0)$，求a和b。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例2：设X的密度函数-f-X-x-begin-cases-ax-1-amp-0-leqslant-x-leqslant-2-0-amp-其他-end-cases-，求常数a。"><span class="nav-number">2.3.2.</span> <span class="nav-text">例2：设X的密度函数$f_X(x) = \begin{cases} ax+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他 \end{cases}$，求常数a。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-求分布律"><span class="nav-number">2.4.</span> <span class="nav-text">4.求分布律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-已知含有未知数分布列，求未知数"><span class="nav-number">2.5.</span> <span class="nav-text">5.已知含有未知数分布列，求未知数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、一维随机变量的函数"><span class="nav-number">3.</span> <span class="nav-text">三、一维随机变量的函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知X分布列，求Y分布列"><span class="nav-number">3.1.</span> <span class="nav-text">1.已知X分布列，求Y分布列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知-F-X-x-，求-F-Y-y"><span class="nav-number">3.2.</span> <span class="nav-text">2.已知$F_X(x)$，求$F_Y(y)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-已知-f-X-x-，求-f-Y-y"><span class="nav-number">3.3.</span> <span class="nav-text">3.已知$f_X(x)$，求$f_Y(y)$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、常见的五种分布"><span class="nav-number">4.</span> <span class="nav-text">四、常见的五种分布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-符合均匀长度，求概率"><span class="nav-number">4.1.</span> <span class="nav-text">1.符合均匀长度，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-符合泊松分布，求概率"><span class="nav-number">4.2.</span> <span class="nav-text">2.符合泊松分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-符合二项分布，求概率"><span class="nav-number">4.3.</span> <span class="nav-text">3.符合二项分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-符合指数分布，求概率"><span class="nav-number">4.4.</span> <span class="nav-text">4.符合指数分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-符合正态分布，求概率"><span class="nav-number">4.5.</span> <span class="nav-text">5.符合正态分布，求概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-正态分布图像"><span class="nav-number">4.6.</span> <span class="nav-text">6.正态分布图像</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、离散型二维变量与连续性二维变量（上）"><span class="nav-number">5.</span> <span class="nav-text">五、离散型二维变量与连续性二维变量（上）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-已知二维离散型分布律，求？？？"><span class="nav-number">5.1.</span> <span class="nav-text">1.已知二维离散型分布律，求？？？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-已知二维离散型分布律，判断独立性"><span class="nav-number">5.2.</span> <span class="nav-text">2.已知二维离散型分布律，判断独立性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-已知二维随机变量X、Y的分布律如下-请判断X、Y的独立性"><span class="nav-number">5.2.1.</span> <span class="nav-text">1.已知二维随机变量X、Y的分布律如下,请判断X、Y的独立性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-已知二维随机变量X、Y的分布律如下-X、Y是相互独立的，求a、β的值"><span class="nav-number">5.2.2.</span> <span class="nav-text">2.已知二维随机变量X、Y的分布律如下,X、Y是相互独立的，求a、β的值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-已知-F-x-y-，求-f-x-y"><span class="nav-number">5.3.</span> <span class="nav-text">3.已知$F(x,y)$，求$f(x,y)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-已知-f-x-y-，求-F-x-y"><span class="nav-number">5.4.</span> <span class="nav-text">4.已知$f(x,y)$，求$F(x,y)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-已知-F-x-y-求P"><span class="nav-number">5.5.</span> <span class="nav-text">5.已知$F(x,y)求P$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-已知-f-x-y-求P"><span class="nav-number">5.6.</span> <span class="nav-text">6.已知$f(x,y)$求P</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-求F-x-y-或f-x-y-中含有的未知数"><span class="nav-number">5.7.</span> <span class="nav-text">7.求F(x,y)或f(x,y)中含有的未知数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-求均匀分布的f-x-y-与P"><span class="nav-number">5.8.</span> <span class="nav-text">8.求均匀分布的f(x,y)与P</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、连续型二维变量（下）"><span class="nav-number">6.</span> <span class="nav-text">六、连续型二维变量（下）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、随机变量的数字特征（上）"><span class="nav-number">7.</span> <span class="nav-text">七、随机变量的数字特征（上）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、随机变量的数字特征（下）与中心极限定理"><span class="nav-number">8.</span> <span class="nav-text">八、随机变量的数字特征（下）与中心极限定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、矩估计"><span class="nav-number">9.</span> <span class="nav-text">九、矩估计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、最大似然估计量"><span class="nav-number">10.</span> <span class="nav-text">十、最大似然估计量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一、区间估计"><span class="nav-number">11.</span> <span class="nav-text">十一、区间估计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二、假设检验1"><span class="nav-number">12.</span> <span class="nav-text">十二、假设检验1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十三、假设检验2"><span class="nav-number">13.</span> <span class="nav-text">十三、假设检验2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十四、假设检验3"><span class="nav-number">14.</span> <span class="nav-text">十四、假设检验3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十五、方差分析"><span class="nav-number">15.</span> <span class="nav-text">十五、方差分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十六、一元线性回�"><span class="nav-number">16.</span> <span class="nav-text">十六、一元线性回�</span></a></li></ol></div>
             
 
           </div>
@@ -1661,7 +1743,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">200k</span>
+    <span title="站点总字数">204k</span>
   
 
   
@@ -1672,7 +1754,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">3:01</span>
+    <span title="站点阅读时长">3:06</span>
   
 </div>
 <!--
@@ -1692,7 +1774,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共97.5k字</span>
+  <span class="post-count">博客全站共99k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -2349,7 +2431,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1575302327159')
+  navigator.serviceWorker.register('/sw.js?t=1575389228822')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
