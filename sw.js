@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019-11-05/如何了解网络信息安全最新的一些动态/');
+  precacheUrls.push('/2019-07-28/史上最全的开发和设计资源大全/');
 
   precacheUrls.push('/2019-07-20/提问的智慧/');
 
+  precacheUrls.push('/2019-10-06/CSDN下载的部分资源-3/');
+
   precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
 
-  precacheUrls.push('/2019-10-16/CSDN下载的部分资源-4/');
-
-  precacheUrls.push('/2019-10-06/CSDN下载的部分资源-3/');
+  precacheUrls.push('/2019-12-04/Markdown常用语法笔记/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
