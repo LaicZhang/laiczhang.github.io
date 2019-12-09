@@ -24,7 +24,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019-11-06/如何说服自己的leader/');
+  precacheUrls.push('/2019-11-05/如何了解网络信息安全最新的一些动态/');
 
   precacheUrls.push('/2019-07-20/提问的智慧/');
 
