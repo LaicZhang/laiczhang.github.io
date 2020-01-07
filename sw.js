@@ -24,15 +24,15 @@ var precacheUrls = [];
 
   precacheUrls.push('/');
 
-  precacheUrls.push('/2019-07-14/ApacheCN资源全整合-更新中/');
-
   precacheUrls.push('/2019-07-13/2019最新百度网盘下载神器/');
 
-  precacheUrls.push('/2019-09-27/CSDN下载的部分资源-2/');
+  precacheUrls.push('/2019-07-09/GitHub提速教程/');
 
-  precacheUrls.push('/2019-10-06/CSDN下载的部分资源-3/');
+  precacheUrls.push('/2019-07-14/ApacheCN资源全整合-更新中/');
 
   precacheUrls.push('/2019-09-20/CSDN下载的部分资源/');
+
+  precacheUrls.push('/2019-10-06/CSDN下载的部分资源-3/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
