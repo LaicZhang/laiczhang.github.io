@@ -124,7 +124,7 @@
 <meta property="og:image" content="https://i.loli.net/2020/01/10/BPCaWgs85XvxpSD.png">
 <meta property="og:image" content="https://i.loli.net/2020/01/10/56wHe3A2UCkOKRt.png">
 <meta property="og:image" content="https://i.loli.net/2020/01/10/Sh9PWtsIaiOLNMm.png">
-<meta property="og:updated_time" content="2020-01-10T15:09:56.505Z">
+<meta property="og:updated_time" content="2020-01-11T07:34:14.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在线jupyter安装教程">
 <meta name="twitter:description" content="看到小游同学搭了个在线jupyter，忽然想起我也还有个学生机买来就没有用，我就也试着在学生机上也搭了一个。 照着他的步骤来，不过他也有一些没有写清楚的地方，我会尽量补充出来。">
@@ -475,7 +475,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-10 23:09:56" itemprop="dateModified" datetime="2020-01-10T23:09:56+08:00">2020-01-10</time>
+                <time title="修改时间：2020-01-11 15:34:14" itemprop="dateModified" datetime="2020-01-11T15:34:14+08:00">2020-01-11</time>
               
             
           </span>
@@ -601,12 +601,10 @@
 <p>如果出现<code>Writing default config to:/root/.jupyter/jupyter _notebook _config.py</code>，说明安装成功了，然后我们需要修改配置文件：<code>vi /root/.jupyter/jupyter_notebook_config.py</code></p>
 <p>好像打不开所以我就直接到文件里面找然后直接修改了。</p>
 <p>找到这一行<code>#c.NotebookApp.allow_root = False</code>改成<code>c.NotebookApp.allow_root =True</code></p>
-<p>然后直接启动程序<code>jupyter notebook</code></p>
-<p>默认端口为<code>8888</code>，我们先到浏览器输入<code>127.0.0.1:8888</code></p>
-<p>但是我们还是进不去的，因为我们没有密码，我们要修改一下密码。</p>
+<p>此时我们启动程序也还是进不去的，因为我们没有密码，我们要修改一下密码。</p>
 <p>输入：<code>ipython</code> 然后在输入<code>from notebook.auth import passwd</code>再输入<code>passwd()</code></p>
-<p>这个时候输入密码就可以获得密码的hash值：<code>&#39;sha1:.......</code></p>
-<p>复制这个值，粘贴到先前的那个配置文件<code>/root/.jupyter/jupyter_notebook_config.py</code>内<code>c.Notebook.password= u&#39;sha1:.....&#39;</code></p>
+<p>这个时候输入并确认密码（此时输入的密码是第一次登陆需要输入的密码），然后获得密码的hash值：<code>&#39;sha1:.......</code></p>
+<p>复制这个值，粘贴到先前的那个配置文件<code>/root/.jupyter/jupyter_notebook_config.py</code>内<code>c.NotebookApp.password= u&#39;sha1:.....&#39;</code></p>
 <p>保存好后就可以直接输入密码访问了，但是这个时候还是不能直接远程访问，所以我们还需要这样设置一下（自己找位置，然后把内容修改一下，把#注释掉）：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip = '*'</span><br><span class="line">c.NotebookApp.open_browser = False（True：启动时自动打开浏览器）</span><br><span class="line">c.NotebookApp.port = 8888（端口设置，随你改）</span><br></pre></td></tr></table></figure>
 
@@ -638,6 +636,7 @@
 <li><p><code>nohup</code>表示<code>no hang up</code>, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行.</p>
 </li>
 </ol>
+<p>我的<a href="http://39.96.24.63:999/" target="_blank" rel="noopener">在线jupyter</a>，因为是用学生机搭建的，性能有限，就不公开了。实在不会配置环境的同学，还是文末公众号后台留言吧。</p>
 <h3 id="停止方法"><a href="#停止方法" class="headerlink" title="停止方法"></a>停止方法</h3><p>执行上面第2条命令, 可以发现关闭终端重新打开后, 用<code>jobs</code>找不到jupyter这个进程了, 于是要用<code>ps -A</code>(注意A要大写), 可以显示所有进程的pid.在CMD下面找到<code>jupyter-noteboo</code>然后<code>kill -9 pid</code> 终止进程即可。</p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>不知道什么原因，用xshell重新连接后，虽然jupyter仍然能够访问，但是再输入<code>conda list</code>或者<code>pip list</code>均失效，从头开始尝试了几次，发现只需要再输入<code>source ~/.bashrc</code>即可。</p>
 </div>
@@ -1340,7 +1339,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共108.6k字</span>
+  <span class="post-count">博客全站共108.8k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1997,7 +1996,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1578672503999')
+  navigator.serviceWorker.register('/sw.js?t=1579002722453')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

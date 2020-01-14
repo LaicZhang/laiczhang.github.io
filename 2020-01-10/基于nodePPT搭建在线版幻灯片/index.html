@@ -121,8 +121,7 @@
 <meta property="og:description" content="累死累活干不过做 PPT 的！查看效果：https://nodeppt.js.org   nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来这儿看看">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://camo.githubusercontent.com/2362e9e0a3fbd286774e386d7fd2cf3b8aeef9d4/68747470733a2f2f6e6f6465692e636f2f6e706d2f6e6f64657070742e706e67">
-<meta property="og:image" content="http://cdn.laiczhang.com/bing/2020-01-09.jpg">
-<meta property="og:updated_time" content="2020-01-10T16:05:24.469Z">
+<meta property="og:updated_time" content="2020-01-11T04:55:34.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于nodePPT搭建在线版幻灯片">
 <meta name="twitter:description" content="累死累活干不过做 PPT 的！查看效果：https://nodeppt.js.org   nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来这儿看看">
@@ -473,7 +472,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-11 00:05:24" itemprop="dateModified" datetime="2020-01-11T00:05:24+08:00">2020-01-11</time>
+                <time title="修改时间：2020-01-11 12:55:34" itemprop="dateModified" datetime="2020-01-11T12:55:34+08:00">2020-01-11</time>
               
             
           </span>
@@ -526,7 +525,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">650</span>
+                <span title="本文字数">1.2k</span>
               
 
               
@@ -567,15 +566,30 @@
 <p>nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="noopener">这儿</a>看看</p>
 <a id="more"></a>
 
-<p><img src="http://cdn.laiczhang.com/bing/2020-01-09.jpg" alt></p>
-<h2 id="配置node环境"><a href="#配置node环境" class="headerlink" title="配置node环境"></a>配置node环境</h2><p>Node 官网已经把 linux 下载版本更改为已编译好的版本了，我们可以直接下载解压后使用：</p>
+<h2 id="配置node环境"><a href="#配置node环境" class="headerlink" title="配置node环境"></a>配置node环境</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>Node 官网已经把 linux 下载版本更改为已编译好的版本了，我们可以直接下载解压后使用：</p>
 <p>不要使用默认的<code>sudo apt-get install node</code>这样安装的版本不够，可以下载Node.tar.xz，版本选择v10.16.0。</p>
 <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># wget https://nodejs.org/dist/v10<span class="meta">.16</span><span class="meta">.0</span>/node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64.tar.xz    // 下载</span><br><span class="line"># tar xf  node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64.tar.xz       // 解压</span><br><span class="line"># cd node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64/                  // 进入解压目录</span><br><span class="line"># ./bin/node -v                               // 执行node命令 查看版本</span><br><span class="line">v10<span class="meta">.16</span><span class="meta">.0</span></span><br></pre></td></tr></table></figure>
 
 <p>解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以使用 ln 命令来设置软连接：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/npm   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span> </span><br><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/node   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="配置nodePPT"><a href="#配置nodePPT" class="headerlink" title="配置nodePPT"></a>配置nodePPT</h2></div>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>以下部分我们将介绍在 Ubuntu Linux 下使用源码安装 Node.js 。 其他的 Linux 系统，如 Centos 等类似如下安装步骤。</p>
+<p>在 Github 上获取 Node.js 源码,当然，我也在码云上导入了一份，可以替换，加快下载速度(将命令中的<code>https://github.com/nodejs/node.git</code>替换成<code>https://gitee.com/qianliyue/node</code>即可)</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nodejs/<span class="keyword">node</span>.<span class="title">git</span></span><br><span class="line">Cloning into '<span class="keyword">node</span><span class="title">'...</span></span><br></pre></td></tr></table></figure>
+
+<p>修改目录权限：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod -R <span class="number">755</span> <span class="keyword">node</span><span class="title"></span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>./configure</code> 创建编译文件，并按照：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> node</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br></pre></td></tr></table></figure>
+
+<p>查看 node 版本：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">node</span> <span class="title">--version</span></span><br><span class="line">v0.<span class="number">10.25</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装并配置nodePPT"><a href="#安装并配置nodePPT" class="headerlink" title="安装并配置nodePPT"></a>安装并配置nodePPT</h2><p>安装：<code>npm install -g nodeppt</code></p>
+<p>如果失败，可以再试试<code>sudo npm install -g nodeppt</code></p>
+<p>具体配置可以查看<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="noopener">nodeppt官方文档</a></p>
+</div>
 
 			<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 			<script>
@@ -1198,7 +1212,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置node环境"><span class="nav-number">1.</span> <span class="nav-text">配置node环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置nodePPT"><span class="nav-number">2.</span> <span class="nav-text">配置nodePPT</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置node环境"><span class="nav-number">1.</span> <span class="nav-text">配置node环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一"><span class="nav-number">1.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二"><span class="nav-number">1.2.</span> <span class="nav-text">方法二</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并配置nodePPT"><span class="nav-number">2.</span> <span class="nav-text">安装并配置nodePPT</span></a></li></ol></div>
             
 
           </div>
@@ -1271,7 +1285,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共108.6k字</span>
+  <span class="post-count">博客全站共108.8k字</span>
 </div>
         
 <div class="busuanzi-count">
@@ -1928,7 +1942,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1578672503999')
+  navigator.serviceWorker.register('/sw.js?t=1579002722453')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
