@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://github.laiczhang.com/about/index.html</loc>
+    
+    <lastmod>2020-02-10T03:42:31.929Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://github.laiczhang.com/2020-01-09/%E5%9C%A8%E7%BA%BFjupyter%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2020-01-11T07:34:14.162Z</lastmod>
+    <lastmod>2020-01-16T02:25:42.531Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>https://github.laiczhang.com/2019-11-28/Windows%E8%89%AF%E5%BF%83%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2020-01-01T14:03:47.700Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://github.laiczhang.com/about/index.html</loc>
-    
-    <lastmod>2019-12-24T10:06:47.283Z</lastmod>
     
   </url>
   
