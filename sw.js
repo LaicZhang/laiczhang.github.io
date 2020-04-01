@@ -32,7 +32,7 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/10/CSDN下载的部分资源-3/');
 
-  precacheUrls.push('/2019/09/CSDN下载的部分资源/');
+  precacheUrls.push('/2019/10/CSDN下载的部分资源-4/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};
