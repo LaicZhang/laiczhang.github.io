@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="baidu-site-verification" content="cf4d76X0A6">
+<meta name="baidu-site-verification" content="QXZrOwMj47">
+<meta name="baidu-site-verification" content="pQH5YMXqCU">
+<meta name="baidu-site-verification" content="VRcPLIaYCS">
+<meta name="google-site-verification" content="eXyB3YhQMe6iNR42X1zH1mZPvw2KLfwvdkjaiGzHG64">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/github-brands.svg?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+  
+
+
+
+
+  <meta name="description" content="准备给我的jupyter notebook加个自动补全功能，网上说要装个pip install jupyter_contrib_nbextensions 结果运行了两次都报pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&amp;#39;files.pythonhosted.org&amp;#39;, port=4">
+<meta name="keywords" content="python,效率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pip换为国内源">
+<meta property="og:url" content="https://laiczhang.github.io/2019-/month/pip换为国内源/index.html">
+<meta property="og:site_name" content="Laic Zhang の Blog">
+<meta property="og:description" content="准备给我的jupyter notebook加个自动补全功能，网上说要装个pip install jupyter_contrib_nbextensions 结果运行了两次都报pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&amp;#39;files.pythonhosted.org&amp;#39;, port=4">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://api.ooopn.com/ipst/api.php">
+<meta property="og:updated_time" content="2020-02-10T06:13:29.642Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pip换为国内源">
+<meta name="twitter:description" content="准备给我的jupyter notebook加个自动补全功能，网上说要装个pip install jupyter_contrib_nbextensions 结果运行了两次都报pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&amp;#39;files.pythonhosted.org&amp;#39;, port=4">
+<meta name="twitter:image" content="https://api.ooopn.com/ipst/api.php">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Laic Zhang の Blog" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://laiczhang.github.io/2019-/month/pip换为国内源/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>pip换为国内源 | Laic Zhang の Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Laic Zhang の Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">Do a good thing.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">96</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">26</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">75</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="algolia-popup popup search-popup">
+  <div class="algolia-search">
+    <div class="algolia-search-input-icon">
+      <i class="fa fa-search"></i>
+    </div>
+    <div class="algolia-search-input" id="algolia-search-input"></div>
+  </div>
+
+  <div class="algolia-results">
+    <div id="algolia-stats"></div>
+    <div id="algolia-hits"></div>
+    <div id="algolia-pagination" class="algolia-pagination"></div>
+  </div>
+
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/LaicZhang" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://laiczhang.github.io/2019-/month/pip换为国内源/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Laic Zhang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/鼬.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Laic Zhang の Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">pip换为国内源
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-16 23:40:04" itemprop="dateCreated datePublished" datetime="2019-12-16T23:40:04+08:00">2019-12-16</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-10 14:13:29" itemprop="dateModified" datetime="2020-02-10T14:13:29+08:00">2020-02-10</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">10k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">10 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>准备给我的jupyter notebook加个自动补全功能，网上说要装个pip install jupyter_contrib_nbextensions</p>
+<p>结果运行了两次都报<code>pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&#39;files.pythonhosted.org&#39;, port=443): Read timed out.</code></p>
+<p>这就是因为网不好，嗯，就是网不好，可没有什么墙。。。</p>
+<a id="more"></a>
+
+<h2 id="0-几个国内源"><a href="#0-几个国内源" class="headerlink" title="0.几个国内源"></a>0.几个国内源</h2><p><a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a>     豆瓣<br><a href="http://pypi.hustunique.com/simple/华中理工大学" target="_blank" rel="noopener">http://pypi.hustunique.com/simple/华中理工大学</a><br><a href="http://pypi.sdutlinux.org/simple/山东理工大学" target="_blank" rel="noopener">http://pypi.sdutlinux.org/simple/山东理工大学</a><br><a href="http://pypi.mirrors.ustc.edu.cn/simple/中国科学技术大学" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/中国科学技术大学</a><br><a href="http://mirrors.aliyun.com/pypi/simple/阿里云" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/阿里云</a><br><a href="https://pypi.tuna.tsinghua.edu.cn/simple/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/simple/</a> 清华大学</p>
+<h2 id="1-临时修改"><a href="#1-临时修改" class="headerlink" title="1.临时修改"></a>1.临时修改</h2><p>直接执行命令：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pythonModuleName -<span class="selector-tag">i</span> https:<span class="comment">//pypi.douban.com/simple</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-修改默认配置"><a href="#2-修改默认配置" class="headerlink" title="2.修改默认配置"></a>2.修改默认配置</h2><p>需要修改<code>~/.pip/pip.conf</code>。 </p>
+<p>修改 pip.conf 文件 (没有就创建一个) </p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">%APPDATA%</span><span class="symbol">\p</span>ip<span class="symbol">\p</span>ip.ini</span><br></pre></td></tr></table></figure>
+
+<p>修改内容如下： </p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 在.pip目录创建并编辑pip.conf</span></span><br><span class="line"><span class="meta"># pip安装需要使用的https加密，所以在此需要添加trusted-host </span></span><br><span class="line"></span><br><span class="line">[global]</span><br><span class="line"><span class="meta"># trusted-host = mirrors.ustc.edu.cn</span></span><br><span class="line">index-url = https:<span class="comment">//mirrors.ustc.edu.cn/pypi/web/simple</span></span><br></pre></td></tr></table></figure>
+
+<p>修改文件后，执行命令发生错误</p>
+<p>使用非HTTPS加密源（如豆瓣源），在执行命令发生错误，在命令最后加上<code>--trusted-host pypi.douban.com</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> django -i <span class="keyword">http</span>://pypi.douban.com/simple <span class="comment">--trusted-host pypi.douban.com</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-在pycharm中创建Django失败-2020-1-06更新"><a href="#3-在pycharm中创建Django失败-2020-1-06更新" class="headerlink" title="3.在pycharm中创建Django失败-2020.1.06更新"></a>3.在pycharm中创建Django失败-<em>2020.1.06更新</em></h2><p>我想在pycharm2017中直接创建Django项目，前两个方法均不起作用，依然报错443超时</p>
+<p>所以，针对<strong>Windows10</strong>，有了第三种修改方法。</p>
+<p>下载的过程，可以看到，默认情况下，最后是pythonhosted.cn这个域名中下载文件出了问题，这是python官方的域名，对应的网站是在国外。</p>
+<p>按照pip的官方说明文档，它的配置文件应该放在%APPDATA%/pip/目录下，配置文件名称是pip.ini，我们先按下win+R键。或者在开始菜单上点右键，点运行。然后在出来的窗口中输入%APPDATA%，然后点击确定。</p>
+<p>我的电脑打开的是C:\Users\HP\AppData\Roaming，在这个目录下没有看到pip目录，因此需要手动创建一个。</p>
+<p>进入pip文件夹，创建一个pip.ini，写入</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Global]</span></span><br><span class="line"><span class="attr">index-url</span> = http://pypi.douban.com/simple</span><br><span class="line"><span class="section">[install]</span></span><br><span class="line"><span class="attr">use-mirrors</span> =<span class="literal">true</span></span><br><span class="line"><span class="attr">mirrors</span> =http://pypi.douban.com/simple/</span><br><span class="line"><span class="attr">trusted-host</span> =pypi.douban.com</span><br></pre></td></tr></table></figure>
+
+<p>配置文件配置好以后，点击文件，再点击保存。然后就可以关闭文件编辑框了。</p>
+<p>然后重新使用pycharm创建Django项目，稍候就能看到，下载成功。</p>
+<h2 id="4-实测"><a href="#4-实测" class="headerlink" title="4.实测"></a>4.实测</h2><p>我是用的临时修改的方法，</p>
+<p>实测效果不错</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">Looking in indexes: https://pypi.douban.com/simple/</span><br><span class="line">Collecting jupyter_contrib_nbextensions</span><br><span class="line">  Downloading https://pypi.doubanio.com/packages/33/f0/6e2c00afda860f655fbf0f795f7310bdbf12122846344dfdc803fc7455d5/jupyter_contrib_nbextensions-0.5.1-py2.py3-none-any.whl (20.9MB)</span><br><span class="line">     |████████████████████████████████| 20.9MB 1.6MB/s</span><br><span class="line">Collecting jupyter-highlight-selected-word&gt;=0.1.1 (from jupyter_contrib_nbextensions)</span><br><span class="line">  Downloading https://pypi.doubanio.com/packages/50/d7/19ab7cfd60bf268d2abbacc52d4295a40f52d74dfc0d938e4761ee5e598b/jupyter_highlight_selected_word-0.2.0-py2.py3-none-any.whl</span><br><span class="line">Requirement already satisfied: pyyaml in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (3.13)</span><br><span class="line">Requirement already satisfied: nbconvert&gt;=4.2 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (5.4.0)</span><br><span class="line">Collecting jupyter-nbextensions-configurator&gt;=0.4.0 (from jupyter_contrib_nbextensions)</span><br><span class="line">  Downloading https://pypi.doubanio.com/packages/51/a3/d72d5f2dc10c5ccf5a6f4c79f636bf071a5ce462dedd07af2f70384db6cb/jupyter_nbextensions_configurator-0.4.1.tar.gz (479kB)</span><br><span class="line">     |████████████████████████████████| 481kB 2.2MB/s</span><br><span class="line">Requirement already satisfied: lxml in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (4.2.5)</span><br><span class="line">Requirement already satisfied: ipython-genutils in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (0.2.0)</span><br><span class="line">Collecting jupyter-latex-envs&gt;=1.3.8 (from jupyter_contrib_nbextensions)</span><br><span class="line">  Downloading https://pypi.doubanio.com/packages/0e/15/55805de080d5542f76920364635e96e64d3b37f678befdfe3b16aa154205/jupyter_latex_envs-1.4.6.tar.gz (861kB)</span><br><span class="line">     |████████████████████████████████| 870kB 1.7MB/s</span><br><span class="line">Requirement already satisfied: traitlets&gt;=4.1 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (4.3.2)</span><br><span class="line">Collecting jupyter-contrib-core&gt;=0.3.3 (from jupyter_contrib_nbextensions)</span><br><span class="line">  Downloading https://pypi.doubanio.com/packages/e6/8f/04a752a8b66a66e7092c035e5d87d2502ac7ec07f9fb6059059b6c0dc272/jupyter_contrib_core-0.3.3-py2.py3-none-any.whl</span><br><span class="line">Requirement already satisfied: tornado in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (5.1)</span><br><span class="line">Requirement already satisfied: jupyter-core in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (4.4.0)</span><br><span class="line">Requirement already satisfied: notebook&gt;=4.0 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter_contrib_nbextensions) (5.6.0)</span><br><span class="line">Requirement already satisfied: mistune&gt;=0.8.1 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (0.8.3)</span><br><span class="line">Requirement already satisfied: jinja2 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (2.10)</span><br><span class="line">Requirement already satisfied: pygments in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (2.2.0)</span><br><span class="line">Requirement already satisfied: nbformat&gt;=4.4 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (4.4.0)</span><br><span class="line">Requirement already satisfied: entrypoints&gt;=0.2.2 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (0.2.3)</span><br><span class="line">Requirement already satisfied: bleach in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (2.1.4)</span><br><span class="line">Requirement already satisfied: pandocfilters&gt;=1.4.1 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (1.4.2)</span><br><span class="line">Requirement already satisfied: testpath in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (0.3.1)</span><br><span class="line">Requirement already satisfied: defusedxml in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (0.5.0)</span><br><span class="line">Requirement already satisfied: ipython in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (6.5.0)</span><br><span class="line">Requirement already satisfied: six in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from traitlets&gt;=4.1-&gt;jupyter_contrib_nbextensions) (1.11.0)</span><br><span class="line">Requirement already satisfied: decorator in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from traitlets&gt;=4.1-&gt;jupyter_contrib_nbextensions) (4.3.0)</span><br><span class="line">Requirement already satisfied: setuptools in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter-contrib-core&gt;=0.3.3-&gt;jupyter_contrib_nbextensions) (40.2.0)</span><br><span class="line">Requirement already satisfied: ipykernel in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (4.10.0)</span><br><span class="line">Requirement already satisfied: pyzmq&gt;=17 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (17.1.2)</span><br><span class="line">Requirement already satisfied: terminado&gt;=0.8.1 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (0.8.1)</span><br><span class="line">Requirement already satisfied: jupyter-client&gt;=5.2.0 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (5.2.3)</span><br><span class="line">Requirement already satisfied: prometheus-client in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (0.3.1)</span><br><span class="line">Requirement already satisfied: Send2Trash in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (1.5.0)</span><br><span class="line">Requirement already satisfied: MarkupSafe&gt;=0.23 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jinja2-&gt;nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (1.0)</span><br><span class="line">Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from nbformat&gt;=4.4-&gt;nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (2.6.0)</span><br><span class="line">Requirement already satisfied: html5lib!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8,&gt;=0.99999999pre in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from bleach-&gt;nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (1.0.1)</span><br><span class="line">Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.15 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (1.0.15)</span><br><span class="line">Requirement already satisfied: jedi&gt;=0.10 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.12.1)</span><br><span class="line">Requirement already satisfied: simplegeneric&gt;0.8 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.8.1)</span><br><span class="line">Requirement already satisfied: colorama; sys_platform == "win32" in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.3.9)</span><br><span class="line">Requirement already satisfied: pickleshare in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.7.4)</span><br><span class="line">Requirement already satisfied: backcall in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.1.0)</span><br><span class="line">Requirement already satisfied: python-dateutil&gt;=2.1 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jupyter-client&gt;=5.2.0-&gt;notebook&gt;=4.0-&gt;jupyter_contrib_nbextensions) (2.7.3)</span><br><span class="line">Requirement already satisfied: webencodings in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from html5lib!=1.0b1,!=1.0b2,!=1.0b3,!=1.0b4,!=1.0b5,!=1.0b6,!=1.0b7,!=1.0b8,&gt;=0.99999999pre-&gt;bleach-&gt;nbconvert&gt;=4.2-&gt;jupyter_contrib_nbextensions) (0.5.1)</span><br><span class="line">Requirement already satisfied: wcwidth in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.15-&gt;ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.1.7)</span><br><span class="line">Requirement already satisfied: parso&gt;=0.3.0 in c:<span class="symbol">\u</span>sers<span class="symbol">\h</span>p<span class="symbol">\a</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages (from jedi&gt;=0.10-&gt;ipython-&gt;jupyter-latex-envs&gt;=1.3.8-&gt;jupyter_contrib_nbextensions) (0.3.1)</span><br><span class="line">Building wheels for collected packages: jupyter-nbextensions-configurator, jupyter-latex-envs</span><br><span class="line">  Building wheel for jupyter-nbextensions-configurator (setup.py) ... done</span><br><span class="line">  Stored in directory: C:<span class="symbol">\U</span>sers<span class="symbol">\H</span>P<span class="symbol">\A</span>ppData<span class="symbol">\L</span>ocal<span class="symbol">\p</span>ip<span class="symbol">\C</span>ache<span class="symbol">\w</span>heels<span class="symbol">\2</span>d<span class="symbol">\3</span>8<span class="symbol">\7</span>4<span class="symbol">\a</span>c84d484daaa7818d65661216c57ab5ef746202845fe6cb1a3</span><br><span class="line">  Building wheel for jupyter-latex-envs (setup.py) ... done</span><br><span class="line">  Stored in directory: C:<span class="symbol">\U</span>sers<span class="symbol">\H</span>P<span class="symbol">\A</span>ppData<span class="symbol">\L</span>ocal<span class="symbol">\p</span>ip<span class="symbol">\C</span>ache<span class="symbol">\w</span>heels<span class="symbol">\e</span>1<span class="symbol">\9</span>7<span class="symbol">\0</span>1<span class="symbol">\f</span>c028f4a234bf10959aef88faddc04d738746e10dcf6f6ba86</span><br><span class="line">Successfully built jupyter-nbextensions-configurator jupyter-latex-envs</span><br><span class="line">Installing collected packages: jupyter-highlight-selected-word, jupyter-contrib-core, jupyter-nbextensions-configurator, jupyter-latex-envs, jupyter-contrib-nbextensions</span><br><span class="line">Successfully installed jupyter-contrib-core-0.3.3 jupyter-contrib-nbextensions-0.5.1 jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6 jupyter-nbextensions-configurator-0.4.1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://api.ooopn.com/ipst/api.php" alt="ip signature"></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+	
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/panda一块砖美化1.png" alt="Laic Zhang wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎关注博主微信公众号【laiczhang】</div>
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Laic Zhang</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://laiczhang.github.io/2019-/month/pip换为国内源/" title="pip换为国内源">https://laiczhang.github.io/2019-/month/pip换为国内源/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/效率/" rel="tag"><i class="fa fa-tag"></i> 效率</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019-/month/Google镜像整理-长期更新/" rel="next" title="Google镜像整理-长期更新">
+                <i class="fa fa-chevron-left"></i> Google镜像整理-长期更新
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020-/month/爬取周读网书籍信息/" rel="prev" title="爬取周读网书籍信息">
+                爬取周读网书籍信息 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/鼬.jpg" alt="Laic Zhang">
+            
+              <p class="site-author-name" itemprop="name">Laic Zhang</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">75</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">96</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/LaicZhang" title="GitHub &rarr; https://github.com/LaicZhang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:i@laiczhang.com" title="E-Mail &rarr; mailto:i@laiczhang.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/qq_44621510" title="CSDN &rarr; https://blog.csdn.net/qq_44621510" rel="noopener" target="_blank"><i class="fa fa-fw fa-copyright"></i>CSDN</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.v2ex.com/?r=LaicZhang" title="V2EX &rarr; https://www.v2ex.com/?r=LaicZhang" rel="noopener" target="_blank"><i class="fa fa-fw fa-vimeo"></i>V2EX</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/laiczhang" title="Weibo &rarr; https://weibo.com/laiczhang" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/zMbK5gdHxMNmDFq?s=09" title="Twitter &rarr; https://twitter.com/zMbK5gdHxMNmDFq?s=09" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.facebook.com/profile.php?id=100035357056010" title="Facebook &rarr; https://www.facebook.com/profile.php?id=100035357056010" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook-square"></i>Facebook</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.laiczhang.com" title="wordpress &rarr; https://www.laiczhang.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-wordpress"></i>wordpress</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/LaicZhang/picture-bed/blob/master/panda%E4%B8%80%E5%9D%97%E7%A0%96%E7%BE%8E%E5%8C%961.png?raw=true" title="WeChat &rarr; https://github.com/LaicZhang/picture-bed/blob/master/panda%E4%B8%80%E5%9D%97%E7%A0%96%E7%BE%8E%E5%8C%961.png?raw=true" rel="noopener" target="_blank"><i class="fa fa-fw fa-qrcode"></i>WeChat</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://hacpai.com/register?r=LaicZhang" title="hacpai &rarr; https://hacpai.com/register?r=LaicZhang" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>hacpai</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-几个国内源"><span class="nav-number">1.</span> <span class="nav-text">0.几个国内源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-临时修改"><span class="nav-number">2.</span> <span class="nav-text">1.临时修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改默认配置"><span class="nav-number">3.</span> <span class="nav-text">2.修改默认配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在pycharm中创建Django失败-2020-1-06更新"><span class="nav-number">4.</span> <span class="nav-text">3.在pycharm中创建Django失败-2020.1.06更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-实测"><span class="nav-number">5.</span> <span class="nav-text">4.实测</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Laic Zhang</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">247k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    
+    <span title="站点阅读时长">3:44</span>
+  
+</div>
+<!--
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
+
+
+
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共105.6k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/reading_progress/reading_progress.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+  <script src="/js/js.cookie.js?v=7.1.2"></script>
+  <script src="/js/scroll-cookie.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/algolia-search.js?v=7.1.2"></script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '500px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script>pangu.spacingPage();</script>
+
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1585746081237')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>
