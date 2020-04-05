@@ -26,13 +26,13 @@ var precacheUrls = [];
 
   precacheUrls.push('/2019/07/2019最新百度网盘下载神器/');
 
-  precacheUrls.push('/2019/10/CSDN下载的部分资源-4/');
-
-  precacheUrls.push('/2019/09/CSDN下载的部分资源-2/');
-
   precacheUrls.push('/2019/07/ApacheCN资源全整合-更新中/');
 
   precacheUrls.push('/2019/10/CSDN下载的部分资源-3/');
+
+  precacheUrls.push('/2019/09/CSDN下载的部分资源-2/');
+
+  precacheUrls.push('/2019/10/CSDN下载的部分资源-4/');
 
 toolbox.precache(precacheUrls);
 toolbox.options = {"networkTimeoutSeconds":5};

@@ -341,23 +341,19 @@
   
     <div class="site-search">
       
-  <div class="algolia-popup popup search-popup">
-  <div class="algolia-search">
-    <div class="algolia-search-input-icon">
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
       <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
-    <div class="algolia-search-input" id="algolia-search-input"></div>
   </div>
-
-  <div class="algolia-results">
-    <div id="algolia-stats"></div>
-    <div id="algolia-hits"></div>
-    <div id="algolia-pagination" class="algolia-pagination"></div>
-  </div>
-
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
+  <div id="local-search-result"></div>
 </div>
 
 
@@ -559,7 +555,7 @@
 <p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：
 Use the</code>printf()` function.</p>
 <p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p>
-<p>Email邮件：<br><a href="mailto:&#49;&#x32;&#x33;&#52;&#53;&#54;&#55;&#56;&#x39;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#49;&#x32;&#x33;&#52;&#53;&#54;&#55;&#56;&#x39;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
+<p>Email邮件：<br><a href="mailto:&#49;&#50;&#51;&#52;&#x35;&#54;&#x37;&#x38;&#57;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;" target="_blank" rel="noopener">&#49;&#50;&#51;&#52;&#x35;&#54;&#x37;&#x38;&#57;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;</a></p>
 <p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p>
 <pre><code></code></pre>
       
@@ -1116,7 +1112,7 @@ Use the</code>printf()` function.</p>
                   
                     
                   
-                  <a href="https://www.laiczhang.com" title="wordpress &rarr; https://www.laiczhang.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-wordpress"></i>wordpress</a>
+                  <a href="https://laiczhang.com" title="wordpress &rarr; https://laiczhang.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-wordpress"></i>wordpress</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1441,6 +1437,19 @@ Use the</code>printf()` function.</p>
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
       
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
 
       $.ajax({
         url: path,
@@ -1475,6 +1484,8 @@ Use the</code>printf()` function.</p>
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
                 
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
@@ -1601,7 +1612,7 @@ Use the</code>printf()` function.</p>
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('-1');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1714,19 +1725,6 @@ Use the</code>printf()` function.</p>
 
 
 
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/algolia-search.js?v=7.1.2"></script>
-
-
 
   
 
@@ -1830,22 +1828,8 @@ if ($('body').find('div.pdf').length) {
   
 
   
-  
-  
-  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
-  <script>pangu.spacingPage();</script>
-
 
   
-  
-  
-  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script>
-  
-    bookmark.scrollToMark('auto', "#更多");
-  
-  </script>
-
 
   
 <script>
@@ -1897,7 +1881,7 @@ if ($('body').find('div.pdf').length) {
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="https://blog-static.cnblogs.com/files/ioufev/love.js"></script>
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1586063881018')
+  navigator.serviceWorker.register('/sw.js?t=1586065230366')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
