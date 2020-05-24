@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://laiczhang.github.io/"/>
-  <updated>2020-04-18T03:09:00.950Z</updated>
+  <updated>2020-05-24T03:41:15.887Z</updated>
   <id>https://laiczhang.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简单介绍Cookie定义及其作用</title>
+    <link href="https://laiczhang.github.io/2020/05/%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8DCookie%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/"/>
+    <id>https://laiczhang.github.io/2020/05/简单介绍Cookie定义及其作用/</id>
+    <published>2020-05-24T03:37:07.000Z</published>
+    <updated>2020-05-24T03:41:15.887Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="cookies是什么？"><a href="#cookies是什么？" class="headerlink" title="cookies是什么？"></a>cookies是什么？</h2><p>Cookie（复数形态Cookies），又称为“小甜饼”。类型为“小型文本文件”，指某些网站为了辨别用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。</p><ul><li>Cookie 是浏览器访问服务器后，服务器传给浏览器的一段数据。</li><li>浏览器需要保存这段数据，不得轻易删除。</li><li>此后每次浏览器访问该服务器，都必须带上这段数据。</li><li>无论谁访问服务器时都必须携带自己的「通行证」，这样服务器就可以通过「通行证」确定用户身份了。</li><li>Cookie有不可跨域名性。即浏览器不会将<a href="http://baidu.com的cookie发送给http://google.com" target="_blank" rel="noopener">http://baidu.com的cookie发送给http://google.com</a><br>Cookie 就是这么简单，这就是 Web 开发里 Cookie 的含义。</li></ul><a id="more"></a><h2 id="查看网站cookies"><a href="#查看网站cookies" class="headerlink" title="查看网站cookies"></a>查看网站cookies</h2><h3 id="在application中查看"><a href="#在application中查看" class="headerlink" title="在application中查看"></a>在application中查看</h3><p><img src="QQ%E6%88%AA%E5%9B%BE20200524112526.png" alt></p><h3 id="在network中查看"><a href="#在network中查看" class="headerlink" title="在network中查看"></a>在network中查看</h3><p><img src="QQ%E6%88%AA%E5%9B%BE20200524112732.png" alt></p><h3 id="console中通过js查看"><a href="#console中通过js查看" class="headerlink" title="console中通过js查看"></a>console中通过js查看</h3><p>document.cookie</p><h3 id="通过浏览器插件查看"><a href="#通过浏览器插件查看" class="headerlink" title="通过浏览器插件查看"></a>通过浏览器插件查看</h3><p>如Chrome浏览器的EditThisCookie插件等等。</p><h2 id="Cookies有几个特点"><a href="#Cookies有几个特点" class="headerlink" title="Cookies有几个特点"></a>Cookies有几个特点</h2><p>第一，它具有专属性，就是谁发出的Cookies就只有谁有权限读。你去淘宝买完了东西又上京东，京东的服务器来读取Cookies时是无法读取淘宝放在你机器中的Cookies的，它只能放置自己的Cookies，在需要时读取。所以尽管你电脑上存储了淘宝京东新浪草榴等一堆网站的Cookies，但只要电脑不丢，这些Cookies本身都是安全的，没有哪个网站能主动取走。</p><p>第二个特点，Cookies的确能记录你的很多个人信息，比如你经常访问哪类网页，在网页上停留多久，通常在什么时候上网等等。这些信息有些人可能毫不在乎，但如果有广告商集中搜集过去，就能掌握这个人的上网兴趣口味，有时还能推算出收入水平等个人信息。不过，对于很多地方强调的Cookies会保存用户密码问题，在我看来倒未必是迫在眉睫的危险，因为这些密码通常会用不可逆的方式加密，泄露出去也无法还原出用户密码；这方面的话题还可以专门开一篇文章讲，我们暂时打住，还是去谈主题。</p><h2 id="Cookie的属性"><a href="#Cookie的属性" class="headerlink" title="Cookie的属性"></a>Cookie的属性</h2><ol><li><p>String「name」 ：该Cookie的「名称」。Cookie一旦创建，名称便不可更改。</p></li><li><p>Object「value」：该Cookie的「值」</p></li><li><p>Int「maxAge」：该Cookie的「失效时间」，单位秒</p></li></ol><p>注：如果为正数，则该Cookie在maxAge秒后失效。如果为负数，则该Cookie为临时Cookie，关闭浏览器即失效。如果为0，表示删除该Cookie。默认为-1，即关闭浏览器即失效</p><ol start="4"><li><p>Boolean「secure」：「是否仅使用安全协议传输」，默认为false</p></li><li><p>String「path」：该Cookie的「使用路径」</p></li></ol><p>注：如果设置为“/shit/”，则只有“<a href="http://xxx.xxx.xxx/shit”的程序可以访问该Cookie。如果设置为“/”，则本域名下的程序都可以访问Cookie，注意最后一个字符必须为“/”。" target="_blank" rel="noopener">http://xxx.xxx.xxx/shit”的程序可以访问该Cookie。如果设置为“/”，则本域名下的程序都可以访问Cookie，注意最后一个字符必须为“/”。</a></p><ol start="6"><li>String「domain」：「可以访问该Cookie的域名」。</li></ol><p>注：如果设置为”.<a href="http://google.com&quot;，则所有以&quot;http://google.com&quot;结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”。" target="_blank" rel="noopener">http://google.com&quot;，则所有以&quot;http://google.com&quot;结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”。</a></p><ol start="7"><li><p>String「comment」：该Cookie的「用处说明」，用来再浏览器显示Cookie信息的时候显示该说明。</p></li><li><p>Int「version」：该Cookie的「版本号」。0表示遵循Netspace的Cookie规范，1表示遵循W3C的RFC2109规范。</p></li></ol><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://zhuanlan.zhihu.com/p/29884606" target="_blank" rel="noopener">清除Cookie？告诉你什么叫Cookie-知乎</a><br><a href="https://www.jianshu.com/p/fe2de6369acf" target="_blank" rel="noopener">Cookie是什么？-简书</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;cookies是什么？&quot;&gt;&lt;a href=&quot;#cookies是什么？&quot; class=&quot;headerlink&quot; title=&quot;cookies是什么？&quot;&gt;&lt;/a&gt;cookies是什么？&lt;/h2&gt;&lt;p&gt;Cookie（复数形态Cookies），又称为“小甜饼”。类型为“小型文本文件”，指某些网站为了辨别用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cookie 是浏览器访问服务器后，服务器传给浏览器的一段数据。&lt;/li&gt;
+&lt;li&gt;浏览器需要保存这段数据，不得轻易删除。&lt;/li&gt;
+&lt;li&gt;此后每次浏览器访问该服务器，都必须带上这段数据。&lt;/li&gt;
+&lt;li&gt;无论谁访问服务器时都必须携带自己的「通行证」，这样服务器就可以通过「通行证」确定用户身份了。&lt;/li&gt;
+&lt;li&gt;Cookie有不可跨域名性。即浏览器不会将&lt;a href=&quot;http://baidu.com的cookie发送给http://google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://baidu.com的cookie发送给http://google.com&lt;/a&gt;&lt;br&gt;Cookie 就是这么简单，这就是 Web 开发里 Cookie 的含义。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="https://laiczhang.github.io/categories/web/"/>
+    
+    
+      <category term="web" scheme="https://laiczhang.github.io/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有一台云服务器可以做什么</title>
+    <link href="https://laiczhang.github.io/2020/05/%E6%9C%89%E4%B8%80%E5%8F%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>https://laiczhang.github.io/2020/05/有一台云服务器可以做什么/</id>
+    <published>2020-05-10T14:01:44.000Z</published>
+    <updated>2020-05-10T14:25:13.362Z</updated>
+    
+    <content type="html"><![CDATA[<p>在知乎上看到的问题，在自己博客上总结一下。</p><a id="more"></a><h2 id="0-富强"><a href="#0-富强" class="headerlink" title="0. 富强"></a>0. 富强</h2><p>这个，算是程序员的基本手艺了，尤其是go程序员:）</p><h2 id="1-搭建个人博客"><a href="#1-搭建个人博客" class="headerlink" title="1. 搭建个人博客"></a>1. 搭建个人博客</h2><ul><li><p>好处</p><ul><li>名誉+1</li><li>技术熟练度+1</li><li>粉丝+n</li></ul></li><li><p>坏处</p><ul><li>完全原创比较花费时间与精力</li><li>文章被盗可能性+1</li><li>机器被攻击可能性+1</li></ul></li><li><p>常见搭建方式</p><ul><li>WordPress</li><li>emlog</li><li>GitHub page（无需服务器</li></ul></li></ul><h2 id="2-图床"><a href="#2-图床" class="headerlink" title="2.图床"></a>2.图床</h2><h2 id="3-在线jupyter-notebook"><a href="#3-在线jupyter-notebook" class="headerlink" title="3.在线jupyter notebook"></a>3.在线jupyter notebook</h2><h2 id="4-在线vscode"><a href="#4-在线vscode" class="headerlink" title="4.在线vscode"></a>4.在线vscode</h2><h2 id="5-在线个人网盘"><a href="#5-在线个人网盘" class="headerlink" title="5.在线个人网盘"></a>5.在线个人网盘</h2><h2 id="n-其他骚操作"><a href="#n-其他骚操作" class="headerlink" title="n. 其他骚操作"></a>n. 其他骚操作</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在知乎上看到的问题，在自己博客上总结一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="高效率" scheme="https://laiczhang.github.io/categories/%E9%AB%98%E6%95%88%E7%8E%87/"/>
+    
+    
+      <category term="云服务器" scheme="https://laiczhang.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>DNS原理及解析过程</title>
@@ -446,7 +497,7 @@
     <published>2019-12-03T16:26:01.000Z</published>
     <updated>2019-12-03T16:27:45.384Z</updated>
     
-    <content type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><p>Markdown编辑器有很多种，我使用的是 Typora</p><p>以下是Markdown的基本语法（将下面的语法复制粘贴到Markdown编辑器里面即看见效果）</p><a id="more"></a><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*斜体*</span></span><br><span class="line"><span class="emphasis">_斜体第二种方法_</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="strong">*加粗*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">__加粗的第二种方法__</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___粗斜体___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">两个enter是换行，或者用&lt;/br&gt;标签表示换行</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">用一行的=或者-表示一级标题和二级标题。如：</span></span><br><span class="line"><span class="strong">一级标题</span></span><br><span class="line"><span class="strong">=======</span></span><br><span class="line"><span class="strong">二级标题</span></span><br><span class="line"><span class="strong">--------</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">也可以在前面加上一到六个#表示标题的1级到6级。如：</span></span><br><span class="line"><span class="strong">#一级标题</span></span><br><span class="line"><span class="strong">##二级标题</span></span><br><span class="line"><span class="strong">###三级标题</span></span><br><span class="line"><span class="strong">####四级标题</span></span><br><span class="line"><span class="strong">#####五级标题</span></span><br><span class="line"><span class="strong">######六级标题</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">无序列表：在前面加上 *</span> 或者 + 或者 - 然后加个空格：</span><br><span class="line"><span class="bullet">* </span>ABC</span><br><span class="line"><span class="bullet">* </span>DEF</span><br><span class="line"><span class="bullet">* </span>GHI</span><br><span class="line"></span><br><span class="line">+ JKL</span><br><span class="line">+ MNO</span><br><span class="line">+ PQR</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>STU</span><br><span class="line"><span class="bullet">- </span>VWX</span><br><span class="line"><span class="bullet">- </span>YZZ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表：数字<span class="code">+英文句点+</span>空格。如下：</span><br><span class="line">1. 呵呵</span><br><span class="line">2. 哈哈</span><br><span class="line">3. 嘿嘿</span><br><span class="line">4. 哼哼</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;lt;   // 会显示为”&lt;“</span><br><span class="line">&amp;amp;  // 会显示为”&amp;“：在 href 属性里面，必须将 &amp; 转变为 &amp;amp;</span><br><span class="line">\.     // 为了防止产生"1."变为有序列表，则可以写成"1\."</span><br><span class="line"><span class="code"> * _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：</span><br><span class="line">&gt;&gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。</span><br><span class="line">&gt;&gt;&gt;这是一个三级引言。格式会显示为字体更小了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​<span class="code">```</span>C++</span><br><span class="line">代码块语法高亮</span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>超级链接：<a href="超级链接的网址，可以是绝对路径、相对路径">超级链接显示的文字</a><br>也支持HTML格式的超级链接<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></p><p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：Use the</code>printf()` function.</p><p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p><p>Email邮件：<br><a href="mailto:&#49;&#50;&#51;&#x34;&#53;&#x36;&#55;&#56;&#x39;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;" target="_blank" rel="noopener">&#49;&#50;&#51;&#x34;&#53;&#x36;&#55;&#56;&#x39;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a></p><p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p><pre><code></code></pre>]]></content>
+    <content type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><p>Markdown编辑器有很多种，我使用的是 Typora</p><p>以下是Markdown的基本语法（将下面的语法复制粘贴到Markdown编辑器里面即看见效果）</p><a id="more"></a><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*斜体*</span></span><br><span class="line"><span class="emphasis">_斜体第二种方法_</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="strong">*加粗*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">__加粗的第二种方法__</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___粗斜体___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">两个enter是换行，或者用&lt;/br&gt;标签表示换行</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">用一行的=或者-表示一级标题和二级标题。如：</span></span><br><span class="line"><span class="strong">一级标题</span></span><br><span class="line"><span class="strong">=======</span></span><br><span class="line"><span class="strong">二级标题</span></span><br><span class="line"><span class="strong">--------</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">也可以在前面加上一到六个#表示标题的1级到6级。如：</span></span><br><span class="line"><span class="strong">#一级标题</span></span><br><span class="line"><span class="strong">##二级标题</span></span><br><span class="line"><span class="strong">###三级标题</span></span><br><span class="line"><span class="strong">####四级标题</span></span><br><span class="line"><span class="strong">#####五级标题</span></span><br><span class="line"><span class="strong">######六级标题</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">无序列表：在前面加上 *</span> 或者 + 或者 - 然后加个空格：</span><br><span class="line"><span class="bullet">* </span>ABC</span><br><span class="line"><span class="bullet">* </span>DEF</span><br><span class="line"><span class="bullet">* </span>GHI</span><br><span class="line"></span><br><span class="line">+ JKL</span><br><span class="line">+ MNO</span><br><span class="line">+ PQR</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>STU</span><br><span class="line"><span class="bullet">- </span>VWX</span><br><span class="line"><span class="bullet">- </span>YZZ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表：数字<span class="code">+英文句点+</span>空格。如下：</span><br><span class="line">1. 呵呵</span><br><span class="line">2. 哈哈</span><br><span class="line">3. 嘿嘿</span><br><span class="line">4. 哼哼</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;lt;   // 会显示为”&lt;“</span><br><span class="line">&amp;amp;  // 会显示为”&amp;“：在 href 属性里面，必须将 &amp; 转变为 &amp;amp;</span><br><span class="line">\.     // 为了防止产生"1."变为有序列表，则可以写成"1\."</span><br><span class="line"><span class="code"> * _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：</span><br><span class="line">&gt;&gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。</span><br><span class="line">&gt;&gt;&gt;这是一个三级引言。格式会显示为字体更小了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​<span class="code">```</span>C++</span><br><span class="line">代码块语法高亮</span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>超级链接：<a href="超级链接的网址，可以是绝对路径、相对路径">超级链接显示的文字</a><br>也支持HTML格式的超级链接<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></p><p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：Use the</code>printf()` function.</p><p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p><p>Email邮件：<br><a href="mailto:&#x31;&#50;&#x33;&#52;&#53;&#54;&#x37;&#x38;&#57;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x31;&#50;&#x33;&#52;&#53;&#54;&#x37;&#x38;&#57;&#x40;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a></p><p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p><pre><code></code></pre>]]></content>
     
     <summary type="html">
     
@@ -460,61 +511,6 @@
     
     
       <category term="笔记" scheme="https://laiczhang.github.io/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的考核故事</title>
-    <link href="https://laiczhang.github.io/2019/12/%E6%88%91%E7%9A%84%E8%80%83%E6%A0%B8%E6%95%85%E4%BA%8B/"/>
-    <id>https://laiczhang.github.io/2019/12/我的考核故事/</id>
-    <published>2019-12-01T14:19:15.000Z</published>
-    <updated>2019-12-01T14:20:59.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>年底又到了，每到这个时候，总是有一件让人烦心的事情： 打考核！</p><p>以前没带团队的时候，不用做这个事情，现在成了每个考核季必不可少的事。</p><p>我想起了一次印象深刻的考核，哦，应该说是两次。</p><a id="more"></a><p>我2011年底开始做存储系统，2012年完成了真正的上线，并且取得了预期的效果，你可以认为2012年对我来说是丰收的一年。</p><p>那时我很自然的认为，我可以在那个考核季拿到一个最好的考核。</p><p>那时候，我们按S，A，B，C作评价，所以我觉得自己可以拿到一个S，而且当时和我同组的的不少人，也觉得我可以拿S。</p><p>我记得当时打开考核结果通知邮件的时候，心情特别激动，我满脑子的S，根本就没有做好其它可能的心理准备。</p><p>但最终结果是一个A！</p><p>我记得当时极其失落，我完全无法理解这个结果，后来我知晓了当时拿S的同事，我仔细对比了那个考核季的产出，他根本就没有啥突出的项目，而我当时完成的是里程碑式的大项目 —- 自研存储第一版上线，而且达到了预期的性能和灾备能力目标。</p><p>自己失落了好一段时间，慢慢才淡化下来。</p><p>我对我领导的失望也是那时候慢慢增长起来的，当时觉得既然存在偏见，那我不如离开吧，反正就打份工！谁也不欠谁！</p><p>后来我真去了外面面试，拿了一个offer , 各方面都谈妥了，已经准备离开了，不过就在离开前，初始团队整体都收到了一笔数额不少的限制性股票，我看在了钱的份上，才留了下来。</p><p>但我对我领导的偏见已经形成，我心里一直在伺机看内部和外部的其它机会。</p><p>大约过了一年，那件事情也慢慢淡化了。</p><p>有一天我跟我领导一起去了深圳，参加一个技术讨论会。</p><p>高铁回来的路上，他突然问我，自己觉得这个考核季的表现怎样？我说感觉一般，拿个A或B的样子吧。他面带惊喜的说，给了我一个S。</p><p>确实，我被惊喜到了，当然很开心，不过我心存疑惑，我问他，我觉得表现一般呀，怎么就拿到了 S ？</p><p>他说，虽然我自己感觉一般，但因为那个考核季，大家的产出都不高，而我是相对最高的，所以给我了S。</p><p>话题聊开了，我就提到了2012年的那次考核，我说那时候自己真觉得一定是S了，为啥最后给了 T 同事？</p><p>他才给我讲了下面这个故事：</p><p>那次，我的产出确实是整个团队最高的，而且表现也很好，第一轮打考核的时候，他确实给我打了S。</p><p>后来将考核结果提交给我们总监的时候，被驳回了，总监把团队唯一的S给了T。</p><p>他说，当时因为T有离开的意向，而总监不想失去T，所以想通过这个S来做些挽回。当然最后T确实也留下了。</p><p>我听完故事，才开始明白，原来考核跟我想的并不一样。</p><p>考核的结果有你可以左右的因素，也有你不可以左右的因素，同时它也是一个管理的工具，那个时候，我深刻的体会到了，在总监看来，我们就是一堆的棋子。</p><p>那一次的谈话，解开了埋藏在心里一年多的结，我也体谅到了领导们的一些难处，不过后来，我还是离开了，离开的因素里面，也确实有对他们这种管理方式的不认可。</p><p>2014年的时候，我去到了新的团队，新团队的管理风格完全不同，总得来说，是更人性化。</p><p>上层的会关怀下层，虽然我知道我们只是螺丝钉，但螺丝钉也需要被关怀，被尊重！</p><p>新团队的直属领导，包括上上层领导都很好，虽然在实际利益上没有获得更多，但我真的从中感受到了被关心，被尊重。</p><p>在后面的考核季里面，其实也出现过类似的事情，因为某些特殊的原因，需要调整我的考核的结果，但他们都及时的跟我沟通，除了表达对我的认可，也充分尊重了我的意见。</p><p>我觉得新部门的管理风格对我影响很大，后面我自己带团队，打考核或作其它安排的时候，我都会换位到那个具体同事的处境上去思考这些决策：如果以前的我被这么对待，我是什么感觉？我希望我自己的领导怎么处理这类的事情 ……</p><p>人心其实是相通的，只要你能充分地站在对方的处境去想，就会让对方感受好很多，只是，有时候，领导们无意或有意不那么做吧！</p><p>最后，给点我自己的建议：</p><p>1    考核确实是一个管理工具，所以如果你的考核不符合你的预期，也有可能不是你的问题</p><p>2    不同团队的管理风格会有巨大的差异，不是所有领导都是“坏人”，也有很多领导是很得民心的。</p><p>3     受了委屈，最好沟通下，我当时要是及时沟通，也不会被憋得那么不舒服。</p><p>4      如果一直无法认可现有团队的管理风格，那就伺机离开吧，不过需要找个好找下家。</p><p>5       要学会忍，但也要能够 “滚”，所以你需要有真正的实力，可以让自己有骨气的 “滚” ！</p><p>我的故事讲完了，不知道大家有没有自己考核相关的故事，也欢迎分享下！！！</p><p>本文来自【大飞码字的朋友们】，欢迎加入。</p><p><img src="/images/ZSXQ_%E5%A4%A7%E9%A3%9E%E7%A0%81%E5%AD%97.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;年底又到了，每到这个时候，总是有一件让人烦心的事情： 打考核！&lt;/p&gt;
-&lt;p&gt;以前没带团队的时候，不用做这个事情，现在成了每个考核季必不可少的事。&lt;/p&gt;
-&lt;p&gt;我想起了一次印象深刻的考核，哦，应该说是两次。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="知识星球" scheme="https://laiczhang.github.io/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
-    
-    
-      <category term="考核" scheme="https://laiczhang.github.io/tags/%E8%80%83%E6%A0%B8/"/>
-    
-      <category term="工作" scheme="https://laiczhang.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【转载】信用租房的套路</title>
-    <link href="https://laiczhang.github.io/2019/12/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91%E4%BF%A1%E7%94%A8%E7%A7%9F%E6%88%BF%E7%9A%84%E5%A5%97%E8%B7%AF/"/>
-    <id>https://laiczhang.github.io/2019/12/【转载】信用租房的套路/</id>
-    <published>2019-12-01T14:15:03.000Z</published>
-    <updated>2019-12-01T14:18:26.261Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.A用户租房，找到B公寓，双方都觉得合适后，签合同。</p><p>2.B公寓以用户的名义，向金融机构C贷款，金额为A用户的全年租金。（1中的合同中可能包含与金融机构C的合作合同，但部分用户并不知情，另一部分用户即使知情也不介意。）</p><p>3.金融机构C放款给公寓B，这笔钱被公寓B放到公司。</p><p>4.公寓B收到钱，一部分用于定期付钱给房东，一部分为自己的利润。</p><p>5.用户A定期以房租形式向金融机构分期还款。</p><p>6.如用户A中途退租，则金融机构C的未还金额由公寓B缴满，好一点的会提前终止分期，比较恶劣的可能是，虽然房客已退租，但是公寓B依然按照原来的节奏，以用户的名义向金融机构C分期还款。</p><p>7.合同结束后，重复以上流程，继续分期。</p><p>现在的问题是，公寓B资金链断裂，所以导致：</p><p>1.无法完成以上第四步的，给房东付钱。</p><p>2.无法完成以上第六步，为已退租的租户向金融机构分期还款。</p><p>所以房东要面临的问题是，收不到房租，房子还被别人住着。</p><p>一部分租户面临的问题是，可能被房东赶走，又要继续向金融机构交钱，如果不交，个人征信页面将会被划上一笔黑账。</p><p>交给公寓的押金就更回不来了。</p><p>另一部分已退租的租户面临的问题是，早就不住他们的房子了，却忽然收到金融机构的欠款通知。</p><p>这笔黑账的金额，最少四位数，多则六位数。</p><p>这些年轻人，可能刚毕业，也可能毕业两三年，他们离家在外，满怀着梦想，他们相信只要好好努力，可以付房租，可以给家人买喜欢的东西，可以和心爱的人结婚，可以在大城市有个家。</p><p>他们不在意别人说他们在假装生活，也不在意每天要挤多久的地铁，因为希望就在前面不远处。</p><p>然后呢，他们，被同他们一样怀揣梦想的，年纪教长的创业者，放了一记黑枪。</p><p>结果就是，这些年轻人，现在不得不把大把本应该努力工作和学习的时间与精力，用在为自己维权上面，建立QQ群、各大论坛、微博发帖维权，用自己的时间为别人的错误买单。</p><p>本就漂泊在外的生活，变得更加难以忍受了。</p><p>某公寓打着的旗号还正是“年轻人的梦想家”，结果却是？</p><p>作为吃瓜群众，不想深挖长租公寓年底爆仓的根本原因是什么，什么经营不善考虑不周，对不起大家，都是废话，只想知道这波结果到底怎么办？</p><p>金钱的损失如何算？最宝贵的，用来维权的，青年人损失的时间又如何算？</p><p>本文来自【大飞码字的朋友们】，欢迎加入。</p><p><img src="/images/ZSXQ_%E5%A4%A7%E9%A3%9E%E7%A0%81%E5%AD%97.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1.A用户租房，找到B公寓，双方都觉得合适后，签合同。&lt;/p&gt;
-&lt;p&gt;2.B公寓以用户的名义，向金融机构C贷款，金额为A用户的全年租金。（1中的合同中可能包含与金融机构C的合作合同，但部分用户并不知情，另一部分用户即使知情也不介意。）&lt;/p&gt;
-&lt;p&gt;3.金融机构C放款给公寓
-      
-    
-    </summary>
-    
-      <category term="知识星球" scheme="https://laiczhang.github.io/categories/%E7%9F%A5%E8%AF%86%E6%98%9F%E7%90%83/"/>
-    
-    
-      <category term="社会" scheme="https://laiczhang.github.io/tags/%E7%A4%BE%E4%BC%9A/"/>
-    
-      <category term="生活" scheme="https://laiczhang.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
