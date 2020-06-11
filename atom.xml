@@ -5,9 +5,9 @@
   <subtitle>Do a good thing.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://laiczhang.github.io/"/>
-  <updated>2020-05-30T05:55:03.229Z</updated>
-  <id>https://laiczhang.github.io/</id>
+  <link href="https://coding.laiczhang.com/"/>
+  <updated>2020-05-24T05:25:57.374Z</updated>
+  <id>https://coding.laiczhang.com/</id>
   
   <author>
     <name>Laic Zhang</name>
@@ -17,37 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个教训</title>
-    <link href="https://laiczhang.github.io/2020/05/%E4%B8%80%E4%B8%AA%E6%95%99%E8%AE%AD/"/>
-    <id>https://laiczhang.github.io/2020/05/一个教训/</id>
-    <published>2020-05-30T05:51:05.000Z</published>
-    <updated>2020-05-30T05:55:03.229Z</updated>
-    
-    <content type="html"><![CDATA[<p>对女孩子，不管感情多好，都要经常哄着啊！！！</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;对女孩子，不管感情多好，都要经常哄着啊！！！&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="人生" scheme="https://laiczhang.github.io/categories/%E4%BA%BA%E7%94%9F/"/>
-    
-    
-      <category term="生活" scheme="https://laiczhang.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="思考" scheme="https://laiczhang.github.io/tags/%E6%80%9D%E8%80%83/"/>
-    
-  </entry>
-  
-  <entry>
     <title>简单介绍Cookie定义及其作用</title>
-    <link href="https://laiczhang.github.io/2020/05/%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8DCookie%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/"/>
-    <id>https://laiczhang.github.io/2020/05/简单介绍Cookie定义及其作用/</id>
+    <link href="https://coding.laiczhang.com/2020/05/%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8DCookie%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%85%B6%E4%BD%9C%E7%94%A8/"/>
+    <id>https://coding.laiczhang.com/2020/05/简单介绍Cookie定义及其作用/</id>
     <published>2020-05-24T03:37:07.000Z</published>
     <updated>2020-05-24T05:25:57.374Z</updated>
     
@@ -66,21 +38,21 @@
     
     </summary>
     
-      <category term="web" scheme="https://laiczhang.github.io/categories/web/"/>
+      <category term="web" scheme="https://coding.laiczhang.com/categories/web/"/>
     
     
-      <category term="web" scheme="https://laiczhang.github.io/tags/web/"/>
+      <category term="web" scheme="https://coding.laiczhang.com/tags/web/"/>
     
   </entry>
   
   <entry>
     <title>有一台云服务器可以做什么</title>
-    <link href="https://laiczhang.github.io/2020/05/%E6%9C%89%E4%B8%80%E5%8F%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
-    <id>https://laiczhang.github.io/2020/05/有一台云服务器可以做什么/</id>
+    <link href="https://coding.laiczhang.com/2020/05/%E6%9C%89%E4%B8%80%E5%8F%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88/"/>
+    <id>https://coding.laiczhang.com/2020/05/有一台云服务器可以做什么/</id>
     <published>2020-05-10T14:01:44.000Z</published>
-    <updated>2020-05-10T14:25:13.362Z</updated>
+    <updated>2020-06-11T06:18:40.874Z</updated>
     
-    <content type="html"><![CDATA[<p>在知乎上看到的问题，在自己博客上总结一下。</p><a id="more"></a><h2 id="0-富强"><a href="#0-富强" class="headerlink" title="0. 富强"></a>0. 富强</h2><p>这个，算是程序员的基本手艺了，尤其是go程序员:）</p><h2 id="1-搭建个人博客"><a href="#1-搭建个人博客" class="headerlink" title="1. 搭建个人博客"></a>1. 搭建个人博客</h2><ul><li><p>好处</p><ul><li>名誉+1</li><li>技术熟练度+1</li><li>粉丝+n</li></ul></li><li><p>坏处</p><ul><li>完全原创比较花费时间与精力</li><li>文章被盗可能性+1</li><li>机器被攻击可能性+1</li></ul></li><li><p>常见搭建方式</p><ul><li>WordPress</li><li>emlog</li><li>GitHub page（无需服务器</li></ul></li></ul><h2 id="2-图床"><a href="#2-图床" class="headerlink" title="2.图床"></a>2.图床</h2><h2 id="3-在线jupyter-notebook"><a href="#3-在线jupyter-notebook" class="headerlink" title="3.在线jupyter notebook"></a>3.在线jupyter notebook</h2><h2 id="4-在线vscode"><a href="#4-在线vscode" class="headerlink" title="4.在线vscode"></a>4.在线vscode</h2><h2 id="5-在线个人网盘"><a href="#5-在线个人网盘" class="headerlink" title="5.在线个人网盘"></a>5.在线个人网盘</h2><h2 id="n-其他骚操作"><a href="#n-其他骚操作" class="headerlink" title="n. 其他骚操作"></a>n. 其他骚操作</h2>]]></content>
+    <content type="html"><![CDATA[<p>在知乎上看到的问题，在自己博客上总结一下。</p><a id="more"></a><h2 id="0-富强"><a href="#0-富强" class="headerlink" title="0. 富强"></a>0. 富强</h2><p>这个，算是程序员的基本手艺了，尤其是go程序员:）</p><h2 id="1-搭建个人网站"><a href="#1-搭建个人网站" class="headerlink" title="1. 搭建个人网站"></a>1. 搭建个人网站</h2><ul><li><p>好处</p><ul><li>名誉+1</li><li>技术熟练度+1</li><li>粉丝+n</li></ul></li><li><p>坏处</p><ul><li>完全原创比较花费时间与精力</li><li>文章被盗可能性+1</li><li>机器被攻击可能性+1</li></ul></li><li><p>常见搭建方式</p><ul><li>WordPress</li><li>emlog</li><li>GitHub page（无需服务器</li></ul></li></ul><h2 id="2-图床"><a href="#2-图床" class="headerlink" title="2.图床"></a>2.图床</h2><ul><li><p>好处</p><ul><li>好看的图+n</li><li>知名度+1</li></ul></li><li><p>坏处</p><ul><li>图片多了消耗流量多</li><li>速度慢了很影响体验</li></ul></li></ul><h2 id="3-在线jupyter-notebook"><a href="#3-在线jupyter-notebook" class="headerlink" title="3.在线jupyter notebook"></a>3.在线jupyter notebook</h2><ul><li>好处<ul><li>在任何地方都可以打开网页写代码</li><li>需要长期运行的代码（比如爬虫和机器学习训练数据）可以丢在机器上定时跑</li></ul></li><li>坏处<ul><li>无</li></ul></li></ul><h2 id="4-在线vscode"><a href="#4-在线vscode" class="headerlink" title="4.在线vscode"></a>4.在线vscode</h2><h2 id="5-在线个人网盘"><a href="#5-在线个人网盘" class="headerlink" title="5.在线个人网盘"></a>5.在线个人网盘</h2><ul><li>好处<ul><li>随时能下载一些东西</li><li>存放一些好东西（不解释</li></ul></li><li>坏处<ul><li>下载的多就流量消耗大</li></ul></li></ul><h2 id="n-其他骚操作"><a href="#n-其他骚操作" class="headerlink" title="n. 其他骚操作"></a>n. 其他骚操作</h2>]]></content>
     
     <summary type="html">
     
@@ -88,17 +60,17 @@
     
     </summary>
     
-      <category term="高效率" scheme="https://laiczhang.github.io/categories/%E9%AB%98%E6%95%88%E7%8E%87/"/>
+      <category term="高效率" scheme="https://coding.laiczhang.com/categories/%E9%AB%98%E6%95%88%E7%8E%87/"/>
     
     
-      <category term="云服务器" scheme="https://laiczhang.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="云服务器" scheme="https://coding.laiczhang.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>DNS原理及解析过程</title>
-    <link href="https://laiczhang.github.io/2020/04/DNS%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B/"/>
-    <id>https://laiczhang.github.io/2020/04/DNS原理及解析过程/</id>
+    <link href="https://coding.laiczhang.com/2020/04/DNS%E5%8E%9F%E7%90%86%E5%8F%8A%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B/"/>
+    <id>https://coding.laiczhang.com/2020/04/DNS原理及解析过程/</id>
     <published>2020-04-18T02:37:14.000Z</published>
     <updated>2020-04-18T03:09:00.950Z</updated>
     
@@ -110,17 +82,17 @@
     
     </summary>
     
-      <category term="知乎" scheme="https://laiczhang.github.io/categories/%E7%9F%A5%E4%B9%8E/"/>
+      <category term="知乎" scheme="https://coding.laiczhang.com/categories/%E7%9F%A5%E4%B9%8E/"/>
     
     
-      <category term="DNS" scheme="https://laiczhang.github.io/tags/DNS/"/>
+      <category term="DNS" scheme="https://coding.laiczhang.com/tags/DNS/"/>
     
   </entry>
   
   <entry>
     <title>PHP获取bing今日壁纸</title>
-    <link href="https://laiczhang.github.io/2020/04/PHP%E8%8E%B7%E5%8F%96bing%E4%BB%8A%E6%97%A5%E5%A3%81%E7%BA%B8/"/>
-    <id>https://laiczhang.github.io/2020/04/PHP获取bing今日壁纸/</id>
+    <link href="https://coding.laiczhang.com/2020/04/PHP%E8%8E%B7%E5%8F%96bing%E4%BB%8A%E6%97%A5%E5%A3%81%E7%BA%B8/"/>
+    <id>https://coding.laiczhang.com/2020/04/PHP获取bing今日壁纸/</id>
     <published>2020-04-17T01:45:42.000Z</published>
     <updated>2020-04-17T05:00:28.190Z</updated>
     
@@ -132,21 +104,21 @@
     
     </summary>
     
-      <category term="PHP" scheme="https://laiczhang.github.io/categories/PHP/"/>
+      <category term="PHP" scheme="https://coding.laiczhang.com/categories/PHP/"/>
     
     
-      <category term="bing" scheme="https://laiczhang.github.io/tags/bing/"/>
+      <category term="bing" scheme="https://coding.laiczhang.com/tags/bing/"/>
     
-      <category term="壁纸" scheme="https://laiczhang.github.io/tags/%E5%A3%81%E7%BA%B8/"/>
+      <category term="壁纸" scheme="https://coding.laiczhang.com/tags/%E5%A3%81%E7%BA%B8/"/>
     
-      <category term="PHP" scheme="https://laiczhang.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="https://coding.laiczhang.com/tags/PHP/"/>
     
   </entry>
   
   <entry>
     <title>vscode远程开发配置</title>
-    <link href="https://laiczhang.github.io/2020/04/vscode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/"/>
-    <id>https://laiczhang.github.io/2020/04/vscode远程开发配置/</id>
+    <link href="https://coding.laiczhang.com/2020/04/vscode%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/"/>
+    <id>https://coding.laiczhang.com/2020/04/vscode远程开发配置/</id>
     <published>2020-04-10T11:13:13.000Z</published>
     <updated>2020-04-11T02:15:03.700Z</updated>
     
@@ -164,19 +136,19 @@
     
     </summary>
     
-      <category term="环境配置" scheme="https://laiczhang.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="环境配置" scheme="https://coding.laiczhang.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="vscode" scheme="https://laiczhang.github.io/tags/vscode/"/>
+      <category term="vscode" scheme="https://coding.laiczhang.com/tags/vscode/"/>
     
-      <category term="remote" scheme="https://laiczhang.github.io/tags/remote/"/>
+      <category term="remote" scheme="https://coding.laiczhang.com/tags/remote/"/>
     
   </entry>
   
   <entry>
     <title>win10安装Linux子系统遇到的问题</title>
-    <link href="https://laiczhang.github.io/2020/04/win10%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://laiczhang.github.io/2020/04/win10安装Linux子系统遇到的问题/</id>
+    <link href="https://coding.laiczhang.com/2020/04/win10%E5%AE%89%E8%A3%85Linux%E5%AD%90%E7%B3%BB%E7%BB%9F%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://coding.laiczhang.com/2020/04/win10安装Linux子系统遇到的问题/</id>
     <published>2020-04-09T12:49:41.000Z</published>
     <updated>2020-04-09T13:46:11.496Z</updated>
     
@@ -189,17 +161,17 @@
     
     </summary>
     
-      <category term="linux" scheme="https://laiczhang.github.io/categories/linux/"/>
+      <category term="linux" scheme="https://coding.laiczhang.com/categories/linux/"/>
     
     
-      <category term="linux" scheme="https://laiczhang.github.io/tags/linux/"/>
+      <category term="linux" scheme="https://coding.laiczhang.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>electron安装的填坑过程</title>
-    <link href="https://laiczhang.github.io/2020/04/electron%E5%AE%89%E8%A3%85%E7%9A%84%E5%A1%AB%E5%9D%91%E8%BF%87%E7%A8%8B/"/>
-    <id>https://laiczhang.github.io/2020/04/electron安装的填坑过程/</id>
+    <link href="https://coding.laiczhang.com/2020/04/electron%E5%AE%89%E8%A3%85%E7%9A%84%E5%A1%AB%E5%9D%91%E8%BF%87%E7%A8%8B/"/>
+    <id>https://coding.laiczhang.com/2020/04/electron安装的填坑过程/</id>
     <published>2020-04-05T04:47:40.000Z</published>
     <updated>2020-04-05T05:39:35.135Z</updated>
     
@@ -211,19 +183,19 @@
     
     </summary>
     
-      <category term="环境配置" scheme="https://laiczhang.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="环境配置" scheme="https://coding.laiczhang.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="electron" scheme="https://laiczhang.github.io/tags/electron/"/>
+      <category term="electron" scheme="https://coding.laiczhang.com/tags/electron/"/>
     
-      <category term="环境配置" scheme="https://laiczhang.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="环境配置" scheme="https://coding.laiczhang.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
   <entry>
     <title>点评自己用的几个vps顺便推推aff</title>
-    <link href="https://laiczhang.github.io/2020/04/%E7%82%B9%E8%AF%84%E8%87%AA%E5%B7%B1%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AAvps%E9%A1%BA%E4%BE%BF%E6%8E%A8%E6%8E%A8aff/"/>
-    <id>https://laiczhang.github.io/2020/04/点评自己用的几个vps顺便推推aff/</id>
+    <link href="https://coding.laiczhang.com/2020/04/%E7%82%B9%E8%AF%84%E8%87%AA%E5%B7%B1%E7%94%A8%E7%9A%84%E5%87%A0%E4%B8%AAvps%E9%A1%BA%E4%BE%BF%E6%8E%A8%E6%8E%A8aff/"/>
+    <id>https://coding.laiczhang.com/2020/04/点评自己用的几个vps顺便推推aff/</id>
     <published>2020-04-04T14:40:34.000Z</published>
     <updated>2020-04-08T02:49:34.218Z</updated>
     
@@ -242,19 +214,19 @@
     
     </summary>
     
-      <category term="评测" scheme="https://laiczhang.github.io/categories/%E8%AF%84%E6%B5%8B/"/>
+      <category term="评测" scheme="https://coding.laiczhang.com/categories/%E8%AF%84%E6%B5%8B/"/>
     
     
-      <category term="vps" scheme="https://laiczhang.github.io/tags/vps/"/>
+      <category term="vps" scheme="https://coding.laiczhang.com/tags/vps/"/>
     
-      <category term="建站" scheme="https://laiczhang.github.io/tags/%E5%BB%BA%E7%AB%99/"/>
+      <category term="建站" scheme="https://coding.laiczhang.com/tags/%E5%BB%BA%E7%AB%99/"/>
     
   </entry>
   
   <entry>
     <title>node环境安装-超详细</title>
-    <link href="https://laiczhang.github.io/2020/04/node%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E8%B6%85%E8%AF%A6%E7%BB%86/"/>
-    <id>https://laiczhang.github.io/2020/04/node环境安装-超详细/</id>
+    <link href="https://coding.laiczhang.com/2020/04/node%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85-%E8%B6%85%E8%AF%A6%E7%BB%86/"/>
+    <id>https://coding.laiczhang.com/2020/04/node环境安装-超详细/</id>
     <published>2020-04-04T08:40:36.000Z</published>
     <updated>2020-04-05T02:59:00.841Z</updated>
     
@@ -266,19 +238,19 @@
     
     </summary>
     
-      <category term="环境配置" scheme="https://laiczhang.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="环境配置" scheme="https://coding.laiczhang.com/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
     
-      <category term="环境配置" scheme="https://laiczhang.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <category term="环境配置" scheme="https://coding.laiczhang.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     
-      <category term="node" scheme="https://laiczhang.github.io/tags/node/"/>
+      <category term="node" scheme="https://coding.laiczhang.com/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>取消文章加密</title>
-    <link href="https://laiczhang.github.io/2020/04/%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86/"/>
-    <id>https://laiczhang.github.io/2020/04/取消文章加密/</id>
+    <link href="https://coding.laiczhang.com/2020/04/%E5%8F%96%E6%B6%88%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86/"/>
+    <id>https://coding.laiczhang.com/2020/04/取消文章加密/</id>
     <published>2020-04-02T07:36:07.000Z</published>
     <updated>2020-04-02T07:42:10.678Z</updated>
     
@@ -295,8 +267,8 @@
   
   <entry>
     <title>Wallpaper-Engine全成就攻略</title>
-    <link href="https://laiczhang.github.io/2020/02/Wallpaper-Engine%E5%85%A8%E6%88%90%E5%B0%B1%E6%94%BB%E7%95%A5/"/>
-    <id>https://laiczhang.github.io/2020/02/Wallpaper-Engine全成就攻略/</id>
+    <link href="https://coding.laiczhang.com/2020/02/Wallpaper-Engine%E5%85%A8%E6%88%90%E5%B0%B1%E6%94%BB%E7%95%A5/"/>
+    <id>https://coding.laiczhang.com/2020/02/Wallpaper-Engine全成就攻略/</id>
     <published>2020-02-14T09:45:28.000Z</published>
     <updated>2020-04-05T05:41:03.978Z</updated>
     
@@ -314,8 +286,8 @@
   
   <entry>
     <title>基于nodePPT搭建在线版幻灯片</title>
-    <link href="https://laiczhang.github.io/2020/01/%E5%9F%BA%E4%BA%8EnodePPT%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E7%89%88%E5%B9%BB%E7%81%AF%E7%89%87/"/>
-    <id>https://laiczhang.github.io/2020/01/基于nodePPT搭建在线版幻灯片/</id>
+    <link href="https://coding.laiczhang.com/2020/01/%E5%9F%BA%E4%BA%8EnodePPT%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E7%89%88%E5%B9%BB%E7%81%AF%E7%89%87/"/>
+    <id>https://coding.laiczhang.com/2020/01/基于nodePPT搭建在线版幻灯片/</id>
     <published>2020-01-10T15:34:07.000Z</published>
     <updated>2020-04-05T05:09:43.101Z</updated>
     
@@ -331,19 +303,19 @@
     
     </summary>
     
-      <category term="Github项目" scheme="https://laiczhang.github.io/categories/Github%E9%A1%B9%E7%9B%AE/"/>
+      <category term="Github项目" scheme="https://coding.laiczhang.com/categories/Github%E9%A1%B9%E7%9B%AE/"/>
     
     
-      <category term="node" scheme="https://laiczhang.github.io/tags/node/"/>
+      <category term="node" scheme="https://coding.laiczhang.com/tags/node/"/>
     
-      <category term="PPT" scheme="https://laiczhang.github.io/tags/PPT/"/>
+      <category term="PPT" scheme="https://coding.laiczhang.com/tags/PPT/"/>
     
   </entry>
   
   <entry>
     <title>基于阿里OSS搭建低价自用图床</title>
-    <link href="https://laiczhang.github.io/2020/01/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8COSS%E6%90%AD%E5%BB%BA%E4%BD%8E%E4%BB%B7%E8%87%AA%E7%94%A8%E5%9B%BE%E5%BA%8A/"/>
-    <id>https://laiczhang.github.io/2020/01/基于阿里OSS搭建低价自用图床/</id>
+    <link href="https://coding.laiczhang.com/2020/01/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8COSS%E6%90%AD%E5%BB%BA%E4%BD%8E%E4%BB%B7%E8%87%AA%E7%94%A8%E5%9B%BE%E5%BA%8A/"/>
+    <id>https://coding.laiczhang.com/2020/01/基于阿里OSS搭建低价自用图床/</id>
     <published>2020-01-10T13:14:48.000Z</published>
     <updated>2020-02-10T06:13:34.583Z</updated>
     
@@ -359,19 +331,19 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://laiczhang.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="https://coding.laiczhang.com/categories/hexo/"/>
     
     
-      <category term="oss" scheme="https://laiczhang.github.io/tags/oss/"/>
+      <category term="oss" scheme="https://coding.laiczhang.com/tags/oss/"/>
     
-      <category term="图床" scheme="https://laiczhang.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+      <category term="图床" scheme="https://coding.laiczhang.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
   <entry>
     <title>在线jupyter安装教程</title>
-    <link href="https://laiczhang.github.io/2020/01/%E5%9C%A8%E7%BA%BFjupyter%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>https://laiczhang.github.io/2020/01/在线jupyter安装教程/</id>
+    <link href="https://coding.laiczhang.com/2020/01/%E5%9C%A8%E7%BA%BFjupyter%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>https://coding.laiczhang.com/2020/01/在线jupyter安装教程/</id>
     <published>2020-01-09T15:22:02.000Z</published>
     <updated>2020-02-10T06:12:00.400Z</updated>
     
@@ -384,19 +356,19 @@
     
     </summary>
     
-      <category term="python" scheme="https://laiczhang.github.io/categories/python/"/>
+      <category term="python" scheme="https://coding.laiczhang.com/categories/python/"/>
     
     
-      <category term="python" scheme="https://laiczhang.github.io/tags/python/"/>
+      <category term="python" scheme="https://coding.laiczhang.com/tags/python/"/>
     
-      <category term="jupyter" scheme="https://laiczhang.github.io/tags/jupyter/"/>
+      <category term="jupyter" scheme="https://coding.laiczhang.com/tags/jupyter/"/>
     
   </entry>
   
   <entry>
     <title>UML中类和类的关系</title>
-    <link href="https://laiczhang.github.io/2020/01/UML%E4%B8%AD%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
-    <id>https://laiczhang.github.io/2020/01/UML中类和类的关系/</id>
+    <link href="https://coding.laiczhang.com/2020/01/UML%E4%B8%AD%E7%B1%BB%E5%92%8C%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://coding.laiczhang.com/2020/01/UML中类和类的关系/</id>
     <published>2020-01-08T13:23:04.000Z</published>
     <updated>2020-01-08T13:30:10.723Z</updated>
     
@@ -411,19 +383,19 @@
     
     </summary>
     
-      <category term="Java" scheme="https://laiczhang.github.io/categories/Java/"/>
+      <category term="Java" scheme="https://coding.laiczhang.com/categories/Java/"/>
     
     
-      <category term="uml" scheme="https://laiczhang.github.io/tags/uml/"/>
+      <category term="uml" scheme="https://coding.laiczhang.com/tags/uml/"/>
     
-      <category term="类" scheme="https://laiczhang.github.io/tags/%E7%B1%BB/"/>
+      <category term="类" scheme="https://coding.laiczhang.com/tags/%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>爬取周读网书籍信息</title>
-    <link href="https://laiczhang.github.io/2020/01/%E7%88%AC%E5%8F%96%E5%91%A8%E8%AF%BB%E7%BD%91%E4%B9%A6%E7%B1%8D%E4%BF%A1%E6%81%AF/"/>
-    <id>https://laiczhang.github.io/2020/01/爬取周读网书籍信息/</id>
+    <link href="https://coding.laiczhang.com/2020/01/%E7%88%AC%E5%8F%96%E5%91%A8%E8%AF%BB%E7%BD%91%E4%B9%A6%E7%B1%8D%E4%BF%A1%E6%81%AF/"/>
+    <id>https://coding.laiczhang.com/2020/01/爬取周读网书籍信息/</id>
     <published>2020-01-07T14:46:55.000Z</published>
     <updated>2020-01-07T15:19:14.457Z</updated>
     
@@ -437,19 +409,19 @@
     
     </summary>
     
-      <category term="爬虫" scheme="https://laiczhang.github.io/categories/%E7%88%AC%E8%99%AB/"/>
+      <category term="爬虫" scheme="https://coding.laiczhang.com/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-      <category term="python" scheme="https://laiczhang.github.io/tags/python/"/>
+      <category term="python" scheme="https://coding.laiczhang.com/tags/python/"/>
     
-      <category term="爬虫" scheme="https://laiczhang.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+      <category term="爬虫" scheme="https://coding.laiczhang.com/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
     <title>pip换为国内源</title>
-    <link href="https://laiczhang.github.io/2019/12/pip%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/"/>
-    <id>https://laiczhang.github.io/2019/12/pip换为国内源/</id>
+    <link href="https://coding.laiczhang.com/2019/12/pip%E6%8D%A2%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90/"/>
+    <id>https://coding.laiczhang.com/2019/12/pip换为国内源/</id>
     <published>2019-12-16T15:40:04.000Z</published>
     <updated>2020-02-10T06:13:29.642Z</updated>
     
@@ -463,19 +435,19 @@
     
     </summary>
     
-      <category term="python" scheme="https://laiczhang.github.io/categories/python/"/>
+      <category term="python" scheme="https://coding.laiczhang.com/categories/python/"/>
     
     
-      <category term="python" scheme="https://laiczhang.github.io/tags/python/"/>
+      <category term="python" scheme="https://coding.laiczhang.com/tags/python/"/>
     
-      <category term="效率" scheme="https://laiczhang.github.io/tags/%E6%95%88%E7%8E%87/"/>
+      <category term="效率" scheme="https://coding.laiczhang.com/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>Google镜像整理-长期更新</title>
-    <link href="https://laiczhang.github.io/2019/12/Google%E9%95%9C%E5%83%8F%E6%95%B4%E7%90%86-%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
-    <id>https://laiczhang.github.io/2019/12/Google镜像整理-长期更新/</id>
+    <link href="https://coding.laiczhang.com/2019/12/Google%E9%95%9C%E5%83%8F%E6%95%B4%E7%90%86-%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
+    <id>https://coding.laiczhang.com/2019/12/Google镜像整理-长期更新/</id>
     <published>2019-12-10T16:04:59.000Z</published>
     <updated>2019-12-10T16:17:19.154Z</updated>
     
@@ -487,21 +459,21 @@
     
     </summary>
     
-      <category term="Google" scheme="https://laiczhang.github.io/categories/Google/"/>
+      <category term="Google" scheme="https://coding.laiczhang.com/categories/Google/"/>
     
     
-      <category term="信息" scheme="https://laiczhang.github.io/tags/%E4%BF%A1%E6%81%AF/"/>
+      <category term="信息" scheme="https://coding.laiczhang.com/tags/%E4%BF%A1%E6%81%AF/"/>
     
-      <category term="福利" scheme="https://laiczhang.github.io/tags/%E7%A6%8F%E5%88%A9/"/>
+      <category term="福利" scheme="https://coding.laiczhang.com/tags/%E7%A6%8F%E5%88%A9/"/>
     
-      <category term="Google" scheme="https://laiczhang.github.io/tags/Google/"/>
+      <category term="Google" scheme="https://coding.laiczhang.com/tags/Google/"/>
     
   </entry>
   
   <entry>
     <title>猴博士-C语言复习笔记</title>
-    <link href="https://laiczhang.github.io/2019/12/%E7%8C%B4%E5%8D%9A%E5%A3%AB-C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>https://laiczhang.github.io/2019/12/猴博士-C语言复习笔记/</id>
+    <link href="https://coding.laiczhang.com/2019/12/%E7%8C%B4%E5%8D%9A%E5%A3%AB-C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://coding.laiczhang.com/2019/12/猴博士-C语言复习笔记/</id>
     <published>2019-12-07T08:49:50.000Z</published>
     <updated>2019-12-09T03:05:07.238Z</updated>
     
@@ -515,6 +487,30 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown常用语法笔记</title>
+    <link href="https://coding.laiczhang.com/2019/12/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/"/>
+    <id>https://coding.laiczhang.com/2019/12/Markdown常用语法笔记/</id>
+    <published>2019-12-03T16:26:01.000Z</published>
+    <updated>2019-12-03T16:27:45.384Z</updated>
+    
+    <content type="html"><![CDATA[<p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><p>Markdown编辑器有很多种，我使用的是 Typora</p><p>以下是Markdown的基本语法（将下面的语法复制粘贴到Markdown编辑器里面即看见效果）</p><a id="more"></a><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">*斜体*</span></span><br><span class="line"><span class="emphasis">_斜体第二种方法_</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*<span class="strong">*加粗*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">__加粗的第二种方法__</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">___粗斜体___</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">两个enter是换行，或者用&lt;/br&gt;标签表示换行</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">用一行的=或者-表示一级标题和二级标题。如：</span></span><br><span class="line"><span class="strong">一级标题</span></span><br><span class="line"><span class="strong">=======</span></span><br><span class="line"><span class="strong">二级标题</span></span><br><span class="line"><span class="strong">--------</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">也可以在前面加上一到六个#表示标题的1级到6级。如：</span></span><br><span class="line"><span class="strong">#一级标题</span></span><br><span class="line"><span class="strong">##二级标题</span></span><br><span class="line"><span class="strong">###三级标题</span></span><br><span class="line"><span class="strong">####四级标题</span></span><br><span class="line"><span class="strong">#####五级标题</span></span><br><span class="line"><span class="strong">######六级标题</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">无序列表：在前面加上 *</span> 或者 + 或者 - 然后加个空格：</span><br><span class="line"><span class="bullet">* </span>ABC</span><br><span class="line"><span class="bullet">* </span>DEF</span><br><span class="line"><span class="bullet">* </span>GHI</span><br><span class="line"></span><br><span class="line">+ JKL</span><br><span class="line">+ MNO</span><br><span class="line">+ PQR</span><br><span class="line"></span><br><span class="line"><span class="bullet">- </span>STU</span><br><span class="line"><span class="bullet">- </span>VWX</span><br><span class="line"><span class="bullet">- </span>YZZ</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">有序列表：数字<span class="code">+英文句点+</span>空格。如下：</span><br><span class="line">1. 呵呵</span><br><span class="line">2. 哈哈</span><br><span class="line">3. 嘿嘿</span><br><span class="line">4. 哼哼</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&amp;lt;   // 会显示为”&lt;“</span><br><span class="line">&amp;amp;  // 会显示为”&amp;“：在 href 属性里面，必须将 &amp; 转变为 &amp;amp;</span><br><span class="line">\.     // 为了防止产生"1."变为有序列表，则可以写成"1\."</span><br><span class="line"><span class="code"> * _   // 如果 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt;只在整个段落的第一行最前面加上大于号可以显示引用（此时出现引用形式，并且为斜体）。但是引言内如果要断行，那个空行也必须在前面加上大于号。就像下面写的酱紫：</span><br><span class="line">&gt;&gt;区块引言也可以有级别，在前面加上不同数量的大于号即可。比如说这就是一个二级引言。</span><br><span class="line">&gt;&gt;&gt;这是一个三级引言。格式会显示为字体更小了。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​<span class="code">```</span>C++</span><br><span class="line">代码块语法高亮</span><br><span class="line">​</span><br></pre></td></tr></table></figure><p>超级链接：<a href="超级链接的网址，可以是绝对路径、相对路径">超级链接显示的文字</a><br>也支持HTML格式的超级链接<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a></p><p>如果要标记一小段行内程序代码，可以用反引号把它包起来（<code>），像这样：Use the</code>printf()` function.</p><p>插入图片：<img src="%E5%9B%BE%E7%89%87%E7%9A%84%E5%9C%B0%E5%9D%80%E6%88%96%E8%B7%AF%E5%BE%84" alt="图片的替换文字"><br><img src="/Snip20160202_227.png" alt="风景区图片"></p><p>Email邮件：<br><a href="mailto:&#x31;&#x32;&#51;&#x34;&#x35;&#x36;&#55;&#x38;&#57;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#x31;&#x32;&#51;&#x34;&#x35;&#x36;&#55;&#x38;&#57;&#x40;&#113;&#x71;&#x2e;&#x63;&#x6f;&#109;</a></p><p>锚点：(能够链接到某个一级标题)<br><a href="#锚点的名称">想要显示的名称</a></p><pre><code></code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。&lt;/p&gt;
+&lt;p&gt;Markdown编辑器有很多种，我使用的是 Typora&lt;/p&gt;
+&lt;p&gt;以下是Markdown的基本语法（将下面的语法复制粘贴到Markdown编辑器里面即看见效果）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://coding.laiczhang.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://coding.laiczhang.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
