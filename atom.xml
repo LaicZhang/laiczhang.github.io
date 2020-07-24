@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coding.laiczhang.com/"/>
-  <updated>2020-06-24T14:22:04.156Z</updated>
+  <updated>2020-07-24T04:00:49.132Z</updated>
   <id>https://coding.laiczhang.com/</id>
   
   <author>
@@ -17,17 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在线jupyter安装教程-第二弹</title>
+    <link href="https://coding.laiczhang.com/2020/07/%E5%9C%A8%E7%BA%BFjupyter%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-%E7%AC%AC%E4%BA%8C%E5%BC%B9/"/>
+    <id>https://coding.laiczhang.com/2020/07/在线jupyter安装教程-第二弹/</id>
+    <published>2020-07-24T02:09:04.000Z</published>
+    <updated>2020-07-24T04:00:49.132Z</updated>
+    
+    <content type="html"><![CDATA[<p>上次已经写了一篇关于<a href="http://coding.laiczhang.com/2020/01/在线jupyter安装教程/#more">在Linux上安装jupyter的教程</a>，但是貌似有点问题，今天新开了一台Centos7，就再照着<a href="https://jupyterhub.readthedocs.io/en/stable/installation-guide.html" target="_blank" rel="noopener">jupyterhub的官方文档</a>重新装一下。</p><a id="more"></a><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我只在新开机器上装了宝塔，没注意是否会影响安装。不过还是建议大家装一下，毕竟如果机器配置够（我的配置是2H2G）的话，用起来还是很方便的。</p><p><strong>须知：在国内云服务器上安装，没有备案域名就只能通过IP访问。</strong></p><h2 id="配置python3环境"><a href="#配置python3环境" class="headerlink" title="配置python3环境"></a>配置python3环境</h2><p>连接成功后，先输入<code>python</code>，显示<code>Python 2.7.5 (default, Aug  7 2019, 00:51:29)</code>，</p><p>再输入<code>python3</code>，如果显示的是<code>-bash: python3: command not found</code>字样，则说明机器自带的python是python2.7版本的，不符合官方要求的3.5及以上，所以需要安装python3.</p><p>如何安装python3环境，我在<a href="http://coding.laiczhang.com/2020/01/在线jupyter安装教程/#more">在线jupyter安装教程</a>已经提过,</p><ul><li>知乎大佬给了一段安装python3.6版本的命令，</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5rc1.tgz</span><br><span class="line">tar -zxvf Python-3.6.5rc1.tgz</span><br><span class="line">cd Python-3.6.5rc1</span><br><span class="line">./configure</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">作者：该ID暂无昵称</span><br><span class="line">链接：https://www.zhihu.com/question/277141716/answer/391713329</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure><ul><li><p>最新版宝塔也集成了python项目管理，可以在<code>软件商店</code>搜索<code>python</code>，安装<code>python项目管理器</code>，选择<code>版本管理</code>安装相关版本</p></li><li><p>使用CentOS系统的同学也可以参考这篇[<a href="https://www.cnblogs.com/yunlongaimeng/p/11119531.html" target="_blank" rel="noopener">在CentOS上安装Python3的三种方法</a></p></li><li><p>当然，我我的机器预装了输入<code>python3</code>，显示的是<code>Python 3.6.7 (default, Oct 22 2018, 11:32:17)</code>，说明版本够了，准备安装jupyterhub</p></li></ul><h2 id="配置nodejs环境"><a href="#配置nodejs环境" class="headerlink" title="配置nodejs环境"></a>配置nodejs环境</h2><ul><li><p><a href="https://www.npmjs.com/" target="_blank" rel="noopener">nodejs / npm</a></p><ul><li><p>如果使用<strong><code>conda</code></strong>，则conda将为您安装nodejs和npm依赖项。</p></li><li><p>如果您正在使用<strong><code>pip</code></strong>，请安装最新版本的 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" rel="noopener">nodejs / npm</a>。例如，使用以下命令在Linux（Debian / Ubuntu）上安装它：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install npm nodejs-legacy</span><br></pre></td></tr></table></figure><p>我的是CentOS，所以安装命令是</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum <span class="keyword">install</span> npm nodejs-legacy</span><br></pre></td></tr></table></figure><p>该<code>nodejs-legacy</code>软件包将安装<code>node</code>可执行文件，当前是npm在Debian / Ubuntu上运行所必需的。</p></li></ul></li></ul><h2 id="安装jupyterhub"><a href="#安装jupyterhub" class="headerlink" title="安装jupyterhub"></a>安装jupyterhub</h2><p>官网给了conda和pip两种安装方式，我用的是pip，</p><p>毕竟，习惯是一种可怕的力量233333</p><p>JupyterHub可以使用安装<code>pip</code>，代理可以使用<code>npm</code>：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g configurable-<span class="keyword">http</span>-proxy</span><br><span class="line">python3 -m pip <span class="keyword">install</span> jupyterhub</span><br></pre></td></tr></table></figure><p>如果计划在本地运行笔记本服务器，则需要安装 <a href="https://jupyter.readthedocs.io/en/latest/install.html" target="_blank" rel="noopener">Jupyter笔记本</a> 软件包：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m pip <span class="keyword">install</span> <span class="comment">--upgrade notebook</span></span><br></pre></td></tr></table></figure><p>没有Error字样，基本就是安装成功了，是不是比上次装jupyter简单多了，</p><h2 id="启动jupyterhub"><a href="#启动jupyterhub" class="headerlink" title="启动jupyterhub"></a>启动jupyterhub</h2><p>要启动集线器服务器，请运行以下命令：</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">jupyterhub</span></span><br></pre></td></tr></table></figure><p><code>https://ip:8000</code>在浏览器中访问</p><p>或者使用以下命令</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup jupyterhub &gt; jupyterhub.<span class="built_in">log</span> <span class="meta">&amp;</span></span><br></pre></td></tr></table></figure><p>在后台运行。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上次已经写了一篇关于&lt;a href=&quot;http://coding.laiczhang.com/2020/01/在线jupyter安装教程/#more&quot;&gt;在Linux上安装jupyter的教程&lt;/a&gt;，但是貌似有点问题，今天新开了一台Centos7，就再照着&lt;a href=&quot;https://jupyterhub.readthedocs.io/en/stable/installation-guide.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;jupyterhub的官方文档&lt;/a&gt;重新装一下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="https://coding.laiczhang.com/categories/python/"/>
+    
+    
+      <category term="python" scheme="https://coding.laiczhang.com/tags/python/"/>
+    
+      <category term="jupyter" scheme="https://coding.laiczhang.com/tags/jupyter/"/>
+    
+  </entry>
+  
+  <entry>
     <title>各vps商家配置价格对比</title>
     <link href="https://coding.laiczhang.com/2020/06/%E5%90%84vps%E5%95%86%E5%AE%B6%E9%85%8D%E7%BD%AE%E4%BB%B7%E6%A0%BC%E5%AF%B9%E6%AF%94/"/>
     <id>https://coding.laiczhang.com/2020/06/各vps商家配置价格对比/</id>
     <published>2020-06-23T06:31:22.000Z</published>
-    <updated>2020-06-24T14:22:04.156Z</updated>
+    <updated>2020-07-22T07:00:12.073Z</updated>
     
-    <content type="html"><![CDATA[<p>国内的备案机制过于牛逼，永不考虑，所以只对比我了解过的部分比较稳的海外vps大厂产品。</p><p>数据来源于官网，仅供参考，不提供任何建议。</p><a id="more"></a><h2 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h2><ul><li>均为Linux系统</li><li>均为月付价格，单位（$，即美元，1美元大概7人民币)</li><li>具体实时信息可以前往对应官网查看</li></ul><h2 id="配置价格对比"><a href="#配置价格对比" class="headerlink" title="配置价格对比"></a>配置价格对比</h2><p>商家\价格\配置  | 512M1G | 1H1G | 1H2G|2H2G|2H4G|<br>— | ——|—-|—-|—-|—|—|<br>Ali | 3.3 | 4.5| 9|  13.5|18|<br>AWS | 3.5 | 5 | \ | 10|20<br>Google Cloud | |<br><a href="https://www.vultr.com/products/cloud-compute/" target="_blank" rel="noopener">vultr</a>| 2.5/3.5 | 5 | 10 | \ | 20|<br><a href="https://www.digitalocean.com/pricing/" target="_blank" rel="noopener">DO</a>|\ |5|10|15|20|</p>]]></content>
+    <content type="html"><![CDATA[<p>国内的备案机制过于牛逼，永不考虑，所以只对比我了解过的部分比较稳的<strong>海外大厂</strong>产品。</p><p>数据来源于官网，仅供参考，不提供任何建议。</p><a id="more"></a><h2 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h2><ul><li>均为Linux系统</li><li>均为月付价格，默认官网计价单位（$，即美元，1美元大概7人民币)</li><li>具体实时信息可以前往对应官网查看</li></ul><h2 id="配置价格对比"><a href="#配置价格对比" class="headerlink" title="配置价格对比"></a>配置价格对比</h2><table><thead><tr><th>商家\价格\配置</th><th>512M1G</th><th>1H1G</th><th>1H2G</th><th>2H2G</th><th>2H4G</th></tr></thead><tbody><tr><td><a href>Ali</a></td><td>3.3</td><td>4.5</td><td>9</td><td>13.5</td><td>18</td></tr><tr><td><a href="https://buy.cloud.tencent.com/lighthouse" target="_blank" rel="noopener">Tencent</a></td><td>无</td><td>24RMB</td><td>34RMB</td><td>无</td><td>133RMB</td></tr><tr><td><a href>Google Cloud</a></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><a href="https://www.vultr.com/products/cloud-compute/" target="_blank" rel="noopener">vultr</a></td><td>2.5/3.5</td><td>5</td><td>10</td><td>无</td><td>20</td></tr><tr><td><a href="https://www.digitalocean.com/pricing/" target="_blank" rel="noopener">DO</a></td><td>无</td><td>5</td><td>10</td><td>15</td><td>20</td></tr><tr><td><a href>AWS</a></td><td>3.5</td><td>5</td><td>无</td><td>10</td><td>20</td></tr><tr><td>博主自营AWS</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table><ul><li>以上商家链接无aff，故不存在返利</li><li>谷歌云没开过，不了解具体价格，只知道价格相当高。。。</li><li>我自营的aws均为在aws官网所开机器，所以机器性能及网络线路与AWS机器相同，待上架。</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;国内的备案机制过于牛逼，永不考虑，所以只对比我了解过的部分比较稳的海外vps大厂产品。&lt;/p&gt;
+      &lt;p&gt;国内的备案机制过于牛逼，永不考虑，所以只对比我了解过的部分比较稳的&lt;strong&gt;海外大厂&lt;/strong&gt;产品。&lt;/p&gt;
 &lt;p&gt;数据来源于官网，仅供参考，不提供任何建议。&lt;/p&gt;
     
     </summary>
@@ -491,32 +515,6 @@
       <category term="python" scheme="https://coding.laiczhang.com/tags/python/"/>
     
       <category term="效率" scheme="https://coding.laiczhang.com/tags/%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google镜像整理-长期更新</title>
-    <link href="https://coding.laiczhang.com/2019/12/Google%E9%95%9C%E5%83%8F%E6%95%B4%E7%90%86-%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0/"/>
-    <id>https://coding.laiczhang.com/2019/12/Google镜像整理-长期更新/</id>
-    <published>2019-12-10T16:04:59.000Z</published>
-    <updated>2019-12-10T16:17:19.154Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单点来说，Google是世界上最大的搜索引擎（百度是世界上第一的中文搜索引擎）。 </p><a id="more"></a><p>2019.12.11，已测试，这些都还能用。 </p><p><a href="https://www.kuaimen.bid/" target="_blank" rel="noopener">https://www.kuaimen.bid/</a></p><p><a href="https://gg.smiling.workers.dev/" target="_blank" rel="noopener">https://gg.smiling.workers.dev/</a></p><p><a href="https://guge.hk.bban.fun/" target="_blank" rel="noopener">https://guge.hk.bban.fun/</a></p><p><a href="https://search.slimjet.org/en/index.php?sbSource=&amp;customtag=" target="_blank" rel="noopener">https://search.slimjet.org/en/index.php?sbSource=&amp;customtag=</a></p><p><a href="http://web01asn.apps-search.com/#gsc.tab=0" target="_blank" rel="noopener">http://web01asn.apps-search.com/#gsc.tab=0</a></p><p><a href="http://drivesearch.kwebpia.net/" target="_blank" rel="noopener">http://drivesearch.kwebpia.net/</a></p><p><a href="http://googlebridge.com/" target="_blank" rel="noopener">http://googlebridge.com/</a></p><p><a href="https://hp.myway.com/myway/index.html" target="_blank" rel="noopener">https://hp.myway.com/myway/index.html</a></p><p><a href="https://fireball.com/" target="_blank" rel="noopener">https://fireball.com/</a></p><details><summary>已失效</summary><p><a href="https://gg.riji.ml/" target="_blank" rel="noopener">https://gg.riji.ml/</a> </p></details>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;简单点来说，Google是世界上最大的搜索引擎（百度是世界上第一的中文搜索引擎）。 &lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Google" scheme="https://coding.laiczhang.com/categories/Google/"/>
-    
-    
-      <category term="信息" scheme="https://coding.laiczhang.com/tags/%E4%BF%A1%E6%81%AF/"/>
-    
-      <category term="福利" scheme="https://coding.laiczhang.com/tags/%E7%A6%8F%E5%88%A9/"/>
-    
-      <category term="Google" scheme="https://coding.laiczhang.com/tags/Google/"/>
     
   </entry>
   
