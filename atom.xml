@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coding.laiczhang.com/"/>
-  <updated>2020-08-05T15:30:33.915Z</updated>
+  <updated>2020-08-05T15:33:32.707Z</updated>
   <id>https://coding.laiczhang.com/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="https://coding.laiczhang.com/2020/08/%E7%BD%91%E7%BB%9C%E5%A4%87%E4%BB%BD%E5%82%A8%E5%AD%98%E7%9A%84%E5%87%A0%E7%A7%8D%E9%80%89%E6%8B%A9/"/>
     <id>https://coding.laiczhang.com/2020/08/网络备份储存的几种选择/</id>
     <published>2020-08-05T15:26:06.000Z</published>
-    <updated>2020-08-05T15:30:33.915Z</updated>
+    <updated>2020-08-05T15:33:32.707Z</updated>
     
-    <content type="html"><![CDATA[<p>因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。</p><p><strong>0</strong></p><p>由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也是个麻烦。如果不加密,就必须选些靠谱的储存,总不能存着存着数据就泄密,那还存个屁。</p><p>因为是数据备份,所以本地上传到备份储存流量较多,而从备份储存下载流量较少,可能要数据恢复时候,才是需要整盘转移或者迁移的。</p><p>作为一个穷鬼，第一选择肯定是白嫖。</p><p><strong>0</strong></p><p>对于国内腾讯云,阿里云储存,对数据是否会被审查表示担忧,毕竟有些内容可能比较敏感（版权或者爱情动作片审核）.所以也直接排除了.</p><p><strong>1</strong></p><p>所以，我的第一个备份源是使用的Microsoft Office 365订阅中的A1订阅中的OneDrive空间，好处如下：</p><ul><li>免费</li><li>微软自带</li><li>容易获取</li><li>方便同步</li><li>1T空间</li></ul><p>当然，也有其劣势：</p><ul><li>免费的是最贵的，存在翻车可能，不稳定</li><li>由于网络原因,经常出现重复传输的情况</li><li>需要一直挂着客户端，关闭后需要重新挂载</li><li>管理员有查看存储内容的权限</li></ul><p>综上所述，我使用4个不同域下的office365账号的OneDrive作为第一处备份源。互相备份一些不是很隐私的资料，比如外网软件，系统，以及一些好看的视频</p><p>但是万一有一天，微软被薅疼了一下子彻查怎么办，所以还需要继续寻找备份源。</p><p><strong>2</strong></p><p>第二个，白嫖的世界上不存在的G姓家的教育账号，无限空间，只是限制了每天750G上传，对我这种菜鸡来说咋样都够了，这次是两个账号互相备份。</p><p>因为一些原因，这里就不细说了。</p><p><strong>3</strong></p><p>不那么重要的资料存完了，接着就是存私人的资料了，比如照片和一些不常用但是有用的脚本。</p><p>这里我首选MEGA，其好处如下，</p><ul><li><p>加密传输</p></li><li><p>同步传输</p></li><li><p>有像OneDrive一样可以挂载到本地的客户端</p><p>关于这个加密传输的效果，大佬是这样说，</p></li></ul><p>“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p><p>当然，成也加密，败也加密，</p><ul><li>mega在大陆地区，下载速度较慢</li><li>不给钱只有15G空间</li></ul><p><strong>4</strong></p><p>然后，考虑了一波S3,亚马逊S3提供很多的选择,</p><p>由于数据不会频繁访问,所以要选择最便宜的储存方式,即S3 Glacier Deep Archive,收费为每月每GB 0.00099USD,</p><p>按照我的数据量来看,0.852192USD每个月,一年付出10.226304USD,大概71元人民币左右.</p><p>数据可靠度也是99.99999999999%,但是数据不能直接取出,取出全部数据本身需要大约70USD成本(如果使用AWS 同区传输可以做到免费,先开AWS账号,然后共享储存桶,然后同区传输到CloudFront,再从CloudFront传回.),还要附加最多2天的取回时间(实测批量取回也是几分钟的事情~)</p><p>也就是说，</p><ul><li>稳定</li><li>安全</li><li>版本控制</li><li>可编程</li></ul><p>单纯以储存来说,这个比较划算,而且支持版本管理,这也是我目前选择的.</p><p>*<em>5<br>*</em></p><p>在vps上，能玩的东西比较多，就可以自行摸索了。自建个人网盘，加速下载百度网盘文件以及密码管理器。</p><p>这个现成的开源程序很多，比如有名的next cloud，cloudreve等等。</p><p>这个坑后期再补，睡觉了。。。</p><p>参考文章：</p><ul><li><p><a href="http://www.songruihua.com/archives/mega-privacy-storage.html" target="_blank" rel="noopener">http://www.songruihua.com/archives/mega-privacy-storage.html</a></p></li><li><p><a href="https://www.zhihu.com/question/41848351" target="_blank" rel="noopener">https://www.zhihu.com/question/41848351</a></p></li><li><p><a href="https://www.taterli.com/7275/" target="_blank" rel="noopener">https://www.taterli.com/7275/</a></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。</p><a id="more"></a><p><strong>0</strong></p><p>由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也是个麻烦。如果不加密,就必须选些靠谱的储存,总不能存着存着数据就泄密,那还存个屁。</p><p>因为是数据备份,所以本地上传到备份储存流量较多,而从备份储存下载流量较少,可能要数据恢复时候,才是需要整盘转移或者迁移的。</p><p>作为一个穷鬼，第一选择肯定是白嫖。</p><p><strong>0</strong></p><p>对于国内腾讯云,阿里云储存,对数据是否会被审查表示担忧,毕竟有些内容可能比较敏感（版权或者爱情动作片审核）.所以也直接排除了.</p><p><strong>1</strong></p><p>所以，我的第一个备份源是使用的Microsoft Office 365订阅中的A1订阅中的OneDrive空间，好处如下：</p><ul><li>免费</li><li>微软自带</li><li>容易获取</li><li>方便同步</li><li>1T空间</li></ul><p>当然，也有其劣势：</p><ul><li>免费的是最贵的，存在翻车可能，不稳定</li><li>由于网络原因,经常出现重复传输的情况</li><li>需要一直挂着客户端，关闭后需要重新挂载</li><li>管理员有查看存储内容的权限</li></ul><p>综上所述，我使用4个不同域下的office365账号的OneDrive作为第一处备份源。互相备份一些不是很隐私的资料，比如外网软件，系统，以及一些好看的视频</p><p>但是万一有一天，微软被薅疼了一下子彻查怎么办，所以还需要继续寻找备份源。</p><p><strong>2</strong></p><p>第二个，白嫖的世界上不存在的G姓家的教育账号，无限空间，只是限制了每天750G上传，对我这种菜鸡来说咋样都够了，这次是两个账号互相备份。</p><p>因为一些原因，这里就不细说了。</p><p><strong>3</strong></p><p>不那么重要的资料存完了，接着就是存私人的资料了，比如照片和一些不常用但是有用的脚本。</p><p>这里我首选MEGA，其好处如下，</p><ul><li><p>加密传输</p></li><li><p>同步传输</p></li><li><p>有像OneDrive一样可以挂载到本地的客户端</p><p>关于这个加密传输的效果，大佬是这样说，</p></li></ul><p>“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p><p>当然，成也加密，败也加密，</p><ul><li>mega在大陆地区，下载速度较慢</li><li>不给钱只有15G空间</li></ul><p><strong>4</strong></p><p>然后，考虑了一波S3,亚马逊S3提供很多的选择,</p><p>由于数据不会频繁访问,所以要选择最便宜的储存方式,即S3 Glacier Deep Archive,收费为每月每GB 0.00099USD,</p><p>按照我的数据量来看,0.852192USD每个月,一年付出10.226304USD,大概71元人民币左右.</p><p>数据可靠度也是99.99999999999%,但是数据不能直接取出,取出全部数据本身需要大约70USD成本(如果使用AWS 同区传输可以做到免费,先开AWS账号,然后共享储存桶,然后同区传输到CloudFront,再从CloudFront传回.),还要附加最多2天的取回时间(实测批量取回也是几分钟的事情~)</p><p>也就是说，</p><ul><li>稳定</li><li>安全</li><li>版本控制</li><li>可编程</li></ul><p>单纯以储存来说,这个比较划算,而且支持版本管理,这也是我目前选择的.</p><p>*<em>5<br>*</em></p><p>在vps上，能玩的东西比较多，就可以自行摸索了。自建个人网盘，加速下载百度网盘文件以及密码管理器。</p><p>这个现成的开源程序很多，比如有名的next cloud，cloudreve等等。</p><p>这个坑后期再补，睡觉了。。。</p><p>参考文章：</p><ul><li><p><a href="http://www.songruihua.com/archives/mega-privacy-storage.html" target="_blank" rel="noopener">http://www.songruihua.com/archives/mega-privacy-storage.html</a></p></li><li><p><a href="https://www.zhihu.com/question/41848351" target="_blank" rel="noopener">https://www.zhihu.com/question/41848351</a></p></li><li><p><a href="https://www.taterli.com/7275/" target="_blank" rel="noopener">https://www.taterli.com/7275/</a></p></li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;0&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也
-      
+      &lt;p&gt;因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。&lt;/p&gt;
     
     </summary>
     
