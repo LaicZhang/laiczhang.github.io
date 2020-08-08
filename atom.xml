@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://coding.laiczhang.com/"/>
-  <updated>2020-08-05T15:33:32.707Z</updated>
+  <updated>2020-08-08T05:21:42.416Z</updated>
   <id>https://coding.laiczhang.com/</id>
   
   <author>
@@ -17,13 +17,63 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常用的默认端口号总结</title>
+    <link href="https://coding.laiczhang.com/2020/08/%E5%B8%B8%E7%94%A8%E7%9A%84%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%8F%B7%E6%80%BB%E7%BB%93/"/>
+    <id>https://coding.laiczhang.com/2020/08/常用的默认端口号总结/</id>
+    <published>2020-08-08T04:56:55.000Z</published>
+    <updated>2020-08-08T05:21:42.416Z</updated>
+    
+    <content type="html"><![CDATA[<p>端口号的范围是从1～65535。<br>其中1～1024是被RFC 3232规定好了的，被称作“众所周知的端口”(Well Known Ports)；<br>从1025～65535的端口被称为动态端口（Dynamic Ports），可用来建立与其它主机的会话，也可由用户自定义用途。</p><a id="more"></a><p>一些常见的端口号及其用途如下表：</p><table><thead><tr><th>默认端口号</th><th>用途</th><th>解释</th><th>备注</th></tr></thead><tbody><tr><td>21</td><td>ftp</td><td>File Transfer Protocol，文件传输协议</td><td></td></tr><tr><td>22</td><td>ssh</td><td></td><td></td></tr><tr><td>23</td><td>TELNET</td><td>不安全的文本传送</td><td></td></tr><tr><td>25</td><td>SMTP</td><td>Simple Mail Transfer Protocol，简单邮件传输协议</td><td></td></tr><tr><td>53</td><td>DNS</td><td>Domain Name Server，域名服务器</td><td>域名解析</td></tr><tr><td>80</td><td>http</td><td>HyperText Transport Protocol，超文本传输协议</td><td></td></tr><tr><td>110</td><td>POP3</td><td>Post Office Protocol（E-mail）</td><td></td></tr><tr><td>443</td><td>https</td><td>提供加密和通过安全端口传输的另一种HTTP</td><td></td></tr><tr><td>1080</td><td>Socks</td><td>代理服务</td><td></td></tr><tr><td>1433</td><td>SQL server</td><td>SQL server数据库</td><td></td></tr><tr><td>1521</td><td>Oracle</td><td>Oracle数据库</td><td></td></tr><tr><td>3306</td><td>mysql</td><td>mysql数据库</td><td></td></tr><tr><td>3389</td><td>win2003</td><td>远程桌面</td><td></td></tr><tr><td>5432</td><td>postgresql</td><td>postgresql数据库</td><td></td></tr><tr><td>6379</td><td>redis</td><td>redis数据库</td><td></td></tr><tr><td>8080</td><td>WWW</td><td>WWW代理服务/宝塔面板默认端口</td><td>同80端口</td></tr><tr><td>9200</td><td>Elasticsearch</td><td>Elasticsearch服务器</td><td></td></tr><tr><td>22122</td><td>fastdfs</td><td>fastdfs服务器</td><td></td></tr><tr><td>27017</td><td>MongoDB</td><td>MongoDB数据库</td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table><p>如需了解从0到65301的所有端口，可以参看<a href="https://blog.csdn.net/l_smalltiger/article/details/81951824" target="_blank" rel="noopener">常用端口大全</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;端口号的范围是从1～65535。&lt;br&gt;其中1～1024是被RFC 3232规定好了的，被称作“众所周知的端口”(Well Known Ports)；&lt;br&gt;从1025～65535的端口被称为动态端口（Dynamic Ports），可用来建立与其它主机的会话，也可由用户自定义用途。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网络安全" scheme="https://coding.laiczhang.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="互联网" scheme="https://coding.laiczhang.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+      <category term="vps" scheme="https://coding.laiczhang.com/tags/vps/"/>
+    
+      <category term="网络安全" scheme="https://coding.laiczhang.com/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你们可能不知道还没开打就投降是什么概念</title>
+    <link href="https://coding.laiczhang.com/2020/08/%E4%BD%A0%E4%BB%AC%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E8%BF%98%E6%B2%A1%E5%BC%80%E6%89%93%E5%B0%B1%E6%8A%95%E9%99%8D%E6%98%AF%E4%BB%80%E4%B9%88%E6%A6%82%E5%BF%B5/"/>
+    <id>https://coding.laiczhang.com/2020/08/你们可能不知道还没开打就投降是什么概念/</id>
+    <published>2020-08-07T05:24:53.000Z</published>
+    <updated>2020-08-07T05:26:33.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>你们可能不知道还没开打就投降是什么概念，我们一般只会用两个字来形容这种人：跪怪！</p><a id="more"></a><p>我经常说一句话，当年法国能用38天向德国投降，我张一鸣用5小时向美帝下跪不是问题。</p><p>埋伏他一手，这个战不能打，这个战不用打，我跪定了。</p><p>反手给一个换掉管理层，闷声发大财。</p><p>他还制裁我？但是不用怕，跪得快 制裁不了我。</p><p>一二三四五，五小时，很牛逼这个跪，如果把这个小时换成秒，我这个跪将绝杀，但是换不得。</p><p>还给我45天缓冲时间，傻～逼，我直接秒跪。</p><p>假装犹豫5小时再认爹。美帝快点，美帝，美帝我给你当儿子都不要吗？美帝你快点啊！美帝别磨磨蹭蹭的。一二三四五。叫错了，应该叫美爹的。</p><p>给美爹倒杯茶好吧，美爹给你倒一杯卡布奇诺。</p><p>给美爹倒一杯卡布奇诺！开始你的制裁秀，制裁我制裁我。漂亮！</p><p>我想跪你能阻止我？你能阻止我？！今天我跪美爹了他不给我钱，我！当！场！就把这个屏幕吃掉！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;你们可能不知道还没开打就投降是什么概念，我们一般只会用两个字来形容这种人：跪怪！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="娱乐" scheme="https://coding.laiczhang.com/categories/%E5%A8%B1%E4%B9%90/"/>
+    
+    
+      <category term="互联网" scheme="https://coding.laiczhang.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/"/>
+    
+      <category term="搞笑" scheme="https://coding.laiczhang.com/tags/%E6%90%9E%E7%AC%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络备份储存的几种选择</title>
     <link href="https://coding.laiczhang.com/2020/08/%E7%BD%91%E7%BB%9C%E5%A4%87%E4%BB%BD%E5%82%A8%E5%AD%98%E7%9A%84%E5%87%A0%E7%A7%8D%E9%80%89%E6%8B%A9/"/>
     <id>https://coding.laiczhang.com/2020/08/网络备份储存的几种选择/</id>
     <published>2020-08-05T15:26:06.000Z</published>
-    <updated>2020-08-05T15:33:32.707Z</updated>
+    <updated>2020-08-07T05:27:34.449Z</updated>
     
-    <content type="html"><![CDATA[<p>因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。</p><a id="more"></a><p><strong>0</strong></p><p>由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也是个麻烦。如果不加密,就必须选些靠谱的储存,总不能存着存着数据就泄密,那还存个屁。</p><p>因为是数据备份,所以本地上传到备份储存流量较多,而从备份储存下载流量较少,可能要数据恢复时候,才是需要整盘转移或者迁移的。</p><p>作为一个穷鬼，第一选择肯定是白嫖。</p><p><strong>0</strong></p><p>对于国内腾讯云,阿里云储存,对数据是否会被审查表示担忧,毕竟有些内容可能比较敏感（版权或者爱情动作片审核）.所以也直接排除了.</p><p><strong>1</strong></p><p>所以，我的第一个备份源是使用的Microsoft Office 365订阅中的A1订阅中的OneDrive空间，好处如下：</p><ul><li>免费</li><li>微软自带</li><li>容易获取</li><li>方便同步</li><li>1T空间</li></ul><p>当然，也有其劣势：</p><ul><li>免费的是最贵的，存在翻车可能，不稳定</li><li>由于网络原因,经常出现重复传输的情况</li><li>需要一直挂着客户端，关闭后需要重新挂载</li><li>管理员有查看存储内容的权限</li></ul><p>综上所述，我使用4个不同域下的office365账号的OneDrive作为第一处备份源。互相备份一些不是很隐私的资料，比如外网软件，系统，以及一些好看的视频</p><p>但是万一有一天，微软被薅疼了一下子彻查怎么办，所以还需要继续寻找备份源。</p><p><strong>2</strong></p><p>第二个，白嫖的世界上不存在的G姓家的教育账号，无限空间，只是限制了每天750G上传，对我这种菜鸡来说咋样都够了，这次是两个账号互相备份。</p><p>因为一些原因，这里就不细说了。</p><p><strong>3</strong></p><p>不那么重要的资料存完了，接着就是存私人的资料了，比如照片和一些不常用但是有用的脚本。</p><p>这里我首选MEGA，其好处如下，</p><ul><li><p>加密传输</p></li><li><p>同步传输</p></li><li><p>有像OneDrive一样可以挂载到本地的客户端</p><p>关于这个加密传输的效果，大佬是这样说，</p></li></ul><p>“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p><p>当然，成也加密，败也加密，</p><ul><li>mega在大陆地区，下载速度较慢</li><li>不给钱只有15G空间</li></ul><p><strong>4</strong></p><p>然后，考虑了一波S3,亚马逊S3提供很多的选择,</p><p>由于数据不会频繁访问,所以要选择最便宜的储存方式,即S3 Glacier Deep Archive,收费为每月每GB 0.00099USD,</p><p>按照我的数据量来看,0.852192USD每个月,一年付出10.226304USD,大概71元人民币左右.</p><p>数据可靠度也是99.99999999999%,但是数据不能直接取出,取出全部数据本身需要大约70USD成本(如果使用AWS 同区传输可以做到免费,先开AWS账号,然后共享储存桶,然后同区传输到CloudFront,再从CloudFront传回.),还要附加最多2天的取回时间(实测批量取回也是几分钟的事情~)</p><p>也就是说，</p><ul><li>稳定</li><li>安全</li><li>版本控制</li><li>可编程</li></ul><p>单纯以储存来说,这个比较划算,而且支持版本管理,这也是我目前选择的.</p><p>*<em>5<br>*</em></p><p>在vps上，能玩的东西比较多，就可以自行摸索了。自建个人网盘，加速下载百度网盘文件以及密码管理器。</p><p>这个现成的开源程序很多，比如有名的next cloud，cloudreve等等。</p><p>这个坑后期再补，睡觉了。。。</p><p>参考文章：</p><ul><li><p><a href="http://www.songruihua.com/archives/mega-privacy-storage.html" target="_blank" rel="noopener">http://www.songruihua.com/archives/mega-privacy-storage.html</a></p></li><li><p><a href="https://www.zhihu.com/question/41848351" target="_blank" rel="noopener">https://www.zhihu.com/question/41848351</a></p></li><li><p><a href="https://www.taterli.com/7275/" target="_blank" rel="noopener">https://www.taterli.com/7275/</a></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。</p><a id="more"></a><p><strong>0</strong></p><p>由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也是个麻烦。如果不加密,就必须选些靠谱的储存,总不能存着存着数据就泄密,那还存个屁。</p><p>因为是数据备份,所以本地上传到备份储存流量较多,而从备份储存下载流量较少,可能要数据恢复时候,才是需要整盘转移或者迁移的。</p><p>作为一个穷鬼，第一选择肯定是白嫖。</p><p><strong>0</strong></p><p>对于国内腾讯云,阿里云储存,对数据是否会被审查表示担忧,毕竟有些内容可能比较敏感（版权或者爱情动作片审核）.所以也直接排除了.</p><p><strong>1</strong></p><p>所以，我的第一个备份源是使用的Microsoft Office 365订阅中的A1订阅中的OneDrive空间，好处如下：</p><ul><li>免费</li><li>微软自带</li><li>容易获取</li><li>方便同步</li><li>1T空间</li></ul><p>当然，也有其劣势：</p><ul><li>免费的是最贵的，存在翻车可能，不稳定</li><li>由于网络原因,经常出现重复传输的情况</li><li>需要一直挂着客户端，关闭后需要重新挂载</li><li>管理员有查看存储内容的权限</li></ul><p>综上所述，我使用4个不同域下的office365账号的OneDrive作为第一处备份源。互相备份一些不是很隐私的资料，比如外网软件，系统，以及一些好看的视频</p><p>但是万一有一天，微软被薅疼了一下子彻查怎么办，所以还需要继续寻找备份源。</p><p><strong>2</strong></p><p>第二个，白嫖的世界上不存在的G姓家的教育账号，无限空间，只是限制了每天750G上传，对我这种菜鸡来说咋样都够了，这次是两个账号互相备份。</p><p>因为一些原因，这里就不细说了。</p><p><strong>3</strong></p><p>不那么重要的资料存完了，接着就是存私人的资料了，比如照片和一些不常用但是有用的脚本。</p><p>这里我首选MEGA，其好处如下，</p><ul><li><p>加密传输</p></li><li><p>同步传输</p></li><li><p>有像OneDrive一样可以挂载到本地的客户端</p><p>关于这个加密传输的效果，大佬是这样说，</p></li></ul><p>“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p><p>当然，成也加密，败也加密，</p><ul><li>mega在大陆地区，下载速度较慢</li><li>不给钱只有15G空间</li></ul><p><strong>4</strong></p><p>然后，考虑了一波S3,亚马逊S3提供很多的选择,</p><p>由于数据不会频繁访问,所以要选择最便宜的储存方式,即S3 Glacier Deep Archive,收费为每月每GB 0.00099USD,</p><p>按照我的数据量来看,0.852192USD每个月,一年付出10.226304USD,大概71元人民币左右.</p><p>数据可靠度也是99.99999999999%,但是数据不能直接取出,取出全部数据本身需要大约70USD成本(如果使用AWS 同区传输可以做到免费,先开AWS账号,然后共享储存桶,然后同区传输到CloudFront,再从CloudFront传回.),还要附加最多2天的取回时间(实测批量取回也是几分钟的事情~)</p><p>也就是说，</p><ul><li>稳定</li><li>安全</li><li>版本控制</li><li>可编程</li></ul><p>单纯以储存来说,这个比较划算,而且支持版本管理,这也是我目前选择的.</p><p><strong>5</strong></p><p>在vps上，能玩的东西比较多，就可以自行摸索了。自建个人网盘，加速下载百度网盘文件以及密码管理器。</p><p>这个现成的开源程序很多，比如有名的next cloud，cloudreve等等。</p><p>这个坑后期再补，睡觉了。。。</p><p>参考文章：</p><ul><li><p><a href="http://www.songruihua.com/archives/mega-privacy-storage.html" target="_blank" rel="noopener">http://www.songruihua.com/archives/mega-privacy-storage.html</a></p></li><li><p><a href="https://www.zhihu.com/question/41848351" target="_blank" rel="noopener">https://www.zhihu.com/question/41848351</a></p></li><li><p><a href="https://www.taterli.com/7275/" target="_blank" rel="noopener">https://www.taterli.com/7275/</a></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -454,62 +504,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>基于nodePPT搭建在线版幻灯片</title>
-    <link href="https://coding.laiczhang.com/2020/01/%E5%9F%BA%E4%BA%8EnodePPT%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E7%89%88%E5%B9%BB%E7%81%AF%E7%89%87/"/>
-    <id>https://coding.laiczhang.com/2020/01/基于nodePPT搭建在线版幻灯片/</id>
-    <published>2020-01-10T15:34:07.000Z</published>
-    <updated>2020-04-05T05:09:43.101Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>累死累活干不过做 PPT 的！<br>查看效果：<a href="https://nodeppt.js.org" target="_blank" rel="noopener">https://nodeppt.js.org</a></p></blockquote><p><img src="https://camo.githubusercontent.com/2362e9e0a3fbd286774e386d7fd2cf3b8aeef9d4/68747470733a2f2f6e6f6465692e636f2f6e706d2f6e6f64657070742e706e67" alt></p><p>nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="noopener">这儿</a>看看</p><a id="more"></a><h2 id="配置node环境"><a href="#配置node环境" class="headerlink" title="配置node环境"></a>配置node环境</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>Node 官网已经把 linux 下载版本更改为已编译好的版本了，我们可以直接下载解压后使用：</p><p>不要使用默认的<code>sudo apt-get install node</code>这样安装的版本不够，可以下载Node.tar.xz，版本选择v10.16.0。</p><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># wget https://nodejs.org/dist/v10<span class="meta">.16</span><span class="meta">.0</span>/node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64.tar.xz    // 下载</span><br><span class="line"># tar xf  node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64.tar.xz       // 解压</span><br><span class="line"># cd node-v10<span class="meta">.16</span><span class="meta">.0</span>-linux-x64/                  // 进入解压目录</span><br><span class="line"># ./bin/node -v                               // 执行node命令 查看版本</span><br><span class="line">v10<span class="meta">.16</span><span class="meta">.0</span></span><br></pre></td></tr></table></figure><p>解压文件的 bin 目录底下包含了 node、npm 等命令，我们可以使用 ln 命令来设置软连接：</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/npm   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span> </span><br><span class="line">ln -s <span class="meta-keyword">/usr/</span>software<span class="meta-keyword">/nodejs/</span>bin/node   <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/bin/</span></span><br></pre></td></tr></table></figure><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>以下部分我们将介绍在 Ubuntu Linux 下使用源码安装 Node.js 。 其他的 Linux 系统，如 Centos 等类似如下安装步骤。</p><p>在 Github 上获取 Node.js 源码,当然，我也在码云上导入了一份，可以替换，加快下载速度(将命令中的<code>https://github.com/nodejs/node.git</code>替换成<code>https://gitee.com/qianliyue/node</code>即可)</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo git <span class="keyword">clone</span> <span class="title">https</span>://github.com/nodejs/<span class="keyword">node</span>.<span class="title">git</span></span><br><span class="line">Cloning into '<span class="keyword">node</span><span class="title">'...</span></span><br></pre></td></tr></table></figure><p>修改目录权限：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod -R <span class="number">755</span> <span class="keyword">node</span><span class="title"></span></span><br></pre></td></tr></table></figure><p>使用 <code>./configure</code> 创建编译文件，并按照：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> node</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo ./configure</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo make install</span></span><br></pre></td></tr></table></figure><p>查看 node 版本：</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">node</span> <span class="title">--version</span></span><br><span class="line">v0.<span class="number">10.25</span></span><br></pre></td></tr></table></figure><h2 id="安装并配置nodePPT"><a href="#安装并配置nodePPT" class="headerlink" title="安装并配置nodePPT"></a>安装并配置nodePPT</h2><p>安装：<code>npm install -g nodeppt</code></p><p>如果失败，可以再试试<code>sudo npm install -g nodeppt</code></p><p>具体配置可以查看<a href="https://github.com/ksky521/nodeppt" target="_blank" rel="noopener">nodeppt官方文档</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;累死累活干不过做 PPT 的！&lt;br&gt;查看效果：&lt;a href=&quot;https://nodeppt.js.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://nodeppt.js.org&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/2362e9e0a3fbd286774e386d7fd2cf3b8aeef9d4/68747470733a2f2f6e6f6465692e636f2f6e706d2f6e6f64657070742e706e67&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来&lt;a href=&quot;https://github.com/ksky521/nodeppt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这儿&lt;/a&gt;看看&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Github项目" scheme="https://coding.laiczhang.com/categories/Github%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-      <category term="node" scheme="https://coding.laiczhang.com/tags/node/"/>
-    
-      <category term="PPT" scheme="https://coding.laiczhang.com/tags/PPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于阿里OSS搭建低价自用图床</title>
-    <link href="https://coding.laiczhang.com/2020/01/%E5%9F%BA%E4%BA%8E%E9%98%BF%E9%87%8COSS%E6%90%AD%E5%BB%BA%E4%BD%8E%E4%BB%B7%E8%87%AA%E7%94%A8%E5%9B%BE%E5%BA%8A/"/>
-    <id>https://coding.laiczhang.com/2020/01/基于阿里OSS搭建低价自用图床/</id>
-    <published>2020-01-10T13:14:48.000Z</published>
-    <updated>2020-02-10T06:13:34.583Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="图床知识普及"><a href="#图床知识普及" class="headerlink" title="图床知识普及"></a>图床知识普及</h2><blockquote><p>Photo by rawpixel.com from Pexels<br>简单说图床就是一个在网络上存储图片的地方，目的是为了节省本地服务器空间，加快图片打开速度，主要是个人博客和网站使用</p></blockquote><p>一般的咱们在网上看到的文章里的插图，其实在浏览器上就是一个图片链接，那个链接所指向的服务器就是所谓的“图床”。粗暴的理解就是文章插图所存放的地方，图床上的图片都可以一串地址链接的形式被用在网络里的各个地方。</p><p>图床地址还有个最简单识别的特征，就是你复制图片的地址，粘贴到浏览器里面是可以直接打开图片的。</p><a id="more"></a><h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><h3 id="购买一个OSS对象存储服务"><a href="#购买一个OSS对象存储服务" class="headerlink" title="购买一个OSS对象存储服务"></a>购买一个OSS对象存储服务</h3><p>通俗的解释这就是一块云盘，只不过他可以通过接口api的形式去使用，面向的对象是开发人员而不是咱们日常客户。主要应用场景就是在存取非结构性数据文件上，就是不是那种数据库里存的结构化数据（目的就是区分云数据库的功能）。</p><p>私人图床嘛，就最低配置40G就差不多了。</p><p><a href="https://www.aliyun.com/product/oss" target="_blank" rel="noopener">阿里云-对象存储 OSS</a></p><p><img src="https://laiczhang-img.oss-cn-beijing.aliyuncs.com/img/20200110212720.png" alt></p><p>购买完成之后还需要点击一下开通OSS服务功能。然后就可以进到OSS控制台了。</p><p>对了关于流量包购买的问题，不开通流量包就是默认为按量收费，大概算了下1.2元10个G每月，还行吧不是很贵，用着再说。</p><p>ps：以防大家可能遇到爬虫攻击或者其他其外情况，就尽量不要在阿里云账号余额里存里过多的钱，不然可能一晚上起来余额就空了，我一般就充50，用完再续随时用手机阿里云就能充值的。本身阿里云就有自己余额超限停止服务的机制的，不用担心因为流量被刷变成负几万资产。</p><p>我永远也不会说付钱的时候我忽然忘了我的支付密码导致我的支付宝被锁了3个小时。</p><p><del>找人代付之后</del>进入OSS的控制台，<br><img src="https://laiczhang-img.oss-cn-beijing.aliyuncs.com/img/20200110214237.png" alt></p><h3 id="创建一个Bucket"><a href="#创建一个Bucket" class="headerlink" title="创建一个Bucket"></a>创建一个Bucket</h3><p><img src="https://laiczhang-img.oss-cn-beijing.aliyuncs.com/img/20200110214745.png" alt></p><p>这个bucket就是顾名思义的桶，你买了40G的空间可以分很多个桶，根据你对想存的东西的定义来划分。</p><p>像咱们做图床，访问频率是不会很低的，如果选低频甚至归档，每次看个你的文章插图需要1分钟冷启动，那黄花菜都凉了，就选择标准存储类型及公共读，加密那个也不用了，都为的是让所有人都看所以肯定选择公共度及不加密了。</p><h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><p>因为我的 laiczhang.com 域名没有备案，所有无法绑定。。。</p><h3 id="关于流量包"><a href="#关于流量包" class="headerlink" title="关于流量包"></a>关于流量包</h3><p>我的网站访问量目前较少才选择的这种配置，如果有同学运营者访客量大的网站建议买个下行流量包哦。。。</p><h3 id="防盗链"><a href="#防盗链" class="headerlink" title="防盗链"></a>防盗链</h3><p>在对象存储的控制台，</p><p><img src="https://laiczhang-img.oss-cn-beijing.aliyuncs.com/img/20200110223306.png" alt></p><p>往下滑，选择防盗链，</p><p>在Referer中填写你允许使用图片的网站地址，比如我填写的是</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//coding.laiczhang.com/</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//github.laiczhang.com/</span></span><br></pre></td></tr></table></figure><p>保存即可。</p><h3 id="配置和使用PicGo"><a href="#配置和使用PicGo" class="headerlink" title="配置和使用PicGo"></a>配置和使用PicGo</h3><p>一个帮助我们上传的免费开源软件，<a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener">picgo官网</a></p><p><img src="https://laiczhang-img.oss-cn-beijing.aliyuncs.com/img/20200110220739.png" alt></p><ul><li><p>keyid和keysecret 这个是阿里账户专用的一个密钥，从头像那里应该找到，没有就创建一个，有就自己回忆回忆存哪了，或者新建一个子密钥密钥也可以</p></li><li><p>空间名就是bucket的名字</p></li><li><p>储存区域就是你当时选的服务器地区的编码从控制台可以找到<br>最后的自定义域名就是你在用你图床外链的时候要显示的域名，可以用默认阿里给你分配的，也可以用自己绑定的自己的个人域名，我就用了自己的解析的pic.dengho.org，加上我安装了https证书，所以前面还能加个S。</p></li></ul><p>使用也非常简单，上传就是拖拽和剪切板上传2种，我试了一下可以一次拖拽多张图片上传，剪切板上传除了用电脑截图的方式、也同样可以复制其他网站上的（例如百度图片、微博图片）直接粘贴上传。</p><p>上传成功的图片会在图床相册里，只有点击一下想要用的图片的左下角的复制按钮就能直接变成现成的Markdown图床链接样式，就可以直接愉快的插入MD编辑器中使用了。</p><p>更多的操作方法可以直接查看<a href="https://picgo.github.io/PicGo-Doc/zh/" target="_blank" rel="noopener">PicGo操作手册</a>。</p><p><img src="https://api.ooopn.com/ipst/api.php" alt="ip signature"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;图床知识普及&quot;&gt;&lt;a href=&quot;#图床知识普及&quot; class=&quot;headerlink&quot; title=&quot;图床知识普及&quot;&gt;&lt;/a&gt;图床知识普及&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Photo by rawpixel.com from Pexels&lt;br&gt;简单说图床就是一个在网络上存储图片的地方，目的是为了节省本地服务器空间，加快图片打开速度，主要是个人博客和网站使用&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一般的咱们在网上看到的文章里的插图，其实在浏览器上就是一个图片链接，那个链接所指向的服务器就是所谓的“图床”。粗暴的理解就是文章插图所存放的地方，图床上的图片都可以一串地址链接的形式被用在网络里的各个地方。&lt;/p&gt;
-&lt;p&gt;图床地址还有个最简单识别的特征，就是你复制图片的地址，粘贴到浏览器里面是可以直接打开图片的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://coding.laiczhang.com/categories/hexo/"/>
-    
-    
-      <category term="oss" scheme="https://coding.laiczhang.com/tags/oss/"/>
-    
-      <category term="图床" scheme="https://coding.laiczhang.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
