@@ -115,10 +115,12 @@
 <meta property="og:site_name" content="Laic Zhang の Blog">
 <meta property="og:description" content="前言很多hexo博客都是部署在github pages 上的，虽然很方便又免费 ，但是速度往往不理想，使用免费的jsdelivr可以对网站中的js等静态资源进行加速，但还是有一定加速效果的。 PS: 本域名解析国内IP访问coding page，国外IP访问GitHub page，可能优化不是特别明显。。。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-29T01:46:03.571Z">
+<meta property="og:image" content="https://coding.laiczhang.com/2020/08/hexo-next启用jsDelivr加快国内访问速度/20200829095151.png">
+<meta property="og:updated_time" content="2020-08-29T01:54:23.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-next启用jsDelivr加快国内访问速度">
 <meta name="twitter:description" content="前言很多hexo博客都是部署在github pages 上的，虽然很方便又免费 ，但是速度往往不理想，使用免费的jsdelivr可以对网站中的js等静态资源进行加速，但还是有一定加速效果的。 PS: 本域名解析国内IP访问coding page，国外IP访问GitHub page，可能优化不是特别明显。。。">
+<meta name="twitter:image" content="https://coding.laiczhang.com/2020/08/hexo-next启用jsDelivr加快国内访问速度/20200829095151.png">
 
 
 
@@ -444,7 +446,7 @@
                 
               
 
-              <time title="创建时间：2020-08-29 09:25:59 / 修改时间：09:46:03" itemprop="dateCreated datePublished" datetime="2020-08-29T09:25:59+08:00">2020-08-29</time>
+              <time title="创建时间：2020-08-29 09:25:59 / 修改时间：09:54:23" itemprop="dateCreated datePublished" datetime="2020-08-29T09:25:59+08:00">2020-08-29</time>
             
 
             
@@ -502,7 +504,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">510</span>
+                <span title="本文字数">592</span>
               
 
               
@@ -543,11 +545,18 @@
 <p>在本地的next主题的配置中已经有对应的配置，修改即可。</p>
 <p>路径形如：./themes/next/_config.yml</p>
 <p>我使用的notepad++，CTRL+f搜索关键词<code>jsdelivr</code>即可找到相关配置。</p>
+<p>![](2020-08-29 093624.png)</p>
 <p>以jQuery模块为例，</p>
 <figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Internal version: 3.4.1</span></span><br><span class="line"><span class="meta"># Example:</span></span><br><span class="line"><span class="meta"># jquery: //cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js</span></span><br><span class="line"><span class="meta"># jquery: //cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js</span></span><br><span class="line">jquery: <span class="comment">//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js</span></span><br></pre></td></tr></table></figure>
 
+<p>然后部署即可。</p>
+<p>打开网站，F12，</p>
+<p>可以看到，</p>
+<p><img src="20200829095151.png" alt></p>
+<p>修改成功！</p>
 <ul>
 <li><a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr官网</a></li>
+<li><a href="https://blog.csdn.net/RayDon03/article/details/104398759/" target="_blank" rel="noopener">使用jsdelivr加速hexo next主题</a></li>
 </ul>
 
       
@@ -1922,7 +1931,7 @@ if ($('body').find('div.pdf').length) {
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1598665621577')
+  navigator.serviceWorker.register('/sw.js?t=1598666764239')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
