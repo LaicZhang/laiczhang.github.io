@@ -111,12 +111,12 @@
 <meta property="og:site_name" content="Laic Zhang の Blog">
 <meta property="og:description" content="主要是想加个内存条。 看看电脑的内存条槽位和厂商。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2020/07/30/857Yrsct3UoQzdB.png">
-<meta property="og:updated_time" content="2020-07-30T08:57:35.599Z">
+<meta property="og:image" content="https://i.loli.net/2020/10/28/TfEjmNJg1WX5bKZ.jpg">
+<meta property="og:updated_time" content="2020-10-28T10:48:23.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给电脑续命之查看配置">
 <meta name="twitter:description" content="主要是想加个内存条。 看看电脑的内存条槽位和厂商。">
-<meta name="twitter:image" content="https://i.loli.net/2020/07/30/857Yrsct3UoQzdB.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/10/28/TfEjmNJg1WX5bKZ.jpg">
 
 
 
@@ -442,12 +442,24 @@
                 
               
 
-              <time title="创建时间：2020-07-30 16:29:27 / 修改时间：16:57:35" itemprop="dateCreated datePublished" datetime="2020-07-30T16:29:27+08:00">2020-07-30</time>
+              <time title="创建时间：2020-07-30 16:29:27" itemprop="dateCreated datePublished" datetime="2020-07-30T16:29:27+08:00">2020-07-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-10-28 18:48:23" itemprop="dateModified" datetime="2020-10-28T18:48:23+08:00">2020-10-28</time>
               
             
           </span>
@@ -500,7 +512,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -556,15 +568,15 @@
 <p>性能主要包括存储器容量、存储周期和可靠性三项内容，性能价格比是一个综合性指标，对于不同的存储器有不同的要求。</p>
 <p><strong>总之，加上一根内存条，可以让电脑快一些。</strong></p>
 <h2 id="查看电脑配置"><a href="#查看电脑配置" class="headerlink" title="查看电脑配置"></a>查看电脑配置</h2><p>鼠标右键任务栏，或者按住<code>Ctrl</code>+<code>Alt</code>+<code>Delete</code>键，选择启动任务管理器，</p>
-<p><img src="https://i.loli.net/2020/07/30/857Yrsct3UoQzdB.png" alt="QQ截图20200730163929.png"></p>
-<p>可以看到，插槽为1，意为还能再添加一根内存条。</p>
+<p><img src="https://i.loli.net/2020/10/28/TfEjmNJg1WX5bKZ.jpg" alt="QQ截图20201028184543.jpg"></p>
+<p>可以看到，我的已使用插槽为2/2（一般情况下都是没装的都是1/2），意为还能再添加一根内存条。</p>
 <p>接着再打开cmd，不会有人还不知道怎么打开cmd吧，不会吧不会吧，就是win+R键呀。</p>
 <p>输入<code>wmic</code>，再输入<code>memorychip list full</code>，可得</p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">C:\Users\HP&gt;wmic</span></span><br><span class="line"><span class="section">wmic:root\cli&gt;memorychip list full</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BankLabel=BANK 2</span><br><span class="line">Capacity=8589934592</span><br><span class="line">DataWidth=64</span><br><span class="line">Description=Physical Memory</span><br><span class="line">DeviceLocator=Bottom - Slot 2 (under)</span><br><span class="line">FormFactor=12</span><br><span class="line">HotSwappable=</span><br><span class="line">InstallDate=</span><br><span class="line">InterleaveDataDepth=0</span><br><span class="line">InterleavePosition=0</span><br><span class="line">Manufacturer=Micron</span><br><span class="line">MemoryType=0</span><br><span class="line">Model=</span><br><span class="line">Name=Physical Memory</span><br><span class="line">OtherIdentifyingInfo=</span><br><span class="line">PartNumber=8ATF1G64HZ-2G6E1</span><br><span class="line">PositionInRow=1</span><br><span class="line">PoweredOn=</span><br><span class="line">Removable=</span><br><span class="line">Replaceable=</span><br><span class="line">SerialNumber=1B52CAF1</span><br><span class="line">SKU=</span><br><span class="line">Speed=2667</span><br><span class="line">Status=</span><br><span class="line">Tag=Physical Memory 1</span><br><span class="line">TotalWidth=64</span><br><span class="line">TypeDetail=128</span><br><span class="line">Version=</span><br></pre></td></tr></table></figure>
 
 <p>其中，Manufacturer的值就是厂商，比如我的是<code>Micron</code>，<code>Speed</code>则为内存的频率,频率越快速度越快，我的为2667，市面上没有，大佬给的解释是，2666是个标称数，不可能造出任何时候运行频率完全一致的，偶尔运行时稍微高个零点几MH，系统就识别成2667了，所以实际是2666。</p>
 <p>当然，2667，2666，2400这些值，具体是多少，对我们来说可能不用那么在意，因为我们基本感受不到。</p>
-<h2 id="综上所述"><a href="#综上所述" class="headerlink" title="综上所述"></a>综上所述</h2><p>我们要选购的这一条内存条的配置为：</p>
+<h2 id="综上所述"><a href="#综上所述" class="headerlink" title="综上所述"></a>综上所述</h2><p>我要选购的这一条内存条的配置为：</p>
 <ul>
 <li>厂商为<code>Micron</code>，即镁光</li>
 <li>内存大小为8G</li>
@@ -1260,7 +1272,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">267k</span>
+    <span title="站点总字数">268k</span>
   
 
   
@@ -1949,7 +1961,7 @@ if ($('body').find('div.pdf').length) {
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1603802801107')
+  navigator.serviceWorker.register('/sw.js?t=1603882152631')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
