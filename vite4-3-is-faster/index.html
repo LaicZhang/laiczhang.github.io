@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>vite4.3是如何更快的 | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="vite4.3是如何更快的,为什么Vite 4.3比Vite 4.2性能提高了这么多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vite4.3是如何更快的">
+<meta property="og:url" content="https://coding.zyha.cn/vite4-3-is-faster/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="vite4.3是如何更快的,为什么Vite 4.3比Vite 4.2性能提高了这么多">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-09-21T02:26:26.000Z">
+<meta property="article:modified_time" content="2023-09-21T02:26:26.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="vite">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://coding.zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-vite4-3是如何更快的" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/vite4-3-is-faster/" class="article-date">
+  <time class="dt-published" datetime="2023-09-21T02:26:26.000Z" itemprop="datePublished">2023-09-21</time>
+</a> -->
+    <a href="/vite4-3-is-faster/" class="article-date">
+  <time class="dt-published" datetime="2023-09-21T02:26:26.000Z" itemprop="datePublished">2023-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%BC%98%E5%8C%96/">优化</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      vite4.3是如何更快的
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/20240410171659.png?x-oss-process=style/blog" alt="vite4.3启动时间"></p>
+<p>正如<a target="_blank" rel="noopener" href="https://github.com/sapphi-red/">@sapphi-red</a>所说，Vite 4.3比Vite 4.2性能得到了极大提高。</p>
+<p>除大概阐述外，我还找了一些具有代表性的PR，来看看Vite 4.3具体是如何做到的。</p>
+<span id="more"></span>
+<h2 id="为什么Vite-4-3比Vite-4-2性能提高了这么多"><a href="#为什么Vite-4-3比Vite-4-2性能提高了这么多" class="headerlink" title="为什么Vite 4.3比Vite 4.2性能提高了这么多"></a>为什么Vite 4.3比Vite 4.2性能提高了这么多</h2><h3 id="1-更智能的调度策略"><a href="#1-更智能的调度策略" class="headerlink" title="1. 更智能的调度策略"></a>1. 更智能的调度策略</h3><p>Vite解析所有收到的URL和路径，以获取目标模块。</p>
+<p>在Vite 4.2中，有许多冗余的解析逻辑和不必要的模块搜索。Vite 4.3使解析逻辑更简单、更严格、更准确，以减少计算和fs调用。</p>
+<h4 id="1-1-简化调度-12576"><a href="#1-1-简化调度-12576" class="headerlink" title="1.1 简化调度 #12576"></a>1.1 简化调度 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/pull/12576">#12576</a></h4><p>Vite 4.2严重依赖<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/resolve">resolve</a>包来解析依赖的package.json，当我们查看resolve源码时，可以发现在解析package.json时有很多无用的逻辑。 Vite 4.3 放弃了解析，遵循更简单的解析逻辑：直接检查嵌套父目录中是否存在 package.json。</p>
+<h4 id="1-2-更严格的解析-12542"><a href="#1-2-更严格的解析-12542" class="headerlink" title="1.2 更严格的解析 #12542"></a>1.2 更严格的解析 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/pull/12542">#12542</a></h4><p>Vite要调用Nodejs fs API 来查找模块，但IO操作是很消耗资源的。 Vite 4.3缩小了文件搜索范围，并跳过了一些特殊路径的搜索，以尽可能减少fs调用。</p>
+<p>例如：</p>
+<ul>
+<li><p>由于#符号不会出现在URL中，并且用户可以控制源文件路径中不包含#符号，因此Vite 4.3不再检查用户源文件中带有#符号的路径，而只在node_modules中搜索。</p>
+</li>
+<li><p>在 Unix 系统中，Vite 4.2 首先检查根目录内的每个绝对路径，对于大多数路径都没有问题，但如果绝对路径以 root 开头，则很可能失败。为了在 &#x2F;root&#x2F;root 不存在时跳过搜索 &#x2F;root&#x2F;root&#x2F;文件路径，Vite 4.3 会在开头判断 &#x2F;root&#x2F;root 是否作为目录存在，并预先缓存结果。</p>
+</li>
+<li><p>当Vite服务器收到@fs&#x2F;xxx和@vite&#x2F;xxx时，无需再次解析这些UR L。 Vite 4.3 直接返回之前缓存的结果，而不是重新解析它们。</p>
+</li>
+</ul>
+<h4 id="1-3-更准确的解析-12542"><a href="#1-3-更准确的解析-12542" class="headerlink" title="1.3 更准确的解析 #12542"></a>1.3 更准确的解析 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/pull/12542">#12542</a></h4><p>Vite 4.2 当文件路径为目录时会递归解析模块，这会导致不必要的重复计算。 Vite 4.3将递归分辨率扁平化，针对不同类型的路径应用合适的分辨率。展平后缓存一些 fs 调用也更容易。</p>
+<h4 id="1-4-更快的解析-12476"><a href="#1-4-更快的解析-12476" class="headerlink" title="1.4 更快的解析 #12476"></a>1.4 更快的解析 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12476">#12476</a></h4><p>Vite 4.3打破了解析node_modules包数据的性能瓶颈。</p>
+<p>Vite 4.2 使用绝对文件路径作为包数据缓存键。这还不够，因为 Vite 必须遍历 pkg&#x2F;foo&#x2F;bar 和 pkg&#x2F;foo&#x2F;baz 中的同一目录。</p>
+<p>Vite 4.3 不仅使用绝对路径（&#x2F;root&#x2F;node _modules&#x2F;pkg&#x2F;foo&#x2F;bar.js &amp; &#x2F;root&#x2F;node_modules&#x2F;pkg&#x2F;foo&#x2F;baz.js），还使用遍历的目录（&#x2F;root&#x2F;node_modules&#x2F;pkg&#x2F;foo&#x2F;bar.js） module&#x2F;pkg&#x2F;foo &amp; &#x2F;root&#x2F;node_modules&#x2F;pkg) 作为 pkg 缓存的键。</p>
+<p>另一种情况是，Vite 4.2 在单个函数内部查找深层导入路径的 package.json，例如 Vite 4.2 解析 a&#x2F;b&#x2F;c&#x2F;d 这样的文件路径时，首先会检查 root a&#x2F;package.json 是否存在，如果没有，则按照a&#x2F;b&#x2F;c&#x2F;package.json -&gt; a&#x2F;b&#x2F;package.json的顺序查找最近的package.json，但事实是查找根package.json和最近的package.json应该处理分开，因为它们在不同的解析上下文中需要。 Vite 4.3 将根 package.json 和最近的 package.json 解析分为两部分，这样它们就不会混合。</p>
+<h3 id="2-fs-realpathSync-2680"><a href="#2-fs-realpathSync-2680" class="headerlink" title="2. fs.realpathSync #2680"></a>2. fs.realpathSync <a target="_blank" rel="noopener" href="https://github.com/nodejs/node/issues/2680">#2680</a></h3><p>Nodejs 中有一个有趣的 realpath Sync 问题，它指出 fs.realpath Sync 比 fs.realpath Sync.native 慢 70 倍。</p>
+<p>但由于在 Windows 上的行为不同，Vite 4.2 仅在非 Windows 系统上使用 fs.realpathSync.native。为了解决这个问题，Vite 4.3 在 Windows 上调用 fs.realpath Sync.native 时添加了网络驱动器验证。</p>
+<h3 id="3-非阻塞任务"><a href="#3-非阻塞任务" class="headerlink" title="3. 非阻塞任务"></a>3. 非阻塞任务</h3><p>作为一种按需服务，Vite 开发服务器不需要所有东西都准备好就可以启动。</p>
+<h4 id="3-1-非阻塞tsconfig解析-12548"><a href="#3-1-非阻塞tsconfig解析-12548" class="headerlink" title="3.1 非阻塞tsconfig解析 #12548"></a>3.1 非阻塞tsconfig解析 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12548">#12548</a></h4><p>Vite 服务器在预捆绑 ts 或 tsx 时需要 tsconfig 数据。</p>
+<p>Vite 4.2 在服务器启动之前等待插件钩子配置中的 tsconfig 数据被解析解析。一旦服务器启动而没有准备好 tsconfig 数据，页面请求就可以访问服务器，即使该请求可能需要稍后等待 tsconfig 解析。</p>
+<p>Vite 4.3 在服务器启动之前初始化 tsconfig 解析，但服务器不会等待它。解析过程在后台运行。一旦有 ts 相关的请求进来，就必须等待 tsconfig 解析完成。</p>
+<h4 id="3-2-非阻塞文件处理-12603"><a href="#3-2-非阻塞文件处理-12603" class="headerlink" title="3.2 非阻塞文件处理 #12603"></a>3.2 非阻塞文件处理 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12603">#12603</a></h4><p>Vite中有大量的fs调用，其中一些是同步的。这些同步 fs 调用可能会阻塞主线程。 Vite 4.3 将它们更改为异步。此外，异步函数的并行化也更容易。关于异步函数，您应该关心的一件事是，在解析后可能有许多 Promise 对象需要释放。由于更智能的解析策略，释放 fs - Promise 对象的成本要少得多。</p>
+<h3 id="4-HMR-优化-12658"><a href="#4-HMR-优化-12658" class="headerlink" title="4. HMR 优化 #12658"></a>4. HMR 优化 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12658">#12658</a></h3><p>考虑两个简单的依赖链C &lt; - B &lt; - A &amp; D &lt; - B &lt; - A，当A被编辑时，HMR会从A传播到C，从A传播到D。这导致A和B在Vite中被更新两次4.2.<br>Vite 4.3 会缓存这些遍历过的模块，以避免多次探索它们。这可能会对那些具有组件桶导入的文件结构产生重大影响。这对于 git checkout 触发的 HMR 也有好处。</p>
+<h3 id="5-并行化-12754"><a href="#5-并行化-12754" class="headerlink" title="5. 并行化 #12754"></a>5. 并行化 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12754">#12754</a></h3><p>并行化始终是获得更好性能的不错选择。在 Vite 4.3 中，我们并行化了一些核心功能，包括导入分析、提取 deps 的导出、解析模块 url 和运行批量优化器。并行化之后确实有令人印象深刻的改进。</p>
+<h3 id="6-JavaScript-优化"><a href="#6-JavaScript-优化" class="headerlink" title="6. JavaScript 优化"></a>6. JavaScript 优化</h3><p>不要错过编程语言优化。 Vite 4.3 中一些有趣的 javascript 优化案例：</p>
+<h4 id="6-1-用回调替换-yield-12541"><a href="#6-1-用回调替换-yield-12541" class="headerlink" title="6.1 用回调替换 *yield #12541"></a>6.1 用回调替换 *yield <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12541">#12541</a></h4><p>Vite 使用 tsconfck(by @dominikg) 来查找和解析 tsconfig 文件。 tsconfck 过去通过 <em>yield 遍历目标目录，生成器的一个缺点是它需要更多的内存空间来存储其 Generator 对象，并且在运行时会有大量的生成器上下文切换。所以@dominikg 自 v2.1.1 以来在核心中用回调替换了</em>yield 。</p>
+<h4 id="6-2-使用-startsWith-endsWith-替换-12531"><a href="#6-2-使用-startsWith-endsWith-替换-12531" class="headerlink" title="6.2 使用 startsWith &amp; endsWith 替换 &#x3D;&#x3D;&#x3D; #12531"></a>6.2 使用 startsWith &amp; endsWith 替换 &#x3D;&#x3D;&#x3D; <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12531">#12531</a></h4><p>Vite 4.2 使用开头 With 和结尾 With 来检查热 UR L 中的标题和尾随“&#x2F;”。我们比较了 str.starts With(‘x’) 和 str[0] &#x3D;&#x3D;&#x3D; ‘x’ 的执行基准，发现 &#x3D;&#x3D;&#x3D; 比starts With 快约 20%。同时，ends With 比 &#x3D;&#x3D;&#x3D; 慢约 60%。</p>
+<h4 id="6-3-避免重新创建正则表达式-12518"><a href="#6-3-避免重新创建正则表达式-12518" class="headerlink" title="6.3 避免重新创建正则表达式 #12518"></a>6.3 避免重新创建正则表达式 <a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/issues/12518">#12518</a></h4><p>Vite需要很多正则表达式来匹配字符串，其中大多数都是静态的，所以最好只使用它们的单例。 Vite 4.3 提升了正则表达式，以便可以重复使用它们。</p>
+<h4 id="6-4-放弃生成自定义错误"><a href="#6-4-放弃生成自定义错误" class="headerlink" title="6.4 放弃生成自定义错误"></a>6.4 放弃生成自定义错误</h4><p>Vite 4.2 中存在一些为了更好的 DX 的自定义错误。这些错误可能会导致额外的计算和垃圾收集，从而降低 Vite 的速度。在 Vite 4.3 中，我们必须放弃生成一些热门的自定义错误（例如 package.json NOT _ FOUND 错误）并直接抛出原始错误以获得更好的性能。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://vitejs.dev/blog/announcing-vite4-3.html">Vite 4.3 is out!</a></li>
+<li><a target="_blank" rel="noopener" href="https://sun0day.github.io/blog/vite/why-vite4_3-is-faster.html#smarter-resolve-strategy">How we made Vite 4.3 faaaaster</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/vitejs/vite/blob/v4.4.9/packages/vite/CHANGELOG.md#430-2023-04-20">github.com&#x2F;vitejs&#x2F;vite&#x2F;pulls</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://coding.zyha.cn/vite4-3-is-faster/" data-id="clx62qxy000388vrm01co7amg" data-title="vite4.3是如何更快的" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vite/" rel="tag">vite</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/prisma-has-been-used-for-3-months/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          prisma使用3个月有感
+        
+      </div>
+    </a>
+  
+  
+    <a href="/aws-ip-charge/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">ip收费的新规将影响到lightsail</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 11.25px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 12.5px;">vue</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 11.25px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 10px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 10px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 11.25px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+          <li>
+            <a href="/ali-chengdu-light-year-pay-99/">【简单测评】ali成都轻量云年付99元</a>
+          </li>
+        
+          <li>
+            <a href="/some-problems-in-nestjs/">开发中遇到的那些nestjs相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/a-z-of-browser/">浏览器从A到Z</a>
+          </li>
+        
+          <li>
+            <a href="/what-is-the-best-id-for-a-database/">使用什么作为数据库的ID？</a>
+          </li>
+        
+          <li>
+            <a href="/docker-container-configurations/">docker相关容器配置</a>
+          </li>
+        
+          <li>
+            <a href="/some-tips-about-apipost/">关于ApiPost的一些技巧</a>
+          </li>
+        
+          <li>
+            <a href="/select-a-good-public-dns-in-2024/">2024选择适合的公共DNS</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>

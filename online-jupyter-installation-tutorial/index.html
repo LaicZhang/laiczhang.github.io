@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>在线jupyter安装教程 | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="看到小游同学搭了个在线jupyter，忽然想起我也还有个学生机买来就没有用，我就也试着在学生机上也搭了一个。 照着他的步骤来，不过他也有一些没有写清楚的地方，我会尽量补充出来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在线jupyter安装教程">
+<meta property="og:url" content="https://coding.zyha.cn/online-jupyter-installation-tutorial/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="看到小游同学搭了个在线jupyter，忽然想起我也还有个学生机买来就没有用，我就也试着在学生机上也搭了一个。 照着他的步骤来，不过他也有一些没有写清楚的地方，我会尽量补充出来。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-09T15:22:02.000Z">
+<meta property="article:modified_time" content="2020-01-09T15:22:02.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="环境配置">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="jupyter">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://coding.zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-在线jupyter安装教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/online-jupyter-installation-tutorial/" class="article-date">
+  <time class="dt-published" datetime="2020-01-09T15:22:02.000Z" itemprop="datePublished">2020-01-09</time>
+</a> -->
+    <a href="/online-jupyter-installation-tutorial/" class="article-date">
+  <time class="dt-published" datetime="2020-01-09T15:22:02.000Z" itemprop="datePublished">2020-01-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      在线jupyter安装教程
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>看到<a target="_blank" rel="noopener" href="https://xiaoyou66.com/archives/1095">小游同学</a>搭了个在线jupyter，忽然想起我也还有个学生机买来就没有用，我就也试着在学生机上也搭了一个。</p>
+<p>照着他的步骤来，不过他也有一些没有写清楚的地方，我会尽量补充出来。</p>
+<span id="more"></span>
+
+<h2 id="安装之前的准备工作-换源"><a href="#安装之前的准备工作-换源" class="headerlink" title="安装之前的准备工作-换源"></a>安装之前的准备工作-换源</h2><p>小游同学在安装完Ubuntu19.04后要换源，他写了个脚本，直接运行可以自动换源。</p>
+<p>目前好像没有19.04的源，所以我就不换了(下面是代码，大家只需要保存为<code>.sh</code>后缀然后到Ubuntu里面输入<code>sh 你的文件名.sh</code>即可)</p>
+<p>用xshell连接服务器的同学，可以右键传输文件，</p>
+<p>也可以安装lrzsz工具包:<code>sudo apt-get install lrzsz</code>,然后<code>rz</code>把.sh后缀文件传至服务器。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"> </span><br><span class="line">echo &quot;*********************************&quot;</span><br><span class="line">sudo echo &quot;选择安装系统：&quot;</span><br><span class="line">echo &quot;  14.04 请输入 1&quot;</span><br><span class="line">echo &quot;  16.04 请输入 2&quot;</span><br><span class="line">echo &quot;  18.04 请输入 3&quot;</span><br><span class="line">echo &quot;*********************************&quot;</span><br><span class="line">read SystemIndex</span><br><span class="line"> </span><br><span class="line">if [ -z $SystemIndex ];then</span><br><span class="line">    echo &quot;输入格式错误&quot;</span><br><span class="line">    exit</span><br><span class="line"> else</span><br><span class="line">    index=`echo &quot;$SystemIndex*1&quot; | bc `</span><br><span class="line">   if [ $index -eq 1 ];then</span><br><span class="line">       System=14.04</span><br><span class="line">   elif [ $index -eq 2 ];then</span><br><span class="line">       System=16.04   </span><br><span class="line">   elif [ $index -eq 3 ];then </span><br><span class="line">       System=18.04 </span><br><span class="line">    fi</span><br><span class="line">fi</span><br><span class="line"> </span><br><span class="line">echo &quot;*********************************&quot;</span><br><span class="line">echo &quot;选择更新源：&quot;</span><br><span class="line">echo &quot;  阿里源请输入 1&quot;</span><br><span class="line">echo &quot;  清华源请输入 2&quot;</span><br><span class="line">echo &quot;  网易源请输入 3&quot;</span><br><span class="line">echo &quot;*********************************&quot;</span><br><span class="line">read SourceIndex</span><br><span class="line"> </span><br><span class="line">if [ -z $SystemIndex ];then</span><br><span class="line">    echo &quot;输入格式错误&quot;</span><br><span class="line">    exit</span><br><span class="line"> else</span><br><span class="line">    index=`echo &quot;$SourceIndex*1&quot; | bc `</span><br><span class="line">   if [ $index -eq 1 ];then</span><br><span class="line">    echo 1111</span><br><span class="line">       Source=ali</span><br><span class="line">   elif [ $index -eq 2 ];then</span><br><span class="line">    echo 222</span><br><span class="line">       Source=qinghua   </span><br><span class="line">   elif [ $index -eq 3 ];then </span><br><span class="line">       Source=163 </span><br><span class="line">    fi</span><br><span class="line">fi</span><br><span class="line">echo $Source</span><br><span class="line">filename=&quot;source_$&#123;Source&#125;_ubuntu$&#123;System&#125;.list&quot;</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">下载安装git</span></span><br><span class="line">echo &quot;开始下载安装git...&quot;</span><br><span class="line">sudo apt-get install git</span><br><span class="line">sudo apt-get -f install</span><br><span class="line">sudo apt-get install git</span><br><span class="line">echo &quot;安装完成&quot;</span><br><span class="line">echo &quot;开始下载库文件...&quot;</span><br><span class="line">git clone https://github.com/quanweiGithub/Ubuntu-China-Source</span><br><span class="line">cd Ubuntu-China-Source</span><br><span class="line">ls</span><br><span class="line">echo &quot;备份原链接...&quot;</span><br><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources_init.list</span><br><span class="line">echo &quot;设置链接...&quot;</span><br><span class="line">sudo cp $filename /etc/apt/sources.list</span><br><span class="line">echo &quot;更新源...&quot;</span><br><span class="line">sudo apt-get update</span><br><span class="line">echo &quot;修复软件...&quot;</span><br><span class="line">sudo apt-get -f install</span><br><span class="line">echo &quot;更新软件...&quot;</span><br><span class="line">sudo apt-get upgrade</span><br><span class="line">echo &quot;清理文件...&quot;</span><br><span class="line">cd ..</span><br><span class="line">sudo rm -rf Ubuntu-China-Source</span><br><span class="line">echo &quot;国内源清理完毕&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置python环境"><a href="#配置python环境" class="headerlink" title="配置python环境"></a>配置python环境</h2><p>安装依赖包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus</span><br><span class="line">sudo apt-get install build-essential libncursesw5-dev libgdbm-dev libc6-dev</span><br><span class="line">sudo apt-get install zlib1g-dev libsqlite3-dev tk-dev</span><br><span class="line">sudo apt-get install libssl-dev openssl</span><br><span class="line">sudo apt-get install libffi-dev</span><br></pre></td></tr></table></figure>
+
+<p>安装pyenv</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/yyuu/pyenv.git ~/.pyenv</span><br><span class="line">echo &#x27;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">echo &#x27;export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">echo &#x27;eval &quot;$(pyenv init -)&quot;&#x27; &gt;&gt; ~/.bashrc</span><br><span class="line">exec $SHELL -l</span><br></pre></td></tr></table></figure>
+<p>安装 python3.7.0<code>pyenv install 3.7.0 -v</code></p>
+<p>对数据库进行更新：<code>pyenv rehash</code></p>
+<p>查看已经安装的python版本：<code>pyenv versions</code></p>
+<p>设置全局python版本<code>pyenv global 3.7.0</code></p>
+<h2 id="安装并配置jupyter"><a href="#安装并配置jupyter" class="headerlink" title="安装并配置jupyter"></a>安装并配置jupyter</h2><p>安装完python后就可以准备安装jupyter了，因为我什么也不懂只好采用最简单的安装方法：使用conda来进行安装。</p>
+<p>我们这里是全程以root用户来运行的，所以要切换到root用户：su - 如果你没设置root密码可以输入 sudo passwd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir /Anaconda</span><br><span class="line">cd /Anaconda</span><br><span class="line">wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh</span><br><span class="line">bash Anaconda3-4.4.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+<p>我们直接下载安装脚本就可以自动安装了。</p>
+<p>在安装过程中会询问你是否将anaconda的路径加入到环境变量中，默认是no，我这里不知道怎么回事所以直接没有加到环境变量里面。所以我们需要手动添加了了。</p>
+<p>我们直接修改配置文件<code>vi ~/.bashrc</code></p>
+<p>然后在最后面加入：<code>export PATH=&quot;/root/anaconda3/bin:$PATH&quot;</code></p>
+<p>最后保存退出，注意，<code>vi</code>代表用vim编辑，进入文件后发现直接修改改不了也表慌，先按<code>i</code>，下方会显示<code>--insert--</code>，此时就能开始编辑了：</p>
+<p>，更新一下环境变量：<code>source ~/.bashrc</code></p>
+<p>然后退出是，先按<code>esc</code>，也就是键盘左上角的那个键，然后输入<code>:wq</code>保存退出。</p>
+<p>然后在输入：<code>conda list</code> 如果有反应说明安装成功！</p>
+<h3 id="正式开始安装jupyter-notebook"><a href="#正式开始安装jupyter-notebook" class="headerlink" title="正式开始安装jupyter notebook"></a>正式开始安装jupyter notebook</h3><p>输入：<code>conda install jupyter notebook</code>开始安装</p>
+<p>安装完后直接输入<code>jupyter notebook</code>就可以启动程序了，但是因为我们是root所以是不让我运行的，我们需要修改配置文件。</p>
+<p>我们先让它生成配置文件：<code>jupyter notebook --generate-config --allow-root</code></p>
+<p>如果出现<code>Writing default config to:/root/.jupyter/jupyter _notebook _config.py</code>，说明安装成功了，然后我们需要修改配置文件：<code>vi /root/.jupyter/jupyter_notebook_config.py</code></p>
+<p>好像打不开所以我就直接到文件里面找然后直接修改了。</p>
+<p>找到这一行<code>#c.NotebookApp.allow_root = False</code>改成<code>c.NotebookApp.allow_root =True</code></p>
+<p>此时我们启动程序也还是进不去的，因为我们没有密码，我们要修改一下密码。</p>
+<p>输入：<code>ipython</code> 然后在输入<code>from notebook.auth import passwd</code>再输入<code>passwd()</code></p>
+<p>这个时候输入并确认密码（此时输入的密码是第一次登陆需要输入的密码），然后获得密码的hash值：<code>&#39;sha1:.......</code></p>
+<p>复制这个值，粘贴到先前的那个配置文件<code>/root/.jupyter/jupyter_notebook_config.py</code>内<code>c.NotebookApp.password= u&#39;sha1:.....&#39;</code></p>
+<p>保存好后就可以直接输入密码访问了，但是这个时候还是不能直接远程访问，所以我们还需要这样设置一下（自己找位置，然后把内容修改一下，把#注释掉）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip = &#x27;*&#x27;</span><br><span class="line">c.NotebookApp.open_browser = False（True：启动时自动打开浏览器）</span><br><span class="line">c.NotebookApp.port = 8888（端口设置，随你改）</span><br></pre></td></tr></table></figure>
+<h3 id="自己的服务器"><a href="#自己的服务器" class="headerlink" title="自己的服务器"></a>自己的服务器</h3><p>还有我们需要配置一下防火墙，默认Ubuntu安转了UFW防火墙，下面是这个防火墙的一些配置：</p>
+<p>启动防火墙：<code>sudo ufw enable或者sudo ufw default deny</code></p>
+<p>关闭防火墙：<code>sudo ufw disable</code></p>
+<p>查看防火墙状态：<code>sudo ufw status</code></p>
+<p>开启或者禁用相应的端口：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> ufw <span class="literal">allow</span> <span class="number">80</span> 允许外部访问<span class="number">80</span>端口</span><br><span class="line"><span class="attribute">sudo</span> ufw delete <span class="literal">allow</span> <span class="number">80</span> 禁止外部访问<span class="number">80</span> 端口</span><br><span class="line"><span class="attribute">sudo</span> ufw <span class="literal">allow</span> from <span class="number">192.168.1.1</span> 允许此IP访问所有的本机端口</span><br><span class="line"><span class="attribute">sudo</span> ufw <span class="literal">deny</span> smtp 禁止外部访问smtp服务</span><br><span class="line"><span class="attribute">sudo</span> ufw delete <span class="literal">allow</span> smtp 删除上面建立的某条规则</span><br><span class="line"><span class="attribute">ufw</span> <span class="literal">deny</span> proto tcp from <span class="number">10.0.0.0</span>/<span class="number">8</span> to <span class="number">192.168.0.1</span> port 要拒绝所有的流量从TCP的<span class="number">10.0.0.0</span>/<span class="number">8</span> 到端口<span class="number">22</span>的地址<span class="number">192.168.0.1</span></span><br></pre></td></tr></table></figure>
+<p>如果没有安装可以输入如下命令安装：<code>sudo apt-get install ufw</code></p>
+<p>我们直接添加我们的端口就行了，然后就可以在本地直接访问虚拟机的ip地址加端口号如果看到以下界面说明可以外部访问了</p>
+<h3 id="云服务器"><a href="#云服务器" class="headerlink" title="云服务器"></a>云服务器</h3><p>这就需要你登陆到云主机供应商的云服务器控制台界面，</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://i.loli.net/2020/01/10/BPCaWgs85XvxpSD.png" alt="20200110171813.png"></p>
+<p>添加安全组，</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://i.loli.net/2020/01/10/56wHe3A2UCkOKRt.png" alt="20200110171934.png"></p>
+<p>然后在自己电脑&#x2F;手机&#x2F;ipad上，打开浏览器输入：<code>服务器公网ip:&#123;设置的端口号&#125;</code>，输入你的服务器密码登陆，即可进入。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://i.loli.net/2020/01/10/Sh9PWtsIaiOLNMm.png" alt="20200110172210.png"></p>
+<h3 id="如何让它一直在后台运行呢？"><a href="#如何让它一直在后台运行呢？" class="headerlink" title="如何让它一直在后台运行呢？"></a>如何让它一直在后台运行呢？</h3><p>有两种方法：</p>
+<ol>
+<li><p><code>jupyter notebook --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp;</code></p>
+</li>
+<li><p><code>nohup jupyter notebook --allow-root &gt; jupyter.log 2&gt;&amp;1 &amp;</code></p>
+</li>
+</ol>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><ol>
+<li><p>用<code>&amp;</code>让命令后台运行, 并把标准输出写入jupyter.log中</p>
+</li>
+<li><p><code>nohup</code>表示<code>no hang up</code>, 就是不挂起, 于是这个命令执行后即使终端退出, 也不会停止运行.</p>
+</li>
+</ol>
+<p><del>我的<a target="_blank" rel="noopener" href="https://39.96.24.63:999/">在线jupyter</a>，因为是用学生机搭建的，性能有限，就不公开了。实在不会配置环境的同学，还是文末公众号后台留言吧。</del></p>
+<h3 id="停止方法"><a href="#停止方法" class="headerlink" title="停止方法"></a>停止方法</h3><p>执行上面第2条命令, 可以发现关闭终端重新打开后, 用<code>jobs</code>找不到jupyter这个进程了, 于是要用<code>ps -A</code>(注意A要大写), 可以显示所有进程的pid.在CMD下面找到<code>jupyter-noteboo</code>然后<code>kill -9 pid</code> 终止进程即可。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>不知道什么原因，用xshell重新连接后，虽然jupyter仍然能够访问，但是再输入<code>conda list</code>或者<code>pip list</code>均失效，从头开始尝试了几次，发现只需要再输入<code>source ~/.bashrc</code>即可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://coding.zyha.cn/online-jupyter-installation-tutorial/" data-id="clx62qxy600568vrmhky537sz" data-title="在线jupyter安装教程" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jupyter/" rel="tag">jupyter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="tag">环境配置</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Building-a-low-cost-self-use-image-bed-based-on-Ali-OSS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          基于阿里OSS搭建低价自用图床
+        
+      </div>
+    </a>
+  
+  
+    <a href="/python3-crawl-zhoudu-books-info/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Python3爬取周读网书籍信息</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 11.25px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 12.5px;">vue</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 11.25px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 10px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 10px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 11.25px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+          <li>
+            <a href="/ali-chengdu-light-year-pay-99/">【简单测评】ali成都轻量云年付99元</a>
+          </li>
+        
+          <li>
+            <a href="/some-problems-in-nestjs/">开发中遇到的那些nestjs相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/a-z-of-browser/">浏览器从A到Z</a>
+          </li>
+        
+          <li>
+            <a href="/what-is-the-best-id-for-a-database/">使用什么作为数据库的ID？</a>
+          </li>
+        
+          <li>
+            <a href="/docker-container-configurations/">docker相关容器配置</a>
+          </li>
+        
+          <li>
+            <a href="/some-tips-about-apipost/">关于ApiPost的一些技巧</a>
+          </li>
+        
+          <li>
+            <a href="/select-a-good-public-dns-in-2024/">2024选择适合的公共DNS</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>网络备份储存的几种选择 | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="Because data is very important, there are also a lot of code snippets, notes, various information documents and so on. Therefore, the necessary multiple off-site backups are important. Here are a few">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络备份储存的几种选择">
+<meta property="og:url" content="https://coding.zyha.cn/Several-options-for-network-backup-storage/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="Because data is very important, there are also a lot of code snippets, notes, various information documents and so on. Therefore, the necessary multiple off-site backups are important. Here are a few">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-05T15:26:06.000Z">
+<meta property="article:modified_time" content="2024-04-05T14:38:21.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="备份">
+<meta property="article:tag" content="数据安全">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://coding.zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-网络备份储存的几种选择" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/Several-options-for-network-backup-storage/" class="article-date">
+  <time class="dt-published" datetime="2020-08-05T15:26:06.000Z" itemprop="datePublished">2020-08-05</time>
+</a> -->
+    <a href="/Several-options-for-network-backup-storage/" class="article-date">
+  <time class="dt-published" datetime="2024-04-05T14:38:21.000Z" itemprop="datePublished">2024-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%A4%87%E4%BB%BD/">备份</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      网络备份储存的几种选择
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>因为数据很重要,这其中还有大量的代码片段,笔记,各种资料文档等等。所以，必要的多处异地备份显得重要，这里给出几个我常用的同步存储的选择。</p>
+<p>2023.7.5更新：近期闲鱼上的硬盘价位较低，400入手了一个4T移动机械硬盘作为备份选择之一。<br>2024.4.5更新：由于近期微软针对E5订阅的消极支持态度，更新备份策略及网盘的推荐。目前备份策略为Bitiful+Onedrive。</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于数据安全性和完整性必须得到保证,如果选用本地加密后上传,取回数据也是个麻烦。如果不加密,就必须选些靠谱的储存,总不能存着存着数据就泄密,那还存个屁。</p>
+<p>因为是数据备份,所以本地上传到备份储存流量较多,而从备份储存下载流量较少,可能要数据恢复时候,才是需要整盘转移或者迁移的。</p>
+<p>作为一个穷鬼，第一选择肯定是白嫖。</p>
+<p>对于国内腾讯云的COS,阿里云的OSS，<del>这种直接算流量钱的，也直接排除了.</del> 存点小文件，也还可以。</p>
+<h2 id="各家对比"><a href="#各家对比" class="headerlink" title="各家对比"></a>各家对比</h2><h3 id="0-国内对象存储"><a href="#0-国内对象存储" class="headerlink" title="0. 国内对象存储"></a>0. 国内对象存储</h3><h4 id="0-1-OSS-COS"><a href="#0-1-OSS-COS" class="headerlink" title="0.1 OSS&#x2F;COS"></a>0.1 OSS&#x2F;COS</h4><p>对于国内的阿里云的OSS，也列个数据表，腾讯云COS应该相差不大，数据仅供参考</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>标准类型</th>
+<th>低频访问类型</th>
+<th>归档类型</th>
+<th>冷归档类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>适用场景</td>
+<td>单文件每月访问大于1次</td>
+<td>单文件访问不到1次</td>
+<td>单文件90访问不到1次</td>
+<td>单文件年访问不到1次</td>
+</tr>
+<tr>
+<td>对象最小计量大小</td>
+<td>按照对象实际大小计算</td>
+<td>64KB，即小于64KB的文件按64KB计费</td>
+<td>64KB，即小于64KB的文件按64KB计费</td>
+<td>64KB，即小于64KB的文件按64KB计费</td>
+</tr>
+<tr>
+<td>最小存储时间要求</td>
+<td>无</td>
+<td>30天</td>
+<td>60天</td>
+<td>180天</td>
+</tr>
+<tr>
+<td>数据访问特点</td>
+<td>实时访问</td>
+<td>实时访问</td>
+<td>解冻后才能读取 解冻时间1分钟</td>
+<td>解冻后才能读取 解冻时间1-12小时</td>
+</tr>
+<tr>
+<td>图片处理</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持，但需先解冻</td>
+<td>支持，但需先解冻</td>
+</tr>
+<tr>
+<td>数据取回费用</td>
+<td>无</td>
+<td>按实际获取的数据量收取 单位GB</td>
+<td>按实际解冻的数据量收取 单位GB</td>
+<td>按实际解冻的数据量以及选择数据解冻时间收取收取 单位GB</td>
+</tr>
+<tr>
+<td>存储空间价格（本地冗余LRS）</td>
+<td>0.12元&#x2F;GB&#x2F;月</td>
+<td>0.08元&#x2F;GB&#x2F;月</td>
+<td>0.033元&#x2F;GB&#x2F;月</td>
+<td>0.015元&#x2F;GB&#x2F;月</td>
+</tr>
+<tr>
+<td>存储空间价格（同城冗余LRS）</td>
+<td>0.15元&#x2F;GB&#x2F;月</td>
+<td>0.10元&#x2F;GB&#x2F;月</td>
+<td>不涉及</td>
+<td>不涉及</td>
+</tr>
+</tbody></table>
+<p>以及OSS+CDN搭配使用的对比数据，</p>
+<p>表格数据来自<a target="_blank" rel="noopener" href="https://blog.wpjam.com/m/how-to-save-money-using-aliyun-oss/">WordPress 博客这样使用阿里云 OSS，可以省一半以上的钱！</a></p>
+<p>假如买了 12 个月的 100G 存储包，CDN 回源流量每月100G，一年1200G，回源请求每月 10万次，一年则120万次（根据用户的热度情况可能回源的流量和请求次数会更少)，CDN 公网每月 200GB，一年 2400G：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>按量付费</th>
+<th>购买资源包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OSS 存储费用</td>
+<td>0.12元&#x2F;GBx100x12 &#x3D; 144 元&#x2F;年</td>
+<td><a href="">购买100G资源包</a>： 99 元&#x2F;年</td>
+</tr>
+<tr>
+<td>OSS+CDN 回源流量费用</td>
+<td>0.15元&#x2F;GB x 1200GB &#x3D; 180 元&#x2F;年</td>
+<td>购买1TB资源包： 156 + 0.15 x 176 &#x3D; 182.4</td>
+</tr>
+<tr>
+<td>OSS+CDN 回源请求费用</td>
+<td>0.01元&#x2F;万次 x 120万 &#x3D; 1.2 元&#x2F;年</td>
+<td>无资源包</td>
+</tr>
+<tr>
+<td>CDN 公网流量费用</td>
+<td>0.24元&#x2F;GB x 2400GB &#x3D; 576 元&#x2F;年</td>
+<td><a href="">购买2TB资源包</a>： 162 x 2 + 0.24 x 400 &#x3D; 420</td>
+</tr>
+</tbody></table>
+<ul>
+<li>存取数据越多越贵</li>
+<li>数据基本不会损坏</li>
+<li>可编程定时&#x2F;批量存取</li>
+<li>无限空间（只要有钱</li>
+</ul>
+<h4 id="0-2-Bitiful"><a href="#0-2-Bitiful" class="headerlink" title="0.2 Bitiful"></a>0.2 <code>Bitiful</code></h4><p>创始人是之前的国内搜索引擎<code>dogedoge</code>的创始人，新项目给出的<a target="_blank" rel="noopener" href="https://www.bitiful.com/docs/prices/detail/storage-prices">解决方案的价格</a>相比OSS价格更低。</p>
+<table>
+<thead>
+<tr>
+<th>容量（GB）</th>
+<th>单价</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0 ~ 50</td>
+<td>0</td>
+</tr>
+<tr>
+<td>51 ~ 1000</td>
+<td>0.065元&#x2F;GB&#x2F;月</td>
+</tr>
+<tr>
+<td>1001 ~ 10000</td>
+<td>0.055元&#x2F;GB&#x2F;月</td>
+</tr>
+<tr>
+<td>10001 ~ 100000</td>
+<td>0.045元&#x2F;GB&#x2F;月</td>
+</tr>
+<tr>
+<td>100000 +</td>
+<td>0.04元&#x2F;GB&#x2F;月</td>
+</tr>
+</tbody></table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/20240416172739.png?x-oss-process=style/blog" alt="缤纷云S4 VS 阿里云OSS"></p>
+<h3 id="1-Microsoft-OneDrive"><a href="#1-Microsoft-OneDrive" class="headerlink" title="1. Microsoft OneDrive"></a>1. Microsoft OneDrive</h3><p>我的第一个备份源是使用的<code>Microsoft Office 365</code>订阅中的<code>A1</code>订阅中的OneDrive空间。</p>
+<h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><ul>
+<li>免费</li>
+<li>微软自带</li>
+<li>容易获取</li>
+<li>方便同步</li>
+<li>最少<code>1T</code>空间</li>
+<li>方便迁移</li>
+</ul>
+<h4 id="劣势"><a href="#劣势" class="headerlink" title="劣势"></a>劣势</h4><ul>
+<li>免费的是最贵的，存在翻车可能，不稳定</li>
+<li>由于网络原因,可能出现重复传输的情况</li>
+<li>需要一直挂着客户端，关闭后需要重新挂载，且一个账户一个后台进程</li>
+<li>管理员有查看存储内容的权限</li>
+</ul>
+<h4 id="常见订阅计划简单对比"><a href="#常见订阅计划简单对比" class="headerlink" title="常见订阅计划简单对比"></a>常见订阅计划简单对比</h4><table>
+<thead>
+<tr>
+<th>订阅代号</th>
+<th>网页版</th>
+<th>桌面版</th>
+<th>子账号价格</th>
+<th>可开子账号数</th>
+<th>开通渠道</th>
+<th>翻车概率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A1</td>
+<td>🟢</td>
+<td>🔴</td>
+<td>&lt;5</td>
+<td>1500000</td>
+<td>教育优惠</td>
+<td>较小</td>
+</tr>
+<tr>
+<td>A1P</td>
+<td>🟢</td>
+<td>🟢</td>
+<td>&lt;10</td>
+<td>1500000</td>
+<td>教育优惠</td>
+<td>较小</td>
+</tr>
+<tr>
+<td>E3 MSDN</td>
+<td>🟢</td>
+<td>🟢</td>
+<td>50</td>
+<td>25</td>
+<td>开发者订阅</td>
+<td>极小</td>
+</tr>
+<tr>
+<td>E5</td>
+<td>🟢</td>
+<td>🟢</td>
+<td>&lt;5</td>
+<td>25</td>
+<td>开发者订阅</td>
+<td><del>较小</del></td>
+</tr>
+</tbody></table>
+<ul>
+<li>仅列举目前常见的可低代价获取的订阅类型，A3等特殊订阅类型不列举。</li>
+<li>网络版在<a target="_blank" rel="noopener" href="https://office.com/">office365</a>登陆后使用</li>
+<li>桌面版能在线使用也可以离线激活Office365应用</li>
+<li>价格单位为人民币,仅供参考，不保证准确性</li>
+</ul>
+<p><del>综上所述，我目前使用</del>4个不同域下<del>自己申请的<code>E5</code>订阅搭配其他白嫖来的<code>office365</code>账号的<code>OneDrive</code>作为第一处备份源。互相备份一些不是很隐私的资料，比如外网软件，系统，以及一些好看的视频。</del></p>
+<p>近期，E5无法新申请且大批账号的订阅资格无故失效，无法再次自动免费续订，所以放弃了E5作为备份源这一曾经最好的选择。</p>
+<p>注意，<code>A1</code>及<code>A1P</code>订阅为微软提供给学校的优惠，皆违反微软<code>TOS</code>。微软有权随时停用，切勿存留重要资料于其中。虽然目前较稳定，但事有万一，微软被薅疼了一下子彻查怎么办，所以还需要继续寻找备份源。</p>
+<h3 id="3-G-workspace-G-one"><a href="#3-G-workspace-G-one" class="headerlink" title="3. G workspace&#x2F; G one"></a>3. G workspace&#x2F; G one</h3><p>第二个，白嫖的世界上不存在的<code>G</code>姓家的教育账号，无限空间，只是限制了每天<code>750G</code>上传，对我这种菜鸡来说咋样都够了，这次是两个账号互相备份。</p>
+<h4 id="G-One-土区价格表"><a href="#G-One-土区价格表" class="headerlink" title="G One 土区价格表"></a>G One 土区价格表</h4><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>容量</th>
+<th>价格&#x2F;月（TRY）</th>
+<th>价格&#x2F;年（TRY）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基本版</td>
+<td>100GB</td>
+<td>5.79 TRY</td>
+<td>57.99 TRY</td>
+</tr>
+<tr>
+<td>标准版</td>
+<td>200GB</td>
+<td>11.59 TRY</td>
+<td>115.99 TRY</td>
+</tr>
+<tr>
+<td>付费版</td>
+<td>2T</td>
+<td>28.99 TRY</td>
+<td>289.99 TRY</td>
+</tr>
+</tbody></table>
+<p><del>关于开通方式，因为一些原因，这里就不细说了。</del></p>
+<p>开了土区的<code>workspace</code>，<code>2T</code>硬盘空间+自定义域名邮箱，一个月也不是很贵（<code>57.6try</code>，按照今天2022.09.05的汇率算，为<code>21.93</code>人民币）。</p>
+<p>如果个人使用，不需要域名邮箱，可以选用<code>G One</code>，可以拿来存点好康的👀。</p>
+<h3 id="4-MEGA"><a href="#4-MEGA" class="headerlink" title="4. MEGA"></a>4. MEGA</h3><p>不那么重要的资料存完了，接着就是存私人的资料了，比如照片和一些不常用但是有用的脚本。</p>
+<p>这里我首选<code>MEGA</code>，其好处如下，</p>
+<ul>
+<li>加密传输</li>
+<li>同步传输</li>
+<li>有像<code>OneDrive</code>一样可以挂载到本地的客户端</li>
+</ul>
+<p>关于这个加密传输的效果，大佬是这样说，</p>
+<p>“哪怕服务器遗失，突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p>
+<p>当然，成也加密，败也加密，</p>
+<ul>
+<li><code>mega</code>在大陆地区，下载速度较慢</li>
+<li>不给钱只有<code>15G</code>空间</li>
+<li>免费用户一个<code>ip</code>当天只能下载<code>5g</code>数据，切换<code>ip</code>可以解决</li>
+</ul>
+<p>话说回来，加密存储这个要求，<code>tg</code>也可以满足。。。</p>
+<h3 id="5-Amazon-S3"><a href="#5-Amazon-S3" class="headerlink" title="5. Amazon S3"></a>5. Amazon S3</h3><p>然后，考虑了一波<code>S3</code>,亚马逊<code>S3</code>提供很多的选择,</p>
+<p>由于数据不会频繁访问,所以要选择最便宜的储存方式，即<code>S3 Glacier Deep Archive</code>，其收费为<code>0.00099USD</code>每月每<code>GB</code>，换算成人民币也就是<code>0.00693</code>元，</p>
+<p>按照我的数据量来看,<code>0.852192USD</code>每个月,一年付出<code>10.226304USD</code>,大概<code>71</code>元人民币左右。</p>
+<p>数据可靠度也是<code>99.99999999999%</code>,但是数据不能直接取出,取出全部数据本身需要大约<code>70USD</code>成本(如果使用AWS 同区传输可以做到免费,先开AWS账号,然后共享储存桶,然后同区传输到 <code>CloudFront</code>,再从 <code>CloudFront</code> 传回.),还要附加最多2天的取回时间(实测批量取回也是几分钟的事情~)</p>
+<p>也就是说，</p>
+<ul>
+<li>稳定</li>
+<li>安全</li>
+<li>版本控制</li>
+<li>可编程</li>
+<li>比较便宜</li>
+</ul>
+<p>单纯以储存来说,这个比较划算,<del>这也是我目前选择的.</del></p>
+<h3 id="6-自建网盘"><a href="#6-自建网盘" class="headerlink" title="6. 自建网盘"></a>6. 自建网盘</h3><p>在<code>vps</code>上，能玩的东西比较多，就可以自行摸索了。</p>
+<p>比如，自建个人网盘，加速下载百度网盘文件以及密码管理器。</p>
+<p>这个现成的开源程序很多，比如有名的<code>next cloud</code>，<code>cloudreve</code>等等。</p>
+<h3 id="7-NAS-家庭服务器"><a href="#7-NAS-家庭服务器" class="headerlink" title="7. NAS&#x2F;家庭服务器"></a>7. NAS&#x2F;家庭服务器</h3><p>这是一个大坑，以后有钱了再来踩。</p>
+<h3 id="8-移动硬盘"><a href="#8-移动硬盘" class="headerlink" title="8. 移动硬盘"></a>8. 移动硬盘</h3><p>硬盘厂商百家争鸣，如果选择机械硬盘，那么就要考虑转速，缓存，接口，通电等等，如果选择固态硬盘，那么就要考虑接口，读写速度，寿命等等。</p>
+<p>目前（2023.7）闲鱼上已经可以找到420左右4T的标注是全新仅拆封的移动硬盘，这个价格还是比较便宜的，可以考虑入手。</p>
+<h4 id="优势-1"><a href="#优势-1" class="headerlink" title="优势"></a>优势</h4><ul>
+<li>数据隐私安全，除非遗失，否则只有自己才能访问数据</li>
+<li>不受网络影响，读写速度极快</li>
+</ul>
+<h4 id="劣势-1"><a href="#劣势-1" class="headerlink" title="劣势"></a>劣势</h4><ul>
+<li>无法简单快速的实现多地备份和在线分享</li>
+<li>每月额外的电费支出，可能电费支出也能购买到相应的云盘的空间</li>
+<li>存在数据丢失的风险，比如硬盘损坏，被盗等等</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>阿里云的<code>OSS</code>存储需要快速访问到的小文件，作为个人用的图床就很合适</li>
+<li><code>OneDrive/Google Drive</code>多个账号备份大文件</li>
+<li><code>mega</code>备份私密小文件，如某些软件的配置文件及密钥等</li>
+<li>未付费的谷歌盘只有15G空间，可以备份网站及数据</li>
+<li><code>S3</code>备份不常用数据，<code>AWS</code>的优惠码要过期了，所以我已将数据取出存入<code>OneDrive</code></li>
+<li>移动硬盘需额外支出电费，但是数据安全性高，读写速度快，可以作为备份的最后一道防线</li>
+</ul>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.songruihua.com/archives/mega-privacy-storage.html">https://www.songruihua.com/archives/mega-privacy-storage.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/41848351">https://www.zhihu.com/question/41848351</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.taterli.com/7275/">https://www.taterli.com/7275/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://coding.zyha.cn/Several-options-for-network-backup-storage/" data-id="clx62qxyc007l8vrm24yxhok8" data-title="网络备份储存的几种选择" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" rel="tag">数据安全</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/some-default-ports/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          常用的默认端口号总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/check-my-pc-configuration/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">给电脑续命之查看配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 11.25px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 12.5px;">vue</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 11.25px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 10px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 10px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 11.25px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+          <li>
+            <a href="/ali-chengdu-light-year-pay-99/">【简单测评】ali成都轻量云年付99元</a>
+          </li>
+        
+          <li>
+            <a href="/some-problems-in-nestjs/">开发中遇到的那些nestjs相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/a-z-of-browser/">浏览器从A到Z</a>
+          </li>
+        
+          <li>
+            <a href="/what-is-the-best-id-for-a-database/">使用什么作为数据库的ID？</a>
+          </li>
+        
+          <li>
+            <a href="/docker-container-configurations/">docker相关容器配置</a>
+          </li>
+        
+          <li>
+            <a href="/some-tips-about-apipost/">关于ApiPost的一些技巧</a>
+          </li>
+        
+          <li>
+            <a href="/select-a-good-public-dns-in-2024/">2024选择适合的公共DNS</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>

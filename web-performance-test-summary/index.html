@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Web应用性能测试优化总结 | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="本文总结了一个 Web 应用在性能测试方面的套路，以便指导发现应用的性能问题，从而优化应用本身。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web应用性能测试优化总结">
+<meta property="og:url" content="https://coding.zyha.cn/web-performance-test-summary/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="本文总结了一个 Web 应用在性能测试方面的套路，以便指导发现应用的性能问题，从而优化应用本身。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-10T01:17:41.000Z">
+<meta property="article:modified_time" content="2024-02-10T01:17:41.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="性能测试">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="sql">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://coding.zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Web应用性能测试总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/web-performance-test-summary/" class="article-date">
+  <time class="dt-published" datetime="2024-02-10T01:17:41.000Z" itemprop="datePublished">2024-02-10</time>
+</a> -->
+    <a href="/web-performance-test-summary/" class="article-date">
+  <time class="dt-published" datetime="2024-02-10T01:17:41.000Z" itemprop="datePublished">2024-02-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E4%BC%98%E5%8C%96/">优化</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Web应用性能测试优化总结
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近某个 <code>Web</code> 项目处于开发阶段，要求设计支持上万用户在线的场景。因此需要对应用整体进行性能评估，以便确认应用整体的可容纳在线用户数，因此有性能测试的需要。</p>
+<p>经过评估，我们的应用架构是典型的 <code>SPA (Vue)</code> + 后端 + 数据库应用，因此决定分开评测各自的性能，以便发现各自的性能问题，最终再集成整体评测。</p>
+<p>因此我们分为了三个不同类型的性能测试:</p>
+<ul>
+<li>数据库(PostgreSQL)性能测试</li>
+<li>后端(Nest.js)性能测试</li>
+<li>前端(Vue+Vite)性能测试</li>
+</ul>
+<p>本文分别总结这三个不同场景的性能测试。</p>
+<p>PS: 由于后端部署的环境是 <code>AWS Lightsail</code>，因此我们使用 <code>AWS</code> 提供的 <code>RDS</code> 作为数据库，国内云服务可能部分场景有不同，请考虑相关的替代品。</p>
+<span id="more"></span>
+<h2 id="数据库性能测试"><a href="#数据库性能测试" class="headerlink" title="数据库性能测试"></a>数据库性能测试</h2><p>我们测试的目的是为了发现我们的 <code>SQL</code> 是否会因为数据量大的情况下导致性能下降，因此我们需要先准备好大量的测试数据（填充数据库即可，无需在乎数据质量），然后大规模运行应用程序中可能用到的 <code>SQL</code>，以便发现数据库设计是否有缺陷，<code>SQL</code> 是否有性能问题等等。</p>
+<p>我们使用的数据库为 <code>PostgreSQL</code>，而 <code>PostgreSQL</code> 官方本身就有个性能测试工具<code>pgbench</code>可以实现这一需求。我们直接使用它即可。</p>
+<p><code>pgbench</code>是 <code>PostgreSQL</code> 官方的性能测试工具，它自带有一组脚本，可以默认创建一个数据库并填充自己的数据表，然后运行自己的 <code>SQL</code> 脚本跑测试。显然默认的脚本和配置只能评测数据库服务器本身的性能，并不能发现我们的数据库设计和应用使用的 <code>SQL</code> 的性能隐患，因此我们需要定制 <code>pgbench</code> 的脚本。</p>
+<p>我们需要创建应用自己的数据库（借助 <code>prisma migration</code> 工具完成），然后填充大量的测试数据，最好有一定的随机性。我们自己写个<code>seed.sql</code>，大体内容如下:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 这里我们用generate_series函数生成大量的记录行</span></span><br><span class="line"><span class="comment">-- coln_expr可以使用一些诸如random()函数产生一些随机性</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> my_table (</span><br><span class="line">    col1,</span><br><span class="line">    col2,</span><br><span class="line">    col3,...</span><br><span class="line">    coln</span><br><span class="line">)</span><br><span class="line"><span class="keyword">SELECT</span> col1_expr, col2_expr, col3_expr, ..., coln_expr</span><br><span class="line"><span class="keyword">FROM</span> generate_series(<span class="number">1</span>, <span class="number">1000000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>我们生成了 100 万条随机记录，可以使用命令<code>psql -f ./seed.sql db</code>向目标数据库插入这 100 万条记录，作为数据准备。</p>
+<p>然后我们需要准备性能测试过程运行的 SQL 语句，再写一个benchmark.sql:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 注意整个benchmark要求必须包裹在整个事务中，因此必须使用BEGIN-END包裹</span></span><br><span class="line"><span class="comment">-- \set是pgbench扩展，可以用于设置一些变量，方便构造随机参数</span></span><br><span class="line"><span class="comment">-- pgbench 可选函数和命令参考官方文档： https://www.postgresql.org/docs/current/pgbench.html</span></span><br><span class="line"></span><br><span class="line">\<span class="keyword">set</span> var1_random random(<span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line">\<span class="keyword">set</span> var2_random random(<span class="number">0</span>, <span class="number">5</span>)</span><br><span class="line">\<span class="keyword">set</span> num random(<span class="number">1</span>, <span class="number">100000</span> <span class="operator">*</span> :scale)</span><br><span class="line">\<span class="keyword">set</span> var3_random random(<span class="number">0</span>, <span class="number">2</span>)</span><br><span class="line">\<span class="keyword">set</span> var4_random hash(:num)</span><br><span class="line"></span><br><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"><span class="keyword">SELECT</span> col1, col2 <span class="keyword">from</span> my_table <span class="keyword">WHERE</span> col1 <span class="operator">=</span> :var1 <span class="keyword">AND</span> col2 <span class="operator">=</span> :var2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span> my_table <span class="keyword">SET</span> col3 <span class="operator">=</span> :var3 <span class="keyword">WHERE</span> col4 <span class="operator">=</span> :var4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span> my_table <span class="keyword">SET</span> col2 <span class="operator">=</span> :var2 <span class="keyword">WHERE</span> some_expr;</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> my_table (</span><br><span class="line">        col1, col2, col3, col4, ... , coln</span><br><span class="line">    )</span><br><span class="line"><span class="keyword">VALUES</span> (...);</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+
+<p>我们的应用主要使用这几种 SQL 语句，构造好参数之后就可以运行了:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pgbench <span class="operator">-</span>r <span class="operator">-</span>j2 <span class="operator">-</span>c10 <span class="operator">-</span>T120 <span class="operator">-</span>n <span class="operator">-</span>f .<span class="operator">/</span>benchmark.sql db</span><br></pre></td></tr></table></figure>
+
+<p>我们用 2 线程运行，每个线程运行 10 个客户端，总共运行 2 分钟（120 秒），最终得到的结果大体如下:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">pgbench (<span class="number">14.5</span> (Ubuntu <span class="number">14.5</span><span class="number">-0</span>ubuntu0<span class="number">.22</span><span class="number">.04</span><span class="number">.1</span>))</span><br><span class="line">transaction type: .<span class="operator">/</span>benchmark.sql</span><br><span class="line">scaling factor: <span class="number">1</span></span><br><span class="line">query mode: simple</span><br><span class="line">number <span class="keyword">of</span> clients: <span class="number">10</span></span><br><span class="line">number <span class="keyword">of</span> threads: <span class="number">2</span></span><br><span class="line">duration: <span class="number">600</span> s</span><br><span class="line">number <span class="keyword">of</span> transactions actually processed: <span class="number">6426</span></span><br><span class="line">latency average <span class="operator">=</span> <span class="number">934.322</span> ms</span><br><span class="line"><span class="keyword">initial</span> connection <span class="type">time</span> <span class="operator">=</span> <span class="number">171.960</span> ms</span><br><span class="line">tps <span class="operator">=</span> <span class="number">10.702950</span> (<span class="keyword">without</span> <span class="keyword">initial</span> connection <span class="type">time</span>)</span><br><span class="line">statement latencies <span class="keyword">in</span> milliseconds:</span><br><span class="line">         <span class="number">4.767</span>  <span class="keyword">BEGIN</span>;</span><br><span class="line">       <span class="number">160.203</span>  <span class="keyword">SELECT</span> xxx,</span><br><span class="line">       <span class="number">176.959</span>  <span class="keyword">UPDATE</span> xxx</span><br><span class="line">       <span class="number">188.223</span>  <span class="keyword">UPDATE</span> xx</span><br><span class="line">       <span class="number">188.389</span>  <span class="keyword">UPDATE</span> xxx</span><br><span class="line">       <span class="number">187.733</span>  <span class="keyword">UPDATE</span> xx</span><br><span class="line">        <span class="number">18.776</span>  <span class="keyword">INSERT</span> <span class="keyword">INTO</span> xxx (</span><br><span class="line">         <span class="number">9.352</span>  <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+
+<p>可以清楚的看到每个 SQL 大体上的延迟是多少，就能发现是否存在慢查询以及需要优化的部分了。</p>
+<p>最初我们发现 INSERT 语句延迟较低，而其他 SELECT 和 UPDATE 延迟非常高，因此推断 RDS 实例性能较低，于是升级 RDS 实例规格，并且存储改为 <code>SSD</code> 存储实例之后，性能显著提升，问题得到解决。</p>
+<p>PS: 大部分情况下，升级配置是很好的性能优化手段：）</p>
+<h2 id="后端性能测试"><a href="#后端性能测试" class="headerlink" title="后端性能测试"></a>后端性能测试</h2><p>在数据库的性能测试完成之后，我们可以将数据准备部分复用，直接给后端性能测试的准备数据阶段使用。</p>
+<p>后端性能测试过程中，我们需要模拟大量用户访问后端 API 的情况，以便发现后端 API 处理过程中的性能问题。</p>
+<p>特别注意如果后端有调用第三方接口的情况，需要在测试前进行屏蔽相关功能，或者进行 Mock 接口，防止压力测试中对第三方接口请求量太大从而耗尽配额或者被 ban。</p>
+<p>这里我们选用了 <code>artillery</code> 这个开源工具跑压力测试，因为它使用比较简单，而且未来会有云服务，方便跑分布式压测场景。不过当前版本已经支持运行在 <code>AWS Lambda</code>，我们可以利用这个特性跑简单的分布式压力测试场景。</p>
+<p>我们需要编写好 artillery 的 yaml 配置文件，这里建议参考官方文档，有大量的范例可供参考： <code>https://github.com/artilleryio/artillery/tree/main/examples</code></p>
+<p>我们在 lambda 上运行，启动 40 个 lambda 实例跑测试:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">artillery run --platform aws:lambda --platform-opt region=us-west-1 --count=40 -o result.json config.yml</span><br></pre></td></tr></table></figure>
+
+<p>得到结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">--------------------------------</span><br><span class="line">Summary report @ 11:50:26(+0800)</span><br><span class="line">--------------------------------</span><br><span class="line"></span><br><span class="line">http.codes.200: ................................................................ 37927</span><br><span class="line">http.codes.201: ................................................................ 60978</span><br><span class="line">http.codes.400: ................................................................ 23046</span><br><span class="line">http.codes.502: ................................................................ 2</span><br><span class="line">http.request_rate: ............................................................. 144/sec</span><br><span class="line">http.requests: ................................................................. 121953</span><br><span class="line">http.response_time:</span><br><span class="line">  min: ......................................................................... 4</span><br><span class="line">  max: ......................................................................... 11839</span><br><span class="line">  median: ...................................................................... 1085.9</span><br><span class="line">  p95: ......................................................................... 5944.6</span><br><span class="line">  p99: ......................................................................... 7407.5</span><br><span class="line">http.responses: ................................................................ 121953</span><br><span class="line">plugins.metrics-by-endpoint.GET /endpoint1/:argument.codes.200: ................ 30441</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint1 (offchain).codes.201: .............. 30590</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint1 (offchain).codes.502: .............. 1</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint1 (onchain).codes.201: ............... 30388</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint1 (onchain).codes.502: ............... 1</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint2.codes.200: ......................... 7486</span><br><span class="line">plugins.metrics-by-endpoint.POST /endpoint2.codes.400: ......................... 23046</span><br><span class="line">plugins.metrics-by-endpoint.response_time.GET /endpoint1/:targetToken:</span><br><span class="line">  min: ......................................................................... 5</span><br><span class="line">  max: ......................................................................... 5966</span><br><span class="line">  median: ...................................................................... 645.6</span><br><span class="line">  p95: ......................................................................... 2018.7</span><br><span class="line">  p99: ......................................................................... 3464.1</span><br><span class="line">plugins.metrics-by-endpoint.response_time.POST /endpoint1 (offchain):</span><br><span class="line">  min: ......................................................................... 59</span><br><span class="line">  max: ......................................................................... 10607</span><br><span class="line">  median: ...................................................................... 2725</span><br><span class="line">  p95: ......................................................................... 6064.7</span><br><span class="line">  p99: ......................................................................... 7260.8</span><br><span class="line">plugins.metrics-by-endpoint.response_time.POST /endpoint1 (onchain):</span><br><span class="line">  min: ......................................................................... 68</span><br><span class="line">  max: ......................................................................... 11839</span><br><span class="line">  median: ...................................................................... 3464.1</span><br><span class="line">  p95: ......................................................................... 7117</span><br><span class="line">  p99: ......................................................................... 8024.5</span><br><span class="line">plugins.metrics-by-endpoint.response_time.POST /endpoint2:</span><br><span class="line">  min: ......................................................................... 4</span><br><span class="line">  max: ......................................................................... 10146</span><br><span class="line">  median: ...................................................................... 391.6</span><br><span class="line">  p95: ......................................................................... 3752.7</span><br><span class="line">  p99: ......................................................................... 5944.6</span><br><span class="line">vusers.completed: .............................................................. 121953</span><br><span class="line">vusers.created: ................................................................ 121953</span><br><span class="line">vusers.created_by_name.GET /endpoint1/:targetToken: ............................ 30441</span><br><span class="line">vusers.created_by_name.POST /endpoint1 (offchain): ............................. 30591</span><br><span class="line">vusers.created_by_name.POST /endpoint1 (onchain): .............................. 30389</span><br><span class="line">vusers.created_by_name.POST /endpoint2: ........................................ 30532</span><br><span class="line">vusers.failed: ................................................................. 0</span><br><span class="line">vusers.session_length:</span><br><span class="line">  min: ......................................................................... 11</span><br><span class="line">  max: ......................................................................... 11847.7</span><br><span class="line">  median: ...................................................................... 1176.4</span><br><span class="line">  p95: ......................................................................... 5944.6</span><br><span class="line">  p99: ......................................................................... 7407.5</span><br><span class="line">vusers.skipped: ................................................................ 35146</span><br><span class="line">Log file: result.json</span><br><span class="line"></span><br><span class="line">Estimated AWS Lambda cost <span class="keyword">for</span> this <span class="built_in">test</span>: <span class="variable">$0</span>.1833</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>通过测试结果，发现了某些 <code>endpoint</code> 接口运行较慢，经过进一步排查最终定位到性能下降的原因进行优化即可。</p>
+<p>最初通过测试报告发现，不请求数据库的 API 性能很高，反之如果 API 有数据库的调用，则压测之后延迟非常高，甚至还有超时错误。最终排查之后发现还是是数据库连接池的库性能较差，更换新的数据库 driver，并且优化部分 SQL 之后性能问题得到很大的改善。</p>
+<h2 id="前端性能测试"><a href="#前端性能测试" class="headerlink" title="前端性能测试"></a>前端性能测试</h2><p>前端性能测试主要包含用户的加载页面速度和页面渲染的速度两方面，我们可以通过配合 <code>lighthouse</code> 和 <code>artillery + playwright</code> 实现。</p>
+<p><code>lighthouse</code> 可以重点帮助分析页面渲染方面的最佳实践，而 <code>artillery + playwright</code> 的组合可以方便的模拟大量用户反复点击某些页面之后，页面加载速度的情况，可以更准确的得到页面相关的 FCP 等重要参数。</p>
+<p>特别注意 <code>playwright</code> 运行浏览器的时候，如果需要加载浏览器插件，无法通过访问在线商店的方式进行安装，必须将插件下载到本地之后使用 <code>playwright API</code>进行加载。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">--------------------------------</span><br><span class="line">Summary report @ 17:24:38(+0000)</span><br><span class="line">--------------------------------</span><br><span class="line"></span><br><span class="line">browser.http_requests: ......................................................... 4392</span><br><span class="line">browser.page.CLS.e2e <span class="built_in">test</span>:</span><br><span class="line">  min: ......................................................................... 0</span><br><span class="line">  max: ......................................................................... 0</span><br><span class="line">  median: ...................................................................... 0</span><br><span class="line">  p95: ......................................................................... 0</span><br><span class="line">  p99: ......................................................................... 0</span><br><span class="line">browser.page.FCP.e2e <span class="built_in">test</span>:</span><br><span class="line">  min: ......................................................................... 311.1</span><br><span class="line">  max: ......................................................................... 1307.7</span><br><span class="line">  median: ...................................................................... 415.8</span><br><span class="line">  p95: ......................................................................... 925.4</span><br><span class="line">  p99: ......................................................................... 1249.1</span><br><span class="line">browser.page.FID.e2e <span class="built_in">test</span>:</span><br><span class="line">  min: ......................................................................... 1.7</span><br><span class="line">  max: ......................................................................... 22.2</span><br><span class="line">  median: ...................................................................... 2.5</span><br><span class="line">  p95: ......................................................................... 9.5</span><br><span class="line">  p99: ......................................................................... 12.6</span><br><span class="line">browser.page.LCP.e2e <span class="built_in">test</span>:</span><br><span class="line">  min: ......................................................................... 726.6</span><br><span class="line">  max: ......................................................................... 2226.1</span><br><span class="line">  median: ...................................................................... 788.5</span><br><span class="line">  p95: ......................................................................... 2018.7</span><br><span class="line">  p99: ......................................................................... 2143.5</span><br><span class="line">browser.page.TTFB.e2e <span class="built_in">test</span>:</span><br><span class="line">  min: ......................................................................... 35.5</span><br><span class="line">  max: ......................................................................... 494</span><br><span class="line">  median: ...................................................................... 48.9</span><br><span class="line">  p95: ......................................................................... 125.2</span><br><span class="line">  p99: ......................................................................... 478.3</span><br><span class="line">vusers.completed: .............................................................. 28</span><br><span class="line">vusers.created: ................................................................ 36</span><br><span class="line">vusers.created_by_name.e2e <span class="built_in">test</span>: ............................................... 36</span><br><span class="line">vusers.failed: ................................................................. 8</span><br><span class="line">vusers.session_length:</span><br><span class="line">  min: ......................................................................... 3314.8</span><br><span class="line">  max: ......................................................................... 6396.5</span><br><span class="line">  median: ...................................................................... 3534.1</span><br><span class="line">  p95: ......................................................................... 5826.9</span><br><span class="line">  p99: ......................................................................... 6187.2</span><br><span class="line">vusers.skipped: ................................................................ 204</span><br><span class="line">Log file: result.json</span><br></pre></td></tr></table></figure>
+
+<p>特别注意 <code>playwright</code> 当前无法在 <code>lambda</code> 环境下运行。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>本文我们大体总结了一个 Web 应用在性能测试方面的套路，以便指导发现应用的性能问题，从而优化应用本身。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://coding.zyha.cn/web-performance-test-summary/" data-id="clx62qxxw001x8vrmf26xbxif" data-title="Web应用性能测试优化总结" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" rel="tag">性能测试</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/use-lambda-to-monitor-lightsail-traffic-limit-and-auto-shutdown-when-exceeding-the-limit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          使用Lambda监控Lightsail流量限额并超额自动关机
+        
+      </div>
+    </a>
+  
+  
+    <a href="/prisma-has-been-used-for-3-months/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">prisma使用3个月有感</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 11.25px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 12.5px;">vue</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 11.25px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 10px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 10px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 11.25px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+          <li>
+            <a href="/ali-chengdu-light-year-pay-99/">【简单测评】ali成都轻量云年付99元</a>
+          </li>
+        
+          <li>
+            <a href="/some-problems-in-nestjs/">开发中遇到的那些nestjs相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/a-z-of-browser/">浏览器从A到Z</a>
+          </li>
+        
+          <li>
+            <a href="/what-is-the-best-id-for-a-database/">使用什么作为数据库的ID？</a>
+          </li>
+        
+          <li>
+            <a href="/docker-container-configurations/">docker相关容器配置</a>
+          </li>
+        
+          <li>
+            <a href="/some-tips-about-apipost/">关于ApiPost的一些技巧</a>
+          </li>
+        
+          <li>
+            <a href="/select-a-good-public-dns-in-2024/">2024选择适合的公共DNS</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>

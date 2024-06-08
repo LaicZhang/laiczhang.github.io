@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>使用什么作为数据库的ID？ | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="前言ID 是计算机系统中的重要概念，它用于标识不同的数据实体和交互过程。ID 生成方案是指用于生成唯一标识符（ID）的算法或方法。这些标识符通常用于唯一标识数据库中的记录、消息队列中的消息、分布式系统中的节点等。 本文建立在本人对过往项目的总结，主要是nestjs+prisma技术栈的代码实现，希望能对大家有所帮助。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用什么作为数据库的ID？">
+<meta property="og:url" content="https://coding.zyha.cn/what-is-the-best-id-for-a-database/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="前言ID 是计算机系统中的重要概念，它用于标识不同的数据实体和交互过程。ID 生成方案是指用于生成唯一标识符（ID）的算法或方法。这些标识符通常用于唯一标识数据库中的记录、消息队列中的消息、分布式系统中的节点等。 本文建立在本人对过往项目的总结，主要是nestjs+prisma技术栈的代码实现，希望能对大家有所帮助。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-04-07T01:19:23.000Z">
+<meta property="article:modified_time" content="2024-04-07T01:19:23.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="数据库">
+<meta property="article:tag" content="sql">
+<meta property="article:tag" content="database">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://coding.zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-使用什么作为数据库的ID？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/what-is-the-best-id-for-a-database/" class="article-date">
+  <time class="dt-published" datetime="2024-04-07T01:19:23.000Z" itemprop="datePublished">2024-04-07</time>
+</a> -->
+    <a href="/what-is-the-best-id-for-a-database/" class="article-date">
+  <time class="dt-published" datetime="2024-04-07T01:19:23.000Z" itemprop="datePublished">2024-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      使用什么作为数据库的ID？
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>ID 是计算机系统中的重要概念，它用于标识不同的数据实体和交互过程。ID 生成方案是指用于生成唯一标识符（ID）的算法或方法。这些标识符通常用于唯一标识数据库中的记录、消息队列中的消息、分布式系统中的节点等。</p>
+<p>本文建立在本人对过往项目的总结，主要是<code>nestjs+prisma</code>技术栈的代码实现，希望能对大家有所帮助。</p>
+<span id="more"></span>
+<h2 id="理论上ID需要具备的特性"><a href="#理论上ID需要具备的特性" class="headerlink" title="理论上ID需要具备的特性"></a>理论上ID需要具备的特性</h2><p>数据库中的唯一ID（或称为主键）通常需要具备以下特性：</p>
+<ul>
+<li>唯一性（Uniqueness）：每个ID值必须是唯一的，不允许重复。这是主键的最基本特性，确保每行数据都可以通过唯一的标识进行识别和访问。</li>
+<li>不变性（Immutability）：一旦分配给某行数据，ID就不能被更改或重用。这保证了数据的稳定性和一致性，避免了混淆或错误。</li>
+<li>简短性（Shortness）：ID应该足够短以节省存储空间和提高检索效率，同时要足够长以确保唯一性。通常采用自增数字或UUID（通用唯一标识符）等方式生成。</li>
+<li>简单性（Simplicity）：ID应该易于生成、理解和处理，不应过于复杂。这有助于简化开发和维护过程，并提高系统的可靠性。</li>
+<li>可排序性（Sortable）：ID的生成方式应当考虑到其在排序操作中的性能和效率，以便支持一些需要基于ID进行排序的查询操作。</li>
+<li>可读性（Readability）：尽管主键通常是内部使用的标识符，但在某些情况下，例如调试或日志记录，可读性也是一个有用的特性。因此，ID应该以一种可读的格式表示，使其易于识别和理解。</li>
+<li>不含业务含义（No business meaning）：主键应当是无意义的值，不应当包含业务相关的信息。这有助于避免在业务规则变化时引起的问题，并提高系统的灵活性和可扩展性。</li>
+<li>可扩展性（Scalability）：ID生成方式应当能够满足系统的扩展需求，即使在高并发或大规模数据量的情况下也能保持高效和稳定。</li>
+<li>全局唯一性（Global uniqueness）：如果系统是分布式的，那么主键需要保证在全局范围内的唯一性，而不仅仅是在单个数据库或表中。</li>
+</ul>
+<p>综合考虑这些特性，可以选择合适的主键生成方式和存储策略，以满足数据库设计的需求和业务规则的要求。</p>
+<h2 id="常见的ID生成方式"><a href="#常见的ID生成方式" class="headerlink" title="常见的ID生成方式"></a>常见的ID生成方式</h2><h3 id="1-自增ID"><a href="#1-自增ID" class="headerlink" title="1. 自增ID"></a>1. 自增ID</h3><p>最简单的ID生成方式就是自增ID。这种方式的实现方式是，在数据库中创建一个计数器，每次插入新记录时，都将计数器的值加1，作为新记录的ID值。</p>
+<p>优点是简单、易于实现，依赖于所使用数据库的本身机制。分表操作时，下一张表需要知道上一张表最后的id；当存储敏感信息时，可能被他人利用这一特性。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id                Int           @id @default(autoincrement())</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-UUID"><a href="#2-UUID" class="headerlink" title="2. UUID"></a>2. UUID</h3><p>UUID（通用唯一标识符）是一种由算法生成的字符串，它保证全局唯一性、全球唯一性、时间戳连续性、随机性。</p>
+<p>优点是简单、易于生成、可读性好、无序性。但UUID的长度较长，占用空间也比较大。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id                String        @id @default(uuid())</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-雪花-Snowflake-算法"><a href="#3-雪花-Snowflake-算法" class="headerlink" title="3. 雪花(Snowflake)算法"></a>3. 雪花(Snowflake)算法</h3><p>Snowflake 是由 Twitter 开发的一种分布式 ID 生成算法，可以保证 ID 的唯一性和足够的可排序性。Snowflake 的 ID 格式为 64 位整数，其中第 1 位为符号位，接下来的 41 位为时间戳，10 位为节点 ID，12 位为序列号。</p>
+<p>Snowflake算法的特性如下：</p>
+<ul>
+<li>唯一性（Uniqueness）：Snowflake算法生成的ID在整个分布式系统中保持唯一性。这是通过将不同的组件（时间戳、机器标识符、序列号）结合在一起生成ID来实现的。</li>
+<li>趋势递增（Increasing trend）：Snowflake生成的ID通常是趋势递增的，即后生成的ID比先生成的ID大。这种特性有助于提高数据库索引效率，减少磁盘碎片等问题。</li>
+<li>可排序性（Sortable）：Snowflake生成的ID可以根据时间戳部分进行排序，因为时间戳部分占据了ID的高位。这使得Snowflake生成的ID在存储和检索时更加高效。</li>
+<li>精度（Precision）：Snowflake算法使用了41位的时间戳，10位的机器标识符和12位的序列号，总共64位。这提供了高达69年的时间精度（2^41 毫秒，约为69年），可以在大多数应用场景下满足需求。</li>
+<li>分布式生成（Distributed generation）：Snowflake算法的设计目标之一是支持分布式生成，即不同的机器可以独立生成ID，而不会发生冲突。这通过在ID中包含机器标识符来实现。</li>
+<li>简单性（Simplicity）：Snowflake算法相对简单，易于实现和部署。它基于时间戳、机器标识符和序列号的组合，使用位运算进行ID的生成，逻辑清晰。</li>
+<li>灵活性（Flexibility）：Snowflake算法允许根据需求调整时间戳的位数、机器标识符的位数和序列号的位数，以适应不同规模和需求的系统。</li>
+<li>可逆性（Reversibility）：Snowflake生成的ID本身不具有可逆性。但是，可以根据ID的结构将其分解为时间戳、机器标识符和序列号等部分，从而了解ID的生成信息。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; env &#125; <span class="keyword">from</span> <span class="string">&#x27;process&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">SnowFlake</span> &#123;</span><br><span class="line">  <span class="comment">// 系统上线的时间戳，此处设置为 2023-06-22 00:00:00 的时间戳</span></span><br><span class="line">  epoch = <span class="title class_">BigInt</span>(<span class="number">1687392000000</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 数据中心的位数</span></span><br><span class="line">  dataCenterIdBits = <span class="number">5</span>;</span><br><span class="line">  <span class="comment">// 机器id的位数</span></span><br><span class="line">  workerIdBits = <span class="number">5</span>;</span><br><span class="line">  <span class="comment">// 自增序列号的位数</span></span><br><span class="line">  sequenceBits = <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 最大的数据中心id 这段位运算可以理解为2^5-1 = 31</span></span><br><span class="line">  maxDataCenterId = (<span class="title class_">BigInt</span>(<span class="number">1</span>) &lt;&lt; <span class="title class_">BigInt</span>(<span class="variable language_">this</span>.<span class="property">workerIdBits</span>)) - <span class="title class_">BigInt</span>(<span class="number">1</span>);</span><br><span class="line">  <span class="comment">// 最大的机器id 这段位运算可以理解为2^5-1 = 31</span></span><br><span class="line">  maxWorkerId = (<span class="title class_">BigInt</span>(<span class="number">1</span>) &lt;&lt; <span class="title class_">BigInt</span>(<span class="variable language_">this</span>.<span class="property">workerIdBits</span>)) - <span class="title class_">BigInt</span>(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 时间戳偏移位数</span></span><br><span class="line">  timestampShift = <span class="title class_">BigInt</span>(</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dataCenterIdBits</span> + <span class="variable language_">this</span>.<span class="property">workerIdBits</span> + <span class="variable language_">this</span>.<span class="property">sequenceBits</span>,</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 数据中心偏移位数</span></span><br><span class="line">  dataCenterIdShift = <span class="title class_">BigInt</span>(<span class="variable language_">this</span>.<span class="property">workerIdBits</span> + <span class="variable language_">this</span>.<span class="property">sequenceBits</span>);</span><br><span class="line">  <span class="comment">// 机器id偏移位数</span></span><br><span class="line">  workerIdShift = <span class="title class_">BigInt</span>(<span class="variable language_">this</span>.<span class="property">sequenceBits</span>);</span><br><span class="line">  <span class="comment">// 自增序列号的掩码</span></span><br><span class="line">  sequenceMask = (<span class="title class_">BigInt</span>(<span class="number">1</span>) &lt;&lt; <span class="title class_">BigInt</span>(<span class="variable language_">this</span>.<span class="property">sequenceBits</span>)) - <span class="title class_">BigInt</span>(<span class="number">1</span>);</span><br><span class="line">  <span class="comment">// 记录上次生成id的时间戳</span></span><br><span class="line">  lastTimestamp = <span class="title class_">BigInt</span>(-<span class="number">1</span>);</span><br><span class="line">  <span class="comment">// 数据中心id</span></span><br><span class="line">  dataCenterId = <span class="title class_">BigInt</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="comment">// 机器id</span></span><br><span class="line">  workerId = <span class="title class_">BigInt</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="comment">// 自增序列号</span></span><br><span class="line">  sequence = <span class="title class_">BigInt</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">dataCenterId: <span class="built_in">number</span>, workerId: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">    <span class="comment">// 校验数据中心 ID 和工作节点 ID 的范围</span></span><br><span class="line">    <span class="keyword">if</span> (dataCenterId &gt; <span class="variable language_">this</span>.<span class="property">maxDataCenterId</span> || dataCenterId &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(</span><br><span class="line">        <span class="string">`Data center ID must be between 0 and <span class="subst">$&#123;<span class="variable language_">this</span>.maxDataCenterId&#125;</span>`</span>,</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (workerId &gt; <span class="variable language_">this</span>.<span class="property">maxWorkerId</span> || workerId &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">`Worker ID must be between 0 and <span class="subst">$&#123;<span class="variable language_">this</span>.maxWorkerId&#125;</span>`</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">dataCenterId</span> = <span class="title class_">BigInt</span>(dataCenterId);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">workerId</span> = <span class="title class_">BigInt</span>(workerId);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">nextId</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timestamp = <span class="title class_">BigInt</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>());</span><br><span class="line">    <span class="comment">// 如果上一次生成id的时间戳比下一次生成的还大，说明服务器时间有问题，出现了回退，这时候再生成id，可能会生成重复的id，所以直接抛出异常。</span></span><br><span class="line">    <span class="keyword">if</span> (timestamp &lt; <span class="variable language_">this</span>.<span class="property">lastTimestamp</span>) &#123;</span><br><span class="line">      <span class="comment">// 时钟回拨，抛出异常并拒绝生成 ID</span></span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Clock moved backwards. Refusing to generate ID.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果当前时间戳和上一次的时间戳相等，序列号加一</span></span><br><span class="line">    <span class="keyword">if</span> (timestamp === <span class="variable language_">this</span>.<span class="property">lastTimestamp</span>) &#123;</span><br><span class="line">      <span class="comment">// 同一毫秒内生成多个 ID，递增序列号，防止冲突</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">sequence</span> = (<span class="variable language_">this</span>.<span class="property">sequence</span> + <span class="title class_">BigInt</span>(<span class="number">1</span>)) &amp; <span class="variable language_">this</span>.<span class="property">sequenceMask</span>;</span><br><span class="line">      <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">sequence</span> === <span class="title class_">BigInt</span>(<span class="number">0</span>)) &#123;</span><br><span class="line">        <span class="comment">// 序列号溢出，等待下一毫秒</span></span><br><span class="line">        timestamp = <span class="variable language_">this</span>.<span class="title function_">waitNextMillis</span>(<span class="variable language_">this</span>.<span class="property">lastTimestamp</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 不同毫秒，重置序列号</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">sequence</span> = <span class="title class_">BigInt</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">lastTimestamp</span> = timestamp;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 组合各部分生成最终的 ID，可以理解为把64位二进制转换位十进制数字</span></span><br><span class="line">    <span class="keyword">const</span> id =</span><br><span class="line">      ((timestamp - <span class="variable language_">this</span>.<span class="property">epoch</span>) &lt;&lt; <span class="variable language_">this</span>.<span class="property">timestampShift</span>) |</span><br><span class="line">      (<span class="variable language_">this</span>.<span class="property">dataCenterId</span> &lt;&lt; <span class="variable language_">this</span>.<span class="property">dataCenterIdShift</span>) |</span><br><span class="line">      (<span class="variable language_">this</span>.<span class="property">workerId</span> &lt;&lt; <span class="variable language_">this</span>.<span class="property">workerIdShift</span>) |</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">sequence</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> id.<span class="title function_">toString</span>();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">waitNextMillis</span>(<span class="params">lastTimestamp</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timestamp = <span class="title class_">BigInt</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>());</span><br><span class="line">    <span class="keyword">while</span> (timestamp &lt;= lastTimestamp) &#123;</span><br><span class="line">      <span class="comment">// 主动等待，直到当前时间超过上次记录的时间戳</span></span><br><span class="line">      timestamp = <span class="title class_">BigInt</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> timestamp;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果有pm_id，把pm_id当机器id传进去</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> snowFlake = <span class="keyword">new</span> <span class="title class_">SnowFlake</span>(<span class="number">0</span>, +env.<span class="property">pm_id</span> || <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<p>综合来看，Snowflake算法是一种在分布式系统中生成唯一ID的高效且可靠的算法，具有较好的唯一性、可排序性和趋势递增性，适用于各种规模的分布式系统。</p>
+<h2 id="4-nanoid"><a href="#4-nanoid" class="headerlink" title="4. nanoid"></a>4. nanoid</h2><p>Nano ID 是一种轻量级、高性能的 ID 生成器，采用了类似 Twitter 的 Snowflake 算法。Nano ID 的长度为 21 个字符，其中 15 个字符用于表示时间戳，6 个字符用于生成随机数，可以保证 ID 的唯一性和足够的随机性。</p>
+<p>适用于高并发环境下的 ID 生成，例如 URL 缩短服务等。但是，Nano ID 不适用于需要支持排序或时间相关操作的场景。</p>
+<p>给<code>prisma</code>提了issue，希望像uuid和自增id那样集成，但根据官方近几个月的release记录来看，目前开发重心是在和<code>drizzle-orm</code>抢市场，至今并未考虑支持。</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; nanoid &#125; <span class="keyword">from</span> <span class="string">&#x27;nanoid&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">getNanoid</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">nanoid</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-Redis生成id"><a href="#5-Redis生成id" class="headerlink" title="5. Redis生成id"></a>5. Redis生成id</h2><p>Redis是一个高性能的内存数据库，可以用来存储键值对数据，其中值可以是字符串、列表、集合、散列等。Redis的incr命令可以用来生成自增ID，但由于Redis的单线程特性，性能上可能不如其他方案。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文只列举了常见的ID生成方式，实际上还有很多种方式，此处不再列举。在实际的项目中，需要根据实际情况选择合适的ID生成方式，并根据业务规则和性能需求进行优化。</p>
+<p>就个人项目经历，目前uuid已经可以满足大部分需求，其本身由于开源早，所以生态更加丰富，比如<code>class-validator</code>的<code>IsUUID</code>和<code>nestjs</code>的<code>ParseUUIDPipe</code>。当然，如果哪天prisma集成nanoid或snowflake，那我可能就会在新项目中考虑替换了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://coding.zyha.cn/what-is-the-best-id-for-a-database/" data-id="clx62qxy4004r8vrm4emf28ak" data-title="使用什么作为数据库的ID？" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/" rel="tag">database</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/a-z-of-browser/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          浏览器从A到Z
+        
+      </div>
+    </a>
+  
+  
+    <a href="/docker-container-configurations/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">docker相关容器配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 11.25px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 12.5px;">vue</a> <a href="/tags/web/" style="font-size: 12.5px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 11.25px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 10px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 10px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 10px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 11.25px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+          <li>
+            <a href="/ali-chengdu-light-year-pay-99/">【简单测评】ali成都轻量云年付99元</a>
+          </li>
+        
+          <li>
+            <a href="/some-problems-in-nestjs/">开发中遇到的那些nestjs相关问题</a>
+          </li>
+        
+          <li>
+            <a href="/a-z-of-browser/">浏览器从A到Z</a>
+          </li>
+        
+          <li>
+            <a href="/what-is-the-best-id-for-a-database/">使用什么作为数据库的ID？</a>
+          </li>
+        
+          <li>
+            <a href="/docker-container-configurations/">docker相关容器配置</a>
+          </li>
+        
+          <li>
+            <a href="/some-tips-about-apipost/">关于ApiPost的一些技巧</a>
+          </li>
+        
+          <li>
+            <a href="/select-a-good-public-dns-in-2024/">2024选择适合的公共DNS</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>
