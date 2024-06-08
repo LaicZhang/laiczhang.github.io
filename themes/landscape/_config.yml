@@ -1,0 +1,69 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Status: https://m.zyha.cn/
+  Resume: /resume
+  # DEMO: /demo
+  About: /about
+rss: /atom.xml
+banner: "images/banner.jpg"
+
+# Content
+# excerpt_link: Read More
+fancybox: true
+
+# Footer
+# copyright:
+# Need help choosing? Please see...
+# https://creativecommons.org/choose/
+# https://choosealicense.com/
+# You can use html like below...
+copyright: |-
+  <!--<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+    <img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+  </a>
+  </br>-->
+  All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
+
+# Sidebar
+sidebar: right
+widgets:
+# - category
+# - tag
+- tagcloud
+- recent_posts
+- archive
+
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# Widget behavior
+archive_type: 'monthly'
+show_count: false
+recent_posts_limits: 10
+
+# Miscellaneous
+google_analytics:
+gauges_analytics:
+favicon: favicon.ico
+twitter:
+fb_admins:
+fb_app_id:
+
+# valine comment system. https://valine.js.org
+valine:
+  enable: false # if you want use valine,please set this value is true
+  appId:  # leancloud application app id
+  appKey:  # leancloud application app key
+  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+  verify: false # valine verify code (true/false)
+  pageSize: 10 # comment list page size
+  avatar: mm # gravatar style https://valine.js.org/#/avatar
+  lang: zh-cn # i18n: zh-cn/en
+  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
+  guest_info: nick,mail,link #valine comment header info

@@ -1,0 +1,3 @@
+<a href="<%- url_for(post.path) %>" class="<%= class_name %>">
+  <time class="dt-published" datetime="<%= date_xml(post.updated) %>" itemprop="datePublished"><%= date(post.updated, date_format) %></time>
+</a>

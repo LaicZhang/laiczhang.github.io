@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8">
+  <%- partial('google-analytics') %>
+  <%
+  let title = page.title;
+
+  if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
+  <% if (config.feed) { %>
+    <%- feed_tag() %>
+  <% } else if (theme.rss) { %>
+    <%- feed_tag(theme.rss) %>
+  <% } %>
+  <% if (theme.favicon){ %>
+    <%- favicon_tag(theme.favicon) %>
+  <% } %>
+  <%- css('css/style') %>
+  <% if (is_post() && theme.fancybox){ %>
+    <%- css('fancybox/jquery.fancybox.min.css') %>
+  <% } %>
+  <% if (is_post() && config.highlight.enable){ %>
+    <%- css('https://unpkg.com/typeface-source-code-pro@1.1.3/index.css') %>
+  <% } %>
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+</head>

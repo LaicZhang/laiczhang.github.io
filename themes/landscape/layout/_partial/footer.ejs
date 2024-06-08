@@ -1,0 +1,17 @@
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <% if (theme.copyright){ %>
+        <%- render(theme.copyright, 'pug'); %>
+      <% } %>
+      &copy; <%= date(new Date(), 'YYYY') %> <a href="https://zyha.cn/" target="_blank"><%= config.author || config.title %></a>
+      <br>
+      <%= __('powered_by') %> <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>

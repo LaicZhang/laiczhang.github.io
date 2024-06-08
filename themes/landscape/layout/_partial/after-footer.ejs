@@ -1,0 +1,35 @@
+<%- js('js/jquery-3.7.1.min.js') %>
+
+<% if (theme.fancybox){ %>
+  <%- js('fancybox/jquery.fancybox.min.js') %>
+<% } %>
+
+<%- js('js/script') %>
+
+<% if (page.mathjax){ %>
+  <%- partial('mathjax') %>
+<% } %>
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0");
+  const msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day);
+    let year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
