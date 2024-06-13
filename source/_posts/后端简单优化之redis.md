@@ -11,7 +11,7 @@ tags:
   - 后端
 categories: 优化
 keywords: redis, 优化, 后端, db, memory, 内存, node, js, ts, nest,nestjs
-permalink:
+permalink: optimizing-redis/
 description:
 ---
 又去研究了一下redis，想到一些值得优化的地方。
