@@ -70,9 +70,9 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
-url: https://coding.zyha.cn
+url: https://zyha.cn
 root: /
-permalink: /:title
+permalink: :title/
 permalink_defaults:
 
 # Directory
