@@ -4,19 +4,17 @@ copyright: true
 comment: true
 mathjax: false
 date: 2022-08-29 22:07:16
-updated: 2022-09-11 22:56:16
+updated: 2024-06-15 12:56:16
 tags:
   - xtom
   - jp
   - vps
 categories: 简单测评
-keywords: xtom, jp, vps, 简单测评, eur, 29,500g,1c,e5,1g,ipv4,ipv6,japan,cloud
+keywords: xtom, jp, vps, 简单测评, eur, 29,500g,1c,e5,1g,ipv4,ipv6,japan,cloud,speedtest,network
 permalink: xtom-japan-vps-simple-evaluation/
 description:
 ---
 本次为预售且仅500台，三周之后才能用，使用时间顺延三周。
-
-2022.9.11已开机。
 
 - 2024.6.15更新测试结果
 <!--more-->
@@ -38,11 +36,10 @@ NRT - Tokyo, Japan
 
 ### 相关解释
 
-- 网络质量更优质（日本软银）。
+- 优质的网络线路质量（日本软银）。
 - 多家供应商的上游，老板肉身在外，受zz管控导致跑路几率较小。
 - 便宜（按照今天的汇率算，实付207.64元，月均17.25元，流量用得少的话，比已经缺货且线路恶化的腾讯云香港还有性价比
 - 支持支付宝
-- 大佬推荐
 - 套餐详情如下
 
   ```txt
