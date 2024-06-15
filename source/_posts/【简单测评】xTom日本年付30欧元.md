@@ -18,7 +18,7 @@ description:
 
 2022.9.11已开机。
 
-- 不定时补货，购买链接：<https://go.zyha.cn/xtom>
+- 2024.6.15更新测试结果
 <!--more-->
 
 ## 放在前面
@@ -61,6 +61,95 @@ NRT - Tokyo, Japan
 
 来自`@Showfom`大佬对此vps的回复
 ![回复内容](https://cdn.zyha.cn/blog/20220829221420.png?x-oss-process=style/blog)
+
+## nws.sh
+
+```bash
+---------------------------------- nws.sh ---------------------------------
+      A simple script to bench network performance using speedtest-cli     
+---------------------------------------------------------------------------
+ Version            : v2024.06.02
+ Global Speedtest   : wget -qO- nws.sh | bash
+ Region Speedtest   : wget -qO- nws.sh | bash -s -- -r <region>
+---------------------------------------------------------------------------
+ Basic System Info
+---------------------------------------------------------------------------
+ CPU Model          : Intel(R) Xeon(R) CPU E5-2678 v3 @ 2.50GHz
+ CPU Cores          : 1 @ 2499.996 MHz
+ CPU Cache          : 16384 KB
+ AES-NI             : ✔ Enabled
+ VM-x/AMD-V         : ✔ Enabled
+ Total Disk         : 14.7 GB (1.6 GB Used)
+ Total RAM          : 977.2 MB (302.9 MB Used)
+ Total Swap         : 256.0 MB (0 Used)
+ System uptime      : 6 days, 13 hour 0 min
+ Load average       : 0.27, 0.31, 0.15
+ OS                 : Debian GNU/Linux 12
+ Arch               : x86_64 (64 Bit)
+ Kernel             : 6.1.0-21-cloud-amd64
+ Virtualization     : KVM
+ TCP Control        : bbr
+---------------------------------------------------------------------------
+ Basic Network Info
+---------------------------------------------------------------------------
+ Primary Network    : IPv4
+ IPv6 Access        : ✔ Online
+ IPv4 Access        : ✔ Online
+ ISP                : xTom Pty Ltd
+ ASN                : AS3258 xTom Pty Ltd
+ Host               : xTom GmbH
+ Location           : Tokyo, Tokyo-13, Japan
+---------------------------------------------------------------------------
+ Speedtest.net (Region: CHINA | 中華人民共和國)
+---------------------------------------------------------------------------
+ Location         Latency     Loss    DL Speed       UP Speed       Server      
+
+ ISP: xTom 
+
+ Nearest          1.15 ms     76.2%   393.01 Mbps    238.71 Mbps    i3D.net - Tokyo 
+
+ CU - Shanghai    63.59 ms    0.0%    406.38 Mbps    405.78 Mbps    China Unicom 5G - Shanghai 
+ CM - Beijing     99.40 ms    18.3%   331.51 Mbps    96.66 Mbps     China Mobile Group Beijing Co.Ltd - Beijing 
+ CU - Beijing     53.00 ms    N/A     10.89 Mbps     416.28 Mbps    BJ Unicom - Beijing 
+ CT - Nanjing     55.72 ms            51.19 Mbps     FAILED         China Telecom JiangSu 5G - Nanjing 
+ CT - Shenzen     FAILED                                                        
+ CT - Zhenjiang   58.37 ms    N/A     399.31 Mbps    385.73 Mbps    China Telecom JiangSu 5G - Zhenjiang 
+ CU - Shenyang    FAILED                                                        
+ CT - Suzhou      67.18 ms    N/A     405.16 Mbps    415.47 Mbps    China Telecom JiangSu 5G - Suzhou 
+ CT - Yangzhou    FAILED                                                        
+ CM - Hangzhou    FAILED                                                        
+ CT - Hangzhou    175.68 ms   N/A     362.14 Mbps    1.33 Mbps      浙江电信 - HangZhou 
+ CU - Zhengzhou   FAILED                                                        
+ CT - Changsha    FAILED                                                        
+ CU - Changsha    FAILED                                                        
+ CM - Chengdu     FAILED                                                        
+ CU - Wu Xi       35.63 ms    0.0%    401.60 Mbps    415.22 Mbps    China Unicom - Wu Xi 
+ CT - Hefei       100.78 ms   3.8%    362.90 Mbps    339.36 Mbps    China Telecom AnHui 5G - Hefei 
+ CT - TianJin     FAILED                                                        
+ CT - XiNing      FAILED                                                        
+ CT - NingBo      104.69 ms   N/A     404.19 Mbps    373.09 Mbps    浙江电信 - NingBo 
+ CM - Guangzhou   FAILED                                                        
+
+ CM - Kwai Chung  51.08 ms    0.0%    394.44 Mbps    418.56 Mbps    CMHK Mobile Service - Hong Kong 
+ CM - Hong Kong   54.59 ms    2.0%    399.56 Mbps    415.05 Mbps    CMHK Broadband - Hong Kong 
+ CU - Hong Kong   FAILED                                                        
+ Hong Kong        FAILED                                                        
+ Hong Kong        49.26 ms    0.0%    412.44 Mbps    422.68 Mbps    Misaka Network, Inc. - Hong Kong 
+---------------------------------------------------------------------------
+ Avg DL Speed       : 338.19 Mbps
+ Avg UL Speed       : 310.28 Mbps
+
+ Total DL Data      : 5.76 GB
+ Total UL Data      : 5.63 GB
+ Total Data         : 11.39 GB
+---------------------------------------------------------------------------
+ Duration           : 6 min 41 sec
+ System Time        : 15/06/2024 - 05:51:49 UTC
+ Total Script Runs  : 47881
+---------------------------------------------------------------------------
+ Result             : https://result.nws.sh/r/1718429761_K2UFJK_CHINA.txt
+---------------------------------------------------------------------------
+```
 
 ## Bench.sh
 
@@ -341,7 +430,7 @@ traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
 
 ### 国内ping测试
 
-![20220911222811](https://cdn.zyha.cn/blog/20220911222811.png?x-oss-process=style/blog)
+![20240615134221](https://s2.loli.net/2024/06/15/I3LZudFnClk9PGh.png)
 
 ## 流媒体解锁
 

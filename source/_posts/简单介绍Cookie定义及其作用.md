@@ -56,19 +56,13 @@ document.cookie
 
 2. Object「value」：该Cookie的「值」
 
-3. Int「maxAge」：该Cookie的「失效时间」，单位秒
-
-注：如果为正数，则该Cookie在maxAge秒后失效。如果为负数，则该Cookie为临时Cookie，关闭浏览器即失效。如果为0，表示删除该Cookie。默认为-1，即关闭浏览器即失效
+3. Int「maxAge」：该Cookie的「失效时间」，单位秒。注意：如果为正数，则该Cookie在maxAge秒后失效。如果为负数，则该Cookie为临时Cookie，关闭浏览器即失效。如果为0，表示删除该Cookie。默认为-1，即关闭浏览器即失效
 
 4. Boolean「secure」：「是否仅使用安全协议传输」，默认为false
 
-5. String「path」：该Cookie的「使用路径」
+5. String「path」：该Cookie的「使用路径」，如果设置为“/shit/”，则只有“<https://xxx.xxx.xxx/shit> ”的程序可以访问该Cookie。如果设置为“/”，则本域名下的程序都可以访问Cookie，注意最后一个字符必须为“/”。
 
-注：如果设置为“/shit/”，则只有“<https://xxx.xxx.xxx/shit> ”的程序可以访问该Cookie。如果设置为“/”，则本域名下的程序都可以访问Cookie，注意最后一个字符必须为“/”。
-
-6. String「domain」：「可以访问该Cookie的域名」。
-
-注：如果设置为".google.com "，则所有以"google.com "结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”。
+6. String「domain」：「可以访问该Cookie的域名」。如果设置为".google.com "，则所有以"google.com "结尾的域名都可以访问该Cookie。注意第一个字符必须为“.”。
 
 7. String「comment」：该Cookie的「用处说明」，用来再浏览器显示Cookie信息的时候显示该说明。
 

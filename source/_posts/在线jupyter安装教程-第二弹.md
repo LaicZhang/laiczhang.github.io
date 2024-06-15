@@ -13,20 +13,17 @@ keywords: python,jupyter,安装,教程
 permalink: jupyter-install-process-2/
 description:
 ---
+## 前言
 
 上次已经写了一篇关于[在Linux上安装jupyter的教程](https://coding.laiczhang.com/2020/01/在线jupyter安装教程/#more)，但是貌似有点问题，今天新开了一台Centos7，就再照着[jupyterhub的官方文档](https://jupyterhub.readthedocs.io/en/stable/installation-guide.html)重新装一下。
 
-
-
 <!-- more -->
-
-# 前言
 
 我只在新开机器上装了宝塔，没注意是否会影响安装。不过还是建议大家装一下，毕竟如果机器配置够（我的配置是2H2G）的话，用起来还是很方便的。
 
 **须知：在国内云服务器上安装，没有备案域名就只能通过IP访问。**
 
-# 通过一般方法安装
+## 通过一般方法安装
 
 emmmm，我这样安装的貌似有问题，推荐使用docker一键安装:(
 
@@ -107,13 +104,13 @@ python3 -m pip install --upgrade notebook
 
 要启动集线器服务器，请运行以下命令：
 
-```
+```bash
 jupyterhub
 ```
 
 或者使用以下命令
 
-```
+```bash
 nohup jupyterhub > jupyterhub.log &
 ```
 
@@ -121,9 +118,9 @@ nohup jupyterhub > jupyterhub.log &
 
 但是这样启动之后还貌似需要配置Nginx才可以通过网络访问`https://ip:port/jupyter`，有点麻烦。
 
-# 通过docker安装（推荐）
+## 通过docker安装（推荐）
 
-## docker的安装
+### docker的安装
 
 关于安装，网上已经有很多的教程了。
 
@@ -135,7 +132,7 @@ nohup jupyterhub > jupyterhub.log &
 
 如果输出：
 
-```
+```txt
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
@@ -161,13 +158,12 @@ Share images, automate workflows, and more with a free Docker ID:
 
 输入
 
-```
+```bash
 docker run -d -p 8000:8000 --name jupyterhub jupyterhub/jupyterhub jupyterhub
 ```
 
-在浏览器中，打开https://ip:8000可以看到
+在浏览器中，打开 https://ip:8000 可以看到
 
 ![QQ截图20200702091222.png](https://i.loli.net/2020/07/24/AxSn1OFs2vUui4T.png)
 
 安装完成。
-
