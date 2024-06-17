@@ -10,7 +10,7 @@ tags:
   - vps
 categories: vps
 keywords: vps, oracle, e2, 云服务器, free
-permalink:
+permalink: oracle-e2-simple-evaluation/
 description:
 ---
 丢包极为严重，测完就后悔开韩国区域了。。。
