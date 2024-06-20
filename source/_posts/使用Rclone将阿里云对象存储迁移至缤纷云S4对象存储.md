@@ -458,7 +458,11 @@ e/n/d/r/c/s/q> q
 
 S4也是支持S3协议的对象存储，配置方法与阿里云对象存储大致相同，这里不再赘述。
 
-其中key和secret可以在 <https://console.bitiful.com/accessKey> 处设置。
+其中`key`和`secret`可以在 <https://console.bitiful.com/accessKey> 处设置。
+
+- 注意，此处用户权限不仅要给`读`,`写`,还要给`列表`。
+
+![](https://img.tucang.cc/api/image/show/d2ecf1a42b483f00109a8f911ceb0931)
 
 ```bash
 ❯ rclone config   
@@ -802,7 +806,18 @@ e/n/d/r/c/s/q>
 
 ## 迁移数据
 
+- 在迁移前，确定oss中已经删除了不需要备份的数据。
+
 ```bash
-rclone sync oss:laic-cdn s4:laic-cdn --progress
+# rclone sync oss:laic-cdn s4:laic-cdn --progress
 # rclone sync 源（配置文件名称）: 源数据Bucket  目标源名称：目标bucket
+
+❯ rclone sync oss:laic-cdn s4:laic-cdn --progress
+2024/06/09 23:54:53 ERROR : public/upload/: Entry doesn't belong in directory "public/upload" (same as directory) - ignoring
+2024/06/09 23:54:53 ERROR : public/upload/: Entry doesn't belong in directory "public/upload" (same as directory) - ignoring
+Transferred:   	  146.137 MiB / 146.137 MiB, 100%, 93.290 KiB/s, ETA 0s
+Transferred:         8635 / 8635, 100%
+Elapsed time:      6m33.3s
 ```
+
+同步时间长达6分半的主要原因就是忘了删除oss中的log文件。
