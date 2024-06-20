@@ -4,7 +4,7 @@ copyright: true
 comment: true
 mathjax: false
 date: 2024-04-07 09:19:23
-updated: 2024-04-07 09:19:23
+updated: 2024-05-07 09:19:23
 tags:
   - sql
   - database
@@ -58,6 +58,38 @@ UUID（通用唯一标识符）是一种由算法生成的字符串，它保证�
   id                String        @id @default(uuid())
 ```
 
+常用的uuid版本为v4，但随着大佬们的改进，v7逐渐展现优势。
+
+与随机前缀的 UUIDv4 相比，UUIDv7 的时间有序性使数据库性能大大提高。第 2 象限博客的这篇文章对随机 UUID 和顺序 UUID 进行了基准测试，结果不仅显示了写入性能的提高，还显示了读取性能的提高。
+
+```txt
+// 10个uuid v4
+275b31eb-0945-4f40-92f3-8354a00acb12
+668a54bc-6f9d-4cbe-be6e-58fbaf836841
+b0a474eb-d27a-4fb0-af4d-44779d4fc7ee
+62a0f416-59b9-4ce6-ba9c-70715a260fb1
+200b2f08-67ae-4bdb-89f4-4d7af74321bf
+df6fe932-c9c1-4612-bcce-1963e53dd589
+fbc48dc4-0b15-4482-bf40-da084a4ab918
+48c361d2-bbf5-4643-a415-1c7a145c72be
+d13ab0fb-4037-4b3d-ac85-fc30fd31ad33
+36349ca7-7672-48e3-b482-82751afe4db5
+
+// 10个uuid v7
+019034cd-2fb4-7080-a9b4-2ca24d3c5e84
+019034cd-2fb4-7080-a9b4-2ca3c4c681a6
+019034cd-2fb4-7080-a9b4-2ca4a19af464
+019034cd-2fb4-7080-a9b4-2ca55e5db91a
+019034cd-2fb4-7080-a9b4-2ca622adb595
+019034cd-2fb4-7080-a9b4-2ca7aae879ae
+019034cd-2fb4-7080-a9b4-2ca89bfe79ad
+019034cd-2fb4-7080-a9b4-2ca9c6c29183
+019034cd-2fb4-7080-a9b4-2caa7953bee1
+019034cd-2fb4-7080-a9b4-2cab494ef6a9
+```
+
+UUIDv7 继续与标准 UUID 格式保持一致，因此从实际使用的角度来看，它们可以被视为任何其他 UUID。这种兼容性使我们可以使用现有的 Postgres UUID 列，并轻松地将列从存储 UUIDv4 值过渡到 UUIDv7。
+
 ### 3. 雪花(Snowflake)算法
 
 Snowflake 是由 Twitter 开发的一种分布式 ID 生成算法，可以保证 ID 的唯一性和足够的可排序性。Snowflake 的 ID 格式为 64 位整数，其中第 1 位为符号位，接下来的 41 位为时间戳，10 位为节点 ID，12 位为序列号。
@@ -77,7 +109,7 @@ Snowflake算法的特性如下：
 import { env } from 'process';
 
 export class SnowFlake {
-  // 系统上线的时间戳，此处设置为 2023-06-22 00:00:00 的时间戳
+  // 系统上线的时间戳，此处为 2023-06-22 00:00:00 的时间戳
   epoch = BigInt(1687392000000);
 
   // 数据中心的位数

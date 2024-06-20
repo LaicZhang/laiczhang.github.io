@@ -7,6 +7,8 @@ date: 2022-02-23 13:42:00
 updated: 2022-02-23 13:42:00
 tags:
   - css
+  - 技巧
+  - web
 categories: css
 keywords: css,水平垂直居中,水平垂直居中,居中
 permalink: center-vertical-align-by-css/

@@ -17,6 +17,7 @@ description:
 
 ApiPost是一个国产的类Postman的API调试工具。由于Postman的一些限制，我开始尝试使用ApiPost，在这里记录一些我在使用ApiPost过程中发现的一些技巧。
 
+- 2024.6.20更新，8.0版本发布，主要优化启动时间，离谱的是v7和v8数据不互通。。。
 <!--more-->
 ## 1. 添加Header参数
 
