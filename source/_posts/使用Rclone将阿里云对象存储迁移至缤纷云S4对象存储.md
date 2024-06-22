@@ -821,3 +821,16 @@ Elapsed time:      6m33.3s
 ```
 
 同步时间长达6分半的主要原因就是忘了删除oss中的log文件。
+
+再次执行只会对比差异然后同步，不会重复上传。
+
+```bash
+❯ rclone sync oss:laic-cdn s4:laic-cdn --progress
+2024/06/10 00:33:58 ERROR : public/upload/: Entry doesn't belong in directory "public/upload" (same as directory) - ignoring
+2024/06/10 00:33:58 ERROR : public/upload/: Entry doesn't belong in directory "public/upload" (same as directory) - ignoring
+Transferred:   	   15.793 KiB / 15.793 KiB, 100%, 1.972 KiB/s, ETA 0s
+Checks:               730 / 730, 100%
+Transferred:            2 / 2, 100%
+Elapsed time:         9.2s
+~ 9s 
+```
