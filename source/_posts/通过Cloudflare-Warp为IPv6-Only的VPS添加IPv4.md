@@ -8,8 +8,8 @@ updated: 2024-06-23 08:34:08
 tags:
   - cf
   - vps
-categories: 网络
-keywords: cf,warp,ipv6,ipv4,only,vps,hz,free,plus
+categories: vps
+keywords: cf,warp,ipv6,ipv4,only,vps,hz,free,plus,cloudflare
 permalink: add-ipv4-to-ipv6-only-vps-with-cloudflare-warp/
 description:
 ---
