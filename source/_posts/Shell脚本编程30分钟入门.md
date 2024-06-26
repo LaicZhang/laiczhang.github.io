@@ -1,7 +1,7 @@
 ---
 title: Shell脚本编程30分钟入门
 copyright: true
-comment: true
+comment: false
 date: 2019-10-25 19:26:59
 updated: 2019-10-25 19:26:59
 tags:

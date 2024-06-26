@@ -1,7 +1,7 @@
 ---
 title: 终端环境下GitHub无法链接
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-06-08 14:22:23
 updated: 2024-06-08 14:22:23

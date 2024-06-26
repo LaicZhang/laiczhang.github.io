@@ -1,7 +1,7 @@
 ---
 title: win10安装Linux子系统遇到的问题
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-09 20:49:41
 updated: 2020-04-09 20:49:41

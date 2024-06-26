@@ -1,7 +1,7 @@
 ---
 title: vscode远程开发配置
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-10 19:13:13
 updated: 2020-04-10 19:13:13

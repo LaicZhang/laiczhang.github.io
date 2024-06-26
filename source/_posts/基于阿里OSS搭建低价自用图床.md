@@ -1,7 +1,7 @@
 ---
 title: 基于阿里OSS搭建低价自用图床
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-01-10 21:14:48
 updated: 2022-07-10 21:14:48

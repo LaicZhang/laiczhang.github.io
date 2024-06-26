@@ -1,7 +1,7 @@
 ---
 title: 如何最大限度避免AWS天价账单
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-09-30 15:37:18
 updated: 2022-09-30 15:37:18

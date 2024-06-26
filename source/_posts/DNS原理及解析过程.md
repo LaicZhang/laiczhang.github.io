@@ -1,7 +1,7 @@
 ---
 title: DNS原理及解析过程
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-18 10:37:14
 updated: 2020-04-18 10:37:14

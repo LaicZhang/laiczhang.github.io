@@ -1,7 +1,7 @@
 ---
 title: ip收费的新规将影响到lightsail
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2023-07-30 00:23:43
 updated: 2023-07-30 00:23:43

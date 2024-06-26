@@ -1,7 +1,7 @@
 ---
 title: 各vps商家配置价格对比
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-06-23 14:31:22
 updated: 2020-06-23 14:31:22

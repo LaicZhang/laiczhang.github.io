@@ -1,7 +1,7 @@
 ---
 title: 记录初学docker踩的坑
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-07-26 16:12:07
 updated: 2020-07-26 16:12:07

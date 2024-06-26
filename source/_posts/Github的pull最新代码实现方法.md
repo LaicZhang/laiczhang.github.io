@@ -1,7 +1,7 @@
 ---
 title: Github的pull最新代码实现方法
 copyright: true
-comment: true
+comment: false
 date: 2019-07-24 16:46:41
 updated: 2019-07-24 16:46:41
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Markdown常用语法笔记
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2019-12-04 00:26:01
 updated: 2019-12-04 00:26:01

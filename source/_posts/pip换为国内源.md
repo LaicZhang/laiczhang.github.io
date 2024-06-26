@@ -1,7 +1,7 @@
 ---
 title: pip换为国内源
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2019-12-16 23:40:04
 updated: 2019-12-16 23:40:04

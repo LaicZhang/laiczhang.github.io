@@ -1,7 +1,7 @@
 ---
 title: 项目中遇到vue相关error及解决方案-持续更新中
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2021-12-03 10:30:43
 updated: 2021-12-03 10:30:43

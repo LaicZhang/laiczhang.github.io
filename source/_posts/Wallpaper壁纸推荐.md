@@ -1,7 +1,7 @@
 ---
 title: Wallpaper壁纸推荐
 copyright: true
-comment: true
+comment: false
 date: 2019-11-10 18:00:51
 updated: 2020-11-10 18:00:51
 tags:

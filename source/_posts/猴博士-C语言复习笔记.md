@@ -1,7 +1,7 @@
 ---
 title: 猴博士-C语言复习笔记
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2019-12-07 16:49:50
 updated: 2020-07-01 23:15:20

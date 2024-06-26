@@ -8,6 +8,6 @@ keywords:
 copyright: true
 permalink: 
 description:
-comment: true
+comment: false
 mathjax: false
 ---

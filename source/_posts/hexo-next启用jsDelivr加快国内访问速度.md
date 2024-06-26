@@ -1,7 +1,7 @@
 ---
 title: hexo-next启用jsDelivr加快国内访问速度
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-08-29 09:25:59
 updated: 2020-08-29 09:25:59

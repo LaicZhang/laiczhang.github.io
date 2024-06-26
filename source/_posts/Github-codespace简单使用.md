@@ -1,7 +1,7 @@
 ---
 title: Github-codespace简单使用
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-08-31 21:08:16
 updated: 2022-08-31 21:08:16

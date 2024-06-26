@@ -1,7 +1,7 @@
 ---
 title: 【第二届字节青训营】理解CSS笔记
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-01-16 21:34:46
 updated: 2022-01-16 21:34:46

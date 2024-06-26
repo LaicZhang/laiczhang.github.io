@@ -1,7 +1,7 @@
 ---
 title: GitHub学生包申请终于通过了
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-10-03 23:14:25
 updated: 2020-10-03 23:14:25

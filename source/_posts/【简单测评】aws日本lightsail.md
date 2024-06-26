@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】aws日本lightsail
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-07-23 19:10:45
 updated: 2022-07-23 19:10:45

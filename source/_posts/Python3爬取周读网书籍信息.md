@@ -1,7 +1,7 @@
 ---
 title: Python3爬取周读网书籍信息
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-01-07 22:46:55
 updated: 2020-01-07 22:46:55

@@ -1,7 +1,7 @@
 ---
 title: 自建ctlist验证服务器
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2021-09-17 16:41:47
 updated: 2021-09-17 16:41:47

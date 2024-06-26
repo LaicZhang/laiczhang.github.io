@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】aws新加坡lightsail
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-07-09 20:49:22
 updated: 2023-07-1 10:00:22

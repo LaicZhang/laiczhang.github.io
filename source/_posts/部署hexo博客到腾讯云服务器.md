@@ -1,7 +1,7 @@
 ---
 title: 部署hexo博客到腾讯云服务器
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-08-26 16:15:41
 updated: 2022-08-26 16:15:41

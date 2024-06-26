@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】xTom日本年付30欧元
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-08-29 22:07:16
 updated: 2024-06-15 12:56:16

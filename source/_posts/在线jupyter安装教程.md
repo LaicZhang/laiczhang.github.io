@@ -1,7 +1,7 @@
 ---
 title: 在线jupyter安装教程
 copyright: true
-comment: true
+comment: false
 mathjax: false
 tags:
   - python

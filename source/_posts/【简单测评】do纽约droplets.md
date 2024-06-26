@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】do纽约droplets
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-08-16 20:17:05
 updated: 2022-08-16 20:17:05

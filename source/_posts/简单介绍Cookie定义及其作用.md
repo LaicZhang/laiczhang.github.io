@@ -1,7 +1,7 @@
 ---
 title: 简单介绍Cookie定义及其作用
 copyright: true
-comment: true
+comment: false
 mathjax: false
 tags:
   - web

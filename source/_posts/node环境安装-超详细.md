@@ -1,7 +1,7 @@
 ---
 title: node环境安装-超详细
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-04 16:40:36
 updated: 2022-07-22 16:40:36

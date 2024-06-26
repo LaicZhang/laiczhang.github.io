@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】sakurayun香港vps
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-09-01 22:24:07
 updated: 2022-09-01 22:24:07

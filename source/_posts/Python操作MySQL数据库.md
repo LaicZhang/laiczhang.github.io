@@ -1,7 +1,7 @@
 ---
 title: Python操作MySQL数据库
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-06-22 15:34:27
 updated: 2020-06-22 15:34:27

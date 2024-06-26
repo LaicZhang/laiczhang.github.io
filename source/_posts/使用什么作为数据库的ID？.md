@@ -1,7 +1,7 @@
 ---
 title: 使用什么作为数据库的ID？
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-04-07 09:19:23
 updated: 2024-05-07 09:19:23

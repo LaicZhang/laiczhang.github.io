@@ -1,7 +1,7 @@
 ---
 title: 长期使用aws低价低配ec2
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-09-19 16:57:19
 updated: 2022-09-19 16:57:19

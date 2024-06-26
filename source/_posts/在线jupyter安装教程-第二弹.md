@@ -1,7 +1,7 @@
 ---
 title: 在线jupyter安装教程-第二弹
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-07-24 10:09:04
 updated: 2020-07-24 10:09:04

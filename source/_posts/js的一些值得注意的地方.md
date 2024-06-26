@@ -1,7 +1,7 @@
 ---
 title: JS的一些值得注意的地方
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-04-28 18:04:46
 updated: 2022-04-28 18:04:46

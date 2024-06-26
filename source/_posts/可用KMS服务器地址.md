@@ -1,7 +1,7 @@
 ---
 title: 可用KMS服务器地址
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-07-27 20:51:14
 updated: 2020-07-27 20:51:14

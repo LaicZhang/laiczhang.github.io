@@ -1,7 +1,7 @@
 ---
 title: PHP获取bing今日壁纸
 copyright: true
-comment: true
+comment: false
 mathjax: false
 tags:
   - bing

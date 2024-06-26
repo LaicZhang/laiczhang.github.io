@@ -1,7 +1,7 @@
 ---
 title: LTS版各版本JDK下载
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2021-09-20 11:13:53
 updated: 2021-09-20 11:13:53

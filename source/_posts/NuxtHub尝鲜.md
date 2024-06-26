@@ -1,7 +1,7 @@
 ---
 title: NuxtHub尝鲜
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-06-18 00:04:59
 updated: 2024-06-18 00:04:59

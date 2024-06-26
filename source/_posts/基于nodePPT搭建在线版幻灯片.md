@@ -1,7 +1,7 @@
 ---
 title: 基于nodePPT搭建在线版幻灯片
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-01-10 23:34:07
 updated: 2020-01-10 23:34:07

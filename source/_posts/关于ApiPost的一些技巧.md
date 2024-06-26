@@ -1,7 +1,7 @@
 ---
 title: 关于ApiPost的一些技巧
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-03-27 17:53:19
 updated: 2024-03-27 17:53:19

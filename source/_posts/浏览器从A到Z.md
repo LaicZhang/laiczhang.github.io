@@ -1,7 +1,7 @@
 ---
 title: 浏览器从A到Z
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-04-17 19:18:23
 updated: 2024-04-17 19:18:23

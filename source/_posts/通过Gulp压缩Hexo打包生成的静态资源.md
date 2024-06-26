@@ -1,7 +1,7 @@
 ---
 title: 通过Gulp压缩Hexo打包生成的静态资源
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-06-07 17:05:48
 updated: 2022-06-07 17:05:48

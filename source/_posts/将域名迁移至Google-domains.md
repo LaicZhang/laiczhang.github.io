@@ -1,7 +1,7 @@
 ---
 title: 将域名迁移至Google-domains
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-06-19 14:30:51
 updated: 2022-07-02 14:30:51

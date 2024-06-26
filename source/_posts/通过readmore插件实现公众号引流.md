@@ -1,7 +1,7 @@
 ---
 title: 通过readmore插件实现公众号引流
 copyright: true
-comment: true
+comment: false
 date: 2019-10-23 22:10:08
 updated: 2019-10-23 22:10:08
 tags:

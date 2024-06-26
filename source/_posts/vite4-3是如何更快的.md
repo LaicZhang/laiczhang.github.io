@@ -1,7 +1,7 @@
 ---
 title: vite4.3是如何更快的
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2023-09-21 10:26:26
 updated: 2023-09-21 10:26:26

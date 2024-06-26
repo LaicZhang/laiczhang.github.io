@@ -1,7 +1,7 @@
 ---
 title: 续订jetbrains家教育包
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-07-06 11:40:32
 updated: 2022-07-06 11:40:32

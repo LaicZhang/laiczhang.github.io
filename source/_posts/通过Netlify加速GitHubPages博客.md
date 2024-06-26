@@ -1,7 +1,7 @@
 ---
 title: 通过Netlify加速GitHubPages博客
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2021-07-29 17:39:06
 updated: 2021-07-29 17:39:06

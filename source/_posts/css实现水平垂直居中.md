@@ -1,7 +1,7 @@
 ---
 title: css实现水平垂直居中
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-02-23 13:42:00
 updated: 2022-02-23 13:42:00

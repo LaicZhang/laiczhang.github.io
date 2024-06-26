@@ -1,7 +1,7 @@
 ---
 title: Windows良心软件推荐
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2019-11-28 12:07:05
 updated: 2019-11-28 12:07:05

@@ -1,7 +1,7 @@
 ---
 title: Electron安装的填坑过程
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-05 12:47:40
 updated: 2020-04-05 12:47:40

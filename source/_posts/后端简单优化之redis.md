@@ -1,7 +1,7 @@
 ---
 title: 后端简单优化之redis
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-06-11 15:52:48
 updated: 2024-06-11 15:52:48

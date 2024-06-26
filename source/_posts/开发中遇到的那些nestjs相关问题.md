@@ -1,7 +1,7 @@
 ---
 title: 开发中遇到的那些nestjs相关问题
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-04-21 00:48:23
 updated: 2024-04-21 00:48:23

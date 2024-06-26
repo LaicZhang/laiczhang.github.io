@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】ali成都轻量云年付99元
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-05-27 20:15:58
 updated: 2024-05-27 20:15:58

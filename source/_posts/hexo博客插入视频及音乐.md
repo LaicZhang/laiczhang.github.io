@@ -1,7 +1,7 @@
 ---
 title: hexo博客插入视频及音乐
 copyright: true
-comment: true
+comment: false
 permalink: hexo-blog-insert-videos-and-musics/
 date: 2019-10-25 18:09:34
 updated: 2019-10-25 18:09:34

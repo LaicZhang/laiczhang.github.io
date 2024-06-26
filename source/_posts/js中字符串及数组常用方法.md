@@ -1,7 +1,7 @@
 ---
 title: Javascript中字符串及数组常用方法
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-04-29 15:58:30
 updated: 2022-04-29 15:58:30

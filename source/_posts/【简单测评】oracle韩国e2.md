@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】oracle韩国e2
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-06-15 16:21:29
 updated: 2024-06-15 16:21:29

@@ -1,7 +1,7 @@
 ---
 title: Git常用命令简单总结
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2021-12-22 10:29:04
 updated: 2021-12-22 10:29:04

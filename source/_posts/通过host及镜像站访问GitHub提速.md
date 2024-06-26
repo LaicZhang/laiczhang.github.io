@@ -1,7 +1,7 @@
 ---
 title: 通过host及镜像站访问GitHub提速
 copyright: true
-comment: true
+comment: false
 date: 2019-07-09 23:21:39
 updated: 2019-07-15 13:21:39
 tags:

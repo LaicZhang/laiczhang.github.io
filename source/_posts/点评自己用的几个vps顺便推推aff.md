@@ -1,7 +1,7 @@
 ---
 title: 点评自己用的几个vps顺便推推aff
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2020-04-04 22:40:34
 updated: 2020-04-04 22:40:34

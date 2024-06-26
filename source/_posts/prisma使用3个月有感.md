@@ -1,7 +1,7 @@
 ---
 title: prisma使用3个月有感
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2023-10-08 22:46:04
 updated: 2024-06-07 11:06:04

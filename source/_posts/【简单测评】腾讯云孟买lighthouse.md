@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】腾讯云孟买lighthouse
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-07-13 11:41:12
 updated: 2022-07-13 11:41:12

@@ -1,7 +1,7 @@
 ---
 title: hexo简易部署脚本
 copyright: true
-comment: true
+comment: false
 date: 2019-11-03 14:15:58
 updated: 2019-11-03 14:15:58
 tags:

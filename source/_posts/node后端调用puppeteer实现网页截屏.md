@@ -1,7 +1,7 @@
 ---
 title: node后端调用puppeteer实现网页截屏
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-04-07 09:36:57
 updated: 2022-04-08 00:36:57

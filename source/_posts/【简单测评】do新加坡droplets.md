@@ -1,7 +1,7 @@
 ---
 title: 【简单测评】do新加坡droplets
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-07-18 00:57:23
 updated: 2024-06-02 00:57:23

@@ -1,7 +1,7 @@
 ---
 title: 使用Lambda监控Lightsail流量限额并超额自动关机
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-03-01 09:03:23
 updated: 2024-03-01 09:03:23

@@ -1,7 +1,7 @@
 ---
 title: vue中assets和static的区别
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-01-08 09:21:25
 updated: 2022-01-08 09:21:25

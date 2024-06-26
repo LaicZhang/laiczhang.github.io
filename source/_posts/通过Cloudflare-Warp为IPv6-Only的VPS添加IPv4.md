@@ -1,7 +1,7 @@
 ---
 title: 通过Cloudflare-Warp为IPv6-Only的VPS添加IPv4
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2024-06-23 08:34:08
 updated: 2024-06-23 08:34:08

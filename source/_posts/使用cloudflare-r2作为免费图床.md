@@ -1,7 +1,7 @@
 ---
 title: 使用cloudflare-r2作为免费图床
 copyright: true
-comment: true
+comment: false
 mathjax: false
 date: 2022-10-09 11:45:54
 updated: 2022-10-09 11:45:54
