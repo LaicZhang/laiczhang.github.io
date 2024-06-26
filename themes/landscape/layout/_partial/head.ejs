@@ -20,7 +20,6 @@
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="preconnect" href="https://unpkg.com">
   <link rel="preconnect" href="https://cdn.zyha.cn">
   <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
   <%- open_graph({twitter_id: theme.twitter, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
@@ -36,8 +35,6 @@
   <% if (is_post() && theme.fancybox){ %>
     <%- css('fancybox/jquery.fancybox.min.css') %>
   <% } %>
-  <% if (is_post() && config.highlight.enable){ %>
-    <%- css('https://unpkg.com/typeface-source-code-pro@1.1.3/index.css') %>
-  <% } %>
   <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+  <link rel="preconnect" href="https://cdn.bootcdn.net">
 </head>

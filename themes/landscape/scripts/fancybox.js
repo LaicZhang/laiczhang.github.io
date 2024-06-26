@@ -9,13 +9,12 @@ let rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:ww
 
 hexo.extend.tag.register('fancybox', function(args){
   let original = args.shift(),
-    thumbnail = '';
+    thumbnail = '',
+    title = args.join(' ');
 
   if (args.length && rUrl.test(args[0])){
     thumbnail = args.shift();
   }
-
-  let title = args.join(' ');
 
   return `<a data-fancybox="gallery" href="${original}" data-caption="${title}">
     <img width="auto" height="100%" class="post-img" loading="lazy" src="${thumbnail || original}" alt="${title}" />

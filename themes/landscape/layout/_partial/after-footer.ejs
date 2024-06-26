@@ -1,7 +1,7 @@
-<%- js('js/jquery-3.7.1.min.js') %>
+<%- js('https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js') %>
 
 <% if (theme.fancybox){ %>
-  <%- js('fancybox/jquery.fancybox.min.js') %>
+  <%- js('https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js') %>
 <% } %>
 
 <%- js('js/script') %>
@@ -11,15 +11,13 @@
 <% } %>
 
 <script type="text/javascript">
-  const BirthDay=new Date("7/5/2019 0:0:0");
-  const msPerDay=86400000; // 24*60*60*1000
+  const BirthDay=new Date("7/5/2019 0:0:0"), msPerDay=86400000; // 24*60*60*1000
   function show_date_time(){
     setTimeout("show_date_time()", 1000);
     let today=new Date();
     let timeold=(today.getTime()-BirthDay.getTime());
     let e_day=timeold/msPerDay;
-    let day=Math.floor(e_day);
-    let year=Math.floor(e_day/365);
+    let day=Math.floor(e_day), year=Math.floor(e_day/365);
     let e_hour=(e_day-day)*24;
     day=parseInt(day%365);
     let hour=Math.floor(e_hour);
