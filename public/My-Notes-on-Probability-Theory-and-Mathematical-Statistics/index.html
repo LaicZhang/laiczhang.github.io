@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>猴博士-概率论与数理统计复习笔记 | LaicZhang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <meta name="description" content="复习概率论，看的【猴博士爱讲课】4小时讲完《概率论与数理统计》&#x2F;《概率论》&#x2F;不挂科 ，因为视频不利于二次复习，所以做个详细点的听课笔记。 本地用Typora与vscode均正常，但是hexo不能很好的渲染数学公式，部署到博客上不太美观。 声明：此笔记仅作学习记录目的，本人并未通过本网站牟利，也请勿倒卖。  2022.07.02更新 修复landscape主题不支持数学公式的问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="猴博士-概率论与数理统计复习笔记">
+<meta property="og:url" content="https://zyha.cn/My-Notes-on-Probability-Theory-and-Mathematical-Statistics/index.html">
+<meta property="og:site_name" content="LaicZhang&#39;s Blog">
+<meta property="og:description" content="复习概率论，看的【猴博士爱讲课】4小时讲完《概率论与数理统计》&#x2F;《概率论》&#x2F;不挂科 ，因为视频不利于二次复习，所以做个详细点的听课笔记。 本地用Typora与vscode均正常，但是hexo不能很好的渲染数学公式，部署到博客上不太美观。 声明：此笔记仅作学习记录目的，本人并未通过本网站牟利，也请勿倒卖。  2022.07.02更新 修复landscape主题不支持数学公式的问题">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-13T06:21:01.000Z">
+<meta property="article:modified_time" content="2020-07-14T15:15:20.000Z">
+<meta property="article:author" content="laiczhang">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="概率论">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="LaicZhang's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+  <link rel="preconnect" href="https://https://lf6-cdn-tos.bytecdntp.com">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">LaicZhang&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">If you&#39;re prepared to adapt and learn, you can transform.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://m.zyha.cn/">Status</a>
+        
+          <a class="main-nav-link" href="/resume">Resume</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://zyha.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-猴博士-概率论与数理统计复习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <!-- <a href="/My-Notes-on-Probability-Theory-and-Mathematical-Statistics/" class="article-date">
+  <time class="dt-published" datetime="2019-11-13T06:21:01.000Z" itemprop="datePublished">2019-11-13</time>
+</a> -->
+    <a href="/My-Notes-on-Probability-Theory-and-Mathematical-Statistics/" class="article-date">
+  <time class="dt-published" datetime="2020-07-14T15:15:20.000Z" itemprop="datePublished">2020-07-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      猴博士-概率论与数理统计复习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>复习概率论，看的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av7566932">【猴博士爱讲课】4小时讲完《概率论与数理统计》&#x2F;《概率论》&#x2F;不挂科</a> ，因为视频不利于二次复习，所以做个详细点的听课笔记。</p>
+<p>本地用Typora与vscode均正常<del>，但是hexo不能很好的渲染数学公式，部署到博客上不太美观</del>。</p>
+<p>声明：此笔记仅作学习记录目的，本人并未通过本网站牟利，也请勿倒卖。</p>
+<ul>
+<li>2022.07.02更新 修复landscape主题不支持数学公式的问题</li>
+<li>2022.07.15更新 更新图片链接</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="一、事件的概率"><a href="#一、事件的概率" class="headerlink" title="一、事件的概率"></a>一、事件的概率</h1><h2 id="1-无放回类题目"><a href="#1-无放回类题目" class="headerlink" title="1.无放回类题目"></a>1.无放回类题目</h2><p>$$ P &#x3D; \frac{c ^{条件一取}<em>{条件一总} \times c ^{条件一取}</em>{条件一总} \times … \times c ^{条件一取}_{条件一总}}{c^取_总} $$</p>
+<p>$$C^m_n &#x3D; \frac{n!}{m! \cdot (n-m)}$$</p>
+<p>（1）盒子中有4红3白共7个球，不用眼瞅，7个球摸起来一样，现无放回的摸4次，那摸出两个红球两个白球的概率是多少？</p>
+<p>$$P&#x3D;\frac{C^2_4 \times C^2_3} {C^4_7}$$</p>
+<p>（2）隔壁山头共有11只母猴儿，其中有5只美猴儿、6只丑猴儿，在大黑天看起来是一样的。今儿月黑风高，我小弟冒死为我捞来5只，问天亮后，发现有2只美猴儿、3只丑猴儿的概率是多少？</p>
+<p>$$P&#x3D;\frac{C^2_5 \times C^3_6} {C^5_{11}}&#x3D;\frac{100}{231}$$</p>
+<h2 id="2-有放回类题目"><a href="#2-有放回类题目" class="headerlink" title="2.有放回类题目"></a>2.有放回类题目</h2><p>K种颜色的球，代号分别为$A_1、A_z…A_k$</p>
+<p>抽一次，出现的概率分别为$p_1、p_2…p_k$</p>
+<p>求摸出各种球的个数分别为$n_1、n_z…n_k$</p>
+<p>$$p &#x3D; \frac{(n_1 + n_2 + … + n_k)!}{n_1!n_2!…n_k!}P_1^{n_1}P_2^{n_2}…P_k^{n_k}$$</p>
+<p>（1）盒子中有5红6白共11个球，不用眼瞅，11个球摸起来是一样的，现有放回的摸5次，那摸出两个红球三个白球的概率是多少？</p>
+<p>解：</p>
+<p>2种颜色的球，代号分别为红、白</p>
+<p>抽一次，出现的概率分别为$\frac{5}{11}、\frac{6}{11}$</p>
+<p>求摸出各种球的个数分别为2、3</p>
+<p>$P &#x3D; \frac{(2+3)!}{2!3!}(\frac{5}{11})^2(\frac{6}{11})^3$</p>
+<p>（2）在小弟为我抓回的5只母猴儿中，有2美3丑，每天我都随机挑一只母猴儿来，为她抓虱子。<br>就这样，过去了101天，抓了101次虱子，问这101次中，为美猴儿服务50次、丑猴儿服务51次的概率是多少？</p>
+<p>解：</p>
+<p>2种母猴儿，代号分别为美、丑</p>
+<p>选一只，出现概率分别为$\frac{2}{5}、\frac{3}{5}$</p>
+<p>为2种服务次数分别为50、51</p>
+<p>$P &#x3D; \frac{(50+51)!}{50!51!} (\frac{2}{5})^{50} (\frac{3}{5})^{51}$</p>
+<h2 id="3-需要画图的题目"><a href="#3-需要画图的题目" class="headerlink" title="3.需要画图的题目"></a>3.需要画图的题目</h2><h3 id="（1）已知0"><a href="#（1）已知0" class="headerlink" title="（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？"></a>（1）已知0&lt;x&lt;1，0&lt;y-1，求x&gt;y的概率是多少？</h3><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/1-5.png?x-oss-process=style/note"></p>
+<p>①表现已知条件</p>
+<p>②表现待求概率的条件</p>
+<p>③找出①②重合部分</p>
+<p>④$P(x&gt;y)&#x3D;\frac{③}{①}$</p>
+<h3 id="（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？"><a href="#（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？" class="headerlink" title="（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？"></a>（2）已知小明会在0点之后1点之前到教室，小刚也是，问小明比小刚晚到的概率是多少？</h3><p>设小明到教室时间为x，小刚为y</p>
+<p>已知0&lt;x&lt;1，0&lt;y&lt;1，求x&gt;y的概率是多少？</p>
+<h3 id="（3）已知-1"><a href="#（3）已知-1" class="headerlink" title="（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？"></a>（3）已知-1&lt;x&lt;1，-1&lt;y&lt;1，求$x^2+y^2&lt;1$的概率是多少？</h3><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/1-6.png?x-oss-process=style/note"><br>解析：</p>
+<p>①表现已知条件</p>
+<p>②表现待求概率的条件</p>
+<p>③找出①②重合部分</p>
+<p>④$P(x^2 + y^2 &lt; 1) &#x3D; \frac { ③ }{ ① }$</p>
+<p>解：<br>$$S_园 &#x3D; π \times 1^2 &#x3D; π$$</p>
+<p>$$S_正 &#x3D; 4$$</p>
+<p>$$P(x^2+y^2&lt;1) &#x3D; \frac{π}{4}$$</p>
+<h2 id="4-条件概率"><a href="#4-条件概率" class="headerlink" title="4.条件概率"></a>4.条件概率</h2><p>$$P(B \mid A) &#x3D; \frac{ P(AB) }{ P(A) }$$</p>
+<p>事件A：掷一次骰子，朝上点数大于3</p>
+<p>事件B：掷一次骰子，朝上点数是6</p>
+<p>P（B|A）：掷一次骰子，已知朝上点数大于3，朝上点数是6的概率</p>
+<p>P（AB）：掷一次骰子，朝上点数是6的概率</p>
+<p>P（A）：掷一次骰子，朝上点数大于3的概率</p>
+<p>（1）小明概率论考试得80分以上的概率是80%，得60分以上的概率是85%，已知这次考试小明概率论没挂，那么小明得80分以上的概率是多少？</p>
+<p>事件A：小明得60分以上</p>
+<p>事件B：小明得80分以上</p>
+<p>P（B|A）：小明得60分以上时，小明得80分以上的概率，即小明得80分以上的概率</p>
+<p>$$P(B \mid A) &#x3D; \frac{ P(AB) }{ P(A) } &#x3D; \frac{ 0.8 }{ 0.85 }$$</p>
+<p>（2）某地区今年会发生洪水的概率是80%，今明两年至少有一年会发生洪水的概率是85%，假如今年没有发生洪水，那么明年发生洪水的概率是多少？</p>
+<p>事件A：今年没有发生洪水</p>
+<p>事件B：明年发生洪水</p>
+<p>P（BIA）：今年没有发生洪水的情况下，明年发洪水的概率</p>
+<p>$$P(B \mid A) &#x3D; \frac{ P(AB) }{ P(A) } &#x3D; \frac{ 0.05 }{ 0.2 }$$</p>
+<h2 id="5-全概率公式"><a href="#5-全概率公式" class="headerlink" title="5.全概率公式"></a>5.全概率公式</h2><p>A、B…等个体均可能发生某事，则</p>
+<p>$$P(发生某事)&#x3D;P(A出现)·P(A发生某事)+P(B出现)·P(B发生某事)…$$</p>
+<p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障的概率。</p>
+<p>$$P(有客车发生故障)&#x3D;P(高速客车出现)·P(高速客车故障)+P(普通客车出现)·P(普通客车故障)$$</p>
+<p>$P(有客车发生故障)&#x3D;0.2·0.002+0.8·0.01&#x3D;0.0084$</p>
+<p>(2)猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，那么抽中的员工通过考核的概率是多少？</p>
+<p>$$P（抽中的员工通过考核）&#x3D;P（猴博士出现）·P猴博士通过）+P（傻孢子出现）·P（傻犯子通过）$$</p>
+<p>$P（抽中的员工通过考核）&#x3D;50%·100%+50%·1%&#x3D;50.5%$</p>
+<p>（3）又到了交配的季节，主人过两天就拉你去隔壁村找母驴配种，隔壁村有三头母驴，分别是白驴、黑驴和棕驴。她仁得你宠幸的概率分别是50%、20%、30%。小白屁股大能生，她能怀上你孩子的概率是80%。小黑太瘦小，能怀孕的概率是20%。小棕中规中矩，能下息的概率是50%。那么你能喜当爹的概率是多少？</p>
+<p>A、0%  B、59%  C、47%</p>
+<h2 id="6-贝叶斯公式"><a href="#6-贝叶斯公式" class="headerlink" title="6.贝叶斯公式"></a>6.贝叶斯公式</h2><p>A、B…等个体均可能发生某事，则</p>
+<p>$$P(已知有个体发生某事时，是A发生的)&#x3D; \frac{ P(A出现) \cdot P(A发生某事) }{ P(发生某事) } $$</p>
+<p>（1）某高速公路上客车中有20%是高速客车，80%是普通客车，假设高速客车发生故障的概率是0.002，普通客车发生故障的概率是0.01。求该高速公路上有客车发生故障时，故障的是高速客车的概率。</p>
+<p>$$P（已知有客车发生故障，是高速客车发生的）&#x3D;\frac{0.2·0.002}{0.0084}&#x3D;\frac{1}{21}$$</p>
+<p>（2）猴博士公司有猴博士与傻孢子两个员工，老板要抽其中一个考核，抽中猴博士与傻孢子的概率都是50%，猴博士考核通过的概率是100%，傻孢子考核通过的概率是1%，求抽中的员工通过考核时，被抽中的员工是傻孢子的概率。</p>
+<p>$$P(已知有员工通过考核，是傻孢子通过的)&#x3D;\frac{0.5·0.1}{0.505}&#x3D;\frac{1}{101}$$</p>
+<h1 id="二、一维随机变量"><a href="#二、一维随机变量" class="headerlink" title="二、一维随机变量"></a>二、一维随机变量</h1><h2 id="1-已知-F-X-x-与-f-X-x-中的一项，求另一项"><a href="#1-已知-F-X-x-与-f-X-x-中的一项，求另一项" class="headerlink" title="1.已知$F_X(x)$与$f_X(x)$中的一项，求另一项"></a>1.已知$F_X(x)$与$f_X(x)$中的一项，求另一项</h2><p>$$f_X(x)&#x3D;F_X{‘}(x)$$</p>
+<p>$$F_X(x)&#x3D;\int ^x _{-\infty}f_X(x)dx$$</p>
+<p>例：设x的分布函数</p>
+<p>$$F_X(x)&#x3D;\begin{cases} 0,&amp;x&lt;1 \ lnx,&amp;1 \leqslant x &lt; e \ 1,&amp;x \geqslant e\end{cases}$$</p>
+<p>求X的密度函数$f_X(x)$</p>
+<p>解：</p>
+<p>$$f_X(x)&#x3D;F_X{‘}(x)&#x3D;\begin{cases}0’,&amp;x&lt;1 \ (lnx)’,&amp;1 \leqslant x &lt; e \ 1’,&amp;x \geqslant e\end{cases}&#x3D;\begin{cases}0,&amp;x&lt;1 \ \frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x \geqslant e\end{cases}&#x3D;\begin{cases}\frac{1}{x},&amp;1 \leqslant x &lt; e \ 0,&amp;x 其他\end{cases}$$</p>
+<p>例：设X的密度函数</p>
+<p>$$f_X(x)&#x3D;\begin{cases}-\frac{1}{2}x+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他\end{cases}$$<br>求X的分布函数$F_X(x)$</p>
+<p>解：</p>
+<p>$$F_X(x) &#x3D; \int^x _{- \infty} f_X(x) dx &#x3D; \begin{cases} 0,&amp;x&lt;0 \ - \frac{x ^2}{4} + x,&amp;0\leqslant x \leqslant 2 \ 1,&amp;x&gt;2  \end{cases} $$</p>
+<h2 id="2-已知-F-X-x-与-f-X-x-中的一种，求-P"><a href="#2-已知-F-X-x-与-f-X-x-中的一种，求-P" class="headerlink" title="2.已知$F_X(x)$与$f_X(x)$中的一种，求$P$"></a>2.已知$F_X(x)$与$f_X(x)$中的一种，求$P$</h2><p>$$P(a&lt;X&lt;b) &#x3D; F_X(b) - F_X(a) &#x3D; \int^b_a f_X(x)dx ,不管P(a&lt;X&lt;b)中的&lt;为&lt;或 \leqslant，后面的部分均不变$$</p>
+<p>例：设X的分布函数</p>
+<p>$$F_X(x) &#x3D; \begin{cases} 0,&amp;x&lt;1 \ lnx,&amp;1 \leqslant x &lt; e \ 1, &amp;e \leqslant x \end{cases} $$</p>
+<p>，求概率$P(x^2&lt;4)$.</p>
+<p>解：</p>
+<p>$P(x^2&lt;4) $</p>
+<p>$&#x3D; P(-2 &lt; x &lt; 2) $</p>
+<p>$&#x3D; F_X(2) - F_X(-2) $</p>
+<p>$&#x3D; \ln 2 - 0 &#x3D; \ln 2$</p>
+<p>例：设X的密度函数</p>
+<p>$$f_X(x) &#x3D; \begin{cases} - \frac{1}{2}x + 1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他  \end{cases}$$</p>
+<p>，求概率$P(-1&lt;x&lt;2)$</p>
+<p>解：</p>
+<p>$P(-1&lt;x&lt;2)$</p>
+<p>$&#x3D; \int ^2 _{-1} f_X(x)dx$</p>
+<p>$&#x3D; \int ^0 _{-1} f_X(x)dx + \int ^2 _{0} f_X(x)dx$</p>
+<p>$&#x3D; \int ^0_{-1} 0dx + \int ^2 _{0} (- \frac{1}{2} x + 1)dx$</p>
+<p>$&#x3D; 0+1 &#x3D; 1$</p>
+<h2 id="3-F-X-x-或-f-X-x-含有未知数，求未知数"><a href="#3-F-X-x-或-f-X-x-含有未知数，求未知数" class="headerlink" title="3.$F_X(x)$或$f_X(x)$含有未知数，求未知数"></a>3.$F_X(x)$或$f_X(x)$含有未知数，求未知数</h2><p>$$F_X(- \infty) &#x3D; 0$$</p>
+<p>$$F_X(+ \infty)  &#x3D; 1$$</p>
+<p>$$F_上(分段点) &#x3D; F_下(分段点)$$</p>
+<p>$$\int ^{+ \infty} _{- \infty} f_X(x)dx &#x3D; 1$$</p>
+<h3 id="例1：设X的分布函数-F-X-x-begin-cases-0-x-leqslant-0-a-be-lambda-x-x-0-end-cases-lambda-0-，求a和b"><a href="#例1：设X的分布函数-F-X-x-begin-cases-0-x-leqslant-0-a-be-lambda-x-x-0-end-cases-lambda-0-，求a和b" class="headerlink" title="例1：设X的分布函数$F_X(x) &#x3D; \begin{cases} 0,&amp;x \leqslant 0 \ a+be^{\lambda -x},&amp;x&gt;0  \end{cases} (\lambda &gt;0)$，求a和b"></a>例1：设X的分布函数$F_X(x) &#x3D; \begin{cases} 0,&amp;x \leqslant 0 \ a+be^{\lambda -x},&amp;x&gt;0  \end{cases} (\lambda &gt;0)$，求a和b</h3><p>解：</p>
+<p>由$F_X(+ \infty) &#x3D; 0$得，</p>
+<p>$a+be^{- \lambda \cdot (+\infty)}&#x3D;1$</p>
+<p>$a+be^{- \infty} &#x3D; 1$</p>
+<p>$a + \frac{b}{e^{+ \infty}} &#x3D; 1$</p>
+<p>$a&#x3D;1$</p>
+<p>由$F_上(分段点) &#x3D; F_下(分段点)$得，</p>
+<p>$F_上(0) &#x3D; F_下(0)$</p>
+<p>$0 &#x3D; a + be^{- \lambda \cdot (0)}$</p>
+<p>$0 &#x3D; a + be^0$</p>
+<p>$a+b&#x3D;0$</p>
+<p>$b&#x3D;-1$</p>
+<h3 id="例2：设X的密度函数-f-X-x-begin-cases-ax-1-0-leqslant-x-leqslant-2-0-其他-end-cases-，求常数a"><a href="#例2：设X的密度函数-f-X-x-begin-cases-ax-1-0-leqslant-x-leqslant-2-0-其他-end-cases-，求常数a" class="headerlink" title="例2：设X的密度函数$f_X(x) &#x3D; \begin{cases} ax+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他 \end{cases}$，求常数a"></a>例2：设X的密度函数$f_X(x) &#x3D; \begin{cases} ax+1,&amp;0 \leqslant x \leqslant 2 \ 0,&amp;其他 \end{cases}$，求常数a</h3><p>解：</p>
+<p>由$\int ^{+ \infty} _{- \infty} f_X(x)dx &#x3D; 1$得，</p>
+<p>$\int ^0 _{- \infty} f_X(x)dx + \int ^2 _0 f_X(x)dx + \int ^{+ \infty} _2 f_X(x)dx &#x3D; 1$</p>
+<p>$\int ^0 _{- \infty} 0dx + \int ^2 _0 (ax+1)dx + \int ^{+ \infty} _2 0dx &#x3D; 1$</p>
+<p>$0 + 2a+2 + 0 &#x3D; 1$</p>
+<p>解得：$a&#x3D;-\frac{1}{2}$</p>
+<h2 id="4-求分布律"><a href="#4-求分布律" class="headerlink" title="4.求分布律"></a>4.求分布律</h2><p>从编号为1、2、3、4、5、6的6只球中任取3只，用X表示从中取出的最大号码，求其分布律。</p>
+<p>解：X可能的取值为3，4，5，6</p>
+<p>$P(X&#x3D;3)&#x3D;\frac{1}{20}$</p>
+<p>$P(X&#x3D;4)&#x3D;\frac{3}{20}$</p>
+<p>$P(X&#x3D;5)&#x3D;\frac{3}{10}$</p>
+<p>$P(X&#x3D;6)&#x3D;\frac{1}{2}$</p>
+<p>分布列为：</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>$\frac{1}{20}$</td>
+<td>$\frac{3}{20}$</td>
+<td>$\frac{3}{10}$</td>
+<td>$\frac{1}{2}$</td>
+</tr>
+</tbody></table>
+<h2 id="5-已知含有未知数分布列，求未知数"><a href="#5-已知含有未知数分布列，求未知数" class="headerlink" title="5.已知含有未知数分布列，求未知数"></a>5.已知含有未知数分布列，求未知数</h2><p>已知分布列如下，求k的值。</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>$\frac{1}{20}$</td>
+<td>$\frac{3}{20}$</td>
+<td>$\frac{3}{10}$</td>
+<td>k</td>
+</tr>
+</tbody></table>
+<p>解：$\frac{1}{20}+\frac{3}{20}+\frac{3}{10}+k&#x3D;1$</p>
+<p>解得$k&#x3D;\frac{1}{2}$</p>
+<h1 id="三、一维随机变量的函数"><a href="#三、一维随机变量的函数" class="headerlink" title="三、一维随机变量的函数"></a>三、一维随机变量的函数</h1><h2 id="1-已知X分布列，求Y分布列"><a href="#1-已知X分布列，求Y分布列" class="headerlink" title="1.已知X分布列，求Y分布列"></a>1.已知X分布列，求Y分布列</h2><p>已知X的分布列为</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>-2</th>
+<th>0</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.4</td>
+<td>0.3</td>
+<td>0.3</td>
+</tr>
+</tbody></table>
+<p>，求$Y&#x3D;X^2+1$的分布列。</p>
+<p>解：</p>
+<p>①根据X的所有取值，计算Y的所有取值</p>
+<p>$Y &#x3D; (-2)^2 + 1 &#x3D; 5$</p>
+<p>$Y &#x3D; 0^2 + 1 &#x3D; 1$</p>
+<p>$Y &#x3D; 2^2 +1 &#x3D; 5$</p>
+<p>②将表格里X那一列对应换成Y</p>
+<table>
+<thead>
+<tr>
+<th>Y</th>
+<th>5</th>
+<th>1</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.4</td>
+<td>0.3</td>
+<td>0.3</td>
+</tr>
+</tbody></table>
+<p>整理可得，</p>
+<table>
+<thead>
+<tr>
+<th>Y</th>
+<th>1</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.3</td>
+<td>0.7</td>
+</tr>
+</tbody></table>
+<h2 id="2-已知-F-X-x-，求-F-Y-y"><a href="#2-已知-F-X-x-，求-F-Y-y" class="headerlink" title="2.已知$F_X(x)$，求$F_Y(y)$"></a>2.已知$F_X(x)$，求$F_Y(y)$</h2><p>设X的分布函数为</p>
+<p>$$F_X(x) &#x3D; \begin{cases} 0,&amp;x\leqslant 0 \ x^2,&amp;0&lt;x&lt;1 \ 1,&amp;1 \leqslant x \end{cases}$$</p>
+<p>，求Y&#x3D;2X的分布函数。</p>
+<p>解：</p>
+<p>①写出X&#x3D;？Y</p>
+<p>$Y&#x3D;2X$→$X &#x3D; \frac{y}{2}$</p>
+<p>②用？y替换$F_X(x)$中的x结果为$F_X(?y)$</p>
+<p>$F_X(x) &#x3D; \begin{cases} 0,&amp;x\leqslant 0 \ x^2,&amp;0&lt;x&lt;1 \ 1,&amp;1 \leqslant x \end{cases}$→$F_X(\frac{y}{2}) &#x3D; \begin{cases} 0,&amp;\frac{y}{2} \leqslant 0 \ \frac{y}{2}^2,&amp;0 &lt;\frac{y}{2}&lt;1 \1,&amp;1\leqslant \frac{y}{2} \end{cases}$</p>
+<p>③判断$?y$中是否有负号,若无，则$F_Y(y) &#x3D; F_X(?y)$,若有，则$F_Y(y)&#x3D;1-F_X(?y)$</p>
+<p>$F_Y(y) &#x3D; F_X(\frac{y}{2}) &#x3D; F_X(\frac{y}{2}) &#x3D; \begin{cases} 0,&amp;\frac{y}{2} \leqslant 0 \ \frac{y^2}{4},&amp;0 &lt;\frac{y}{2}&lt;1 \1,&amp;1\leqslant \frac{y}{2} \end{cases} $</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>设X的分布函数为</p>
+<p>$$F_X(x) &#x3D; \begin{cases} 0,&amp;x \leqslant 0 \ x^2,&amp;0&lt;x&lt;1 \ 1,&amp;1\leqslant x \end{cases}$$</p>
+<p>，求$Y&#x3D;-X$的分布函数。</p>
+<p>解：</p>
+<p>①写出X&#x3D;？Y</p>
+<p>$Y&#x3D;-X$ → $X&#x3D;-Y$</p>
+<p>②用？y替换$F_X(x)$中的$x$结果为$F_X(?y)$</p>
+<p>$F_X(x) &#x3D; \begin{cases} 0,&amp;x \leqslant 0 \ x^2,&amp;0&lt;x&lt;1 \ 1,&amp;1\leqslant x \end{cases}$→$F_X(-y) &#x3D; \begin{cases} 0,&amp;-y \leqslant 0 \ (-y)^2,&amp;0&lt;-y&lt;1 \ 1,&amp;1\leqslant -y \end{cases}$</p>
+<p>③判断$?y$中是否有负号,若无，则$F_Y(y) &#x3D; F_X(?y)$,若有，则$F_Y(y)&#x3D;1-F_X(?y)$</p>
+<p>$F_Y(y) &#x3D; 1-F_X(-y) &#x3D; \begin{cases} 1,&amp;-y \leqslant 0 \ 1-y^2,&amp;0&lt;-y&lt;1 \ 0,&amp;1 \leqslant -y \end{cases}$</p>
+<h2 id="3-已知-f-X-x-，求-f-Y-y"><a href="#3-已知-f-X-x-，求-f-Y-y" class="headerlink" title="3.已知$f_X(x)$，求$f_Y(y)$"></a>3.已知$f_X(x)$，求$f_Y(y)$</h2><p>设X的密度函数为$f_X(x)&#x3D;\begin{cases} 1,&amp;0&lt;x&lt;1 \ 0,&amp;其他 \end{cases}$，求$Y&#x3D;2X$的密度函数。</p>
+<p>解：</p>
+<p>①写出X&#x3D;？Y</p>
+<p>$Y&#x3D;2X$ →$X&#x3D;\frac{Y}{2}$</p>
+<p>②用$?y$替换$f_X(x)$中的$x$，结果为$f_X(?y)$</p>
+<p>$f_X(x)&#x3D;\begin{cases} 1,&amp;0&lt;x&lt;1 \ 0,&amp;其他 \end{cases}$→$f_X(\frac{y}{2})&#x3D;\begin{cases} 1,&amp;0&lt;\frac{y}{2}&lt;1 \ 0,&amp;其他 \end{cases}$</p>
+<p>③令$f_Y&#x3D;(?y)’ \cdot f_X(?y)$</p>
+<p>$f_Y&#x3D;(\frac{y}{2})’ \cdot f_X(\frac{y}{2})&#x3D;\frac{1}{2} \cdot f_X(\frac{y}{2})&#x3D;\begin{cases} \frac{1}{2},&amp;0&lt;y&lt;2 \ 0,&amp;其他  \end{cases}$</p>
+<p>④判断$?y$中是否有负号$\begin{cases}若无,&amp;则f_Y&#x3D;f_Y \ 若有,&amp;则f_Y(y)&#x3D;-f_Y \end{cases}$</p>
+<p>$f_Y(y)&#x3D;f_Y&#x3D;\begin{cases} \frac{1}{2},&amp;0&lt;y&lt;2 \ 0,&amp;其他  \end{cases}$</p>
+<h1 id="四、常见的五种分布"><a href="#四、常见的五种分布" class="headerlink" title="四、常见的五种分布"></a>四、常见的五种分布</h1><h2 id="1-符合均匀长度，求概率"><a href="#1-符合均匀长度，求概率" class="headerlink" title="1.符合均匀长度，求概率"></a>1.符合均匀长度，求概率</h2><p>$$P&#x3D;\frac{满足要求长度}{总长度}$$</p>
+<p>设X在[2,5]上服从均匀分布，求X的取值大于3 的概率。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/4-1.png?x-oss-process=style/note"></p>
+<p>总长度：3</p>
+<p>大于3的长度：2</p>
+<p>$P(X的取值大于3)&#x3D;\frac{2}{3}$</p>
+<h2 id="2-符合泊松分布，求概率"><a href="#2-符合泊松分布，求概率" class="headerlink" title="2.符合泊松分布，求概率"></a>2.符合泊松分布，求概率</h2><p>$$P(X&#x3D;x)&#x3D;\frac{\lambda^x}{x!}e^{-\lambda}$$</p>
+<p>某电话交换台每分钟接到的呼叫数服从参数为5的泊松分布，求在一分钟内呼叫次数为2次的概率。</p>
+<p>解：X表示一分钟接到呼叫的次数</p>
+<p>$P(X&#x3D;2)&#x3D;\frac{5^2}{2!}e^{-5} &#x3D; 0.0842$</p>
+<h2 id="3-符合二项分布，求概率"><a href="#3-符合二项分布，求概率" class="headerlink" title="3.符合二项分布，求概率"></a>3.符合二项分布，求概率</h2><p>$$P(X&#x3D;x)&#x3D;C^x_np^x(1-p)^{n-x}$$</p>
+<p>重复投5次硬币，求正面朝上次数为3次的概率。</p>
+<p>解：x&#x3D;3,n&#x3D;5，p(正面朝上)&#x3D;$\frac{1}{2}$</p>
+<p>$P(x&#x3D;3)&#x3D;C^3_5(\frac{1}{2}^3)(1-\frac{1}{2})^{5-3} &#x3D; \frac{5}{16}$</p>
+<p>在2红1绿三个球中有放回地摸3次，求摸到红球次数为2次的概率。</p>
+<p>解：x&#x3D;2,n&#x3D;3,P(摸到红球)&#x3D;$\frac{2}{3}$</p>
+<p>$P(x&#x3D;2)&#x3D;C^2_3(\frac{2}{3})^2(1-\frac{2}{3})^{3-2}&#x3D;\frac{4}{9}$</p>
+<h2 id="4-符合指数分布，求概率"><a href="#4-符合指数分布，求概率" class="headerlink" title="4.符合指数分布，求概率"></a>4.符合指数分布，求概率</h2><p>$$f(x)&#x3D;\begin{cases} \lambda e^{-\lambda x},&amp;x&gt;0 \ 0,&amp;x\leqslant 0 \end{cases}$$</p>
+<p>$$\begin{cases} P(a_1 &lt; x &lt; a_2) &#x3D;\int^{a_2}_{a_1} f(x)dx \ P(X&lt;a)&#x3D;\int^a_{-\infty} f(x)dx \P(x&gt;a)&#x3D;\int^{+ \infty}_a f(x)dx \end{cases}$$</p>
+<p>某种电子元件的使用寿命x（单位：小时）服从$\lambda &#x3D; \frac{1}{2000}$的指数分布。<br>求：（1）一个元件能正常使用1000小时以上的概率；<br>（2）一个元件能正常使用1000小时到2000小时之间的概率。</p>
+<p>解：X的密度函数为$f(x)&#x3D;\begin{cases} \frac{1}{2000}e^{-\frac{x}{2000}},&amp;x&gt;0 \0,&amp;x \leqslant 0 \end{cases}$</p>
+<p>(1)$P(X&gt;1000)&#x3D;\int^{+ \infty}<em>{1000}f(x)dx&#x3D;\int^{+ \infty}</em>{1000} \frac{1}{2000}e^{-\frac{x}{2000}}dx&#x3D;e^{-0.5}$</p>
+<p>(2)$P(1000&lt;X&lt;2000)&#x3D;\int^{2000}<em>{1000} f(x)dx&#x3D;\int^{2000}</em>{1000} \frac{1}{2000}e^{\frac{x}{2000}} dx&#x3D;-e^{-1}+e^{0.5}$</p>
+<h2 id="5-符合正态分布，求概率"><a href="#5-符合正态分布，求概率" class="headerlink" title="5.符合正态分布，求概率"></a>5.符合正态分布，求概率</h2><p>$$\begin{cases} P(a&lt;X&lt;b)&#x3D;\phi(\frac{b-\mu}{\sigma})-\phi(\frac{a-\mu}{\sigma}) \ P(X&lt;a) &#x3D; \phi(\frac{a-\mu}{\sigma}) \ P(X&gt;b) &#x3D; 1-\phi(\frac{b-\mu}{\sigma}) \end{cases}$$</p>
+<p>设随机变量X服从正态分布N（1.5，4），求：（1）P（1.5&lt;x&lt;3.5）；（2）P（X&lt;3.5）。<br>[其中：$\phi（0）&#x3D;0.5，\phi（0.75）&#x3D;0.7734，\phi（1）&#x3D;0.8413，\phi（2.25）&#x3D;0.9878$]</p>
+<p>解：$\mu&#x3D;1.5,\sigma&#x3D;\sqrt{4}&#x3D;2$</p>
+<p>(1)$P(1.5&lt;X&lt;3.5)&#x3D;\phi(\frac{3.5-1.5}{2}-\phi \frac{1.5-1.5}{2})&#x3D;\phi(1)-\phi(0)&#x3D;0.3413$</p>
+<p>(2)$P(X&lt;3.5)&#x3D;\phi(\frac{3.5-1.5}{2})&#x3D;\phi(1)&#x3D;0.8413$</p>
+<h2 id="6-正态分布图像"><a href="#6-正态分布图像" class="headerlink" title="6.正态分布图像"></a>6.正态分布图像</h2><p>符号：$N(\mu,\sigma ^2)$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/4-2.png?x-oss-process=style/note"></p>
+<p>①图像关于u对称</p>
+<p>②面积表示概率，总面积为1</p>
+<p>③o越小，图像越陡</p>
+<h1 id="五、离散型二维变量与连续性二维变量（上）"><a href="#五、离散型二维变量与连续性二维变量（上）" class="headerlink" title="五、离散型二维变量与连续性二维变量（上）"></a>五、离散型二维变量与连续性二维变量（上）</h1><h2 id="1-已知二维离散型分布律，求？？？"><a href="#1-已知二维离散型分布律，求？？？" class="headerlink" title="1.已知二维离散型分布律，求？？？"></a>1.已知二维离散型分布律，求？？？</h2><p>已知二维随机变量X，Y的分布律如下表</p>
+<table>
+<thead>
+<tr>
+<th>X\Y</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.1</td>
+</tr>
+</tbody></table>
+<p>求：</p>
+<p>（1）P（X&#x3D;0），P（Y&#x3D;2）</p>
+<p>（2）P（X&lt;1，Y≤2）</p>
+<p>（3）P（X+Y&#x3D;2）</p>
+<p>（4）X，Y的分布律</p>
+<p>（5）Z&#x3D;X+Y的分布律</p>
+<p>解：</p>
+<p>(1)P（X&#x3D;0）&#x3D;0.2+0.1+0.1&#x3D;0.4</p>
+<p>P（Y&#x3D;2）&#x3D;0.1+0.2&#x3D;0.3</p>
+<p>(2)P（X&lt;1，Y≤2）&#x3D;0.2+0.1&#x3D;0.3</p>
+<p>(3)P（X+Y&#x3D;2）&#x3D;0.1+0.3&#x3D;0.4</p>
+<p>(4)</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.4</td>
+<td>0.6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Y</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.5</td>
+<td>0.3</td>
+<td>0.2</td>
+</tr>
+</tbody></table>
+<p>(5)</p>
+<p>P(Z&#x3D;1)&#x3D;P(X&#x3D;0,Y&#x3D;1)&#x3D;0.2</p>
+<p>P(Z&#x3D;2)&#x3D;P(X&#x3D;0,Y&#x3D;2)+P(X&#x3D;1,Y&#x3D;1)&#x3D;0.1+0.3&#x3D;0.4</p>
+<p>P(Z&#x3D;3)&#x3D;P(X&#x3D;0,Y&#x3D;3)+P(X&#x3D;1,Y&#x3D;2)&#x3D;0.1+0.2&#x3D;0.3</p>
+<p>P(Z&#x3D;4)&#x3D;P(X&#x3D;1,Y&#x3D;3)&#x3D;0.1</p>
+<table>
+<thead>
+<tr>
+<th>Z</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.2</td>
+<td>0.4</td>
+<td>0.3</td>
+<td>0.1</td>
+</tr>
+</tbody></table>
+<h2 id="2-已知二维离散型分布律，判断独立性"><a href="#2-已知二维离散型分布律，判断独立性" class="headerlink" title="2.已知二维离散型分布律，判断独立性"></a>2.已知二维离散型分布律，判断独立性</h2><p>如果任意$x_i$，$y_i$均满足P（X&#x3D;$x_i$，Y&#x3D;$y_i$）&#x3D;$P（X&#x3D;x_i）\cdot P（Y&#x3D;y_i）$<br>那么X、Y相互独立，否则X、Y不相互独立</p>
+<h3 id="1-已知二维随机变量X、Y的分布律如下-请判断X、Y的独立性"><a href="#1-已知二维随机变量X、Y的分布律如下-请判断X、Y的独立性" class="headerlink" title="1.已知二维随机变量X、Y的分布律如下,请判断X、Y的独立性"></a>1.已知二维随机变量X、Y的分布律如下,请判断X、Y的独立性</h3><table>
+<thead>
+<tr>
+<th>X\Y</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0.2</td>
+<td>0.1</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.3</td>
+<td>0.2</td>
+<td>0.1</td>
+</tr>
+</tbody></table>
+<p>解：</p>
+<p>P(X&#x3D;0,Y&#x3D;3)&#x3D;0.1</p>
+<p>P(X&#x3D;0)·P(Y&#x3D;3)&#x3D;0.4*0.2&#x3D;0.08</p>
+<p> P(X&#x3D;0,Y&#x3D;3) $\neq$ P(X&#x3D;0)·P(Y&#x3D;3)</p>
+<p>$\therefore$X、Y不相互独立</p>
+<h3 id="2-已知二维随机变量X、Y的分布律如下-X、Y是相互独立的，求a、β的值"><a href="#2-已知二维随机变量X、Y的分布律如下-X、Y是相互独立的，求a、β的值" class="headerlink" title="2.已知二维随机变量X、Y的分布律如下,X、Y是相互独立的，求a、β的值"></a>2.已知二维随机变量X、Y的分布律如下,X、Y是相互独立的，求a、β的值</h3><table>
+<thead>
+<tr>
+<th>X\Y</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>$\frac{1}{6}$</td>
+<td>$\frac{1}{9}$</td>
+<td>$\frac{1}{18}$</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$\frac{1}{3}$</td>
+<td>$\alpha$</td>
+<td>$\beta$</td>
+</tr>
+</tbody></table>
+<p>P(X&#x3D;1,Y&#x3D;2)&#x3D;P(X&#x3D;1)-P(Y&#x3D;2)</p>
+<p>$\frac{1}{9}&#x3D;\frac{1}{3} \times (\frac{1}{9}+\alpha) \to \alpha&#x3D;\frac{2}{9}$</p>
+<p>P(X&#x3D;1,Y&#x3D;3)&#x3D;P(X&#x3D;1)·P(Y&#x3D;3)</p>
+<p>$\frac{1}{18}&#x3D;\frac{1}{3} \times (\frac{1}{18} + \beta) \to \beta&#x3D;\frac{1}{9}$</p>
+<p>$\frac{1}{6}+\frac{1}{9}+\frac{1}{18}+\frac{1}{3}+\frac{2}{9}+\frac{1}{9}&#x3D;1$</p>
+<h2 id="3-已知-F-x-y-，求-f-x-y"><a href="#3-已知-F-x-y-，求-f-x-y" class="headerlink" title="3.已知$F(x,y)$，求$f(x,y)$"></a>3.已知$F(x,y)$，求$f(x,y)$</h2><p>$$f(x,y)&#x3D;\frac{\partial ^2 F(x,y)}{\partial x \partial y}$$</p>
+<p>已知二维随机变量的联合分布函数</p>
+<p>$F(x,y)&#x3D;\begin{cases} \frac{1}{2} x^2y+\frac{1}{2}xy^2 &amp;0&lt;x&lt;1,0&lt;y&lt;1 \ \frac{1}{2}y+\frac{1}{2}y^2 &amp;1\leqslant x,0&lt;y&lt;1 \ \frac{1}{2} x^2 +\frac{1}{2}x &amp;0&lt;x&lt;1,1 \leqslant y \1 &amp;1\leqslant x,1\leqslant y \0 &amp;其他 \end{cases}$，求f(x,y)</p>
+<p>解：</p>
+<p>①当$0&lt;x&lt;1,0&lt;y&lt;1$时，$f(x,y)&#x3D;\frac{\partial ^2(\frac{1}{2}x^2y+\frac{1}{2}xy^2)}{\partial x \partial y}&#x3D;\frac{\partial[\frac{\partial ^2(\frac{1}{2}x^2y+\frac{1}{2}xy^2)} {\partial x }]}{\partial y }&#x3D;\frac{\partial(xy+\frac{1}{2}y^2)}{\partial y }&#x3D;x+y$</p>
+<p>②当$1\leqslant x,0&lt;y&lt;1$时，</p>
+<p>$f(x,y)&#x3D;\frac{\partial ^2(\frac{1}{2}y+\frac{1}{2}y^2)}{\partial x \partial y}&#x3D;\frac{\partial[\frac{\partial ^2(\frac{1}{2}y+\frac{1}{2}y^2)} {\partial x }]}{\partial y }&#x3D;\frac{\partial 0}{\partial y}&#x3D;0$</p>
+<p>③当$0&lt;x&lt;1,y&gt;1$时，</p>
+<p>$f(x,y)&#x3D;\frac{\partial ^2(\frac{1}{2}x^2+\frac{1}{2}x)}{\partial x \partial y}&#x3D;\frac{\partial[\frac{\partial ^2(\frac{1}{2}x^2+\frac{1}{2}x)} {\partial x }]}{\partial y }&#x3D;\frac{\partial (x+\frac{1}{2})}{\partial y }&#x3D;0$</p>
+<p>④当$1\leqslant x,1\leqslant y$时，</p>
+<p>$f(x,y)&#x3D;\frac{a^2(1)}{\partial x \partial y}&#x3D;\frac{\partial[\frac{\partial(1)}{\partial x}]}{\partial y}&#x3D;\frac{\partial (0)}{\partial y}&#x3D;0$</p>
+<p>⑤当x、y属于其他情况时，</p>
+<p>$f(x,y)&#x3D;\frac{\partial ^2 (0)}{\partial x \partial y}&#x3D;\frac{\partial[\frac{\partial (0)}{\partial x}]}{\partial y}&#x3D;\frac{\partial(0)}{\partial y}&#x3D;0$</p>
+<p>综上所述，</p>
+<p>$f(x,y)&#x3D;\begin{cases} x+y &amp;0&lt;x&lt;1,0&lt;y&lt;1 \ 0 &amp;其他 \end{cases}$</p>
+<h2 id="4-已知-f-x-y-，求-F-x-y"><a href="#4-已知-f-x-y-，求-F-x-y" class="headerlink" title="4.已知$f(x,y)$，求$F(x,y)$"></a>4.已知$f(x,y)$，求$F(x,y)$</h2><p>(1)已知二维随机变量的联合密度函数</p>
+<p>$f(x,y)&#x3D;\begin{cases} \frac{21}{4}x^2y,&amp;x^2 \leqslant y \leqslant 1 \ 0,&amp;其他 \end{cases}$，求$F(x,y)$</p>
+<p>解：</p>
+<p>第一步：找出f（x,y）不等于零时x的范围和y的范围</p>
+<p>x的范围：$x^2 \leqslant y \to -\sqrt{y} \leqslant x \leqslant \sqrt{y}$</p>
+<p>y的范围：$x^2 \leqslant y \leqslant 1$</p>
+<p>第二步：计算$\int ^x <em>{g_1(y)}du \int ^y</em>{h_1(u) }f(u,v) dv$，结果记为①</p>
+<p>$g_1(y)$为x的左边界</p>
+<p>$h_1(u)$为将y的下边界中的x替换为u后的式子</p>
+<p>$f(u,v)$为将$f(x,y)$中的x替换为u、y替换为v后的式子</p>
+<p>$g_1(y) &#x3D; - \sqrt{y}$，$h_1(u) &#x3D; u^2$，$f(u,v) &#x3D; \frac{21}{4} u^2 v$</p>
+<p>$① &#x3D; \int ^x <em>{- \sqrt{y}}du \int ^y</em>{u^2} \frac{21}{4} u^2 v dv &#x3D;\frac{7}{8}x^3y^2 -\frac{3}{8}x^7 +\frac{1}{2}y^{\frac{7}{2}}$</p>
+<p>第三步：将$x&#x3D;g_2(y)$、$y&#x3D;h_2(x)$分别代入①中，结果分别记为②、③</p>
+<p>$g_2(y)$为x的右边界</p>
+<p>$h_2(x)$为y的上边界</p>
+<p>$g_2(y) &#x3D; \sqrt{y}$</p>
+<p>将$x &#x3D; \sqrt{y}$代入①中，则</p>
+<p>$② &#x3D; \frac{7}{8}(\sqrt{y})^3y^2 - \frac{3}{8}(\sqrt{y})^7 + \frac{1}{2}y^{\frac{7}{2}}$</p>
+<p>$②&#x3D;y^{\frac{7}{2}}$</p>
+<p>$h_2(x)&#x3D;1$</p>
+<p>将$y&#x3D;1$代入①中，则</p>
+<p>$③ &#x3D; \frac{7}{8}x^3 \cdot 1^2 - \frac{3}{8}x^7 + \frac{1}{2} \cdot 1^{\frac{7}{2}}$</p>
+<p>$③ &#x3D; \frac{7}{8}x^3  - \frac{3}{8}x^7 + \frac{1}{2} $</p>
+<p>第四步：画出f（x,y）不等于零的区域，记为区域A</p>
+<p>A右侧的区域记为B</p>
+<p>A上侧的区域记为C</p>
+<p>A右上方的区域记为D</p>
+<p>则$F(x,y)&#x3D;\begin{cases}①&amp;A区域 \ ② &amp;B区域 \③&amp;C区域 \ 1 &amp; D区域 \0 &amp; 其他 \end{cases}$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/5-1.png?x-oss-process=style/note"></p>
+<p>$F(x,y)&#x3D;\begin{cases} \frac{7}{8}x^3y^2 -\frac{3}{8}x^7 +\frac{1}{2}y^{\frac{7}{2}}&amp;x^2 \leqslant y \leqslant 1  \ y^{\frac{7}{2}} &amp;x&gt; \sqrt{y} ,0 \leqslant y \leqslant 1 \ \frac{7}{8}x^3 -\frac{3}{8}x^7 +\frac{1}{2}&amp;-1 \leqslant x \leqslant 1,y&gt;1 \ 1 &amp; x&gt;1,y&gt;1 \0 &amp; 其他 \end{cases}$</p>
+<p>(2)已知二维随机变量的联合密度函数</p>
+<p>$f(x,y) &#x3D; \begin{cases} x+y &amp;0&lt;x&lt;1,0&lt;y&lt;1 \0&amp;其他 \end{cases}$，求$F(x,y)$</p>
+<p>x的范围：0&lt;x&lt;1，y的范围：0&lt;y&lt;1</p>
+<p>$ g_1(y)&#x3D;0，h_1(u)&#x3D;0，f(u,v)&#x3D;u+v$</p>
+<p>$①&#x3D;\int ^x <em>{0}du \int ^y</em>{0 }(u+v) dv&#x3D;\frac{1}{2}x^2y+\frac{1}{2}xy^2$</p>
+<p>$g_2(y)&#x3D;1$</p>
+<p>将$x&#x3D;1$代入①中，则</p>
+<p>$②&#x3D;\frac{1}{2}  \cdot 1^2 \cdot y + \frac{1}{2} \cdot 1 \cdot y^2$</p>
+<p>$②&#x3D;\frac{1}{2} y + \frac{1}{2} y^2$</p>
+<p>$h_2(x)&#x3D;1$</p>
+<p>将$y&#x3D;1$代入①中，则</p>
+<p>$③&#x3D;\frac{1}{2} x^2 \cdot 1 + \frac{1}{2} x \cdot 1^2$</p>
+<p>$③&#x3D;\frac{1}{2} x^2+ \frac{1}{2} x $</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/5-2.png?x-oss-process=style/note"></p>
+<p>$F(x,y)&#x3D;\begin{cases} \frac{1}{2}x^2y+\frac{1}{2}xy^2&amp;0&lt;x&lt;1,0&lt;y&lt;1  \ \frac{1}{2} y + \frac{1}{2} y^2 &amp;1 \leqslant x,0&lt;y&lt;1 \ \frac{1}{2} x^2+ \frac{1}{2} x&amp;0&lt;x&lt;1,1 \leqslant y \ 1 &amp; 1 \leqslant x,1 \leqslant y \0 &amp; 其他 \end{cases}$</p>
+<h2 id="5-已知-F-x-y-求P"><a href="#5-已知-F-x-y-求P" class="headerlink" title="5.已知$F(x,y)求P$"></a>5.已知$F(x,y)求P$</h2><p>$$P(X \leqslant x_0,Y \leqslant y_0)&#x3D;F(x_0,y_0)$$</p>
+<p>已知二维随机变量的联合分布函数$F(x,y) &#x3D;\begin{cases} \frac{1}{2}x^2y+\frac{1}{2}xy^2 &amp;0&lt;x&lt;1,0&lt;y&lt;1 \\frac{1}{2}y+\frac{1}{2}y^2 &amp;1 \leqslant x,0&lt;y&lt;1 \\frac{1}{2}x^2+\frac{1}{2}x &amp;0&lt;x&lt;1,1 \leqslant y \1 &amp;  1 \leqslant x,1 \leqslant y \0&amp;其他\end{cases}$</p>
+<p>(1)求$P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})$</p>
+<p>解：</p>
+<p>$F(\frac{1}{2},\frac{1}{2})&#x3D;\frac{1}{2} \times (\frac{1}{2})^2 \times \frac{1}{2} + \frac{1}{2} \times \frac{1}{2} \times (\frac{1}{2})^2&#x3D;\frac{1}{8}$</p>
+<p>$\therefore P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})&#x3D;\frac{1}{8}$</p>
+<p>(2)求$P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})$</p>
+<p>$\because P(X \leqslant \frac{1}{2})&#x3D;P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})+P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})$</p>
+<p>$\therefore P(X \leqslant \frac{1}{2},Y &gt;\frac{1}{2})&#x3D;P(X \leqslant \frac{1}{2}) - P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})&#x3D;P(X \leqslant \frac{1}{2},Y \leqslant +\infty) - P(X \leqslant \frac{1}{2},Y \leqslant \frac{1}{2})&#x3D;F(\frac{1}{2},\infty)-F(\frac{1}{2},\frac{1}{2})&#x3D;\frac{3}{8}-\frac{1}{8}&#x3D;\frac{1}{4}$</p>
+<h2 id="6-已知-f-x-y-求P"><a href="#6-已知-f-x-y-求P" class="headerlink" title="6.已知$f(x,y)$求P"></a>6.已知$f(x,y)$求P</h2><p>已知二维随机变量的联合密度函数$f(x,y)&#x3D;\begin{cases}6xy&amp;0 \leqslant x \leqslant 1,x^2 \leqslant y \leqslant 1 \   0,其他 \end{cases}$，求$P(X \ge Y)$</p>
+<p>第一步：找出f（xy）不等于零时x的范围和y的范围</p>
+<p>x的范围：0≤x≤1</p>
+<p>y的范围：$x^2 \leqslant y \leqslant 1$</p>
+<p>第二步：找出要求概率的范围，添到上一步的范围里（要保证至少有一个未知数的上下限都是纯数字）</p>
+<p>$P（X \ge Y）→P（Y \leqslant X）$</p>
+<p>x的范围：0≤x≤1,$(0 \to a,1 \to b$</p>
+<p>y的范图：$\begin{cases} x^2 \le y \le 1\\ y \le x \end{cases} \to x^2 \le y \le x,(x^2 \to c,x \to d)$</p>
+<p>第三步：如果x的上下限都是纯数字则$P&#x3D;\int ^b _a dx \int ^d _c f(x,y)dy$，如果y的上下限都是纯数字则$P&#x3D;\int ^d _c dy \int ^b _a f(x,y)dx$</p>
+<p>$P(X \ge Y) &#x3D; \int ^1_0 dx int ^x _{x^2} 6xy dy &#x3D;\frac{1}{4}$</p>
+<h2 id="7-求F-x-y-或f-x-y-中含有的未知数"><a href="#7-求F-x-y-或f-x-y-中含有的未知数" class="headerlink" title="7.求F(x,y)或f(x,y)中含有的未知数"></a>7.求F(x,y)或f(x,y)中含有的未知数</h2><p>$$F(+\infty,-\infty)&#x3D;1$$</p>
+<p>$$F(-\infty,-\infty)&#x3D;0$$</p>
+<p>$$F(x,-\infty)&#x3D;0$$</p>
+<p>$$F(-\infty,y)&#x3D;0$$</p>
+<p>$$\int ^{+\infty} _{-\infty} \int ^{+\infty} _{-\infty} f(x,y)dxdy&#x3D;1$$</p>
+<p>(1)设二维随机变量的联合分布函数为F(x,y)&#x3D;a(b+arctanx)(c+arctan2y),求a、b、c</p>
+<p>解：</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/5-3.png?x-oss-process=style/note"></p>
+<p>解得：$a&#x3D;\frac{1}{\pi ^2},b&#x3D;\frac{\pi}{2},c&#x3D;\frac{\pi}{2}$</p>
+<p>(2)设二维随机变量的联合密度函数$f(x,y)&#x3D;\begin{cases}kxy &amp;0 \le x \le 1,x^2 \le y \le 1 \ 0&amp;其他 \end{cases}$，求k</p>
+<p>解：由$\int ^{+\infty} _{-\infty} \int ^{+\infty} _{-\infty} f(x,y)dxdy&#x3D;1$得：</p>
+<p>$\int ^1_0 \int ^1 _{x^2} kxydxdy&#x3D;1$</p>
+<p>解得：k&#x3D;6</p>
+<h2 id="8-求均匀分布的f-x-y-与P"><a href="#8-求均匀分布的f-x-y-与P" class="headerlink" title="8.求均匀分布的f(x,y)与P"></a>8.求均匀分布的f(x,y)与P</h2><p>$$f(x,y)&#x3D;\begin{cases}\frac{1}{A} &amp;当(x,y)\in D(A为区域D的面积) \ 0 &amp;其他 \end{cases}$$</p>
+<p>设二维随机变量（x，y）在区域$D&#x3D;{（x，y）lx≥0，y≥0，x+y≤1}​$上服从均匀分布求密度函数$f(x,y),P(X+Y \le  \frac{1}{2})​$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/5-4.png?x-oss-process=style/note"></p>
+<p>$A&#x3D;\frac{1}{2} \times 1 \times 1&#x3D; \frac{1}{2}$</p>
+<p>$f(x,y)&#x3D;\begin{cases}\frac{1}{\frac{1}{2}} &amp;当(x,y)\in D \ 0 &amp;其他 \end{cases} \to \begin{cases}2&amp;当(x,y)\in D \ 0 &amp;其他 \end{cases}$</p>
+<p>$A_1&#x3D;\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} &#x3D; \frac{1}{8}$</p>
+<p>$P(X+Y \le  \frac{1}{2})&#x3D;\frac{A_1}{A}&#x3D;\frac{\frac{1}{8}}{\frac{1}{2}}&#x3D;\frac{1}{4}$</p>
+<h1 id="六、连续型二维变量（下）"><a href="#六、连续型二维变量（下）" class="headerlink" title="六、连续型二维变量（下）"></a>六、连续型二维变量（下）</h1><p>$$F_X(x)&#x3D;F(x, + \infty)$$</p>
+<p>$$F_Y(y)&#x3D;F(+ \infty,y)$$</p>
+<h2 id="1-求边缘分布函数"><a href="#1-求边缘分布函数" class="headerlink" title="1.求边缘分布函数"></a>1.求边缘分布函数</h2><p>设随机变量（X，Y）的分布函数为$F(x,y)&#x3D;\frac{1}{\pi ^2}(\frac{\pi}{2} + \arctan x)(\frac{\pi}{2} + \arctan 2y)$，求边缘分布函数$F_X(x),F_Y(y)$</p>
+<p>$F_X(x)&#x3D;F(x, + \infty)&#x3D;\frac{1}{\pi ^2}(\frac{\pi}{2} + \arctan x)(\frac{\pi}{2} + \arctan (+ \infty))&#x3D;\frac{1}{2}+\frac{1}{\pi} \arctan x$</p>
+<p>$F_Y(y)&#x3D;F(+ \infty,y)&#x3D;\frac{1}{\pi ^2}(\frac{\pi}{2} + \arctan (+ \infty))(\frac{\pi}{2} + \arctan 2y)$</p>
+<h2 id="2-求边缘密度函数"><a href="#2-求边缘密度函数" class="headerlink" title="2.求边缘密度函数"></a>2.求边缘密度函数</h2><p>设二维随机变量的联合密度函数为$f(x,y)&#x3D;\begin{cases}6xy &amp;0\le x \le 1,x^2 \le y \le 1 \ 0 &amp;其他 \end{cases} $</p>
+<p>解：</p>
+<p>第一步：将f（x，y）非零的区域画在坐标系上</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-1.png?x-oss-process=style/note"></p>
+<p>第二步：表示出左边界$x&#x3D;g_1（y）$、右边界$x&#x3D;g_2（y）$、上边界$y&#x3D;h_1（x）$、下边界$y&#x3D;h_2（x）$</p>
+<p>$x&#x3D;0$</p>
+<p>$x&#x3D;\sqrt{y}$</p>
+<p>$y&#x3D;1$</p>
+<p>$y&#x3D;x^2$</p>
+<p>第三步：$f_X(x) &#x3D; \int ^{h_1(x)} _{h_2(x)} f(x,y) dy,f_Y(y) &#x3D; \int ^{g_2(y)} _{g_1(y)} f(x,y) dx$</p>
+<p>$f_X(x) &#x3D; \int ^1 _{x^2} 6xy dy &#x3D; 3x-3x^5$</p>
+<p>$f_Y(y) &#x3D; \int ^{\sqrt{y}} _{0} 6xy dx &#x3D; 3y^2$</p>
+<p>$\therefore $</p>
+<p>$f_X(x)&#x3D;\begin{cases} 3x-3x^5 &amp;0\le x \le 1 \ 0 &amp;其他 \end{cases} $</p>
+<p>$f_Y(y)&#x3D;\begin{cases}3y^2 &amp;0\le y \le 1  \ 0 &amp;其他 \end{cases} $</p>
+<h2 id="3-判断连续型二维变量的独立性"><a href="#3-判断连续型二维变量的独立性" class="headerlink" title="3.判断连续型二维变量的独立性"></a>3.判断连续型二维变量的独立性</h2><p>$$F(x,y)&#x3D;F_X(x) \cdot F_Y(y)（X、Y相互独立）$$</p>
+<p>$$F(x,y) \neq &#x3D;F_X(x) \cdot F_Y(y)（X、Y相互不独立）$$</p>
+<p>$$f(x,y)&#x3D;f_X(x) \cdot f_Y(y)（X、Y相互独立）$$</p>
+<p>$$f(x,y) \neq &#x3D;f_X(x) \cdot f_Y(y)（X、Y相互不独立）$$</p>
+<p>设二维随机变量的联合密度函数为$f(x,y)&#x3D;\begin{cases}6xy &amp;0\le x \le 1,x^2 \le y \le 1 \ 0 &amp;其他 \end{cases} $，判断$f(x,y)$的独立性</p>
+<p>$f_X(x)&#x3D;\begin{cases} 3x-3x^5 &amp;0\le x \le 1 \ 0 &amp;其他 \end{cases} $</p>
+<p>$f_Y(y)&#x3D;\begin{cases}3y^2 &amp;0\le y \le 1  \ 0 &amp;其他 \end{cases} $</p>
+<p>$f_X(x) \cdot f_Y(y) &#x3D; (3x-3x^5) \cdot 3y^2&#x3D;9xy^2-9x^5y^2 \neq f(x,y)$</p>
+<p>$\therefore X、Y相互不独立$</p>
+<h2 id="4-已知-f-x-y-Z-X-Y-求-f-Z-z"><a href="#4-已知-f-x-y-Z-X-Y-求-f-Z-z" class="headerlink" title="4.已知$f(x,y),Z&#x3D;X+Y$,求$f_Z(z)$"></a>4.已知$f(x,y),Z&#x3D;X+Y$,求$f_Z(z)$</h2><p>$$f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} f(x,z-x)dx$$</p>
+<p>设二维随机变量（X，Y）的密度函数为$f(x,y) &#x3D; \begin{cases} 2-x-y &amp;0&lt; x&lt;1,0&lt; y&lt;1 \ 0 &amp;其他 \end{cases} $，求Z&#x3D;X+Y的密度函数$f_Z(z)$</p>
+<p>解：</p>
+<p>$f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} f(x,z-x)dx$</p>
+<p>$f(x,y) &#x3D; \begin{cases} 2-z &amp;0&lt; x&lt;1,z-1&lt; x&lt;z \ 0 &amp;其他 \end{cases}  $</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-2.png?x-oss-process=style/note"></p>
+<p>当$z \le 0$时，$f(x,z-x)&#x3D;0$</p>
+<p>$f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} f(x,z-x)dx &#x3D; f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} 0dx &#x3D; 0$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-3.png?x-oss-process=style/note"></p>
+<p>当$0&lt; z \le 1$时，$f(x,x-z)&#x3D;\begin{cases} 2-z &amp;0&lt;x&lt;z \ 0 &amp;其他 \end{cases} $</p>
+<p>$f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} f(x,z-x)dx &#x3D; \int ^z _0 (2-z)dx &#x3D; z(2-z)$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-4.png?x-oss-process=style/note"></p>
+<p>当$1 \le z \le 2$时，$f(x,z-x) &#x3D; \begin{cases} 2-z &amp; z-1&lt; x &lt;1 \ 0 &amp;其他 \end{cases} $</p>
+<p>$f_Z(z)&#x3D;\int ^{1} _{z-1} (2-x)dx &#x3D; (2-z)^2$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-5.png?x-oss-process=style/note"></p>
+<p>当$z&gt;2$时，$f(x,z-x)&#x3D;0$</p>
+<p>$f_Z(z)&#x3D;\int ^{+ \infty} _{- \infty} 0dx &#x3D;0$</p>
+<p>综上所述，</p>
+<p>$f_Z(z)&#x3D; \begin{cases} z(2-z) &amp; 0&lt; z \le 1 \ (2-z)^2 &amp;1 &lt; z \le 2 \ 0 &amp;其他 \end{cases} $</p>
+<h2 id="5-已知-f-x-y-Z-frac-X-Y-求-f-Z-z"><a href="#5-已知-f-x-y-Z-frac-X-Y-求-f-Z-z" class="headerlink" title="5.已知$f(x,y),Z&#x3D;\frac{X}{Y}$,求$f_Z(z)$"></a>5.已知$f(x,y),Z&#x3D;\frac{X}{Y}$,求$f_Z(z)$</h2><p>$$f_Z(z)&#x3D; \int ^{+ \infty} _{- \infty} f(yz,y) \cdot |y|dy$$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/6-6.png?x-oss-process=style/note"></p>
+<p>$f_Z(z)&#x3D;\begin{cases} 0 &amp;z \le 0 \ \frac{1}{2} &amp;0&lt; z \le 1 \ \frac{1}{2x^2} &amp;z &gt;1 \end{cases} $</p>
+<h2 id="6-已知-f-x-y-，且-X-Y-相互独立，-Z-max-X-Y-，求-F-Z-z"><a href="#6-已知-f-x-y-，且-X-Y-相互独立，-Z-max-X-Y-，求-F-Z-z" class="headerlink" title="6.已知$f(x,y)$，且$X,Y$相互独立，$Z&#x3D;max(X,Y)$，求$F_Z(z)$"></a>6.已知$f(x,y)$，且$X,Y$相互独立，$Z&#x3D;max(X,Y)$，求$F_Z(z)$</h2><p> $$F_Z(z) &#x3D; F_X(z) \cdot F_Y(z)$$</p>
+<p>设随机变量X，Y独立同分布，且X的分布函数为$x^3+2x$，求Z&#x3D;max（X，Y）的分布函数。</p>
+<p>$F_X(x)&#x3D;x^3+2x$</p>
+<p>$\therefore F_X(z)&#x3D;z^3+2z$</p>
+<p>$\because X,Y同分布$</p>
+<p>$\therefore F_Y(y)&#x3D;y^3+2y$</p>
+<p>$\therefore F_Y(z)&#x3D;z^3+2z$</p>
+<p>$\therefore F_Z(z)&#x3D;F_X(z) \cdot F_Y(z)&#x3D;(z^3+2z) \cdot (z^3+2z)$</p>
+<h2 id="7-已知f-x-y-且X，Y相互独立，z-min-X-Y-，求-F-Z-z"><a href="#7-已知f-x-y-且X，Y相互独立，z-min-X-Y-，求-F-Z-z" class="headerlink" title="7.已知f(x,y),且X，Y相互独立，z&#x3D;min(X,Y)，求$F_Z(z)$"></a>7.已知f(x,y),且X，Y相互独立，z&#x3D;min(X,Y)，求$F_Z(z)$</h2><p>设随机变量X，Y独立同分布，且X的分布函数为$x^3+2x$，求Z&#x3D;min（X，Y）的分布函数。</p>
+<p>$F_X(x)&#x3D;x^3+2x$</p>
+<p>$\therefore F_X(z)&#x3D;z^3+2z$</p>
+<p>$\because X,Y同分布$</p>
+<p>$\therefore F_Y(y)&#x3D;y^3+2y$</p>
+<p>$\therefore F_Y(z)&#x3D;z^3+2z$</p>
+<p>$\therefore F_Z(z)&#x3D;1-[1-(z^3+2z)] \cdot [1-(z^3+2z)]$</p>
+<h1 id="七、随机变量的数字特征（上）"><a href="#七、随机变量的数字特征（上）" class="headerlink" title="七、随机变量的数字特征（上）"></a>七、随机变量的数字特征（上）</h1><h2 id="1-求离散型的期望E-X"><a href="#1-求离散型的期望E-X" class="headerlink" title="1.求离散型的期望E(X)"></a>1.求离散型的期望E(X)</h2><p>$$E(X)&#x3D;\sum x_i p_i$$</p>
+<p>已知一个工厂一周获利10万元的概率为0.2，获利5万元的概率为0.3，亏损2万元的概率为0.5，该工厂一周内利润的期望是多少？</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>10</th>
+<th>5</th>
+<th>-2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.5</td>
+</tr>
+</tbody></table>
+<p>E(X)&#x3D;$\sum x_i p_i$&#x3D;10×0.2+5×0.3+（-2）×0.5&#x3D;2.5（万元）</p>
+<h2 id="2-求连续型的期望E-X"><a href="#2-求连续型的期望E-X" class="headerlink" title="2.求连续型的期望E(X)"></a>2.求连续型的期望E(X)</h2><p>$$E(X) &#x3D; \int ^{+ \infty} _{-\infty} xf(x)dx$$</p>
+<p>设随机变量X的密度函数为$f(x)&#x3D;\begin{cases} 0 &amp; x &lt; 0 \ 4x^3 &amp;0 \le x le 1 \ 0 &amp; x&gt; 1 \end{cases} $，则E(X)&#x3D;？</p>
+<p>$E(X) &#x3D; \int ^{+ \infty} _{-\infty} xf(x)dx&#x3D; \int ^{0} _{-\infty} x \cdot 0dx +  \int ^{1} _{0} x\cdot 4x^3 dx + \int ^{+ \infty} _{1} x \cdot 0dx&#x3D;0+\frac{4}{5}+0&#x3D;\frac{4}{5}$</p>
+<h2 id="3-已知Y-g-x-求E-Y"><a href="#3-已知Y-g-x-求E-Y" class="headerlink" title="3.已知Y&#x3D;g(x),求E(Y)"></a>3.已知Y&#x3D;g(x),求E(Y)</h2><p>$$离散型E(Y)&#x3D;\sum g(x_i)p_i$$</p>
+<p>$$连续型E(Y)&#x3D;\int ^{+\infty} _{- \infty} g(x) \cdot f(x) dx$$</p>
+<p>(1)已知随机变量X的分布列为</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.4</td>
+</tr>
+</tbody></table>
+<p>求Y&#x3D;2X-1的期望</p>
+<p>解：</p>
+<p>$E(Y)&#x3D;\sum g(x_i)p_i&#x3D;\sum (2x_i - 1) p_i&#x3D;3$</p>
+<p>(2)设随机变量X的密度函数为$f(x) &#x3D; \begin{cases}0 &amp;x&lt;0 \ 4x^3 &amp;0 \le x \le 1 \ 0 &amp; x&gt;1 \end{cases} $，$Y&#x3D;X^2$，求E(Y)</p>
+<p>$E(Y)&#x3D;\int ^{+\infty} _{- \infty} g(x) \cdot f(x) dx &#x3D;\int ^{+\infty} _{- \infty} x^2 \cdot f(x) dx &#x3D; \int ^{0} _{- \infty} x^2 \cdot 0 dx + \int ^{1} _{0} x^2 \cdot 4x^3 dx + \int ^{+\infty} _{1} x^2 \cdot 0 dx &#x3D; 0+\frac{2}{3}+0&#x3D;\frac{2}{3}$</p>
+<h2 id="4-求方差D-X"><a href="#4-求方差D-X" class="headerlink" title="4.求方差D(X)"></a>4.求方差D(X)</h2><p>$$D(X)&#x3D;\sum [x_i - E(X)] ^2 \cdot p_i \to 离散型$$</p>
+<p>$$D(X)&#x3D;E(X^2) - E^2(X) \to 连续型 \ 离散型$$</p>
+<p>(1)已知随机变量X的分布列为</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.4</td>
+</tr>
+</tbody></table>
+<p>求D(X)</p>
+<p>解：</p>
+<p>方法一：</p>
+<p>E(X)&#x3D;0×0.1+1×0.2+2×0.3+3×0.4&#x3D;2</p>
+<p>$D(X) &#x3D; \sum [x_i - E(X)] ^2 \cdot p_i&#x3D;(0-2)^2·0.1+(1-2)^2·0.2+(2-2)^2.0.3+(3-2)^2·0.4&#x3D;1$</p>
+<p>方法二：</p>
+<table>
+<thead>
+<tr>
+<th>$X^2$</th>
+<th>0</th>
+<th>1</th>
+<th>4</th>
+<th>9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P</td>
+<td>0.1</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.4</td>
+</tr>
+</tbody></table>
+<p>$E(X^2)$&#x3D;0×0.1+1×0.2+4×0.3+9×0.4&#x3D;5</p>
+<p>E(X)&#x3D;0×0.1+1×0.2+2×0.3+3×0.4&#x3D;2</p>
+<p>$D(X)&#x3D;E(X^2) - E^2(X)&#x3D;5-2^2&#x3D;1$</p>
+<p>(2)设随机变量X的密度函数为$f(x) &#x3D; \begin{cases}0 &amp;x&lt;0 \ 4x^3 &amp;0 \le x \le 1 \ 0 &amp; x&gt;1 \end{cases} $，$Y&#x3D;X^2$，求D(X)</p>
+<p>$D(X)&#x3D;E(X^2) - E^2(X)&#x3D;\frac{2}{3}-(\frac{4}{5})^2 &#x3D; \frac{2}{75} $</p>
+<h2 id="5-根据E（X）、D（X）的性质进行复杂运算"><a href="#5-根据E（X）、D（X）的性质进行复杂运算" class="headerlink" title="5.根据E（X）、D（X）的性质进行复杂运算"></a>5.根据E（X）、D（X）的性质进行复杂运算</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/7-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/7-2.png?x-oss-process=style/note"></p>
+<h2 id="6-E（X）、D（X）与各种分布的综合题"><a href="#6-E（X）、D（X）与各种分布的综合题" class="headerlink" title="6.E（X）、D（X）与各种分布的综合题"></a>6.E（X）、D（X）与各种分布的综合题</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/7-3.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/7-4.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/7-5.png?x-oss-process=style/note"></p>
+<h1 id="八、随机变量的数字特征（下）与中心极限定理"><a href="#八、随机变量的数字特征（下）与中心极限定理" class="headerlink" title="八、随机变量的数字特征（下）与中心极限定理"></a>八、随机变量的数字特征（下）与中心极限定理</h1><h2 id="1-Cov-rho-xy-D相关类题目"><a href="#1-Cov-rho-xy-D相关类题目" class="headerlink" title="1.Cov,$\rho _{xy}$,D相关类题目"></a>1.Cov,$\rho _{xy}$,D相关类题目</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/8-1.png?x-oss-process=style/note"></p>
+<p>已知A&#x3D;2X+Y，B&#x3D;2X-Y，X与Y相互独立，D（X）&#x3D;D（Y）&#x3D;1，试求Cov（A，B）。</p>
+<p>Cov(A,B)&#x3D;Cov(2X+Y,2X-Y)</p>
+<p>&#x3D;Cov(2X,2X-Y)+Cov(Y,2X-Y)</p>
+<p>&#x3D;Cov(2X,2X)-Cov(2X,Y)+Cov(Y,2X)-Cov(Y,Y)</p>
+<p>&#x3D;4Cov(X,X)-2Cov(X,Y)+2Cov(Y,X)-Cov(Y,Y)</p>
+<p>&#x3D;4Cov(X,X)-0+0-Cov(YY)</p>
+<p>&#x3D;4D(X)-0+0-D(Y)</p>
+<p>&#x3D;4-1&#x3D;3</p>
+<p>已知D（X）&#x3D;1，D（Y）&#x3D;4，$\rho_{xy}&#x3D;-0.5$，试求D(X+Y)</p>
+<p>D(X+Y)&#x3D;D(X)+D(Y)+2Cov(X,Y)</p>
+<p>&#x3D;1+4+2Cov(X,Y)</p>
+<p>&#x3D;5+2Cov(X,Y)</p>
+<p>&#x3D;5+2$\cdot \rho _{xy} \cdot \sqrt{D(X)} \cdot \sqrt{D(Y)}$</p>
+<p>&#x3D;5+2$\cdot (-0.5) \cdot \sqrt{1} \cdot \sqrt{4}</p>
+<p>&#x3D;3</p>
+<h2 id="2-利用切比雪夫不等式求概率"><a href="#2-利用切比雪夫不等式求概率" class="headerlink" title="2.利用切比雪夫不等式求概率"></a>2.利用切比雪夫不等式求概率</h2><p>$$P[|X-E(X)| \ge \varepsilon ] \le \frac{D(X)}{\varepsilon ^2} (\varepsilon为任意正数)$$</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/8-2.png?x-oss-process=style/note"></p>
+<h2 id="3-多项独立同分布，求总和怎样的概率"><a href="#3-多项独立同分布，求总和怎样的概率" class="headerlink" title="3.多项独立同分布，求总和怎样的概率"></a>3.多项独立同分布，求总和怎样的概率</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/8-3.png?x-oss-process=style/note"></p>
+<p>(1)某商店出售一种商品，该商品周销量的期望是1，方差是1，假设各周的销量是相互独立的，求该商品的年销量（1年&#x3D;52周）在50件到70件之间的概率。（结果用$\phi (X)$表示）</p>
+<p>共52项（n&#x3D;52），总销量为Y</p>
+<p>E（X）&#x3D;1，D（X）&#x3D;1</p>
+<p>$\therefore P(50 \le Y \le)&#x3D;\phi (\frac{70-52 \times 1}{\sqrt{52 \times 1}})-\phi (\frac{52-52 \times 1}{\sqrt{52 \times 1}}) &#x3D; \phi (2.5)-\phi (-0.28)$</p>
+<p>(2)一个工厂每箱产品的质量独立同分布，假设每箱平均重50kg，标准差为5kg。若用最大载重量5000kg的汽车承运，那么每辆车最多可以装多少箱，才能保证不超载的概率大于0.977？（$\phi$（2）&#x3D;0.977）</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/8-4.png?x-oss-process=style/note"></p>
+<h1 id="九、矩估计"><a href="#九、矩估计" class="headerlink" title="九、矩估计"></a>九、矩估计</h1><h2 id="1-求某一未知参数的距估计"><a href="#1-求某一未知参数的距估计" class="headerlink" title="1.求某一未知参数的距估计"></a>1.求某一未知参数的距估计</h2><p>①写出E（X）与待求未知数的关系</p>
+<p>②将①的结果整理成未知数&#x3D;？E（X）的形式</p>
+<p>③根据给出的样本，算出实际的E（X）</p>
+<p>④求出未知数</p>
+<p>例1：设一大批产品的合格率是P，每次从中随机抽取出10件进行检验，用xi表示第i次抽出的10件产品中次品的个数，则可以认为x1，X2..…，xn独立同分布，总体分布是二项分布B（10，P），求P的矩估计。</p>
+<p>解：</p>
+<p>①E(X)&#x3D;nP&#x3D;10P</p>
+<p>②E(X)&#x3D;nP $\to P&#x3D;\frac{E(X)}{10}$</p>
+<p>③E(X)&#x3D;$\frac{x_1+x_2+…+x_n}{n}$</p>
+<p>④$\widehat{P}&#x3D;\frac{x_1+x_2+…+x_n}{10n}$</p>
+<p>例2：设x1，X2…，Xn为总体的一个样本，X1，X2.…，Xn为相应的样本值，求下述总体的概率密度中的未知参数的矩估计。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/9-1.png?x-oss-process=style/note"></p>
+<h2 id="2-求两个未知参数的矩估计"><a href="#2-求两个未知参数的矩估计" class="headerlink" title="2.求两个未知参数的矩估计"></a>2.求两个未知参数的矩估计</h2><p>①写出E（X）与$E（X^2）&#x3D;D（X）+E^2（X）$同待求未知数的关系</p>
+<p>②将①的结果整理成未知数$&#x3D;？E(X)+?E（X^2）$的形式</p>
+<p>③根据给出的样本，算出实际的E(X）与$E（X^2）$</p>
+<p>④求出未知数</p>
+<p>例：设总体X在[a，b]上服从均匀分布，a，b未知，X1，X2…，Xn是来自x的样本，试求a，b的矩估计量。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/9-2.png?x-oss-process=style/note"></p>
+<h1 id="十、最大似然估计量"><a href="#十、最大似然估计量" class="headerlink" title="十、最大似然估计量"></a>十、最大似然估计量</h1><h2 id="1-求出某离散型参数的最大似然估计量"><a href="#1-求出某离散型参数的最大似然估计量" class="headerlink" title="1.求出某离散型参数的最大似然估计量"></a>1.求出某离散型参数的最大似然估计量</h2><p>①写出$P{X&#x3D;X_1}，P{X&#x3D;x_2}.…，P{X&#x3D;Xn}$</p>
+<p>②依次对①的结果取In</p>
+<p>③依次对②的结果求导</p>
+<p>④令③中结果之和为0，求出未知数</p>
+<table>
+<thead>
+<tr>
+<th>离散型分布</th>
+<th>P</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二项分布B(n,P)</td>
+<td>$P(X&#x3D;d)&#x3D;C^d_n(1-P)^{n-d}$</td>
+</tr>
+<tr>
+<td>泊松分布$P(\lambda)$</td>
+<td>$P(X&#x3D;d)&#x3D;\frac{\lambda ^d}{d!}e^{-\lambda}$</td>
+</tr>
+</tbody></table>
+<p>例1：设X具有分布律</p>
+<table>
+<thead>
+<tr>
+<th>X</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$P_K$</td>
+<td>$\theta ^2$</td>
+<td>$2\theta (1-\theta)$</td>
+<td>$(1-\theta)^2$</td>
+</tr>
+</tbody></table>
+<p>其中$\theta（0&lt;\theta&lt;1）$为未知参数，已知取得了样本值X1&#x3D;1，x2&#x3D;2，x3&#x3D;1，求$\theta$的最大似然估计值。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/10-1.png?x-oss-process=style/note"></p>
+<h2 id="2-求出某连续型参数的最大似然估计量"><a href="#2-求出某连续型参数的最大似然估计量" class="headerlink" title="2.求出某连续型参数的最大似然估计量"></a>2.求出某连续型参数的最大似然估计量</h2><p>①写出f（X1），f（X2）..…，f（xn）</p>
+<p>②依次对①的结果取ln</p>
+<p>③依次对②的结果求导</p>
+<p>④令③中结果之和为0，求出未知数</p>
+<table>
+<thead>
+<tr>
+<th>连续型分布</th>
+<th>f(x)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>均匀分布</td>
+<td>$f(x)&#x3D;\begin{cases} \frac{1}{b-a} &amp; a\le x \le b \ 0 &amp;其他 \end{cases} $</td>
+</tr>
+<tr>
+<td>指数分布</td>
+<td>$f(x)&#x3D;\begin{cases} \lambda e^{- \lambda x} \  0 &amp;x \le 0 \end{cases}$</td>
+</tr>
+<tr>
+<td>正态分布</td>
+<td>$f(x)&#x3D;\frac{1}{\sqrt{2 \pi \sigma}} e ^{-\frac{(x-\mu)^2}{2\sigma ^2}}$</td>
+</tr>
+</tbody></table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/10-2.png?x-oss-process=style/note"></p>
+<h1 id="十一、区间估计"><a href="#十一、区间估计" class="headerlink" title="十一、区间估计"></a>十一、区间估计</h1><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/11-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/11-2.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/11-3.png?x-oss-process=style/note"></p>
+<h1 id="十二、假设检验1"><a href="#十二、假设检验1" class="headerlink" title="十二、假设检验1"></a>十二、假设检验1</h1><h2 id="判断单项参数与某数值关系"><a href="#判断单项参数与某数值关系" class="headerlink" title="判断单项参数与某数值关系"></a>判断单项参数与某数值关系</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/12-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/12-2.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/12-3.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/12-4.png?x-oss-process=style/note"></p>
+<h1 id="十三、假设检验2"><a href="#十三、假设检验2" class="headerlink" title="十三、假设检验2"></a>十三、假设检验2</h1><h2 id="判断两项参数间的关系"><a href="#判断两项参数间的关系" class="headerlink" title="判断两项参数间的关系"></a>判断两项参数间的关系</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/13-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/13-2.png?x-oss-process=style/note"></p>
+<h1 id="十四、假设检验3"><a href="#十四、假设检验3" class="headerlink" title="十四、假设检验3"></a>十四、假设检验3</h1><h2 id="1-对于成对数据的检验"><a href="#1-对于成对数据的检验" class="headerlink" title="1.对于成对数据的检验"></a>1.对于成对数据的检验</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/14-1.png?x-oss-process=style/note"></p>
+<h2 id="2-P值检验"><a href="#2-P值检验" class="headerlink" title="2.P值检验"></a>2.P值检验</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/14-2.png?x-oss-process=style/note"></p>
+<h1 id="十五、方差分析"><a href="#十五、方差分析" class="headerlink" title="十五、方差分析"></a>十五、方差分析</h1><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/15-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/15-2.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/15-3.png?x-oss-process=style/note"></p>
+<h1 id="十六、一元线性回归"><a href="#十六、一元线性回归" class="headerlink" title="十六、一元线性回归"></a>十六、一元线性回归</h1><h2 id="1-求一元线性回归模型系数"><a href="#1-求一元线性回归模型系数" class="headerlink" title="1.求一元线性回归模型系数"></a>1.求一元线性回归模型系数</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-1.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-2.png?x-oss-process=style/note"></p>
+<h2 id="2-对一元线性回归模型的方差进行估计"><a href="#2-对一元线性回归模型的方差进行估计" class="headerlink" title="2.对一元线性回归模型的方差进行估计"></a>2.对一元线性回归模型的方差进行估计</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-3.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-4.png?x-oss-process=style/note"></p>
+<h2 id="3-在一元线性回归模型中检验回归效果显著性"><a href="#3-在一元线性回归模型中检验回归效果显著性" class="headerlink" title="3.在一元线性回归模型中检验回归效果显著性"></a>3.在一元线性回归模型中检验回归效果显著性</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-5.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-6.png?x-oss-process=style/note"></p>
+<h2 id="4-在一元线性回归模型中求系数b的置信区间"><a href="#4-在一元线性回归模型中求系数b的置信区间" class="headerlink" title="4.在一元线性回归模型中求系数b的置信区间"></a>4.在一元线性回归模型中求系数b的置信区间</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-7.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-8.png?x-oss-process=style/note"></p>
+<h2 id="5-Y约为x的指数函数时，求Y关于x的回归方程"><a href="#5-Y约为x的指数函数时，求Y关于x的回归方程" class="headerlink" title="5.Y约为x的指数函数时，求Y关于x的回归方程"></a>5.Y约为x的指数函数时，求Y关于x的回归方程</h2><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-9.png?x-oss-process=style/note"></p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.zyha.cn/blog/Dr.Monkey-Probability-Theory-and-Mathematical-Statistics-note/16-10.png?x-oss-process=style/note"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      <a data-url="https://zyha.cn/My-Notes-on-Probability-Theory-and-Mathematical-Statistics/" data-id="clxvacuik007tztrm1aecguzl" data-title="猴博士-概率论与数理统计复习笔记" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag">概率论</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/great-tools-for-windows-10/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Windows良心软件推荐
+        
+      </div>
+    </a>
+  
+  
+    <a href="/wallpaper-engine-recommendation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Wallpaper壁纸推荐</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/DNS/" style="font-size: 10px;">DNS</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MongoDB/" style="font-size: 10px;">MongoDB</a> <a href="/tags/Netlify/" style="font-size: 10px;">Netlify</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/tags/Tampermonkey/" style="font-size: 10px;">Tampermonkey</a> <a href="/tags/WPS/" style="font-size: 10px;">WPS</a> <a href="/tags/ali/" style="font-size: 10px;">ali</a> <a href="/tags/api/" style="font-size: 11.25px;">api</a> <a href="/tags/assets/" style="font-size: 10px;">assets</a> <a href="/tags/aws/" style="font-size: 16.25px;">aws</a> <a href="/tags/bing/" style="font-size: 10px;">bing</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cdn/" style="font-size: 10px;">cdn</a> <a href="/tags/cf/" style="font-size: 12.5px;">cf</a> <a href="/tags/cn/" style="font-size: 10px;">cn</a> <a href="/tags/coding/" style="font-size: 10px;">coding</a> <a href="/tags/config/" style="font-size: 10px;">config</a> <a href="/tags/css/" style="font-size: 11.25px;">css</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/dns/" style="font-size: 10px;">dns</a> <a href="/tags/do/" style="font-size: 11.25px;">do</a> <a href="/tags/docker/" style="font-size: 11.25px;">docker</a> <a href="/tags/domain/" style="font-size: 10px;">domain</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/electron/" style="font-size: 10px;">electron</a> <a href="/tags/free/" style="font-size: 11.25px;">free</a> <a href="/tags/git/" style="font-size: 11.25px;">git</a> <a href="/tags/github/" style="font-size: 18.75px;">github</a> <a href="/tags/google/" style="font-size: 10px;">google</a> <a href="/tags/hexo/" style="font-size: 18.75px;">hexo</a> <a href="/tags/hk/" style="font-size: 10px;">hk</a> <a href="/tags/hosts/" style="font-size: 10px;">hosts</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jp/" style="font-size: 10px;">jp</a> <a href="/tags/js/" style="font-size: 11.25px;">js</a> <a href="/tags/jupyter/" style="font-size: 11.25px;">jupyter</a> <a href="/tags/kms/" style="font-size: 10px;">kms</a> <a href="/tags/koa/" style="font-size: 10px;">koa</a> <a href="/tags/koa2/" style="font-size: 10px;">koa2</a> <a href="/tags/lambda/" style="font-size: 10px;">lambda</a> <a href="/tags/lightsail/" style="font-size: 13.75px;">lightsail</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nestjs/" style="font-size: 10px;">nestjs</a> <a href="/tags/next/" style="font-size: 11.25px;">next</a> <a href="/tags/node/" style="font-size: 15px;">node</a> <a href="/tags/nuxt/" style="font-size: 10px;">nuxt</a> <a href="/tags/oracle/" style="font-size: 10px;">oracle</a> <a href="/tags/orm/" style="font-size: 10px;">orm</a> <a href="/tags/oss/" style="font-size: 10px;">oss</a> <a href="/tags/puppeteer/" style="font-size: 10px;">puppeteer</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/python3/" style="font-size: 10px;">python3</a> <a href="/tags/rclone/" style="font-size: 10px;">rclone</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/sql/" style="font-size: 12.5px;">sql</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/steam/" style="font-size: 11.25px;">steam</a> <a href="/tags/string/" style="font-size: 10px;">string</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/ts/" style="font-size: 10px;">ts</a> <a href="/tags/vite/" style="font-size: 10px;">vite</a> <a href="/tags/vps/" style="font-size: 20px;">vps</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/vue/" style="font-size: 13.75px;">vue</a> <a href="/tags/web/" style="font-size: 13.75px;">web</a> <a href="/tags/win10/" style="font-size: 10px;">win10</a> <a href="/tags/windows/" style="font-size: 11.25px;">windows</a> <a href="/tags/xtom/" style="font-size: 10px;">xtom</a> <a href="/tags/%E4%B8%AA%E4%BD%93%E6%88%B7/" style="font-size: 10px;">个体户</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91/" style="font-size: 10px;">中国天气网</a> <a href="/tags/%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 11.25px;">互联网</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 10px;">人工智能</a> <a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 15px;">优化</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%86%85%E6%8E%A8/" style="font-size: 10px;">内推</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 17.5px;">前端</a> <a href="/tags/%E5%90%8E%E7%AB%AF/" style="font-size: 11.25px;">后端</a> <a href="/tags/%E5%91%BD%E4%BB%A4/" style="font-size: 10px;">命令</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 11.25px;">图床</a> <a href="/tags/%E5%9F%9F%E5%90%8D/" style="font-size: 10px;">域名</a> <a href="/tags/%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9/" style="font-size: 10px;">增删查改</a> <a href="/tags/%E5%A3%81%E7%BA%B8/" style="font-size: 12.5px;">壁纸</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 10px;">备份</a> <a href="/tags/%E5%A4%8D%E7%9B%98/" style="font-size: 10px;">复盘</a> <a href="/tags/%E5%A8%B1%E4%B9%90/" style="font-size: 10px;">娱乐</a> <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" style="font-size: 10px;">字符串</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 10px;">字节跳动</a> <a href="/tags/%E5%AD%9F%E4%B9%B0/" style="font-size: 10px;">孟买</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 11.25px;">安全</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 11.25px;">实习</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%87%BD%E6%95%B0/" style="font-size: 10px;">工具函数</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 11.25px;">建站</a> <a href="/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" style="font-size: 11.25px;">开发环境</a> <a href="/tags/%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">性能测试</a> <a href="/tags/%E6%88%90%E9%95%BF/" style="font-size: 10px;">成长</a> <a href="/tags/%E6%8A%80%E5%B7%A7/" style="font-size: 12.5px;">技巧</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 11.25px;">插件</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 11.25px;">效率</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/tags/%E6%95%99%E8%82%B2/" style="font-size: 10px;">教育</a> <a href="/tags/%E6%95%99%E8%82%B2%E4%BC%98%E6%83%A0/" style="font-size: 11.25px;">教育优惠</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" style="font-size: 10px;">数据安全</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 11.25px;">数据库</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%96%B0%E5%8A%A0%E5%9D%A1/" style="font-size: 11.25px;">新加坡</a> <a href="/tags/%E6%96%B9%E6%B3%95/" style="font-size: 10px;">方法</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 10px;">日本</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 10px;">概率论</a> <a href="/tags/%E6%AF%95%E8%AE%BE/" style="font-size: 11.25px;">毕设</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 10px;">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.25px;">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83/" style="font-size: 10px;">环境</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 15px;">环境配置</a> <a href="/tags/%E7%90%86%E8%B4%A2/" style="font-size: 10px;">理财</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 10px;">知乎</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 11.25px;">硬件</a> <a href="/tags/%E7%A5%9E%E5%9B%9E%E5%A4%8D/" style="font-size: 10px;">神回复</a> <a href="/tags/%E7%A6%8F%E5%88%A9/" style="font-size: 11.25px;">福利</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 10px;">税务</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 11.25px;">笔记</a> <a href="/tags/%E7%BA%BD%E7%BA%A6/" style="font-size: 10px;">纽约</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 11.25px;">编程语言</a> <a href="/tags/%E7%BD%91%E7%9B%98/" style="font-size: 10px;">网盘</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 12.5px;">网络安全</a> <a href="/tags/%E8%82%A1%E7%A5%A8/" style="font-size: 10px;">股票</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 10px;">腾讯云</a> <a href="/tags/%E8%A7%81%E8%AF%81%E5%8E%86%E5%8F%B2/" style="font-size: 10px;">见证历史</a> <a href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" style="font-size: 11.25px;">解决方案</a> <a href="/tags/%E8%AF%84%E6%B5%8B/" style="font-size: 11.25px;">评测</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 11.25px;">资源</a> <a href="/tags/%E8%BF%81%E7%A7%BB/" style="font-size: 10px;">迁移</a> <a href="/tags/%E9%95%9C%E5%83%8F/" style="font-size: 10px;">镜像</a> <a href="/tags/%E9%95%9C%E5%83%8F%E7%AB%99/" style="font-size: 10px;">镜像站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 13.75px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/add-ipv4-to-ipv6-only-vps-with-cloudflare-warp/">通过Cloudflare-Warp为IPv6-Only的VPS添加IPv4</a>
+          </li>
+        
+          <li>
+            <a href="/image-format-trade-offs-for-website-optimization/">网站优化之图片格式权衡</a>
+          </li>
+        
+          <li>
+            <a href="/nuxthub-preview/">NuxtHub尝鲜</a>
+          </li>
+        
+          <li>
+            <a href="/oracle-e2-simple-evaluation/">【简单测评】oracle韩国e2</a>
+          </li>
+        
+          <li>
+            <a href="/signup-oracle-free-trial/">成功注册甲骨文试用账号</a>
+          </li>
+        
+          <li>
+            <a href="/optimizing-redis/">后端简单优化之redis</a>
+          </li>
+        
+          <li>
+            <a href="/transfer-oss-to-s4-by-rclone/">使用Rclone将阿里云对象存储迁移至缤纷云S4对象存储</a>
+          </li>
+        
+          <li>
+            <a href="/cannot-link-github-in-terminal/">终端环境下GitHub无法链接</a>
+          </li>
+        
+          <li>
+            <a href="/Black-Myth-wukong-has-opened-pre-sale/">黑神话悟空已开启预售</a>
+          </li>
+        
+          <li>
+            <a href="/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/">个体户0申报及工商年报提交教程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">十月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+        <!--<a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+</a>
+</br>--><All>website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br></All>
+      
+      &copy; 2024 <a href="https://zyha.cn/" target="_blank">laiczhang</a>
+      <br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <br>
+      <span id="span_dt_dt"></span>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://m.zyha.cn/" class="mobile-nav-link">Status</a>
+  
+    <a href="/resume" class="mobile-nav-link">Resume</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+  
+<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            let all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i ++) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+</script>
+
+<script type="text/javascript" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-y/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+<script type="text/javascript">
+  const BirthDay=new Date("7/5/2019 0:0:0"), msPerDay=86400000; // 24*60*60*1000
+  function show_date_time(){
+    setTimeout("show_date_time()", 1000);
+    let today=new Date();
+    let timeold=(today.getTime()-BirthDay.getTime());
+    let e_day=timeold/msPerDay;
+    let day=Math.floor(e_day), year=Math.floor(e_day/365);
+    let e_hour=(e_day-day)*24;
+    day=parseInt(day%365);
+    let hour=Math.floor(e_hour);
+    let e_minute=(e_hour-hour)*60;
+    let minute=Math.floor((e_hour-hour)*60);
+    let seconds=Math.floor((e_minute-minute)*60);
+    span_dt_dt.innerHTML=' 网站稳定运行：<font style=color:#258fb8>'+year+'</font> 年 <font style=color:#258fb8>'+day+'</font> 天 <font style=color:#258fb8>'+hour+'</font> 时 <font style=color:#258fb8>'+minute+'</font> 分 <font style=color:#258fb8>'+seconds+'</font> 秒';
+  }
+  show_date_time();
+</script>
+
+<!-- <script type="module" src="https://cdn.zyha.cn/blog/js/instantpage.js"></script> -->
+<!-- <script async defer data-website-id="3ae007b2-8aaf-4ea0-95da-fcff482a37c9" src="https://analytics.zyha.cn/umami.js"></script> -->
+
+  </div>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,d=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=o());for(var e,i=0;i<d.length;i++)0<=(e=(e=d[i]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,a,n,o=d[i];e=function(){d=d.filter(function(t){return o!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(o)},(t=o).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,n=t.getAttribute("data-original"),a.onload=function(){t.src=n,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=n},t.src!==n&&(a.src=n)))}()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)}(this);</script></body>
+</html>
