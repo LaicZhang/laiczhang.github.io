@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2020-04-04 22:40:34
-updated: 2020-04-04 22:40:34
+updated: 2024-06-30 22:40:34
 tags:
   - vps
   - 建站
@@ -18,20 +18,19 @@ description:
 - 都是便宜货（基本不超过20元/月）
 - 非专业评测，并且并未跑测试脚本，仅仅是个人感觉
 - 不同地区不同运营商的网络环境不同
-
-所以，更多的是科普向，不用期盼能捡个好大的便宜。
+- 更多的是科普向，不用期盼能捡个好大的便宜。
 
 如有谬误，还请指出。
 
+- 2024.6.30更新：增加阿里云99/年活动机，oracle免费🐔
 - 2022.8.1更新：增加do评测链接
 - 2022.7.26更新：增加AWS评测链接
 - 2020.10.27更新：增加hostmem使用评价
 - 2020.10.2更新：添加hostmem国庆活动链接
 - 2020.9.8更新：添加AWS lightsail，hostmem
-- 2024.6.30更新：增加阿里云99/年活动机
 <!-- more -->
 
-## 1.阿里云学生机ECS（已弃用）
+## 1. 阿里云学生机ECS（已弃用）
 
 价格：9.5元/月
 
@@ -49,7 +48,7 @@ description:
 
 PS：最近出来了个高校学生在家实践活动，可以免费一年的vps,而且配置居然比114一年的好，可以看看:<https://developer.aliyun.com/adc/student/>
 
-## 2.vultr日本（已弃用）
+## 2. vultr日本（已弃用）
 
 价格：2.5美元/月
 
@@ -63,7 +62,7 @@ PS：最近出来了个高校学生在家实践活动，可以免费一年的vps
 
 aff：<https://www.vultr.com/?ref=8508301>
 
-## 3.阿里云香港新手试用（已送人）
+## 3. 阿里云香港新手试用（已送人）
 
 价格：0元/年
 
@@ -73,7 +72,7 @@ aff：<https://www.vultr.com/?ref=8508301>
 
 这个机器需要国外ip+非国区PayPal+非大陆电话，加上阿里的风控，开通相当麻烦，不过同学们还是可以试一试滴。~~当然，如果有同学需要的话，60一个，可以发邮件给我<i@laiczhang.com>~~
 
-## 4.aws EC2 日本（已弃用）
+## 4. aws EC2 日本（已弃用）
 
 价格：15元/月
 
@@ -87,7 +86,7 @@ aff：<https://www.vultr.com/?ref=8508301>
 
 ~~只用两个月，过了就计划迁移到DO或者VU上去了。~~
 
-## 5.hostmem 美国（不推荐）
+## 5. hostmem 美国（不推荐）
 
 并发稍微大一点（17ce测试网速）就要么宕机要么直接显示”Attack Internet“，然后给停了。需要发工单说明情况才给解封，同价位能买其他的机器就不要买这个了。
 
@@ -111,7 +110,7 @@ aff：<https://www.vultr.com/?ref=8508301>
 
 ~~2020国庆活动：经典云77折，折扣码 ”23OFF"，折后10刀一年；动态云6折， 折扣码 “CND-6“~~
 
-## 6.AWS lightsail
+## 6. AWS lightsail
 
 - 由于aws新政策，不再提供免费的ipv4地址，所以lightsail不再是极有性价比的选择。
 
@@ -124,10 +123,22 @@ aff：<https://www.vultr.com/?ref=8508301>
 - [【简单测评】aws新加坡lightsail】](./aws-singapore-lightsail-simple-evaluation/)
 - [【简单测评】aws日本lightsail](./aws-japan-lightsail-simple-evaluation/)
 
-## 6.Do Droplets
+## 7. Do Droplets
 
-性能一般，网络一般。
+性能一般，网络一般，在有学生包的前提下可以低配免费用一年。
 
 ![基础款定价](https://cdn.zyha.cn/blog/20220809200103.png?x-oss-process=style/blog)
 
 - [【简单测评】do新加坡droplets](./do-singapore-droplets-simple-evaluation/)
+
+## 8. 阿里云99/年活动机
+
+一分钱，一分货。
+
+[【简单测评】ali成都轻量云年付99元](./ali-chengdu-light-year-pay-99/)
+
+## 9. Oracle Cloud Free Tier
+
+oracle号称永久免费的vps，实际上是玄学开号，玄学开机，玄学封号。
+
+[oracle e2简单测评](./oracle-e2-simple-evaluation/)
