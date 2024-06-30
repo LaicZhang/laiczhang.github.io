@@ -35,7 +35,7 @@ description:
 
 ## 架构
 
-![](https://img.tucang.cc/api/image/show/a7a98a507e6564ad3f682138e81dbdae)
+![架构](https://img.tucang.cc/api/image/show/a7a98a507e6564ad3f682138e81dbdae)
 
 ## 价格
 
@@ -65,7 +65,6 @@ PS: 对用量极少的大部分人来说，两者都差不多都是免费的。
 | 流量限制                 | 无限                                                                                   | 免费流出100 GB /月，超出$0.15/GB；免费回源10GB/月， $0.06/月                                           |
 | 自定义域名网络联通测试          | ![](https://cdn.zyha.cn/blog/20240618010910.png?x-oss-process=style/blog)            | ![](https://cdn.zyha.cn/blog/20240618010749.png?x-oss-process=style/blog)              |
 | 默认域名网络联通测试           | ![*.nuxt.dev](https://img.tucang.cc/api/image/show/cb5619c4fcc002aadc22eba15b396f2a) | ![*.vercel.app](https://img.tucang.cc/api/image/show/8435375c13d5731541694b931679b4ca) |
-
 
 - 此为2024.6.17的情况，随时可能变化，以官网内容为准
 - 虽然目前nuxthub的默认域名还能用，但迟早被滥用，还是会步入`*.page.dev`和`*vercel.app`的后尘，还是建议绑定自定义域名进行使用
