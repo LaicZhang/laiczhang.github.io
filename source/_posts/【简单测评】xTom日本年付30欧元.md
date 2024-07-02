@@ -427,7 +427,7 @@ traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
 
 ### 国内ping测试
 
-![20240615134221](https://s2.loli.net/2024/06/15/I3LZudFnClk9PGh.png)
+![](https://img.tucang.cc/api/image/show/34efc3853227ee1b8586636053f526e6)
 
 ## 流媒体解锁
 
