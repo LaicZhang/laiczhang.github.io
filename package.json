@@ -10,7 +10,7 @@
     "babel-preset-mobx": "^2.0.0",
     "gulp-html-minifier-terser": "^7.1.0",
     "gulp-htmlmin": "^5.0.1",
-    "hexo": "^7.2.0",
+    "hexo": "^7.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
