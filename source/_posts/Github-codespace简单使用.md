@@ -9,9 +9,9 @@ tags:
   - github
   - vps
 categories: github
-keywords: github, vps
+keywords: github, vps, code, coding, cloud, serverless, codespace,space,spaces
 permalink: GitHub-codespace/
-description:
+description: 简单介绍Github-codespace的使用方法
 ---
 很早就有资格了，今天忽然想起来，就跑一跑。
 
