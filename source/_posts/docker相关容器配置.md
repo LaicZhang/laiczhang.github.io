@@ -39,21 +39,27 @@ nginx
 ```shell
 docker run -d \
     -e POSTGRES_PASSWORD=mypassword \
-    -e POSTGRES_USER=myuser \
+    -e POSTGRES_USER=postgres \
     -p 5432:5432 \
-    --name mypostgres postgres 
+    --name postgres-container postgres 
 ```
 
-- 参数POSTGRES_PASSWORD是必需的， POSTGRES_USER它在参数中定义用户的密码。
-- 参数POSTGRES_USER是可选的，如果未定义，postgres将使用默认用户，可以使用用户名和密码访问数据库。
+- 参数`POSTGRES_PASSWORD`是必需的， `POSTGRES_USER`它在参数中定义用户的密码。
+- 参数`POSTGRES_USER`是可选的，如果未定义，`postgres`将使用默认用户，可以使用用户名和密码访问数据库。
 
 ### Redis
 
 创建目录：
+
+```bash
 mkdir -p $PWD/redis/conf
+```
 
 创建文件：
+
+```bash
 touch $PWD/redis/conf/redis.conf
+```
 
 ```shell
 docker run -d \
