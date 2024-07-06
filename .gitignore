@@ -6,3 +6,4 @@ node_modules/
 .deploy*/
 .history
 source/_posts/.obsidian/
+.vscode/settings.json

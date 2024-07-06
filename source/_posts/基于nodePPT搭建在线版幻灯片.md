@@ -16,8 +16,6 @@ description:
 > 累死累活干不过做 PPT 的！
 > 查看效果：https://nodeppt.js.org
 
-![](https://camo.githubusercontent.com/2362e9e0a3fbd286774e386d7fd2cf3b8aeef9d4/68747470733a2f2f6e6f6465692e636f2f6e706d2f6e6f64657070742e706e67)
-
 nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来[这儿](https://github.com/ksky521/nodeppt)看看
 <!-- more -->
 

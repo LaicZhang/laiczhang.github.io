@@ -11,7 +11,7 @@ categories: 壁纸
 permalink: php-get-bing-todays-wallpaper/
 date: 2020-04-17 09:45:42
 updated: 2020-04-17 09:45:42
-keywords: bing,壁纸,PHP,今日壁纸
+keywords: bing,壁纸,PHP,今日壁纸,随机
 description:
 ---
 众所周知，[bing官网](https://cn.bing.com/) 每日壁纸都是不一样的 如何获取当日的壁纸呢？

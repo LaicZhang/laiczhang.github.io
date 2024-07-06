@@ -1,3 +1,10 @@
+https://zyha.cn/select-a-good-public-dns-in-2024/
+https://zyha.cn/demo/index.html
+https://zyha.cn/Solution-to-the-remote-code-execution-vulnerability-in-OpenSSH-without-authentication/
+https://zyha.cn/cloudflare-workers-proxy-pixiv/
+https://zyha.cn/evaluate-several-vps-I-have-used/
+https://zyha.cn/about/index.html
+https://zyha.cn/some-prompts/
 https://zyha.cn/add-ipv4-to-ipv6-only-vps-with-cloudflare-warp/
 https://zyha.cn/image-format-trade-offs-for-website-optimization/
 https://zyha.cn/nuxthub-preview/
@@ -5,14 +12,12 @@ https://zyha.cn/oracle-e2-simple-evaluation/
 https://zyha.cn/signup-oracle-free-trial/
 https://zyha.cn/all-in-one-test/
 https://zyha.cn/xtom-japan-vps-simple-evaluation/
-https://zyha.cn/select-a-good-public-dns-in-2024/
 https://zyha.cn/optimizing-redis/
 https://zyha.cn/transfer-oss-to-s4-by-rclone/
 https://zyha.cn/cannot-link-github-in-terminal/
 https://zyha.cn/Black-Myth-wukong-has-opened-pre-sale/
 https://zyha.cn/prisma-has-been-used-for-3-months/
 https://zyha.cn/do-singapore-droplets-simple-evaluation/
-https://zyha.cn/cloudflare-workers-proxy-pixiv/
 https://zyha.cn/0-report-and-business-license-submission-tutorial-for-individual-entrepreneurs/
 https://zyha.cn/ali-chengdu-light-year-pay-99/
 https://zyha.cn/what-is-the-best-id-for-a-database/
@@ -30,9 +35,7 @@ https://zyha.cn/check-new-machine-development-environment/
 https://zyha.cn/aws-singapore-lightsail-simple-evaluation/
 https://zyha.cn/yuan-sheng-hui-fe-interview/
 https://zyha.cn/from-input-url-to-page-display/
-https://zyha.cn/demo/index.html
 https://zyha.cn/some-advice-from-interviewer/
-https://zyha.cn/about/index.html
 https://zyha.cn/Internet-fraud-prevention-tips-you-should-know/
 https://zyha.cn/free-image-bed-with-cloudflare-r2/
 https://zyha.cn/how-to-avoid-aws-expensive-bill/
@@ -94,7 +97,6 @@ https://zyha.cn/php-get-bing-todays-wallpaper/
 https://zyha.cn/remote-development-configuration-in-vscode/
 https://zyha.cn/some-problems-with-win10-install-linux-system/
 https://zyha.cn/electron-install-process/
-https://zyha.cn/evaluate-several-vps-I-have-used/
 https://zyha.cn/all-achievements-guide-for-wallpaper-engine/
 https://zyha.cn/build-a-slideshow-with-node-and-ppt/
 https://zyha.cn/online-jupyter-installation-tutorial/
@@ -265,6 +267,9 @@ https://zyha.cn/tags/%E9%95%9C%E5%83%8F/
 https://zyha.cn/tags/%E6%8F%92%E4%BB%B6/
 https://zyha.cn/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/
 https://zyha.cn/tags/%E6%B8%B8%E6%88%8F/
+https://zyha.cn/tags/%E7%BD%91%E7%BB%9C/
+https://zyha.cn/tags/ai/
+https://zyha.cn/tags/prompt/
 https://zyha.cn/categories/%E7%9F%A5%E4%B9%8E/
 https://zyha.cn/categories/dns/
 https://zyha.cn/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/
@@ -318,3 +323,5 @@ https://zyha.cn/categories/web/
 https://zyha.cn/categories/%E5%A4%87%E4%BB%BD/
 https://zyha.cn/categories/%E5%85%AC%E4%BC%97%E5%8F%B7/
 https://zyha.cn/categories/%E6%B8%B8%E6%88%8F/
+https://zyha.cn/categories/%E5%AE%89%E5%85%A8/
+https://zyha.cn/categories/ai/
