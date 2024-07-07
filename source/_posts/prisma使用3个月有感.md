@@ -88,6 +88,8 @@ export class CreateUserDto implements Prisma.UserCreateInput {}
 - 不提供`@default(nanoid())`，只支持`@default(uuid())`。
   - [Implement nanoid() #18612](https://github.com/prisma/prisma/issues/18612)
   - [Make @default(nanoid()) alphabet configurable #17294](https://github.com/prisma/prisma/issues/17294)
+  - [Support ULID · Issue #13679 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/13679)
+  - [Support UUID v7 · Issue #24079 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/24079)
 
 ### Bug年久失修
 
