@@ -16,8 +16,8 @@ description: node is a good choice for front-end development.
 `node` 是一个很有用的东西，比如我的 `hexo` 博客就是基于 `node` 环境搭建的。
 
 - 2022.2.3 更新，增加mac安装方法和常用命令
-- 2022.7.22 更新，推荐版本号为 `v16.16.0`
-- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面
+- 2022.7.22 更新, ~~~推荐版本号为 `v16.x`~~~
+- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面，推荐`22.x`版本
 <!-- more -->
 
 ## 0.关于node
@@ -31,24 +31,29 @@ description: node is a good choice for front-end development.
 ## 1.node版本管理工具
 
 ### 官网选择（推荐）
-![image.png](https://img.tucang.cc/api/image/show/5005b24d5a49fda2c46a49669d2d3861)
 
+![image.png](https://img.tucang.cc/api/image/show/5005b24d5a49fda2c46a49669d2d3861)
 
 - [Node.js — 下载 Node.js®](https://nodejs.org/zh-cn/download/package-manager)
 - [Node.js — 通过包管理器安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/all)
 
 ### nvm-windows
 
-A node.js version management utility for Windows. Ironically written in Go.
+- 2024.7.10更新，发现官方已经放缓了对`nvm-windows`的维护，建议使用其他版本管理器进行安装。
+
+```txt
+NVM4W Feature Freeze
+I intend to deprecate NVM for Windows after Runtime is released. There are two things slowing work on Runtime. First, client engagements. I am wrapping up the most time-consuming projects, which extended into Q2 2023. My co-developer and I started working on this full-time on June 20, 2023. The other thing slowing down Runtime development is this project. So, I'm freezing feature development on NVM for Windows.
+```
 
 需要注意的是，一定要卸载已安装的 NodeJS（意思就是，如果你有多版本的node并且不想卸载老版本的，你可以直接上手nvm-windows），否则会发生冲突。然后下载 `nvm-windows` 最新安装包，直接安装即可。
 
-Github下载地址：<https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe>
+Github下载地址：<https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.exe>
 
 镜像地址：
 
-- <https://nvm-windows.io/v1.1.9/nvm-setup.exe>
-- <https://ghproxy.com/https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe>
+- <https://nvm-windows.io/v1.1.12/nvm-setup.exe>
+- <https://ghproxy.com/https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.exe>
 
 ### nvm
 
@@ -62,7 +67,7 @@ Github下载地址：<https://github.com/coreybutler/nvm-windows/releases/downlo
 
 ## 2.使用安装包
 
-- [通过本站镜像下载](https://files.catbox.moe/lnhsc4.pkg)
+- [通过镜像下载](https://files.catbox.moe/lnhsc4.pkg)
 
 建议不使用其他第三方下载站，谁知道有没有加东西。
 
@@ -100,8 +105,7 @@ LTS发布状态为“长期支持”，这通常保证关键错误将修复总�
 而`node.js` 的 `msi` 包是傻瓜式一路`next`就可以了，所以尽量选择`msi`进行安装
 
 2. 解压后的目录,或者`mis`安装后，先打开`cmd`验证一下，输入 `node -v` 来查看安装版本和是否安装成功
-
-![node版本验证](https://cdn.zyha.cn/blog/20220722004821.png?x-oss-process=style/blog)
+![image.png](https://img1.tucang.cc/api/image/show/1b5abc28a21a0b69dd758b18e30b4795)
 
 如图，安装成功
 

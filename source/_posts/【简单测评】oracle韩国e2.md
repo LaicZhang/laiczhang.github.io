@@ -4,12 +4,12 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-06-15 16:21:29
-updated: 2024-06-15 16:21:29
+updated: 2024-07-07 16:21:29
 tags:
   - oracle
   - vps
 categories: vps
-keywords: vps, oracle, e2, 云服务器, free
+keywords: vps, oracle, e2, 云服务器, free, shell, test, speed, speedtest
 permalink: oracle-e2-simple-evaluation/
 description:
 ---

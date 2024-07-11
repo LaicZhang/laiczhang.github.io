@@ -64,6 +64,7 @@ ORM（对象关系映射）是一种将对象编程语言中的对象与关系�
 
 ## 相关链接
 
+- [为什么选择 Prisma ORM？与 SQL 查询构建器和 ORM 的比较 | Prisma 文档 - Prisma 中文](https://prisma.org.cn/docs/orm/overview/introduction/why-prisma)
 - [大家喜欢用纯 sql 还是 orm 框架？ - V2EX](https://v2ex.com/t/719199)
 - [程序使用 ORM 框架是不是基本就可以解决 SQL 注入了？ - V2EX](https://v2ex.com/t/1013951)
 - [大家喜欢用 ORM 还是直接写 SQL - V2EX](https://s.v2ex.com/t/1004383)

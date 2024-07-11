@@ -9,11 +9,11 @@
 ## 部署方案
 
 - 博客本体Hexo
-  - Github Pages -> Vercel + tencent cloud -> Vercel
+  - Github Pages -> Vercel + tencent cloud -> Vercel + cloudflare page
 - 图床系统
   - GitHub + jsDelivr -> 百度客服图床 -> 阿里云 OSS + CDN + PicGo -> 图仓图床 + PicGo
 - 静态资源
-  - local -> jsDelivr -> 阿里云 CDN -> cdnjs.loli.net -> BootCDN
+  - local -> jsDelivr -> 阿里云 CDN -> cdnjs.loli.net -> BootCDN -> zstatic.net
 - 统计系统
   - Google Analytics + Baidu Tongji -> Umami -> none
 
