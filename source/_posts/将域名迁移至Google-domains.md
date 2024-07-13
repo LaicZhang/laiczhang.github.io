@@ -17,7 +17,15 @@ description: The main reason for the migration is because Google Domain is curre
 
 - 按照目前的价格，75try约为29元，比dnspod等网站便宜一半，感觉还行。🤪
 - 2022.7.1更新 7.29号土区com域名涨价提醒（75try->195try）
+- 2024.7.1更新 domain业务已经被出售给Squarespace
 <!--more-->
+
+```txt
+Squarespace is the registrar of record for your domain. However, Google will manage your domain during a transition period, and Google's Privacy Policy and Terms of Service will apply during that period. Your customer and billing information, if applicable, will subsequently be transferred to Squarespace. Upon transfer, your data will be governed by Squarespace's Privacy Policy and Squarespace's Terms of Service will apply. More information can be found here.
+
+To learn more about Squarespace Domains and Squarespace's plans, visit the Squarespace Domains page.
+```
+
 ![20220619143406](https://cdn.zyha.cn/public/upload/20220619143406.png)
 
 本文完成于转移成功之后，所以中间细节可能未提及，仅记录大概过程。

@@ -834,3 +834,7 @@ Transferred:            2 / 2, 100%
 Elapsed time:         9.2s
 ~ 9s 
 ```
+
+## 其他
+
+rclone还可以挂载大容量的onedrive和Google drive，结合emby实现自建媒体库，过段时间试一试。

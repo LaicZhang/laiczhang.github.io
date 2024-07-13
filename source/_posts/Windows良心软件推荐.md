@@ -30,8 +30,6 @@ github地址：<https://github.com/LaicZhang/some-software>
 
 屏幕截图-(FastStone Capture)9.1汉化单文件便携企业版.zip 
 
-远程桌面-[teamviewer](/download/TeamViewer 14.2.8352H.exe)
-
 - 娱乐相关
 
 Google浏览器-Chrome
@@ -41,8 +39,6 @@ B站视频下载器-JiJiDown
 - 编程相关
 
 强大的编辑器-notepad++
-
-C及C++编译器-VC++6.0（迷你版才7M）
 
 抓包神器-Fiddler
 

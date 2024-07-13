@@ -23,8 +23,6 @@ shell脚本（shell script），是一种为shell编写的脚本程序。业界�
 
 <!-- more -->
 
-![](/images/美化/2.jpg)
-
 ### 示例
 
 看个例子吧：
@@ -116,7 +114,7 @@ iMac:~ wuxiao$ ls -l /bin/*sh
 
 如下是一个PHP Shell Script示例（假设文件名叫test.php）：
 
-```
+```bash
 #!/usr/bin/php
 <?php
 for ($i=0; $i < 10; $i++)
@@ -125,13 +123,13 @@ for ($i=0; $i < 10; $i++)
 
 执行：
 
-```
+```bash
 /usr/bin/php test.php
 ```
 
 或者：
 
-```
+```bash
 chmod +x test.php
 ./test.php
 ```
@@ -166,7 +164,7 @@ shell只定义了一个非常简单的编程语言，所以，如果你的脚本
 
 输入一些代码，第一行一般是这样：
 
-```
+```bash
 #!/bin/bash
 #!/usr/bin/php
 ```
@@ -179,7 +177,7 @@ shell只定义了一个非常简单的编程语言，所以，如果你的脚本
 
 #### 作为可执行程序
 
-```
+```bash
 chmod +x test.sh
 ./test.sh
 ```
@@ -194,7 +192,7 @@ chmod +x test.sh
 
 这种运行方式是，直接运行解释器，其参数就是shell脚本的文件名，如：
 
-```
+```bash
 /bin/sh test.sh
 /bin/php test.php
 ```
@@ -207,7 +205,7 @@ chmod +x test.sh
 
 定义变量时，变量名不加美元符号（$），如：
 
-```
+```bash
 your_name="qinjx"
 ```
 
@@ -215,7 +213,7 @@ your_name="qinjx"
 
 除了显式地直接赋值，还可以用语句给变量赋值，如：
 
-```
+```bash
 for file in `ls /etc`
 ```
 
@@ -223,7 +221,7 @@ for file in `ls /etc`
 
 使用一个定义过的变量，只要在变量名前面加美元符号即可，如：
 
-```
+```bash
 your_name="qinjx"
 echo $your_name
 echo ${your_name}
@@ -231,7 +229,7 @@ echo ${your_name}
 
 变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界，比如下面这种情况：
 
-```
+```bash
 for skill in Ada Coffe Action Java; do
  echo "I am good at ${skill}Script"
 done
@@ -245,7 +243,7 @@ done
 
 已定义的变量，可以被重新定义，如：
 
-```
+```bash
 your_name="qinjx"
 echo $your_name
 
@@ -263,7 +261,7 @@ echo $your_name
 
 sh里没有多行注释，只能每一行加一个#号。就像这样：
 
-```
+```bash
 #--------------------------------------------
 # 这是一个自动打ipa的脚本，基于webfrogs的ipa-build书写：https://github.com/webfrogs/xcode_shell/blob/master/ipa-build
 
@@ -288,7 +286,7 @@ sh里没有多行注释，只能每一行加一个#号。就像这样：
 
 ### 单引号
 
-```
+```bash
 str='this is a string'
 ```
 
@@ -299,7 +297,7 @@ str='this is a string'
 
 ### 双引号
 
-```
+```bash
 your_name='qinjx'
 str="Hello, I know your are \"$your_name\"! \n"
 ```
@@ -311,7 +309,7 @@ str="Hello, I know your are \"$your_name\"! \n"
 
 #### 拼接字符串
 
-```
+```bash
 your_name="qinjx"
 greeting="hello, "$your_name" !"
 greeting_1="hello, ${your_name} !"
@@ -321,21 +319,21 @@ echo $greeting $greeting_1
 
 #### 获取字符串长度
 
-```
+```bash
 string="abcd"
 echo ${#string} #输出：4
 ```
 
 #### 提取子字符串
 
-```
+```bash
 string="alibaba is a great company"
 echo ${string:1:4} #输出：liba
 ```
 
 #### 查找子字符串
 
-```
+```bash
 string="alibaba is a great company"
 echo `expr index "$string" is`#输出：3，这个语句的意思是：找出字母i在这名话中的位置，要在linux下运行，mac下会报错
 ```
@@ -354,7 +352,7 @@ echo `expr index "$string" is`#输出：3，这个语句的意思是：找出字
 
 和Java、PHP等语言不一样，sh的流程控制不可为空，如：
 
-```
+```php
 <?php
 if (isset($_GET["q"])) {
  search(q);
@@ -368,7 +366,7 @@ else {
 
 还要注意，sh里的if [ $foo -eq 0 ]，这个方括号跟Java/PHP里if后面的圆括号大不相同，它是一个可执行程序（和ls, grep一样），想不到吧？在CentOS上，它在/usr/bin目录下：
 
-```
+```bash
 ll /usr/bin/[
 -rwxr-xr-x. 1 root root 33408 6月  22 2012 /usr/bin/[
 ```
@@ -379,7 +377,7 @@ ll /usr/bin/[
 
 #### if
 
-```
+```bash
 if condition
 then
  command1 
@@ -391,7 +389,7 @@ fi
 
 写成一行（适用于终端命令提示符）：
 
-```
+```bash
 if `ps -ef | grep ssh`;  then echo hello; fi
 ```
 
@@ -399,7 +397,7 @@ if `ps -ef | grep ssh`;  then echo hello; fi
 
 #### if else
 
-```
+```bash
 if condition
 then
  command1 
@@ -413,7 +411,7 @@ fi
 
 #### if else-if else
 
-```
+```bash
 if condition1
 then
  command1
@@ -430,7 +428,7 @@ fi
 
 在开篇的示例里演示过了：
 
-```
+```bash
 for var in item1 item2 ... itemN
 do
  command1
@@ -442,13 +440,13 @@ done
 
 写成一行：
 
-```
+```bash
 for var in item1 item2 ... itemN; do command1; command2… done;
 ```
 
 #### C风格的for
 
-```
+```bash
 for (( EXP1; EXP2; EXP3 ))
 do
  command1
@@ -459,7 +457,7 @@ done
 
 #### while
 
-```
+```bash
 while condition
 do
  command
@@ -468,7 +466,7 @@ done
 
 #### 无限循环
 
-```
+```bash
 while :
 do
  command
@@ -477,7 +475,7 @@ done
 
 或者
 
-```
+```bash
 while true
 do
  command
@@ -486,13 +484,13 @@ done
 
 或者
 
-```
+```bash
 for (( ; ; ))
 ```
 
 #### until
 
-```
+```bash
 until condition
 do
  command
@@ -501,7 +499,7 @@ done
 
 ### case
 
-```
+```bash
 case "${opt}" in
  "Install-Puppet-Server" )
   install_master $1
@@ -543,7 +541,7 @@ case的语法和C family语言差别很大，它需要一个esac（就是case反
 
 可以使用source和.关键字，如：
 
-```
+```bash
 source ./function.sh
 . ./function.sh
 ```
@@ -552,19 +550,19 @@ source ./function.sh
 
 包含一个文件和执行一个文件一样，也要写这个文件的路径，不能光写文件名，比如上述例子中:
 
-```
+```bash
 . ./function.sh
 ```
 
 不可以写作：
 
-```
+```bash
 . function.sh
 ```
 
 如果function.sh是用户传入的参数，如何获得它的绝对路径呢？方法是：
 
-```
+```bash
 real_path=`readlink -f $1`#$1是用户输入的参数，如function.sh
 . $real_path
 ```
