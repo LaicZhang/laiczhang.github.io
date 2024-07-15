@@ -10,7 +10,7 @@ tags:
   - cn
   - vps
 categories: vps
-keywords: ali, vps, 轻量云, 成都, 99元, 简单测评, 云服务器, 服务器, 价格, chengdu, 轻量级,benchmark
+keywords: ali, vps, 轻量云, 成都, 99元, 简单测评, 云服务器, 服务器, 价格, chengdu, 轻量级,benchmark,beian,备案,icp,许可
 permalink: ali-chengdu-light-year-pay-99/
 description: 
 ---
@@ -82,3 +82,7 @@ wget -qO- bench.sh | bash
 ### 国内ping
 
 ![itdog.cn](https://img.tucang.cc/api/image/show/989cf81bc801f551806898ae9b9ebdb0)
+
+## 总结
+
+注意，国内vps需要备案才可以绑定域名。

@@ -16,6 +16,7 @@ description:
 
 前段时间就想做个简单的桌面应用，今天终于入坑了electron，参照官方例子配置electron环境，奈何electron始终安装不成功。折腾了大半天总算是解决了electron无法正常安装的问题，在此分享我的安装过程，希望能帮助出现类似问题的同学。
 
+- 其实不太推荐直接安装electron，建议找一找electron相关的模板clone后直接install。
 <!-- more -->
 
 ## 0.electron介绍

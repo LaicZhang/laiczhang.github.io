@@ -15,9 +15,8 @@ description:
 ---
 心血来潮想挂载onedrive，发现rclone有了gui，第一次打开时需要填入账号密码。
 
-rclone 文档：<https://rclone.org/docs/>
-
-rclone gui文档：<https://rclone.org/gui/>
+- [rclone 文档](https://rclone.org/docs/)
+- [rclone gui文档](https://rclone.org/gui/)
 <!--more-->
 之前已经安装好了rclone，所以不再演示如何安装。
 

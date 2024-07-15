@@ -17,7 +17,7 @@ description: Because they are all from aws, the test situation in Singapore is s
 ---
 也是5$/月的那款小🐔。
 
-因为都是aws的，所以和新加坡的测试情况是差不多的，所以本次测试主要看网络情况。
+因为都是aws的，所以和[新加坡的测试情况](./aws-singapore-lightsail-simple-evaluation/)是差不多的，所以本次测试主要看网络情况。
 <!--more-->
 
 ## bench.sh

@@ -13,7 +13,7 @@ keywords: vps, oracle, e2, 云服务器, free, shell, test, speed, speedtest
 permalink: oracle-e2-simple-evaluation/
 description:
 ---
-丢包极为严重，测完就后悔开韩国区域了。。。
+丢包极为严重，测完就后悔开韩国春川区域了。。。
 
 - 2024.7.7更新，添加保活脚本避免因为闲置被回收
 
