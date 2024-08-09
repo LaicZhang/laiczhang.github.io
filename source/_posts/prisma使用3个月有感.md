@@ -14,7 +14,7 @@ keywords: prisma,prisma-orm,orm-prisma, orm, sqlite, typeorm, 后端, 数据库,
 permalink: prisma-has-been-used-for-3-months/
 description: prisma使用3个月有感,prisma是什么,prisma的优缺点
 ---
-用了3个月的prisma，作为和TypeOrm可以说占据了大部分的node后端orm份额，但实际我个人用起来，虽然在参数类型上比较方便，但其他还有值得改进的点，但官方给人的感觉就很傲慢，就这个态度，在我看来目前还称不上`下一代ORM`。
+用了`3`个月的`prisma`，作为和`TypeOrm`可以说占据了大部分的node后端orm份额，但实际我个人用起来，虽然在参数类型上比较方便，但其他还有值得改进的点，但官方给人的感觉就很**傲慢**，就这个态度，在我看来目前还称不上`下一代ORM`。
 
 因为本人主要做前端开发，写后端只是顺带，所以一定会有不了解的地方。以下为个人使用过程中遇到的，仅作记录。
 
