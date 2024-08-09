@@ -37,6 +37,7 @@ description:
 
 - 由于我还没通过申请，所以点击Playground后还是无法使用。
 ![image.png](https://img1.tucang.cc/api/image/show/df41048626815f57048d97549ad289c6)
+
 ## 模型选择
 
 GitHub Models 提供了一系列功能各异的模型来满足不同开发需求。如 Mistral 模型具有低延迟优势，而 GPT-4o 在构建需要实时音频、视觉和文本的多模态应用程序时表现出色。开发者可以在这里测试和比较不同模型，选择最适合自己项目的方案。
@@ -45,7 +46,6 @@ GitHub Models 提供了一系列功能各异的模型来满足不同开发需求
 
 游乐场和免费 API 使用受到每分钟请求次数、每天请求次数、每次请求的 token 数和并发请求数的速率限制（文档：[Rate limits - Prototyping with AI models - GitHub Docs](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)）。如果达到速率限制，则需要等待限制重置后才能进行更多请求。低、中、高和嵌入模型有不同的速率限制。
 ![image.png](https://img1.tucang.cc/api/image/show/fb2410ace9f999c019c4f71c0fe3ac5b)
-
 
 ## 相关
 

@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2023-10-08 22:46:04
-updated: 2024-06-07 11:06:04
+updated: 2024-08-09 11:06:04
 tags:
   - orm
   - sql
@@ -20,6 +20,7 @@ description: prisma使用3个月有感,prisma是什么,prisma的优缺点
 
 - 2024.4.21 更新： `5.12.0` 发布，sqlite支持了`createMany`方法。
 - 2024.6.7 更新： `5.15.0` 发布，支持拆分配置文件
+- 2024.8.9 更新： `5.18.0` 发布，支持`uuid(7)`.目前，有效值只有 4 和 7，默认值为 4。
 <!-- more -->
 
 ![](https://img.tucang.cc/api/image/show/19c5795185d2aaa62c456adfff6973e5)
@@ -85,11 +86,28 @@ export class CreateUserDto implements Prisma.UserCreateInput {}
 
 - ~~不支持拆分配置文件。`prisma`的数据模型设计文件并非`.ts`，而是自定义的`*.prisma`。以我正在开发中的项目为例子，目前只设计了`62`张表，`schema.prisma`（`prisma`默认存放表结构的文件）已经`800+`行。~~ 最新版本已经支持。
   - ~~[Support for splitting Prisma schema into multiple files #2377](https://github.com/prisma/prisma/issues/2377)~~
-- 不提供`@default(nanoid())`，只支持`@default(uuid())`。
+- 只支持`@default(uuid())`。
   - [Implement nanoid() #18612](https://github.com/prisma/prisma/issues/18612)
   - [Make @default(nanoid()) alphabet configurable #17294](https://github.com/prisma/prisma/issues/17294)
   - [Support ULID · Issue #13679 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/13679)
-  - [Support UUID v7 · Issue #24079 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/24079)
+  - ~~[Support UUID v7 · Issue #24079 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/24079)~~`5.18.0`已支持。[Native support for UUIDv7](https://github.com/prisma/prisma/releases/tag/5.18.0)
+
+  ```txt
+    model User {
+    id   String @id @default(uuid()) // defaults to 4
+    name String
+  }
+
+  model User {
+    id   String @id @default(uuid(4)) // same as above, but explicit
+    name String
+  }
+
+  model User {
+    id   String @id @default(uuid(7)) // will use UUIDv7 instead of UUIDv4
+    name String
+  }
+  ```
 
 ### Bug年久失修
 
