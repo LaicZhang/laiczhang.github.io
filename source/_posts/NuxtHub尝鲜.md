@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-06-18 00:04:59
-updated: 2024-06-18 00:04:59
+updated: 2024-08-18 00:04:59
 tags:
   - vue
   - nuxt
@@ -12,12 +12,14 @@ tags:
   - 开发环境
   - 效率
 categories: nuxt
-keywords: nuxt, vue, nuxtHub,nuxt-hub,cf,free,cloudflare,d1,r2
+keywords: nuxt, vue, nuxtHub,nuxt-hub,cf,free,cloudflare,d1,r2,blob,post
 permalink: nuxthub-preview/
 description:
 ---
 我们`Vue`也有自己的`Vercel`了：）
 
+- 2024.8.11更新：`NuxtHub`支持快速上传文件至r2存储，并提供免费流量。
+- 2024.8.18更新：`NuxtHub`支持`Cloudflare Workers AI`相关api
 <!-- more -->
 ## 写在最前面
 
@@ -69,9 +71,52 @@ PS: 对用量极少的大部分人来说，两者都差不多都是免费的。
 - 此为2024.6.17的情况，随时可能变化，以官网内容为准
 - 虽然目前nuxthub的默认域名还能用，但迟早被滥用，还是会步入`*.page.dev`和`*vercel.app`的后尘，还是建议绑定自定义域名进行使用
 
+## 上传文件至R2存储
+
+- server/api/upload.post.ts
+
+```ts
+export default eventHandler(async (event) => {
+  // Make sure the user is authenticated to upload
+  const { user } = await requireUserSession(event)
+
+  // Read the form data
+  const form = await readFormData(event)
+  const drawing = form.get('drawing') as File
+
+  // Ensure the file is a jpeg image and is not larger than 1MB
+  ensureBlob(drawing, {
+    maxSize: '1MB',
+    types: ['image/jpeg'],
+  })
+
+  // Upload the file to the Cloudflare R2 bucket
+  return hubBlob().put(`${Date.now()}.jpg`, drawing, {
+    addRandomSuffix: true,
+    customMetadata: {
+      userProvider: user.provider,
+      userId: user.id,
+      userName: user.name,
+      userAvatar: user.avatar,
+      userUrl: user.url,
+    },
+  })
+})
+```
+
+## `hubAI()`
+
+```ts
+export default defineEventHandler(async (event) => {
+  return await hubAI().run('@cf/meta/llama-3.1-8b-instruct', {
+    prompt: 'Who is the author of Nuxt?'
+  })
+})
+```
+
 ## 总之
 
- `NuxtHub`的总体表现不及`Vercel`，主要原因之一是目前项目还太新了（2024.6.3发布beta），但站在`Cloudflare`的肩膀上，很多功能会有更多的免费额度，算是未来可期吧。
+`NuxtHub`的总体表现不及`Vercel`，主要原因之一是目前项目还太新了（2024.6.3发布beta），但站在`Cloudflare`的肩膀上，很多功能会有更多的免费额度，算是未来可期吧。
 
 `NuxtHub`目前还处于`beta`阶段，部分功能可能还不完善，但对于海外的个人开发者来说，应该是个不错的选择。
 
