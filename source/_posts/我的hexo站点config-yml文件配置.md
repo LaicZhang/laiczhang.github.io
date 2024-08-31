@@ -12,9 +12,6 @@ keywords: hexo,config,配置
 permalink: my-config-yml/
 description:
 ---
-
-
-
 **声明：此配置为个人hexo博客使用，仅供参考。**
 
 **Statement:This configuration is for personal use and is for informational purposes only.**
