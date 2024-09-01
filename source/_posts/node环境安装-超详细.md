@@ -16,7 +16,7 @@ description: node is a good choice for front-end development.
 `node` 是一个很有用的东西，比如我的 `hexo` 博客就是基于 `node` 环境搭建的。
 
 - 2022.2.3 更新，增加mac安装方法和常用命令
-- 2022.7.22 更新, ~~~推荐版本号为 `v16.x`~~~
+- 2022.7.22 更新, 推荐版本号为 ~~~`v16.x`~~~`v22.x`
 - 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面，推荐`22.x`版本
 <!-- more -->
 
@@ -116,7 +116,7 @@ LTS发布状态为“长期支持”，这通常保证关键错误将修复总�
 更换为淘宝源，淘宝仓库源和`npm`仓库源每10分钟同步一次，基本满足需求。
 
 ```bash
- npm config set registry https://registry.npm.taobao.org/
+npm config set registry https://registry.npmmirror.com
  ```
 
 测试：`npm install express -g`

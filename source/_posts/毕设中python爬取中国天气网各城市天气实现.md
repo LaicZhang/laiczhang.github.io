@@ -11,7 +11,7 @@ tags:
   - 爬虫
   - 中国天气网
 categories: 爬虫
-keywords: python, 爬虫, 中国天气网, 毕设
+keywords: python3,python, 爬虫, 中国天气网, 毕设
 permalink: python-requests-chinese-weather-data/
 description:
 ---

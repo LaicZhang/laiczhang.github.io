@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2023-10-08 22:46:04
-updated: 2024-08-09 11:06:04
+updated: 2024-09-01 10:00:04
 tags:
   - orm
   - sql
@@ -91,6 +91,7 @@ export class CreateUserDto implements Prisma.UserCreateInput {}
   - [Make @default(nanoid()) alphabet configurable #17294](https://github.com/prisma/prisma/issues/17294)
   - [Support ULID · Issue #13679 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/13679)
   - ~~[Support UUID v7 · Issue #24079 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/24079)~~`5.18.0`已支持。[Native support for UUIDv7](https://github.com/prisma/prisma/releases/tag/5.18.0)
+  - 需要注意的是，截止目前（2024.9.1），jetbrains的`prisma`插件还不支持`uuid(7)`，其`language-server`仍然为1.6版本。
 
   ```txt
     model User {
