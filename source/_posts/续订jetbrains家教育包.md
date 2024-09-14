@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2022-07-06 11:40:32
-updated: 2022-07-06 11:40:32
+updated: 2024-09-13 11:40:32
 tags:
   - 教育
   - 福利
@@ -19,10 +19,14 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 
 记录一下续订的过程。
 
+- 2024.9.13更新，收到jb家的`opensource`续订提醒邮件，等待审核中
+
 <!-- more -->
+## 续订提醒
+
 ![过期提醒](https://cdn.zyha.cn/blog/20220706114250.png?x-oss-process=style/blog)
 
-## 续订过程
+## edu续订过程
 
 - [登录官网，打开license界面](https://account.jetbrains.com/licenses)找到续订按钮，续订按钮只有在优惠过期的前一个月的时候才会出现。
 ![续订按钮](https://cdn.zyha.cn/blog/20220706114800.png?x-oss-process=style/blog)
@@ -43,3 +47,13 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 
 再次打开官网，日期增加了一年，续订成功。
 ![20220706115948](https://cdn.zyha.cn/blog/20220706115948.png?x-oss-process=style/blog)
+
+## `opensource`续订过程
+
+![](https://img1.tucang.cc/api/image/show/d0cffd0362d9f44af825c795accc1140)
+
+点击[applying for a license renewal](https://www.jetbrains.com/shop/eform/opensource)
+
+填好信息，等待审核。
+
+审核通过后，jb会发邮件通知续订成功。
