@@ -36,12 +36,17 @@
 
 ## 工作经历
 
+### 成都希坤商贸有限公司（2023.9-至今）- ***全栈开发工程师***
+
+- 基于 `Vue3 + Element UI + TypeScript` 的进销存系统PC端开发，承担前端核心功能模块开发，并参与后端`Nest.js`技术栈功能部分功能模块开发
+- 封装多个公共组件及常用工具库，并基于开源项目搭建多个工具网站（GPT/MinIO/✈️等），极大增加团队开发效率
+
 ### 钛铂云医（2023.6-2023.8）- ***前端开发工程师***
 
 - 基于 `Vue3 + Arco Design + TypeScript` 的医院内网医务人员管理系统PC端开发，承担前端核心功能模块开发，并参与后端`Nest.js`技术栈功能部分功能模块开发
 - 封装多个公共组件及常用工具库，并基于开源项目搭建多个工具网站（GPT/MinIO/✈️等），极大增加团队开发效率
 - 关键功能点：`IndexedDB`前端操作医药等相关数据；人事系统主要功能模块编写
-- 项目维护关键点：`git`提交检查； 基于Docker完善前后端持续部署
+- 项目维护关键点：`git`提交检查； 基于`Docker`完善前后端持续部署
 
 ### 方正国际（2021.9-2023.5）-***前端开发工程师***
 
@@ -54,11 +59,10 @@
 
 ## 项目经历
 
-### 轮胎贸易类进销存系统（开发中）
+### 轮胎贸易类进销存系统[demo](https://tire.laiczhang.com/)
 
-- PC端网页（20%）： Next.js + antd + TypeScript + Echarts
-- 小程序端（10%）： react + Taro + TypeScript
-- 后端（80%）： Nest.js + Postgres + Docker
+- PC端网页：`Vue3`+`Element Plus`+`TypeScript`+`Echarts`
+- 后端： `Nest.js` + `Postgres`+ `Prisma` + `Docker`
 
 ### 天气数据可视化系统 [demo](https://weather.zyha.cn/) （admin/123456）
 

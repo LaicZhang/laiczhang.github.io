@@ -4,18 +4,21 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-03-28 15:24:31
-updated: 2024-03-28 15:24:31
+updated: 2024-09-09 15:24:31
 tags:
   - docker
   - vps
 categories: docker
-keywords: docker, vps, nginx, sql,redis
+keywords: docker, vps, nginx, sql,redis, minio,db
 permalink: docker-container-configurations/
 description:
 ---
 ## 前言
 
-一不小心选错了选项，docker直接给我重置了，重新安装一些常用镜像，下面记录一下正在使用的容器和相关配置内容。
+一不小心选错了选项，`docker`直接给我重置了，重新安装一些常用镜像，下面记录一下正在使用的容器和相关配置内容。
+
+- 2024.9.9更新，`registry-1.docker.io` 和背后重定向的 `production.cloudflare.docker.com` 目前可以访问了
+但是 `download.docker.com` 还有较小的概率被`RST` 无论`v4 v6`
 
 <!--more-->
 ### Nginx
