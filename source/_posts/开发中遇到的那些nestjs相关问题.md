@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-04-21 00:48:23
-updated: 2024-04-21 00:48:23
+updated: 2024-09-11 00:48:23
 tags:
   - nestjs
   - node
@@ -80,3 +80,36 @@ imports: [
 ```
 
 这样就可以通过 `http://localhost:3000/public/foo.png` 访问静态文件了。
+
+## typeerror do not know how to serialize a bigint nestjs
+
+有时会使用bigint类型的数据，而默认的序列化器不支持bigint，需要使用json-bigint模块来序列化。
+
+```ts
+// bigint.interceptor.ts
+import {
+  CallHandler,
+  ExecutionContext,
+  Injectable,
+  NestInterceptor,
+} from '@nestjs/common';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import JSONBig from 'json-bigint';
+
+@Injectable()
+export class BigintInterceptor implements NestInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+    return next.handle().pipe(
+      map(data => {
+        return JSONBig.parse(JSONBig.stringify(data));
+      }),
+    );
+  }
+}
+
+// some.controller.ts
+@UseInterceptors(new BigintInterceptor())
+export class SomeController {
+}
+```
