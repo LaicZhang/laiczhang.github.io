@@ -56,4 +56,6 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 
 填好信息，等待审核。
 
+![](https://img1.tucang.cc/api/image/show/1b09ac9172c6f1d76418c96c3eb4ad86)
+
 审核通过后，jb会发邮件通知续订成功。

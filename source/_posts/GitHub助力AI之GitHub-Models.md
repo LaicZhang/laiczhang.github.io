@@ -4,12 +4,12 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-08-05 14:53:51
-updated: 2024-08-05 14:53:51
+updated: 2024-09-15 14:53:51
 tags:
   - ai
   - github
 categories: AI
-keywords: ai, github, models,gpt,deep-learning,4o,4o-min
+keywords: ai, github, models,gpt,deep-learning,4o,4o-min,gpt-4o,gpt-4o-min,openai,chatgpt
 permalink: how-to-use-github-models/
 description:
 ---
@@ -17,7 +17,7 @@ description:
 
 > 我们正在推出 GitHub Models，使超过 1 亿的开发人员能够成为 AI 工程师并使用行业领先的 AI 模型进行构建。
 
-- 已申请，待通过后再更新。
+- ~~已申请，待通过后再更新。~~ 已通过。
 
 <!--more-->
 
@@ -37,6 +37,52 @@ description:
 
 - 由于我还没通过申请，所以点击Playground后还是无法使用。
 ![image.png](https://img1.tucang.cc/api/image/show/df41048626815f57048d97549ad289c6)
+
+- 通过申请，然后根据提示进行操作。
+
+![](https://img1.tucang.cc/api/image/show/9c7df45bcc94a02e5f00448bc0c23ffc)
+
+### 使用步骤
+
+- 以`openai-gpt-4o`模型为例
+
+1. 登录GitHub账号，点击右上角头像，选择 Settings > Developer settings > Personal access tokens > [Generate new toke](https://github.com/settings/tokens)。
+2. 安装openai `npm install openai`
+3. 示例代码
+
+```shell
+export GITHUB_TOKEN="<your-github-token-goes-here>"
+```
+
+```javascript
+import OpenAI from "openai";
+
+const token = process.env["GITHUB_TOKEN"];
+const endpoint = "https://models.inference.ai.azure.com";
+const modelName = "gpt-4o";
+
+export async function main() {
+
+  const client = new OpenAI({ baseURL: endpoint, apiKey: token });
+
+  const response = await client.chat.completions.create({
+    messages: [
+        { role:"system", content: "You are a helpful assistant." },
+        { role:"user", content: "What is the capital of France?" }
+      ],
+      model: modelName,
+      temperature: 1.0,
+      max_tokens: 1000,
+      top_p: 1.0
+    });
+
+  console.log(response.choices[0].message.content);
+}
+
+main().catch((err) => {
+  console.error("The sample encountered an error:", err);
+});
+```
 
 ## 模型选择
 
