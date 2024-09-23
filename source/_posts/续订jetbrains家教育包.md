@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2022-07-06 11:40:32
-updated: 2024-09-13 11:40:32
+updated: 2024-09-23 11:40:32
 tags:
   - 教育
   - 福利
@@ -20,6 +20,7 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 记录一下续订的过程。
 
 - 2024.9.13更新，收到jb家的`opensource`续订提醒邮件，等待审核中
+- 2024.9.23更新，更新我被拒绝的各种原因，继续等待过审
 
 <!-- more -->
 ## 续订提醒
@@ -59,3 +60,23 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 ![](https://img1.tucang.cc/api/image/show/1b09ac9172c6f1d76418c96c3eb4ad86)
 
 审核通过后，jb会发邮件通知续订成功。
+
+## 被拒绝的原因
+
+- 项目超过6个月无代码提交
+
+```txt
+We’ve run an automated check of your GitHub repository to see if your open-source project meets the requirements of our Open Source Program. Unfortunately, the project didn’t pass the check because it hasn’t been actively and consistently developed in the past six months.
+```
+
+- README文件不详细
+
+```txt
+To support a project with a free license, we need to see its documentation. It can be a detailed README file that outlines project goals, features, installation guidelines, deployment details, etc. We also encourage open-source projects to have a code of conduct and contributing guidelines.
+```
+
+- README中缺少安装/使用说明
+
+```txt
+To support a project with a free license, we need to see its documentation. It can be a detailed README file that outlines project goals, features, installation guidelines, deployment details, etc. We also encourage open-source projects to have a code of conduct and contributing guidelines.
+```
