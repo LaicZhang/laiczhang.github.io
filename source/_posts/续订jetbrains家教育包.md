@@ -9,7 +9,7 @@ tags:
   - 教育
   - 福利
 categories: 福利
-keywords: 教育优惠, JetBrains, 免费
+keywords: 教育优惠, JetBrains, 免费,jb,idea,education,jetbrains家教育包,续订,续费,opensource
 permalink: renew-jetbrains-education-education-package/
 description:  I'm about to start reviewing the C language, and as soon as I open C Lion, I am prompted that my education qualification is about to expire. Hurry up and renew it. Document the renewal process.
 ---
@@ -21,6 +21,7 @@ description:  I'm about to start reviewing the C language, and as soon as I open
 
 - 2024.9.13更新，收到jb家的`opensource`续订提醒邮件，等待审核中
 - 2024.9.23更新，更新我被拒绝的各种原因，继续等待过审
+- 2024.9.24更新，jb家通过审核，jb给的订阅信息已经生效，感谢jb的慷慨
 
 <!-- more -->
 ## 续订提醒
@@ -80,3 +81,11 @@ To support a project with a free license, we need to see its documentation. It c
 ```txt
 To support a project with a free license, we need to see its documentation. It can be a detailed README file that outlines project goals, features, installation guidelines, deployment details, etc. We also encourage open-source projects to have a code of conduct and contributing guidelines.
 ```
+
+## 申请通过邮件
+
+![](https://img1.tucang.cc/api/image/show/57a1b19f27bab119fc2f4932d911deef)
+
+再打开后台，可以看到我的全家桶的过期时间为2025年9月27日，续订成功。
+
+![](https://img1.tucang.cc/api/image/show/81beedd6e630d0258e758173ef586a73)
