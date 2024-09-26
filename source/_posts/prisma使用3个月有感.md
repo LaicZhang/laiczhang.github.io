@@ -91,9 +91,7 @@ export class CreateUserDto implements Prisma.UserCreateInput {}
   - [Make @default(nanoid()) alphabet configurable #17294](https://github.com/prisma/prisma/issues/17294)
   - [Support ULID · Issue #13679 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/13679)
   - ~~[Support UUID v7 · Issue #24079 · prisma/prisma · GitHub](https://github.com/prisma/prisma/issues/24079)~~`5.18.0`已支持。[Native support for UUIDv7](https://github.com/prisma/prisma/releases/tag/5.18.0)
-  - 需要注意的是，截止目前（2024.9.1），jetbrains的`prisma`插件还不支持`uuid(7)`，其`language-server`仍然为1.6版本。
-
-![](https://img1.tucang.cc/api/image/show/050c9e0f99c469c192c3607fb9f6b767)
+  - ~~需要注意的是，截止目前（2024.9.1），jetbrains的`prisma`插件还不支持`uuid(7)`，其`language-server`仍然为1.6版本。~~ 最新版本已支持。
 
   ```txt
     model User {
