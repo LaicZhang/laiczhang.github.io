@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-06-18 00:04:59
-updated: 2024-08-18 00:04:59
+updated: 2024-09-29 00:04:59
 tags:
   - vue
   - nuxt
@@ -18,8 +18,11 @@ description:
 ---
 我们`Vue`也有自己的`Vercel`了：）
 
+> Nuxt on Cloudflare infra with minimal effort - this is huge!
+
 - 2024.8.11更新：`NuxtHub`支持快速上传文件至r2存储，并提供免费流量。
 - 2024.8.18更新：`NuxtHub`支持`Cloudflare Workers AI`相关api
+- 2024.9.29更新：忽然发现其暗改免费计划（项目上限20个->5个）
 <!-- more -->
 ## 写在最前面
 
@@ -42,12 +45,18 @@ description:
 ## 价格
 
 ![20240618002915](https://cdn.zyha.cn/blog/20240618002915.png?x-oss-process=style/blog)
+
+- 其免费计划可以创建的项目已经从20个修改为5个
+
+![](https://img1.tucang.cc/api/image/show/0efb6fc56725f34d1d9e9f69966903cb)
+
 而`Vercel`的价格
 
 ![20240618003117](https://cdn.zyha.cn/blog/20240618003117.png?x-oss-process=style/blog)
-对于较大的项目来说，截图中的月费可能并不是最终花费。但由于`NuxtHub`是基于大善人`Cloudflare`的服务，所以大概率是更低价的。x上众多吐槽vercel费用高昂的有业务的用户可能会感到开心：）
 
-PS: 对用量极少的大部分人来说，两者都差不多都是免费的。
+PS: 对于较大的项目来说，截图中的月费可能并不是最终花费。但由于`NuxtHub`是基于大善人`Cloudflare`的服务，所以大概率是更低价的。x上众多吐槽vercel费用高昂的有业务的用户可能会感到开心：）
+
+PSS: 对用量极少的大部分人来说，两者都差不多都是免费的。
 
 ## 简单对比
 
@@ -55,7 +64,7 @@ PS: 对用量极少的大部分人来说，两者都差不多都是免费的。
 
 |                      | NuxtHub                                                                              | Vercel                                                                                 |
 | -------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| 官网模板数量               | 极少（4个）                                                                               | 多                                                                                      |
+| 官网模板数量               | 较少（10个）                                                                               | 多                                                                                      |
 | 同等较大项目计费             | 低                                                                                    | 高                                                                                      |
 | 教程数量                 | 极少                                                                                   | 多                                                                                      |
 | 所需账号                 | `Github`+`Cloudflare`                                                                | `Vercel`                                                                               |
@@ -64,7 +73,7 @@ PS: 对用量极少的大部分人来说，两者都差不多都是免费的。
 | 修改环境变量后              | 会提醒重新构建                                                                              | 无提醒                                                                                    |
 | 流量图表                 | 无（可在CF查询）                                                                            | 有                                                                                      |
 | GitHub Deployments集成 | 无                                                                                    | 有                                                                                      |
-| 流量限制                 | 无限                                                                                   | 免费流出100 GB /月，超出$0.15/GB；免费回源10GB/月， $0.06/月                                           |
+| 流量限制                 | 无限                                                                                   | 免费流出`100 GB /mo`，超出`$0.15/GB`；免费回源`10GB/mo`， `$0.06/mo`                                           |
 | 自定义域名网络联通测试          | ![](https://cdn.zyha.cn/blog/20240618010910.png?x-oss-process=style/blog)            | ![](https://cdn.zyha.cn/blog/20240618010749.png?x-oss-process=style/blog)              |
 | 默认域名网络联通测试           | ![*.nuxt.dev](https://img.tucang.cc/api/image/show/cb5619c4fcc002aadc22eba15b396f2a) | ![*.vercel.app](https://img.tucang.cc/api/image/show/8435375c13d5731541694b931679b4ca) |
 
