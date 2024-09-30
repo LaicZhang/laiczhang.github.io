@@ -7,7 +7,6 @@ date: 2020-01-07 22:46:55
 updated: 2020-01-07 22:46:55
 tags:
   - python
-  - python3
   - 爬虫
 categories: 爬虫
 keywords: python,python3,爬虫,周读网,书籍信息
