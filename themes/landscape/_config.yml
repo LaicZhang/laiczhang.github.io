@@ -21,7 +21,7 @@ fancybox: true
 # You can use html like below...
 copyright: |-
   <!--<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
-    <img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://pic.rmb.bdstatic.com/bjh/aec52e3b3758bf529b782e2729b710f9.png" />
+    <img alt="Creative Commons License" loading="lazy" style="border-width:0" src="https://img1.tucang.cc/api/image/show/dfca8757ffd2f8e5d811548e2750609a" />
   </a>
   </br>-->
   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></br>
@@ -33,7 +33,7 @@ widgets:
 # - tag
 - tagcloud
 - recent_posts
-- archive
+# - archive
 
 
 # display widgets at the bottom of index pages (pagination == 2)
