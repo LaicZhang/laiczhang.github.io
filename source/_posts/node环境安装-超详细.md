@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2020-04-04 16:40:36
-updated: 2024-07-05 16:40:36
+updated: 2024-10-11 16:40:36
 tags:
   - node
   - 环境配置
@@ -17,7 +17,8 @@ description: node is a good choice for front-end development.
 
 - 2022.2.3 更新，增加mac安装方法和常用命令
 - 2022.7.22 更新, 推荐版本号为 ~~`v16.x`~~ `v22.x`
-- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面，推荐`22.x`版本
+- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面，推荐`20.x`版本
+- 2024.10.11更新，增加**手动**安装`nvm-sh`的步骤，并给出多个镜像下载地址，方便国内开发者
 <!-- more -->
 
 ## 0.关于node
@@ -57,7 +58,35 @@ Github下载地址：<https://github.com/coreybutler/nvm-windows/releases/downlo
 
 ### nvm
 
+#### 一键安装
+
 `MacOS`可以使用 `brew` 一键安装`nvm`: `brew install nvm`
+
+#### 手动安装（通过git）
+
+```shell
+cd ~/
+git clone https://github.com/nvm-sh/nvm.git .nvm
+cd ~/.nvm
+git checkout v0.40.1
+. ./nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+此处也给出几个目前还能使用的镜像下载地址，将其中任意一行替换上方的github地址即可。
+
+```txt
+git clone https://gitclone.com/github.com/nvm-sh/nvm.git
+git clone https://kkgithub.com/nvm-sh/nvm.git
+git clone https://hub.incept.pw/nvm-sh/nvm.git
+git clone https://mirror.ghproxy.com/https://github.com/nvm-sh/nvm.git
+git clone https://githubfast.com/nvm-sh/nvm.git
+git clone https://ghproxy.net/https://github.com/nvm-sh/nvm.git
+git clone https://github.moeyy.xyz/https://github.com/nvm-sh/nvm.git
+```
 
 ### 其他版本管理工具
 
