@@ -16,8 +16,8 @@ description: node is a good choice for front-end development.
 `node` 是一个很有用的东西，比如我的 `hexo` 博客就是基于 `node` 环境搭建的。
 
 - 2022.2.3 更新，增加mac安装方法和常用命令
-- 2022.7.22 更新, 推荐版本号为 ~~`v16.x`~~ `v22.x`
-- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面，推荐`20.x`版本
+- 2022.7.22 更新, 推荐版本号为 ~~`v16.x`~~ `v20.x`
+- 2024.7.05 更新，nodejs官网给出了更直观的通过版本管理器进行安装的页面
 - 2024.10.11更新，增加**手动**安装`nvm-sh`的步骤，并给出多个镜像下载地址，方便国内开发者
 <!-- more -->
 
@@ -74,6 +74,17 @@ git checkout v0.40.1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+若重启后报错`-bash: nvm: command not found`,可以执行下面的命令。
+
+```shell
+cd ~/.nvm
+. ./nvm.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
 
 此处也给出几个目前还能使用的镜像下载地址，将其中任意一行替换上方的github地址即可。

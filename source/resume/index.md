@@ -103,6 +103,7 @@
 - [vite](https://github.com/vitejs/vite)
 - [prisma](https://github.com/prisma/prisma)
 - [picgo](https://github.com/PicGo/PicGo-Core)
+- [nestjs](https://github.com/nestjs/nest)
 
 ## 联系方式
 
