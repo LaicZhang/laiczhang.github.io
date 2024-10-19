@@ -85,6 +85,8 @@ cd ~/.nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+nvm alias default 20   # 设置默认版本为20.x
 ```
 
 此处也给出几个目前还能使用的镜像下载地址，将其中任意一行替换上方的github地址即可。
