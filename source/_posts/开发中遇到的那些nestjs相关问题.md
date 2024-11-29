@@ -17,7 +17,10 @@ description:
 ---
 ## 前言
 
-最近在开发nestjs项目，遇到了一些问题，记录一下。
+最近在开发`nestjs`项目，遇到了一些问题，记录一下。
+
+- 静态文件服务
+- typeError do not know how to serialize a bigint nestjs
 
 <!-- more -->
 
@@ -112,4 +115,10 @@ export class BigintInterceptor implements NestInterceptor {
 @UseInterceptors(new BigintInterceptor())
 export class SomeController {
 }
+
+// or
+// main.ts
+app.useGlobalInterceptors(
+      new BigintInterceptor(),
+)
 ```
