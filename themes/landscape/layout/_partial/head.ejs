@@ -1,5 +1,9 @@
 <head>
   <meta charset="utf-8">
+  <link rel="preconnect" href="https://cdn.zyha.cn">
+  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
+  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
+  <link rel="preconnect" href="https://s4.zstatic.net">
   <%- partial('google-analytics') %>
   <%
   let title = page.title;
@@ -31,10 +35,6 @@
   <% } %>
   <%- css('css/style') %>
   <% if (is_post() && theme.fancybox){ %>
-    <%- css('fancybox/jquery.fancybox.min.css') %>
+    <%- css('https://s4.zstatic.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css') %>
   <% } %>
-  <link rel="preconnect" href="https://cdn.zyha.cn">
-  <!-- <link rel="shortcut icon" href="https://cdn.zyha.cn/blog/favicon.ico" type="image/x-icon"> -->
-  <link rel="preconnect" href="https://pic.rmb.bdstatic.com">
-  <link rel="preconnect" href="https://s4.zstatic.net">
 </head>
