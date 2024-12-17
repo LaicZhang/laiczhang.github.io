@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-11-29 14:17:31
-updated: 2024-11-29 14:17:31
+updated: 2024-12-17 14:17:31
 tags:
   - prisma
   - orm
@@ -15,7 +15,25 @@ description:
 ---
 Prisma ORM v6 版本更新会带来一些破坏性更新，如果你从旧版本升级，需要特别注意。这份指南解释了升级对你的应用可能的影响，并提供了处理这些变化的指导。
 
+- 2024-11-29吐槽， 时隔半个月，[jetbrains官方维护的prisma插件](https://plugins.jetbrains.com/plugin/20686-prisma-orm/reviews/new)仍然没有跟进更新，使用v6新特性会报错。
+
 <!-- more -->
+![](https://img1.tucang.cc/api/image/show/ca3dc7d7d5b8b022efe28527dbad09e0)
+
+## 写在前面
+
+```txt
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder", "fullTextSearchPostgres"]
+}
+```
+
+```txt
+The preview feature "fullTextSearchPostgres" is not known. Expected one of: deno, driverAdapters, fullTextIndex, fullTextSearch, metrics, multiSchema, nativeDistinct, postgresqlExtensions, tracing, views, relationJoins, prismaSchemaFolder, omitApi, strictUndefinedChecks. If this is unexpected, it might be due to your editor's Prisma Extension being out of date.
+```
+
+如上，jetbrains提供的prisma暂时不支持新特性，所以以下推荐使用vscode安装prisma官方维护的[prisma插件](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)来体验新特性。
 
 ## 升级前准备
 
