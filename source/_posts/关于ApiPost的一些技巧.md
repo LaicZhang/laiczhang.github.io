@@ -11,7 +11,7 @@ tags:
 categories: 测试
 keywords: api, testing, apipost, postman,
 permalink: some-tips-about-apipost/
-description:
+description: ApiPost是一款开源的API测试工具，本文介绍了一些常用的技巧。
 ---
 ## 关于ApiPost
 

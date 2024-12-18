@@ -9,9 +9,9 @@ tags:
   - ai
   - prompt
 categories: ai
-keywords: ai, prompt,gpt,coze,Claude,3.5,code,coding,system
+keywords: ai, prompt,gpt,coze,Claude,3.5,code,coding,system,o1,chatgpt,7%
 permalink: some-prompts/
-description:
+description: 收集的一些可能有用的prompt
 ---
 其实没啥用, 就是平常用的自动优化, 感觉写的挺有条理的, 想研究研究怎么写的。
 

@@ -11,7 +11,7 @@ tags:
 categories: 网络安全
 keywords: vps, 安全, 网络安全
 permalink: force-vps-security/
-description:
+description: 手里的vps还是不少了，加上之前写毕设的时候没有设置密码就把mongodb数据库公开了，以为会没啥事，结果还是被攻击了。此时想起来，觉得安全还是有必要重视起来了。
 ---
 手里的vps还是不少了，加上之前写毕设的时候没有设置密码就把mongodb数据库公开了，以为会没啥事，结果还是被攻击了。此时想起来，觉得安全还是有必要重视起来了。
 

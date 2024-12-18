@@ -12,7 +12,7 @@ tags:
 categories: 数据库
 keywords: sql,db,database,id,主键,外键,索引,主键索引,唯一索引,联合索引,聚集索引,复合索引,数据库设计,数据库优化,数据库索引,数据库性能,
 permalink: what-is-the-best-id-for-a-database/
-description:
+description: 本文介绍了数据库中ID的理论特性，并给出了常见的ID生成方式。
 ---
 ## 前言
 

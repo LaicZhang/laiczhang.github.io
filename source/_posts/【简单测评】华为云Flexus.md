@@ -13,7 +13,7 @@ tags:
 categories: vps
 keywords: vps, huawei, Flexus, 新加坡, 简单测评
 permalink: huawei-singapore-flexus-simple-evaluation/
-description:
+description: 华为云Flexus新加坡服务器简单测评，配置低，价格便宜，性价比高。
 ---
 既然没花钱，那么配置低也是可以接受的了。
 
@@ -71,7 +71,7 @@ wget -qO- bench.sh | bash
 bash <(curl -sL IP.Check.Place)
 ```
 
-```
+```txt
 ########################################################################
 一、基础信息（Maxmind 数据库）
 自治系统号：            AS136907
@@ -128,7 +128,7 @@ IP地址黑名单数据库：  有效 439   正常 295   已标记 144   黑名�
 wget -qO- git.io/besttrace | bash
 ```
 
-```
+```txt
 ----------------------------------------------------------------------
 北京电信
 traceroute to 219.141.147.210 (219.141.147.210), 30 hops max, 32 byte packets
@@ -408,7 +408,7 @@ traceroute to 202.112.14.151 (202.112.14.151), 30 hops max, 32 byte packets
 curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
 ```
 
-```
+```txt
 正在测试,请稍等...
 ——————————————————————————————
 
@@ -453,7 +453,7 @@ curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bas
 bash <(curl -L -s check.unlock.media)
 ```
 
-```
+```txt
  [流媒体平台及游戏区域限制测试]
 
 项目地址 https://github.com/lmc999/RegionRestrictionCheck 

@@ -12,7 +12,7 @@ tags:
 categories: 优化
 keywords: redis, 优化, 后端, db, memory, 内存, node, js, ts, nest,nestjs
 permalink: optimizing-redis/
-description:
+description: redis 优化，减少内存使用，提升查询速度，编码解码，key 命名，读写分离，HyperLogLog，时间区间，Lua脚本
 ---
 又去研究了一下redis，想到一些值得优化的地方。
 
