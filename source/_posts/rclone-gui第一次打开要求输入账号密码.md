@@ -20,7 +20,11 @@ description:
 <!--more-->
 之前已经安装好了rclone，所以不再演示如何安装。
 
-文档里直接给了运行代码，`rclone rcd --rc-web-gui`
+文档里直接给了运行代码，
+
+```bash
+rclone rcd --rc-web-gui
+```
 
 不过第一次打开时，会要求输入账号密码（第一次打开，我自己都不知道账号密码是什么，还输入什么）
 
@@ -42,6 +46,6 @@ To set it yourself.
 翻译一下就是，复制粘贴`rclone rcd --rc-web-gui --rc-user usernamehere
 --rc-passwd somepassword`，然后将对应的用户密码改成自己的即可。
 
-![](https://cdn.jsdelivr.net/gh/LaicZhang/picture-bed/com/image-20210917134758190.png)
+![](https://img1.tucang.cc/api/image/show/45b63e9a5aa3404b44c00c3481fb5d36)
 
 参考链接：<https://forum.rclone.org/t/browser-asking-to-sign-in-when-using-gui/18601>
