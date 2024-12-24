@@ -12,7 +12,7 @@ tags:
 categories: aws
 keywords: aws, lambda, lightsail, 流量, 限额, 自动关机
 permalink: use-lambda-to-monitor-lightsail-traffic-limit-and-auto-shutdown-when-exceeding-the-limit/
-description:
+description: 使用Lambda监控Lightsail流量限额并超额自动关机
 ---
 ## 前言
 

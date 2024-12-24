@@ -12,7 +12,7 @@ tags:
 categories: 福利
 keywords: JetBrains, WebStorm, Rider, 免费, 商业, 非商业, 个人版, 社区版, 社区, 社区版,ide,idea
 permalink: webstorm-and-rider-are-now-free-for-non-commercial-use/
-description:
+description: WebStorm和Rider现在对非商业用途免费
 ---
 ## 前言
 
@@ -23,7 +23,6 @@ description:
 <!-- more -->
 
 个人版和商业版功能完全相同，唯一的区别在于 `Code With Me` 功能，个人版用户获得的是 `Code With Me Community` 版本。
-
 
 ![](https://img1.tucang.cc/api/image/show/6302723469492b18c3cd242c3dee5e35)
 

@@ -11,7 +11,7 @@ tags:
 categories: cf
 keywords: 图床, cf, cloudflare, cloudflare-r2, 免费图床,free image bed
 permalink: free-image-bed-with-cloudflare-r2/
-description:
+description: 使用cloudflare-r2作为免费图床
 ---
 r2是cloudflare的一个产品，可以免费提供一个域名，可以用来做图床。
 

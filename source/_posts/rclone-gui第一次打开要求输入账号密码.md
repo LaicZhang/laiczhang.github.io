@@ -11,7 +11,7 @@ tags:
 categories: 网盘
 keywords: rclone, rclone-gui
 permalink: first-time-open-require-input-account-password-in-rclone-gui/
-description:
+description: rclone-gui第一次打开要求输入账号密码
 ---
 心血来潮想挂载onedrive，发现rclone有了gui，第一次打开时需要填入账号密码。
 

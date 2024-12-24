@@ -11,7 +11,7 @@ tags:
 categories: 爬虫
 keywords: python,python3,爬虫,周读网,书籍信息
 permalink: python3-crawl-zhoudu-books-info/
-description:
+description: 爬取周读网书籍信息，并存入CSV及mysql数据库中。
 ---
 
 室友想写个图书管理系统，苦于没有数据，

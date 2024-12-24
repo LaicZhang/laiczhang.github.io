@@ -11,7 +11,7 @@ tags:
 categories: python
 keywords: python, python3, 国内源, 换源, 加速
 permalink: pip-change-to-chinese-source/
-description:
+description: pip换源
 ---
 
 准备给我的jupyter notebook加个自动补全功能，网上说要装个pip install jupyter_contrib_nbextensions

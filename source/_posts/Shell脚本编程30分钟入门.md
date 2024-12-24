@@ -10,7 +10,7 @@ tags:
 categories: shell
 keywords: shell, 入门, 脚本编程, 30分钟, 入门教程, 脚本, 编程, 教程, bash, sh, shell脚本
 permalink: shell-30-minutes-beginner/
-description:
+description: Shell脚本编程30分钟入门，从零开始学习Shell脚本编程。
 ---
 
 ## 什么是Shell脚本

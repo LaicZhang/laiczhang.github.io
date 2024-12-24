@@ -11,7 +11,7 @@ tags:
 categories: 技术
 keywords: python, 数据库, mysql
 permalink: python-operate-mysql-database/
-description:
+description: Python操作MySQL数据库
 ---
 看了几篇博客，难道是打开姿势不对？总是感觉不是很懂，于是自己再总结一下。
 

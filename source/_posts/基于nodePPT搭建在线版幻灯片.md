@@ -17,6 +17,8 @@ description:
 > 查看效果：<https://nodeppt.js.org>
 
 nodeppt是@三水清大大的力作，想要了解nodeppt有哪些强大的功能，可以来[这儿](https://github.com/ksky521/nodeppt)看看
+
+- 2024.12.25更新，nodeppt已基本停止维护。
 <!-- more -->
 
 ## 配置node环境

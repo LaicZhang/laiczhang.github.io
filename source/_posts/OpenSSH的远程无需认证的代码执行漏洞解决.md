@@ -11,7 +11,7 @@ tags:
 categories: 安全
 keywords: OpenSSH,漏洞,代码执行,远程命令执行,root,Debian,Debian12,vps,CentOS7,Ubuntu22,安全,fail2ban,22,ssh
 permalink: Solution-to-the-remote-code-execution-vulnerability-in-OpenSSH-without-authentication/
-description:
+description: OpenSSH的远程无需认证的代码执行漏洞解决。
 ---
 作为 Debian 12 + Ubuntu 22 钉子户，我的 VPS 全中……大家快去更新吧。
 

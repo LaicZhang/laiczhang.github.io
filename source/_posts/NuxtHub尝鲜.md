@@ -14,7 +14,7 @@ tags:
 categories: nuxt
 keywords: nuxt, vue, nuxtHub,nuxt-hub,cf,free,cloudflare,d1,r2,blob,post
 permalink: nuxthub-preview/
-description:
+description: NuxtHub是由Cloudflare提供支持的Nuxt部署和管理平台，在Cloudflare账户上部署带有数据库、键值和blob存储的应用程序，无需任何配置。
 ---
 我们`Vue`也有自己的`Vercel`了：）
 

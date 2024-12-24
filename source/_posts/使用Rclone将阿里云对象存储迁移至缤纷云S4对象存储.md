@@ -11,7 +11,7 @@ tags:
 categories: 网站
 keywords: 阿里云对象存储, 缤纷云S4对象存储,Rclone, 迁移, 优化,s4,对象存储,oss
 permalink: transfer-oss-to-s4-by-rclone/
-description:
+description: 使用Rclone将阿里云对象存储迁移至缤纷云S4对象存储，主要原因是想省钱。。。
 ---
 主要原因是想省钱。。。
 <!--more-->

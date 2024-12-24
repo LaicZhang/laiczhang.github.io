@@ -11,7 +11,7 @@ tags:
 categories: 环境配置
 keywords: vscode,remote,环境配置
 permalink: remote-development-configuration-in-vscode/
-description:
+description: vscode远程开发配置
 ---
 vscode上微软官方发布了三个相关插件，包括 ：
 

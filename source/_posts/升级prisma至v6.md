@@ -11,7 +11,7 @@ tags:
 categories: orm
 keywords: prisma, orm, upgrade, v6, v5,sql,nodejs,ts, 翻译
 permalink: upgrading-to-prisma-6/
-description:
+description: 升级prisma至v6
 ---
 Prisma ORM v6 版本更新会带来一些破坏性更新，如果你从旧版本升级，需要特别注意。这份指南解释了升级对你的应用可能的影响，并提供了处理这些变化的指导。
 
