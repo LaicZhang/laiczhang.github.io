@@ -10,7 +10,7 @@ tags:
 categories: mac
 keywords: mac, 外接硬盘, 垃圾桶,bin,empty
 permalink: how-to-empty-bin-on-external-hard-disk-in-mac/
-description:
+description: mac清空外接硬盘垃圾桶
 ---
 ## 具体情况
 

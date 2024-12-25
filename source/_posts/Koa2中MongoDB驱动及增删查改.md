@@ -12,7 +12,7 @@ tags:
 categories: 毕设
 keywords: koa2,MongoDB,驱动,增删查改,数据库
 permalink: mongodb-driver-and-crud-in-koa2/
-description:
+description: Koa2中MongoDB驱动及增删查改
 ---
 毕设用的koa2，使用mongoose操作mongodb，完成增删查改。
 

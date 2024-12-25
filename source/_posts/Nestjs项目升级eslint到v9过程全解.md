@@ -9,7 +9,7 @@ tags:
 categories:
 keywords: 升级,eslint,v9,prettier,v8,eslint9
 permalink: upgrade-eslint-to-v9/
-description:
+description: 本文将详细介绍 Nestjs 项目从 eslint 8 升级到 eslint 9 的过程，并介绍 eslint 9 配置规则和集成 prettier。
 ---
 距离 9.0 版本发布已经4个多月了，主流框架或者工具基本都已经适配，体验一下新版本。
 
