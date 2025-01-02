@@ -10,9 +10,9 @@ tags:
   - 编程
   - 思考
 categories: ai
-keywords: ai,编程,思考
+keywords: ai,编程,思考, idea, cursor, copilot, windsurf,tongyi,programming,coding,code
 permalink: my-some-idea-about-ai-programming/
-description:
+description: 对AI辅助编程的一些思考
 ---
 - 工程师的价值正在向上迁移
 
