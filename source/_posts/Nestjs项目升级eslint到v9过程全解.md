@@ -7,6 +7,7 @@ date: 2024-10-23 13:44:50
 updated: 2024-01-08 13:44:50
 tags:
   - nest
+  - eslint
 categories: nest
 keywords: 升级,eslint,v9,prettier,v8,eslint9,nest,nestjs,migrate
 permalink: upgrade-eslint-to-v9/
