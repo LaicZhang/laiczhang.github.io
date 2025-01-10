@@ -9,8 +9,9 @@ tags:
   - do
   - vps
   - 纽约
+  - 评测
 categories: vps
-keywords: vps, do, 测评, 简单测评
+keywords: vps, do, 测评, 简单测评, test
 permalink: do-new-york-droplets-simple-evaluation/
 description:
 ---

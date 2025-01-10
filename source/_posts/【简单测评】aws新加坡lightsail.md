@@ -10,6 +10,7 @@ tags:
   - lightsail
   - 新加坡
   - vps
+  - 评测
 categories: vps
 keywords: vps, aws, lightsail, 新加坡, 简单测评
 permalink: aws-singapore-lightsail-simple-evaluation/

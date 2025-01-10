@@ -9,6 +9,7 @@ tags:
   - 新加坡
   - do
   - vps
+  - 评测
 categories: vps
 keywords: vps, do, 测评, 简单测评,cloud,sg,singapore
 permalink: do-singapore-droplets-simple-evaluation/

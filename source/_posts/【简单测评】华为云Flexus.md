@@ -10,8 +10,9 @@ tags:
   - flexus
   - 新加坡
   - vps
+  - 评测
 categories: vps
-keywords: vps, huawei, Flexus, 新加坡, 简单测评
+keywords: vps, huawei, Flexus, 新加坡, 简单测评,test
 permalink: huawei-singapore-flexus-simple-evaluation/
 description: 华为云Flexus新加坡服务器简单测评，配置低，价格便宜，性价比高。
 ---

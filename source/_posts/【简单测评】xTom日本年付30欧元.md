@@ -4,19 +4,21 @@ copyright: true
 comment: false
 mathjax: false
 date: 2022-08-29 22:07:16
-updated: 2024-06-15 12:56:16
+updated: 2024-08-15 12:56:16
 tags:
   - xtom
   - jp
   - vps
+  - 评测
 categories: 简单测评
 keywords: xtom, jp, vps, 简单测评, eur, 29,500g,1c,e5,1g,ipv4,ipv6,japan,cloud,speedtest,network
 permalink: xtom-japan-vps-simple-evaluation/
-description:
+description: 
 ---
 本次为预售且仅500台，三周之后才能用，使用时间顺延三周。
 
 - 2024.6.15更新测试结果
+- 2024.8.15，由于手里小鸡挺多了，选择不再续费
 <!--more-->
 
 ## 放在前面

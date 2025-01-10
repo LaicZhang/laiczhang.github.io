@@ -10,6 +10,7 @@ tags:
   - lightsail
   - 日本
   - vps
+  - 评测
 categories: vps
 keywords: vps, aws, lightsail, 日本
 permalink: aws-japan-lightsail-simple-evaluation/

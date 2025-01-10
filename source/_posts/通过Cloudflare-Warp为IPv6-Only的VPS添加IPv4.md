@@ -11,7 +11,7 @@ tags:
 categories: vps
 keywords: cf,warp,ipv6,ipv4,only,vps,hz,free,plus,cloudflare
 permalink: add-ipv4-to-ipv6-only-vps-with-cloudflare-warp/
-description:
+description: 通过Cloudflare-Warp为IPv6-Only的VPS添加IPv4。
 ---
 大佬送了个免费小🐔，奈何只支持ipv6，很不方便，所以通过warp来添加ipv4。
 

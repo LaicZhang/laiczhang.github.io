@@ -8,6 +8,7 @@ updated: 2024-07-07 16:21:29
 tags:
   - oracle
   - vps
+  - 评测
 categories: vps
 keywords: vps, oracle, e2, 云服务器, free, shell, test, speed, speedtest
 permalink: oracle-e2-simple-evaluation/

@@ -9,6 +9,7 @@ tags:
   - ali
   - cn
   - vps
+  - 评测
 categories: vps
 keywords: ali, vps, 轻量云, 成都, 99元, 简单测评, 云服务器, 服务器, 价格, chengdu, 轻量级,benchmark,beian,备案,icp,许可
 permalink: ali-chengdu-light-year-pay-99/

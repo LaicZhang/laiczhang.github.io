@@ -9,6 +9,7 @@ tags:
   - vps
   - 腾讯云
   - 孟买
+  - 评测
 categories: 简单测评
 keywords: 腾讯云,孟买,lighthouse,简单测评,vps
 permalink: tencentcloud-mumbai-lighthouse-simple-evaluation/
