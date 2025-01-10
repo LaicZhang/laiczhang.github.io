@@ -15,8 +15,10 @@ description: nestjs项目中使用keyv替换cache-manager-redis-yet
 ---
 在 cache-manager v6 中，原来的 cache-manager-redis-yet 将被弃用，转为使用 @keyv/redis。虽然仍然提供遗留版本支持，但还是适配新版本以免后面出错。
 
+给doc提pr被拒绝了，由此我推测可能v11的时候会直接更新，所以此处近针对v10版本。
+
 <!--more-->
-## 0. 遗留版本支持
+## 遗留版本支持
 
 ```ts
 import { createCache, KeyvAdapter } from 'cache-manager';
@@ -31,15 +33,15 @@ const cache = createCache({
 
 如果确定不在乎更新版本特性，可以继续使用 cache-manager-redis-yet。
 
-## 1. 正式开始
+## 正式开始
 
-### 1.1 安装依赖包
+### 安装依赖包
 
 ```bash
 yarn add keyv @keyv/redis cache-manager @nestjs/cache-manager@next
 ```
 
-### 1.2 更新代码
+### 更新代码
 
 - app.module.ts
 
