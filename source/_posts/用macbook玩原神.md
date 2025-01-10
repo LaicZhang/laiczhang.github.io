@@ -7,10 +7,11 @@ date: 2025-01-04 02:48:58
 updated: 2025-01-04 02:48:58
 tags:
   - mac
+  - game
 categories: mac
-keywords: mac,macbook,macbook-air,m1,yuanshen,genshin,原神
+keywords: mac,macbook,macbook-air,m1,yuanshen,genshin,原神，utm,Parallels,playcover,ipa
 permalink: how-to-play-yuanshen-on-macbook-air-m1/
-description: 用macbook玩原神
+description: 用macbook玩原神有三种方法。
 ---
 主流的有三种方法。
 

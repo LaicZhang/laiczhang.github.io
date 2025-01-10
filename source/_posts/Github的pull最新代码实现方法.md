@@ -8,9 +8,9 @@ tags:
   - github
   - git
 categories: git
-keywords: github,pull,最新代码
+keywords: github,pull,最新代码,git-pull,git-push
 permalink: git-pull-the-last-github-repo/
-description:
+description: github的pull最新代码实现方法.
 ---
 
 `github`现在已经经常用了，但是经常遇到下面的问题

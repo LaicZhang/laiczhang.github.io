@@ -9,9 +9,9 @@ tags:
   - java
   - 环境
 categories: java
-keywords: jdk
+keywords: jdk,java,cn,lts,jdk下载,mac,win,linux,java8,jdk8,java11,jdk11,java17,jdk17,java21,jdk21
 permalink: lts-jdks-download/
-description:
+description: LTS版各版本JDK下载
 ---
  [Amazon Corretto](https://amazonaws-china.com/cn/corretto/)是一个免费的 、多平台的、面向生产的开放Java开发工具包（OpenJDK） 发行版。Corretto提供长期支持，包括性能增强和安全修复。亚马逊在数 个生产服务上运行Corretto，并且Corretto被证明与Java SE标准兼容。使用Corretto，您 可以在流行的操作系统（包括Linux、Windows和macOS）上开发和运行Java应用程序。
 

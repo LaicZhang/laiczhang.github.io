@@ -10,10 +10,9 @@ tags:
   - 域名
 categories: hexo
 permalink: build-a-personal-blog-with-hexo-and-github-page/
-keywords: hexo,github,blog
+keywords: hexo,github,blog,node,nodejs,markdown,coding,域名
 copyright: true
 ---
-
 ## 前言
 
 [Hexo](https://hexo.io/zh-cn/) 是高效的静态站点生成框架，她基于 [Node.js](https://nodejs.org/)。
