@@ -9,9 +9,9 @@ tags:
   - github
   - 教育优惠
 categories: 福利
-keywords: 教育优惠, github, 学生包, 免费, 福利, 编程
+keywords: 教育优惠, github, 学生包, 免费, 福利, 编程,edu
 permalink: my-github-education-package-was-validated/
-description:
+description: GitHub学生包申请终于通过了
 ---
 
 其实申请很久了，但是今天才发来通过的邮件。。。
