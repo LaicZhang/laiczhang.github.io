@@ -7,15 +7,16 @@ date: 2025-01-21 01:18:06
 updated: 2025-01-21 01:18:06
 tags:
   - ai
+  - ide
 categories: ai
-keywords: ai,cursor,gpt,coding,vscode,trae
+keywords: ai,cursor,gpt,coding,vscode,trae,trae.ai,aiide,cursor竞品,4o
 permalink: try-to-use-trae/
-description:
+description: Trae是一款适应性人工智能集成开发环境，能改变工作方式，与用户协作提高工作效率。
 ---
 > Trae is an adaptive AI IDE that transforms how you work, collaborating with you to run faster.
-> Trae是一个自适应的AI IDE，它将如何工作your工作，与您合作，以更快地运行。
+> Trae是一款适应性人工智能集成开发环境，能改变工作方式，与用户协作提高工作效率。
 
-说人话：一个竞品。
+说人话：一个cursor竞品。
 
 <!--more-->
 
@@ -35,6 +36,7 @@ description:
 
 简单用了一会儿，相比cursor，问题还不少。
 
+- 如果提示地区不可用，暗示你要换ip
 - 官网文档都时而不能正常打开（非网络问题，纯粹是网站自身问题）
 - 编辑器ai相关配置不如cursor丰富。
 - **给出的代码质量也还不如cursor**
