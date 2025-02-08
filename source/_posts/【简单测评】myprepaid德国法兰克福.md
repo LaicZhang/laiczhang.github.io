@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2025-01-14 12:45:08
-updated: 2025-01-15 00:15:08
+updated: 2025-02-05 00:15:08
 tags:
   - vps
   - de
@@ -12,7 +12,7 @@ tags:
 categories: vps
 keywords: vps,de,评测,frankfurt,test,speed, speedtest
 permalink: myprepaid-de-vps-simple-evaluation/
-description: myprepaid德国法兰克福vps简单评测，此机型虽然配置高，但实际cpu性能较差。不过网络不错。
+description: myprepaid德国法兰克福vps简单评测，此机型虽然配置高，但实际cpu性能一般。不过网络不错。
 ---
 据说是一个低调的商家，最早的公告是22年发的。
 
@@ -22,8 +22,9 @@ description: myprepaid德国法兰克福vps简单评测，此机型虽然配置�
 
 控制面板默认是德语的，需要自己改一下设置，即便改成中文也会有部分仍然为德文，所以建议英文。当然也可使用网页翻译。
 
-- 系统自带dns有问题，需要自己改一下
+- 2025.1.14更新，系统自带dns有问题，需要自己改一下
 - 2025.1.15更新，经过一天的等待，找商家将cpu从`Intel(R) Xeon(R) CPU E5-2697 v2`更换成了`Intel(R) Xeon(R) Gold 6154 CPU @ 3.00GHz`，虽然实际性能和跑分并没提高多少。。。
+- 2025.2.6 更新，更新测试结果和半月使用体会。
 <!--more-->
 
 ## 修改dns
@@ -480,6 +481,10 @@ Https URL: https://paste.spiritlhl.net/#/show/leMaF.txt
 
 ## 总结
 
-cpu性能较差，三网中联通网络连接较好。
+cpu性能一般（与同类机器相比），三网直连中联通网络连接较好。
 
 适合个人建站。
+
+用了半个月后的体验：时不时连不上ssh，需要打开官网控制台，手动重启vps。
+
+应该还是会续费，毕竟便宜，就当备用了。

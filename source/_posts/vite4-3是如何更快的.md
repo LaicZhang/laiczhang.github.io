@@ -10,7 +10,7 @@ tags:
   - vite
   - 前端
 categories: 优化
-keywords: 优化,vue,vite,vite4
+keywords: 优化,vue,vite,vite4,前端,vue3
 permalink: vite4-3-is-faster/
 description: vite4.3是如何更快的,为什么Vite 4.3比Vite 4.2性能提高了这么多
 ---

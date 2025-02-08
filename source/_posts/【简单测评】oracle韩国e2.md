@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-06-15 16:21:29
-updated: 2024-07-07 16:21:29
+updated: 2025-02-05 16:21:29
 tags:
   - oracle
   - vps
@@ -12,13 +12,127 @@ tags:
 categories: vps
 keywords: vps, oracle, e2, 云服务器, free, shell, test, speed, speedtest
 permalink: oracle-e2-simple-evaluation/
-description:
+description: oracle韩国e2简单测试，仅供参考。
 ---
 丢包极为严重，测完就后悔开韩国春川区域了。。。
 
 - 2024.7.7更新，添加保活脚本避免因为闲置被回收
+- 2025.2.6 更新，添加融合怪测试结果
 
 <!-- more -->
+## 融合怪
+
+```txt
+--------------------------------------系统基础信息--------------------------------------
+ CPU 型号            : AMD EPYC 7551 32-Core Processor @ 1996.250 MHz
+ CPU 数量            : 2 Virtual CPU(s)
+ CPU 缓存            : 512 KB
+ AES-NI              : ✔️ Enabled
+ VM-x/AMD-V/Hyper-V  : ✔️ Enabled
+ 内存                : 482.89 MB / 947.48 MB
+ 虚拟内存 Swap       : [ no swap partition or swap file detected ]
+ 硬盘空间            : 8.83 GB / 44.96 GB
+ 启动盘路径          : /dev/sda1
+ 系统                : ubuntu 22.04 [x86_64] 
+ 内核                : 6.5.0-1025-oracle
+ 系统在线时间        : 207 days, 12 hours, 29 minutes
+ 时区                : UTC
+ 负载                : 0.81 / 0.50 / 0.43
+ 虚拟化架构          : KVM
+ NAT类型             : Port Restricted Cone
+ TCP加速方式         : bbr
+ IPV4 ASN            : AS31898 ORACLE-BMC-31898
+ IPV4 Location       : Chuncheon / Gangwon-do / South Korea
+--------------------------------CPU测试-通过sysbench测试--------------------------------
+1 线程测试(单核)得分:    361.05
+2 线程测试(多核)得分:    456.80
+--------------------------------内存测试-通过sysbench测试---------------------------------
+单线程顺序写速度: 4283.91 MB/s(4.49K IOPS, 5s)
+单线程顺序读速度: 11657.96 MB/s(12.22K IOPS, 5s)
+-----------------------------------硬盘测试-通过fio测试-----------------------------------
+测试路径      块大小   读测试(IOPS)            写测试(IOPS)            总和(IOPS)
+/root         4k       6.27 MB/s(1566)         6.27 MB/s(1567)         12.54 MB/s(3133)        
+/root         64k      25.91 MB/s(404)         26.37 MB/s(412)         52.29 MB/s(816)         
+/root         512k     24.84 MB/s(48)          26.25 MB/s(51)          51.09 MB/s(99)          
+/root         1m       22.95 MB/s(22)          25.69 MB/s(25)          48.64 MB/s(47)          
+-------------------------------------三网回程线路检测-------------------------------------
+北京电信 219.141.140.10  检测不到回程路由节点的IP地址
+北京联通 202.106.195.68  联通4837   [普通线路] 
+北京移动 221.179.155.161 移动CMI    [普通线路] 
+上海电信 202.96.209.133  检测不到回程路由节点的IP地址
+上海联通 210.22.97.1     联通4837   [普通线路] 
+上海移动 211.136.112.200 移动CMI    [普通线路] 
+广州电信 58.60.188.222   电信163    [普通线路] 
+广州联通 210.21.196.6    联通4837   [普通线路] 
+广州移动 120.196.165.24  移动CMI    [普通线路] 
+成都电信 61.139.2.69     检测不到回程路由节点的IP地址
+成都联通 119.6.6.6       联通4837   [普通线路] 
+成都移动 211.137.96.205  移动CMI    [普通线路] 
+-------------------------------------三网回程路由检测-------------------------------------
+[NextTrace API] preferred API IP - 104.21.48.1 - 334.84ms - Misaka.HKG
+广州电信 - ICMP v4 - traceroute to 58.60.188.222, 30 hops max, 52 byte packets
+0.31 ms      AS31898    [ORACLE-CLOUD]     韩国, 江原道, 春川, cloud.oracle.com 
+36.69 ms     AS2914                        日本, 东京都, 东京, gin.ntt.net 
+35.64 ms     AS2914                        日本, 东京都, 东京, gin.ntt.net 
+38.77 ms     AS2914     [NTT-BACKBONE]     日本, 东京都, 东京, gin.ntt.net 
+36.82 ms     AS2914     [NTT-BACKBONE]     日本, 东京都, 东京, gin.ntt.net 
+*
+117.74 ms    AS4134     [CHINANET-BB]      中国, 北京, www.chinatelecom.com.cn  电信
+*
+*
+144.58 ms    AS134774   [CHINANET-GD]      中国, 广东, 深圳, chinatelecom.cn  电信
+*
+135.83 ms    AS4134                        中国, 广东, 深圳, www.chinatelecom.com.cn  电信
+广州联通 - ICMP v4 - traceroute to 210.21.196.6, 30 hops max, 52 byte packets
+0.30 ms      AS31898    [ORACLE-CLOUD]     韩国, 江原道, 春川, cloud.oracle.com 
+35.38 ms     AS6453     [TATA-COMMUNICATIONS] 日本, 东京都, 东京, tatacommunications.com 
+59.85 ms     AS6453     [TATA-COMMUNICATIONS] 日本, 东京都, 东京, tatacommunications.com 
+*
+*
+243.61 ms    AS6453     [TATA-COMMUNICATIONS] 日本, 千叶县, 千叶市, tatacommunications.com 
+243.40 ms    AS6453                        美国, 加利福尼亚, 洛杉矶, tatacommunications.com 
+142.04 ms    AS6453                        美国, 加利福尼亚, 洛杉矶, tatacommunications.com 
+136.61 ms    AS6453                        美国, 加利福尼亚, 洛杉矶, tatacommunications.com 
+200.03 ms    AS6453                        美国, 加利福尼亚, 洛杉矶, tatacommunications.com 
+194.31 ms    AS4837     [CU169-BACKBONE]   中国, 北京市, chinaunicom.cn  联通
+187.84 ms    AS4837     [CU169-BACKBONE]   中国, 北京, chinaunicom.cn  联通
+*
+*
+225.89 ms    AS17816    [UNICOM-GD]        中国, 广东省, 广州市, chinaunicom.cn  联通
+223.08 ms    AS17623    [APNIC-AP]         中国, 广东, 深圳, chinaunicom.cn  联通
+224.48 ms    AS17623                       中国, 广东, 深圳, chinaunicom.cn  联通
+广州移动 - ICMP v4 - traceroute to 120.196.165.24, 30 hops max, 52 byte packets
+0.26 ms      AS31898    [ORACLE-CLOUD]     韩国, 江原道, 春川, cloud.oracle.com 
+42.19 ms     AS2914                        日本, 东京都, 东京, gin.ntt.net 
+35.71 ms     AS2914                        日本, 东京都, 东京, gin.ntt.net 
+*
+89.62 ms     AS2914     [NTT-BACKBONE]     中国, 香港, gin.ntt.net 
+88.22 ms     AS2914     [NTT-BACKBONE]     中国, 香港, gin.ntt.net 
+119.37 ms    AS2914     [NTT-GLOBAL]       中国, 香港, gin.ntt.net 
+82.12 ms     AS58453    [CMI-INT]          中国, 香港, cmi.chinamobile.com  移动
+92.78 ms     AS58453    [CMI-INT]          中国, 广东, 广州, cmi.chinamobile.com  移动
+94.01 ms     AS9808     [CMNET]            中国, 广东, 广州, chinamobileltd.com  移动
+95.63 ms     AS9808     [CMNET]            中国, 广东, 广州, chinamobileltd.com  移动
+94.24 ms     AS9808     [CMNET]            中国, 广东, 广州, chinamobileltd.com  移动
+81.44 ms     AS9808     [CMNET]            中国, 广东, 广州, chinamobileltd.com  移动
+84.32 ms     AS9808     [CMNET]            中国, 广东, 广州, chinamobileltd.com  移动
+81.89 ms     AS56040    [APNIC-AP]         中国, 广东, 深圳, gd.10086.cn  移动
+--------------------------------------就近节点测速--------------------------------------
+位置            上传速度        下载速度        延迟            丢包率          
+日本东京        58.91 Mbps      47.84 Mbps      34.571375ms     N/A             
+中国香港        50.84 Mbps      47.99 Mbps      66.066797ms     N/A             
+新加坡          46.01 Mbps      47.94 Mbps      86.413086ms     N/A             
+洛杉矶          47.11 Mbps      46.82 Mbps      139.167473ms    N/A             
+----------------------------------------------------------------------------------
+花费          : 6 分 7 秒
+时间          : Thu Feb 6 07:39:52 UTC 2025
+----------------------------------------------------------------------------------
+测试结果已写入 goecs.txt
+上传成功!
+Http URL:  http://hpaste.spiritlhl.net/#/show/JKOzp.txt
+Https URL: https://paste.spiritlhl.net/#/show/JKOzp.txt
+```
+
 ## nws.sh
 
 ```bash
