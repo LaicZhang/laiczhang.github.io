@@ -8,7 +8,7 @@ tags:
   - 公众号
   - 插件
 categories: 公众号
-keywords: 插件,公众号
+keywords: 插件,公众号,wechat
 permalink: add-wechat-fans-by-readmore-plugin/
 description:
 ---
@@ -19,7 +19,7 @@ description:
 
 如图，![通过readmore插件实现公众号引流](/images/通过readmore插件实现公众号引流/QQ截图20191023221432.png)
 
-# Step #1 - 更新 `_config.yml` 配置文件
+## Step 1 - 更新 `_config.yml` 配置文件
 
 在 `_config.yml` 配置文件中,配置 `readmore` 插件相关信息,详情见 [OpenWrite 微信公众号增长神器 "ReadMore" 简介](https://openwrite.cn/openwrite/openwrite-readmore/).
 
@@ -41,7 +41,7 @@ plugins:
 - `qrcode` : [必选]OpenWrite 后台申请的微信公众号二维码,例如:<https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg>
 - `keyword` : [必选]OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip
 
-# Step #2 - 运行 hexo 相关命令
+## Step 2 - 运行 hexo 相关命令
 
 - 运行 `npm install` 命令安装到本地项目
 

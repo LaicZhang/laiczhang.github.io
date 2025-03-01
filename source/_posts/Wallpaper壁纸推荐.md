@@ -39,17 +39,17 @@ description:
 
 ### DJ&魔方V1.1
 
-如果我是DJ你会爱我吗。 
+如果我是DJ你会爱我吗。
 
 ![](https://cdn.zyha.cn/blog/wallpaper-recommendation/魔方.jpg)
 
 ### 【终极版】大圣归来 The Return of The Monkey King
 
-“大圣，此去欲何?” 
+“大圣，此去欲何?”
 
-“踏南天，碎凌霄。” 
+“踏南天，碎凌霄。”
 
-“若一去不回……” 
+“若一去不回……”
 
 “便一去不回”
 
@@ -57,9 +57,9 @@ description:
 
 ### 星云变换t001
 
-> 这个要高画质和高帧数才好看 
+> 这个要高画质和高帧数才好看
 >
-> 但是效果绝对一流 
+> 但是效果绝对一流
 >
 > ——知乎用户@汤姆船长
 
@@ -67,7 +67,7 @@ description:
 
 ### Dark Souls
 
-> 黑魂的壁纸，动态的火焰，适合长时间当壁纸。推荐！！ 
+> 黑魂的壁纸，动态的火焰，适合长时间当壁纸。推荐！！
 >
 > ——知乎用户@王小秀
 
@@ -75,7 +75,7 @@ description:
 
 ### miku
 
-> 这个时候怎么能没有初音呢！！多个场景，同样适合长时间壁纸 
+> 这个时候怎么能没有初音呢！！多个场景，同样适合长时间壁纸
 
 ![](https://cdn.zyha.cn/blog/wallpaper-recommendation/miku.jpg)
 
@@ -93,7 +93,7 @@ description:
 
 ### Reimu 灵梦（1080P60FPS）重置版
 
-> 图片高清，人物美丽，雪落在水里还有水波纹散开，绝对好看 
+> 图片高清，人物美丽，雪落在水里还有水波纹散开，绝对好看
 >
 > ——知乎用户@王小秀
 
@@ -107,7 +107,7 @@ description:
 
 ### Global Network Traffic_全球网络流量[Video]
 
-> 是不是看起来很牛逼的样子？？ 
+> 是不是看起来很牛逼的样子？？
 
 ![](https://cdn.zyha.cn/blog/wallpaper-recommendation/GNT.jpg)
 
@@ -127,7 +127,7 @@ description:
 
 ### Ori DE Silent
 
-> 树林随风舞动，树叶与水雾翻腾 
+> 树林随风舞动，树叶与水雾翻腾
 >
 > ——知乎用户@QJwind
 
@@ -187,11 +187,10 @@ description:
 
 ![](https://cdn.zyha.cn/blog/wallpaper-recommendation/路人女主和服.jpg)
 
-
-
 ## 福利向
 
 咳咳，给几个关键词：
+
 ```
 x-ray
 
