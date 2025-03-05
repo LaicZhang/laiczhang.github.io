@@ -9,7 +9,7 @@ tags:
   - python
   - 效率
 categories: python
-keywords: python, python3, 国内源, 换源, 加速
+keywords: python, python3, 国内源, 换源, 加速,pip3,pipx,env
 permalink: pip-change-to-chinese-source/
 description: pip换源
 ---

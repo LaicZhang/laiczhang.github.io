@@ -10,7 +10,7 @@ tags:
   - vite
   - 前端
 categories: 前端
-keywords: vue,vite,vite6,vite6新特性,vue3
+keywords: vue,vite,vite6,vite6新特性,vue3,env,sass,postcss,hash,crypto,createHash
 permalink: vite-6-new-features/
 description: vite6新特性一览
 ---

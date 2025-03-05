@@ -10,7 +10,7 @@ tags:
   - 后端
   - 效率
 categories: 福利
-keywords: JetBrains, WebStorm, Rider, 免费, 商业, 非商业, 个人版, 社区版, 社区, 社区版,ide,idea
+keywords: JetBrains, WebStorm, Rider, cursor,免费, 商业, 非商业, 个人版, 社区版, 社区, 社区版,ide,idea
 permalink: webstorm-and-rider-are-now-free-for-non-commercial-use/
 description: WebStorm和Rider现在对非商业用途免费
 ---

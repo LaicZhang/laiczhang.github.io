@@ -11,7 +11,7 @@ tags:
 categories: vps
 keywords: vps, 评测, aws, do, ali, tencent, tencentcloud,gcp
 permalink: compare-some-vps-price/
-description:
+description: 各vps商家配置价格对比
 ---
 国内的备案机制过于牛逼，永不考虑，所以只对比我了解过的部分比较稳的**老牌海外大厂**产品。
 

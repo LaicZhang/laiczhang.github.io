@@ -8,7 +8,7 @@ updated: 2022-09-30 15:37:18
 tags:
   - aws
 categories: 优化
-keywords: aws, 优化, 云计算, 省钱, 服务器, 天价账单
+keywords: aws, 优化, 云计算, 省钱, 服务器, 天价账单,ec2
 permalink: how-to-avoid-aws-expensive-bill/
 description: aws过于复杂的计费规则让很多人，本文总结一些方法来尽可能最大化 AWS 的节省。
 ---

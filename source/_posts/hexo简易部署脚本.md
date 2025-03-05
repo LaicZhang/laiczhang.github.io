@@ -8,7 +8,7 @@ tags:
   - hexo
   - 技巧
 categories: hexo
-keywords: hexo,技巧,部署脚本,deployment script
+keywords: hexo,技巧,部署脚本,deployment-script,git,shell,bash
 permalink: a-simple-hexo-deploy-script/
 description:
 ---

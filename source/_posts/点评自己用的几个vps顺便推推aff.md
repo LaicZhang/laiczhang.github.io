@@ -11,7 +11,7 @@ tags:
 categories: 评测
 keywords: 评测,vps,建站
 permalink: evaluate-several-vps-I-have-used/
-description:
+description: 点评自己用的几个vps,顺便推推aff. 都是便宜货，非专业评测，并且并未跑测试脚本，仅仅是个人感觉。不同地区不同运营商的网络环境不同。更多的是科普向，不用期盼能捡个好大的便宜。
 ---
 首先声明，
 

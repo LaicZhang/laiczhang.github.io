@@ -13,7 +13,7 @@ tags:
 categories: 后端
 keywords: nestjs,后端,ts, static, nest,typescript,file,server-static,prisma,db,postgres,sql,ENOENT,file,file-index,500,404,stat,no-such-file-or-directory,html
 permalink: some-problems-in-nestjs/
-description:
+description: 开发中遇到的那些nestjs相关问题
 ---
 ## 前言
 
