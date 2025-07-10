@@ -23,6 +23,8 @@ description: NuxtHub是由Cloudflare提供支持的Nuxt部署和管理平台，�
 - 2024.8.11更新：`NuxtHub`支持快速上传文件至r2存储，并提供免费流量。
 - 2024.8.18更新：`NuxtHub`支持`Cloudflare Workers AI`相关api
 - 2024.9.29更新：忽然发现其暗改免费计划（项目上限20个->5个）
+- 2025.7.10更新：[Vercel收编了NuxtLabs，nuxthub或将被开源](https://nuxtlabs.com)，后续nuxt的项目集成可能更多会由vercel实现
+
 <!-- more -->
 ## 写在最前面
 
