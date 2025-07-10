@@ -29,8 +29,8 @@
     "hexo-symbols-count-time": "^0.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.4",
-    "@babel/preset-env": "^7.27.2",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "gulp": "^5.0.1",
     "gulp-babel": "^8.0.0",
