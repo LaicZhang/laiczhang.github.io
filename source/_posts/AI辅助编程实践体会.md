@@ -13,7 +13,7 @@ keywords: ai, 编程, 实践, 体会, FittenCode, Copilot, github,ali,tongyi,ton
 permalink: how-to-use-ai-to-assist-programming/
 description: 
 ---
-我用ai辅助写代码已经很多年了，从刚开始的FittenCode和通义灵码，到后来的Copilot，再到现在的chatgpt+cursor，都在不断地提升编程效率。也有了一些使用ai的编程实践体会，希望对你有帮助。
+我用ai辅助写代码已经很多年了，从刚开始的`FittenCode`和通义灵码，到后来的`Copilot`，再到现在的`chatgpt+cursor`，都在不断地提升编程效率。也有了一些使用ai的编程实践体会，希望对你有帮助。
 
 <!-- more -->
 

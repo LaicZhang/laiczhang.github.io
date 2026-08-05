@@ -1,4 +1,3 @@
+# Single-package blog; this file only records lifecycle-script policy for pnpm 11+.
 allowBuilds:
-  core-js: set this to true or false
-  hexo-util: set this to true or false
-  highlight.js: set this to true or false
+  hexo-util: false

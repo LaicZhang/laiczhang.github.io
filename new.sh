@@ -1,1 +1,1 @@
-./node_modules/hexo/bin/hexo new $1
+pnpm run new -- "$@"
