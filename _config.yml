@@ -151,4 +151,4 @@ deploy:
   - type: git
     repo:
       github: git@github.com:LaicZhang/laiczhang.github.io.git
-    branch: master
+    branch: main

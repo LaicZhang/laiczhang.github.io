@@ -3,14 +3,14 @@
   "version": "1.1.0",
   "private": true,
   "hexo": {
-    "version": "7.3.0"
+    "version": "8.1.2"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-mobx": "^2.0.0",
     "gulp-html-minifier-terser": "^7.1.0",
     "gulp-htmlmin": "^5.0.1",
-    "hexo": "^8.1.1",
+    "hexo": "^8.1.2",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
@@ -29,11 +29,11 @@
     "hexo-symbols-count-time": "^0.7.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.5",
-    "@babel/preset-env": "^7.28.5",
-    "@babel/preset-react": "^7.28.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
     "gulp": "^5.0.1",
-    "gulp-babel": "^8.0.0",
+    "gulp-babel": "^8.1.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-uglify": "^3.0.2"

@@ -1,0 +1,4 @@
+allowBuilds:
+  core-js: set this to true or false
+  hexo-util: set this to true or false
+  highlight.js: set this to true or false

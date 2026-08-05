@@ -4,7 +4,7 @@ copyright: true
 comment: false
 mathjax: false
 date: 2024-06-15 16:21:29
-updated: 2025-02-05 16:21:29
+updated: 2026-08-05 11:21:29
 tags:
   - oracle
   - vps
@@ -18,6 +18,7 @@ description: oracle韩国e2简单测试，仅供参考。
 
 - 2024.7.7更新，添加保活脚本避免因为闲置被回收
 - 2025.2.6 更新，添加融合怪测试结果
+- 2026.8.5 更新，补充免费额度变更公告
 
 <!-- more -->
 ## 融合怪
@@ -605,6 +606,25 @@ No VM guests are running outdated hypervisor (qemu) binaries on this host.
 Created symlink /etc/systemd/system/timers.target.wants/bandwidth_occupier.timer → /etc/systemd/system/bandwidth_occupier.timer.
 带宽限制安装成功 脚本路径: /usr/local/bin/bandwidth_occupier.sh
 The bandwidth limit script has been installed at /usr/local/bin/bandwidth_occupier.sh
+```
+
+## 免费额度变更公告
+
+甲骨文云近日向多名用户发送邮件，表明其应当于 8 月 18 日前将机器降至新配额限制内，否则虚拟机将被自动取消。
+邮件翻译正文如下：
+
+```txt
+我们写信通知您有关甲骨文云基础设施（OCI）永久免费计算的重要更新。
+
+始终免费的计算限制已更新。如果您的租约目前使用高于新限制的 Always Free 计算资源，您必须在 2026 年 8 月 18 日之前减少使用量。
+
+从 2026 年 8 月 18 日开始，甲骨文将开始执行更新的“始终免费”计算限制。超过“始终免费”权限的计算实例将自动终止。
+
+当前始终自由计算限制
+
+- 最多 2 个 Ampere A1 OCPU
+
+- 高达 12 GB 的内存
 ```
 
 ## 写在最后
